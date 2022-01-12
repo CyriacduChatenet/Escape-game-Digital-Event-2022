@@ -1,6 +1,8 @@
 import './SessionChoicePage.scss';
 export const SessionChoicePage = () => {
     return (
-        <div></div>
+        <div>
+            <h1>Session page</h1>
+        </div>
     )
 }
