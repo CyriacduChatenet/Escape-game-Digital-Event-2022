@@ -1,0 +1,10 @@
+@import '../../../public/assets/styles/import.scss';
+
+.chat-input {
+    width: 27vw;
+    height: 4vh;
+    background: linear-gradient(90.37deg, rgba(63, 137, 141, 0.225) 0.22%, rgba(196, 196, 196, 0) 124.63%);
+    transform: translateY(2vh);
+    padding: 0 2vw;
+    color: white;
+}

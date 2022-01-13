@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./LoaderPage.scss";
 
 export const LoaderPage = () => {
@@ -12,6 +13,24 @@ export const LoaderPage = () => {
           (2/4)
         </h2>
       </div>
+=======
+import { useEffect } from "react";
+import "./LoaderPage.scss";
+
+export const LoaderPage = () => {
+  useEffect(() => {
+    const Redirection = () => {
+      setTimeout(() => {
+      }, 3000);
+    };
+
+    Redirection();
+  }, []);
+
+  return (
+    <div>
+      <h1>Loading</h1>
+>>>>>>> 8103e329ae292f60f5104d2130af427295bf8a96
     </div>
   );
 };
