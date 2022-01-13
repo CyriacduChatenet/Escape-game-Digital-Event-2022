@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+=======
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+>>>>>>> b2f0804c086b94df588de1370dad7e219923b3a5
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
 import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage";
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';

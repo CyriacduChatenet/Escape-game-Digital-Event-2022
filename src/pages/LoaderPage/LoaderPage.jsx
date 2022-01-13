@@ -1,20 +1,19 @@
-import { useEffect } from 'react';
-import './LoaderPage.scss';
+import { useEffect } from "react";
+import "./LoaderPage.scss";
 
 export const LoaderPage = () => {
+  useEffect(() => {
+    const Redirection = () => {
+      setTimeout(() => {
+      }, 3000);
+    };
 
-    useEffect(() => {
-        const Redirection = () => {
-            setTimeout(() => {
-            }, 3000)
-        }
+    Redirection();
+  }, []);
 
-        Redirection();
-    },[])
-
-    return (
-        <div>
-            <h1>Loading</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h1>Loading</h1>
+    </div>
+  );
+};
