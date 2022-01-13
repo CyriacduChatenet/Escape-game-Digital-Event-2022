@@ -3,6 +3,7 @@ import { Terminal } from "../../components/Terminal/Terminal"
 import { ProgressBar } from '../../components/ProgressBar/ProgressBar';
 import { Chat } from '../../components/Chat/Chat';
 import { Missions } from '../../components/Missions/Missions';
+import { Dock } from '../../components/Dock/Dock';
 export const DashboardPage = () => {
     return (
         <div>
@@ -14,6 +15,7 @@ export const DashboardPage = () => {
                 <ProgressBar/>
                 <Chat/>
                 <Missions/>
+                <Dock/>
             </div>
         </div>
     )
