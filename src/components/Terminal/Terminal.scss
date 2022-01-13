@@ -1,1 +1,28 @@
-@import '/public/assets/styles/import.scss';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$green : #007200;
+$greyTerminal: #252525;
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.terminal-div{
+    background-color: $greyTerminal;
+    height: 50vh;
+    width: 50%;
+    padding: 2%;
+    border: #007200 solid 5px;
+}
+p{
+    color: $green;
+    font-size: 1.5em;
+    font-weight: bold;
+}
