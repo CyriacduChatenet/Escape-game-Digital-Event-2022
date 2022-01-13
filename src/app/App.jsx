@@ -1,4 +1,3 @@
-import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {Homepage} from '../pages/Homepage/Homepage'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
