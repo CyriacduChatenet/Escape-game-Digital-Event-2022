@@ -2,7 +2,6 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
 import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage";
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
-import { ErrorNotFound } from '../pages/ErrorNotFound/ErrorNotFound';
 
 function App() {
   return (

@@ -1,3 +1,4 @@
+import { Mission } from '../Mission/Mission';
 import './Missions.scss';
 export const Missions = () => {
     return (
@@ -7,7 +8,12 @@ export const Missions = () => {
                 <img src="/assets/images/terminal-bar/Bar-top-right.png" alt="" className="missions-btn" />
             </div>
             <div className="missions">
-                <p className="text">missions</p>
+                <h3 className="subtitle">Missions</h3>
+                <div className="mission-container">
+                    <Mission/>
+                    <Mission/>
+                    <Mission/>
+                </div>
             </div>
         </div>
     )
