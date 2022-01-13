@@ -9,7 +9,7 @@ export const Terminal = () => {
                     <img src="/assets/images/terminal-bar/bar-top-left.png" alt="" className="terminal-head" />
                     <img src="/assets/images/terminal-bar/Bar-top-right.png" alt="" className="terminal-btn" />
                 </div>
-                <div className = 'text-div'>
+                <div className = 'text-div'>  
                     <p>{text}</p>
                 </div>
             </div>
