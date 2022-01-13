@@ -1,1 +1,86 @@
-@import '/public/assets/styles/import.scss';
+@font-face {
+    font-family: "MonumentExtended";
+    src : url("./fonts/MonumentExtended-Black.otf") format('opentype'),
+          url("./fonts/MonumentExtended-Regular.otf") format('opentype'),
+          url("./fonts/MonumentExtended-Light.ttf") format('truetype')
+   }
+
+.loaderpage{
+    background-image: url('https://cdn.discordapp.com/attachments/930046178303828018/930808915275448411/bg_matr.jpg');
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-displaying{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+}
+
+.team-loading-displaying{
+ display: flex;
+ justify-content: center;
+}
+
+.current-logo{
+ font-size: 45px;
+ font-family: MonumentExtended, Arial, Helvetica, sans-serif;
+ animation: load 2s infinite;
+ position: relative;
+ color: white;
+}
+
+.current-loading{
+ font-family: MonumentExtended, Arial, Helvetica, sans-serif;
+ font-size: 20px;
+ text-align: center;
+ line-height: 35px;
+ color: white;
+}
+
+.loading{
+ width: 200px;
+ margin-top: 100px;
+ height: 5px;
+ background-color: white;
+ border-radius: 100px;
+ display: flex;
+ justify-content: center;
+ animation: loadingBar 2s infinite;
+ position: absolute;
+
+ 
+}
+
+@keyframes load{
+ 0%{
+     transform: scale(100%);
+ }
+
+ 50%{
+     transform: scale(150%);
+ }
+ 100%{
+     transform: scale(100%);
+
+ }
+}
+
+@keyframes loadingBar{
+ 0%{
+     left: 37%;
+ }
+
+ 50%{
+     left: 50%;
+ }
+ 100%{
+     left: 37%;
+ }
+}

@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "MonumentExtendedBlack";
+    src : url("./fonts/MonumentExtended-Black.otf") format('opentype');
+
+   }
+
+@font-face {
+    font-family: "MonumentExtendedRegular";
+    src: url("./fonts/MonumentExtended-Regular.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("./fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
+$color-primary: white;
+
+.errorPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F3F4C;
+}
+
+.errorPageBlock{
+    width: 50vw;
+    height: 60vh;
+    background: linear-gradient(45deg, rgba(63,137,141,.1), rgba(196,196,196,0));
+    text-align: center;
+    border: solid 1px $color-primary;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.errorPageContainer{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+.errorType{
+    -webkit-text-stroke: 2px #86EBD9ed;
+    font-size: 25px;
+    color: $color-primary;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 42px #86EBD9ed,
+    0 0 82px #86EBD9ed,
+    0 0 92px #86EBD9ed;
+    font-family: "MonumentExtendedBlack", Arial, Helvetica, sans-serif;
+
+
+    .errorTypeNumber{
+        -webkit-text-stroke: 3px #86EBD9ed;
+        font-size: 70px;
+        color: $color-primary;
+        font-family: "MonumentExtendedBlack", Arial, Helvetica, sans-serif;
+    }
+
+}
+
+.errorText{
+    font-size: 20px;
+    color: $color-primary;
+    font-family: "MonumentExtendedRegular", Arial, Helvetica, sans-serif;
+    
+}
+
+.backToHomeText{
+    color: #3F898D;
+    font-family: "MonumentExtendedRegular", Arial, Helvetica, sans-serif;
+}
+
+.errorPageFooter{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.errorPageFooterImg{
+    width: 20px;
+    height: 20px;
+    fill: #3F898D;
+}
