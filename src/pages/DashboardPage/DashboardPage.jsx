@@ -4,6 +4,7 @@ import { ProgressBar } from '../../components/ProgressBar/ProgressBar';
 import { Chat } from '../../components/Chat/Chat';
 import { Missions } from '../../components/Missions/Missions';
 import { Dock } from '../../components/Dock/Dock';
+import {Modal } from "../../components/Modal/Modal";
 export const DashboardPage = () => {
     return (
         <div>
@@ -16,6 +17,7 @@ export const DashboardPage = () => {
                 <Chat/>
                 <Missions/>
                 <Dock/>
+                <Modal/>
             </div>
         </div>
     )

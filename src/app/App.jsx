@@ -3,7 +3,6 @@ import {Homepage} from '../pages/Homepage/Homepage'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
 import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage";
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
-import { ModalPage } from '../pages/ModalPage/ModalPage';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
 import {WindowsLoader} from '../pages/WindowsLoader/WindowsLoader'
 
@@ -14,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={ <Homepage/> }/>
           <Route path="/loaderpage" element={ <LoaderPage/> }/>
-          <Route path="/modal" element={ <ModalPage/> }/>
           <Route path="/session" element={ <SessionChoicePage/> }/>
           <Route path="/windowsloader" element={<WindowsLoader/> }/>
           <Route path="/dashboard" element={ <DashboardPage/> }/>
