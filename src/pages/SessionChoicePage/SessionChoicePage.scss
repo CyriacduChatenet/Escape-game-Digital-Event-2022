@@ -1,1 +1,17 @@
-@import '../../assets/styles/import.scss';
+@import '/public/assets/styles/import.scss';
+
+@media all and (min-width : 1200px) {
+    .Session-page {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Session-img {
+        width: 10vw;
+        height: 15vh;
+        background-color: rebeccapurple;
+    }
+}

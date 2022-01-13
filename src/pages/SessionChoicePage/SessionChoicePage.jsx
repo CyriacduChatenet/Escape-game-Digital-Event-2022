@@ -1,8 +1,9 @@
+import { NavLink } from 'react-router-dom';
 import './SessionChoicePage.scss';
 export const SessionChoicePage = () => {
     return (
-        <div>
-            <h1>Session page</h1>
+        <div className='Session-page'>
+            <NavLink to="/dashboard"><img src="" alt="session-img" className="Session-img" /></NavLink>
         </div>
     )
 }
