@@ -1,17 +1,49 @@
 @import '/public/assets/styles/import.scss';
 
-@media all and (min-width : 1200px) {
-    .Session-page {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+// @media all and (min-width : 1200px) {
+//     .Session-page {
+//         width: 100vw;
+//         height: 100vh;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+
+//     .Session-img {
+//         width: 10vw;
+//         height: 15vh;
+//         background-color: rebeccapurple;
+//     }
+// }
+
+.session-page {
+    background-image: url("../../../public/assets/images/bg_matr.jpg");
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+        margin-bottom: 2em;
     }
 
-    .Session-img {
-        width: 10vw;
-        height: 15vh;
-        background-color: rebeccapurple;
+    .session-form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border: 1px solid black;
+            padding: 6px;
+        }
+
+        a {
+            color: white;
+            margin-top: 2em;
+            text-align: center;
+        }
+
     }
 }
+
