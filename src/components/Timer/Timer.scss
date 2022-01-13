@@ -1,1 +1,10 @@
 @import '/public/assets/styles/import.scss';
+
+.timer-container {
+    transform: translateY(12.5vh) translateX(47.5vw);
+    font-size: 3vh;
+}
+
+.timer {
+    color: white;
+}

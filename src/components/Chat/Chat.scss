@@ -1,0 +1,13 @@
+@import '../../../public/assets/styles/import.scss';
+
+.chat-container{
+    width: 27.5vw;
+    height: 30vh;
+    background-color: rebeccapurple;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(70vw) translateY(60vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -6,6 +6,17 @@
 }
 
 .video {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -100;
+}
+
+.folder-container {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    z-index: -50;
+    display: flex;
+    flex-wrap: wrap;
 }
