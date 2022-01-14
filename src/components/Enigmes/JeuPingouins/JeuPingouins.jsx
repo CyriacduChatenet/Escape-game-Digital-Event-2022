@@ -5,7 +5,7 @@ import mapboxgl from "mapbox-gl";
 import { useState, useEffect, useRef } from "react";
 
 export const JeuPingouins = () => {
-  mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY;
+  mapboxgl.accessToken = "pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg";
 
   const mapContainer = useRef(null);
   const map = useRef(null);
@@ -36,7 +36,7 @@ export const JeuPingouins = () => {
     <div className="JeuPingouins">
       <h1>Jeu Pingouins</h1>
       <div className="mapbox-container">
-      <div ref={mapContainer} id="mapbox-pingouins"/>
+        <div ref={mapContainer} id="mapbox-pingouins"/>
       </div>
     </div>
   );
