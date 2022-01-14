@@ -2,12 +2,8 @@ import { useState } from 'react';
 import './Dossier.scss';
 
 export const Dossier = () => {
-
     const [dossier, setDossier] = useState(false)
-    console.log('dossier :', dossier);
-
     const [open, setOpen] = useState(false)
-    console.log('PopUp Open :', open)
 
     return(
         <div className = 'dossierContainer'>
