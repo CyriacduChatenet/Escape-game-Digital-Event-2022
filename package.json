@@ -9,10 +9,6 @@
     "firebase": "^9.6.2",
     "gsap": "^3.9.1",
     "mapbox-gl": "^2.6.1",
-<<<<<<< HEAD
-=======
-    "progressbar.js": "^1.1.0",
->>>>>>> William
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
