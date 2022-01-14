@@ -22,7 +22,6 @@ export const JeuPingouins = () => {
   });
 
 
-<<<<<<< HEAD
   return (
     <div className="JeuPingouins">
       <h1>Jeu Pingouins</h1>
@@ -32,14 +31,3 @@ export const JeuPingouins = () => {
     </div>
   );
 };
-=======
-      return (
-        <div className="JeuPingouins">
-          <h1>Jeu Pingouins</h1>
-          <div className="mapbox-container">
-            <div ref={mapContainer} id="mapbox-pingouins" />
-          </div>
-        </div>
-      );
-    }
->>>>>>> cyriac
