@@ -31,7 +31,6 @@ export const JeuFeuForet = () => {
 
         return ()=> clearInterval(intervalTime)
     })
-    
     return(
         <div>
             <h1>{three}</h1>

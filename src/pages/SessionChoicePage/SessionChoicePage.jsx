@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import { Dossier } from '../../components/Dossier/Dossier';
 import './SessionChoicePage.scss';
 export const SessionChoicePage = () => {
     return (
@@ -9,7 +8,6 @@ export const SessionChoicePage = () => {
                 <input type="text" name="name" placeholder="Code de la room" />
                 <NavLink to='/dashboard'><a>Se connecter</a></NavLink>
             </form>
-            <Dossier/>
         </div>
     )
 }

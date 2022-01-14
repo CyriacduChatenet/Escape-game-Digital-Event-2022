@@ -5,22 +5,25 @@ import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage"
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { WindowsLoader } from '../pages/WindowsLoader/WindowsLoader';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
-import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins"
-import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
+import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins";
+import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
+import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={ <Homepage/> }/>
-          <Route path="/loaderpage" element={ <LoaderPage/> }/>
-          <Route path="/session" element={ <SessionChoicePage/> }/>
-          <Route path="/windowsloader" element={<WindowsLoader/> }/>
-          <Route path="/dashboard" element={ <DashboardPage/> }/>
-          <Route path="/error" element={ <ErrorPage/> }/>
-          <Route path="/jeu-pingouins" element={ <JeuPingouins/> }/>
-          <Route path="/settings-modal" element={ <SettingsModal/> }/>
+          <Route exact path="/" element={ <Homepage/> }/>
+          <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
+          <Route exact path="/session" element={ <SessionChoicePage/> }/>
+          <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
+          <Route exact path="/dashboard" element={ <DashboardPage/> }/>
+          <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
+          <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
+          <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
+
+          <Route path='*' exact={true} element={ <ErrorPage/>} />
         </Routes>
       </Router>
     </div>
