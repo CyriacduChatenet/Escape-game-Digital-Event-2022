@@ -6,7 +6,7 @@ import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage"
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { WindowsLoader } from '../pages/WindowsLoader/WindowsLoader';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
-import { JeuPingouins } from "../pages/Enigmes/JeuPingouins/JeuPingouins"
+import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins"
 
 function App() {
   return (
