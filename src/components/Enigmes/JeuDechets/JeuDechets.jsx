@@ -40,8 +40,8 @@ export const JeuDechets = () => {
     });
 
     // const marker1 = new mapboxgl.Marker()
-    // .setLngLat([-0.571498, 44.8357766])
-    // .addTo(map)
+    //   .setLngLat([-0.571498, 44.8357766])
+    //   .addTo(map)
 
   });
 
