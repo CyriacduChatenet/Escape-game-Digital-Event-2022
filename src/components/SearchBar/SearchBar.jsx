@@ -2,7 +2,7 @@ import './SearchBar.scss';
 
 export const SearchBar = ({state, setState}) => {
     const handleClick = () => {
-        console.log('hello');
+        // console.log('hello');
     }
     return(
         <div className = 'containerSearch'>
