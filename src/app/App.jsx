@@ -6,6 +6,7 @@ import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { WindowsLoader } from '../pages/WindowsLoader/WindowsLoader';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
 import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins";
+import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/dashboard" element={ <DashboardPage/> }/>
           <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
           <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
+          <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
 
           <Route path='*' exact={true} element={ <ErrorPage/>} />
         </Routes>
