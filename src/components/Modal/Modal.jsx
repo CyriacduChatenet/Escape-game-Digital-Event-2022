@@ -13,14 +13,20 @@ export const Modal = () => {
     setShowCross(true);
   };
 
+  setTimeout(function() {
+    const video = document.querySelector('.modal-video')
+    video.setAttribute('Controls', 'true')
+    console.log(video)
+  }, 10000);
+
   return (
     <>
       {showModal === true ?
         <div className="dark-bg">         
 		      <div className="modal">
 			      {showCross === true ? <img className="cross" onClick={() => setShowModal(false)} src="/assets/images/terminal-bar/Bar-top-right.png" alt=""/>: null}
-              <video autoPlay className="modal-video">
-                <source src="/assets/video/ModalVideo.mp4" type="video/mp4" />
+              <video className="modal-video" autoPlay loop>
+                <source src="/assets/video/loadingVideo.mp4" type="video/mp4" />
               </video>
     	      </div>
           </div>

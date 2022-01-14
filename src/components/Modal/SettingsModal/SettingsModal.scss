@@ -1,0 +1,75 @@
+@import '../../../../public/assets/styles/import.scss';
+
+
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../../../../public/assets/fonts/MonumentExtended-Regular.otf');
+}
+
+.settingsModalPage{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #2F404D;
+
+    .settingsModal{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        border: solid 1px #86EBD9;
+        
+        
+        .leftSideMenu{
+            width: 25%;
+            height: 100%;
+            border-right: solid 1px #86EBD9;
+            background: linear-gradient(98deg, rgba(63, 137, 141, 44%), rgba(196, 196, 196,0) 70.71%),
+        } 
+
+        .rightSideMenu{
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(217deg, rgba(63, 137, 141,.8), rgba(255,0,0,0) 70.71%), 
+        }
+    }
+}
+
+
+.userAvatar{
+    display: flex;
+    align-items: center;
+
+    .avatarImg{
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 100px;
+    }
+
+    .avatarName{
+        color: white;
+    }
+}
+
+.settingsList{
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-left: 65px;
+    font-size: 12px;
+
+    .settingsItem{
+        color: #86EBD9;
+        font-family: 'MonumentExtended', Arial, Helvetica, sans-serif;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+} 
+
+
+
