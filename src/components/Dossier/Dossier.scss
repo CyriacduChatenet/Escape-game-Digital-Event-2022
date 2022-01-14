@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dossierItem{
+    width: 88px;
+    height: 72px;
+    background: url('./img/Group\ 14.png');
+    margin: 2vw;
+}
+.second{
+    background-color: pink;
+}
+.popUpDossier{
+    background: black;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 80%;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.closeDossier{
+    width: 2vw;
+    height: 2vw;
+    background-color: green;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
