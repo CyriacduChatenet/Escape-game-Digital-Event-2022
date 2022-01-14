@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Dossier } from '../../components/Dossier/Dossier';
 import './SessionChoicePage.scss';
 export const SessionChoicePage = () => {
     const [credentials, setCredentials] = useState({
@@ -24,7 +23,6 @@ export const SessionChoicePage = () => {
                     />
                 <NavLink to='/dashboard'><a>Se connecter</a></NavLink>
             </form>
-            <Dossier/>
         </div>
     )
 }
