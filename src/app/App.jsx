@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {Homepage} from '../pages/Homepage/Homepage'
+import { Homepage } from '../pages/Homepage/Homepage'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
 import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage";
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
-import {WindowsLoader} from '../pages/WindowsLoader/WindowsLoader'
+import { WindowsLoader } from '../pages/WindowsLoader/WindowsLoader'
 
 function App() {
   return (
