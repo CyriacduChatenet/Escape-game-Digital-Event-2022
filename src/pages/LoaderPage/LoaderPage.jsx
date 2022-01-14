@@ -1,20 +1,11 @@
-import { useEffect } from 'react';
-import './LoaderPage.scss';
+import "./LoaderPage.scss";
 
 export const LoaderPage = () => {
-
-    useEffect(() => {
-        const Redirection = () => {
-            setTimeout(() => {
-            }, 3000)
-        }
-
-        Redirection();
-    },[])
-
-    return (
-        <div>
-            <h1>Loading</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <video  autoPlay className="loader_video" loop muted>
+        <source src="/assets/video/loadingVideo.mp4" type="video/mp4" />
+      </video>
+    </div>
+  );
+};

@@ -1,9 +1,32 @@
 import './DashboardPage.scss';
+import { Terminal } from "../../components/Terminal/Terminal"
+import { ProgressBar } from '../../components/ProgressBar/ProgressBar';
+import { Chat } from '../../components/Chat/Chat';
+import { Missions } from '../../components/Missions/Missions';
+import { Dock } from '../../components/Dock/Dock';
+import { ShortTerminal } from '../../components/ShortTerminal/ShortTerminal';
+import { Modal } from "../../components/Modal/Modal";
+import { Dossier } from '../../components/Dossier/Dossier';
 export const DashboardPage = () => {
     return (
         <div>
             <div className="video-container">
-                <img src="/assets/images/bg_matr.jpg" alt="" className="video" />
+                <video autoPlay className='video' muted loop>
+                    <source src="/assets/video/background-loop.mp4" type="video/mp4" />
+                </video>
+                <Terminal/>
+                <ProgressBar/>
+                <div className = 'dossierDivDashboard'>
+                    <Dossier/>
+                    <Dossier/>
+                    <Dossier/>
+                    <Dossier/>
+                </div>
+                <Chat/>
+                <Missions/>
+                <Dock/>
+                <ShortTerminal/>
+                <Modal/>
             </div>
         </div>
     )
