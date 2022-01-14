@@ -24,6 +24,8 @@ const ENDPOINT = "http://127.0.0.1:4001";
 //   messagingSenderId: "447258039553",
 //   appId: "1:447258039553:web:37615cc46a9d09c8ed3700",
 // };
+import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins"
+import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 
 function App() {
   const app = initializeApp(firebaseConfig);
@@ -50,15 +52,14 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route exact path="/" element={ <Homepage/> }/>
-          <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
-          <Route exact path="/session" element={ <SessionChoicePage/> }/>
-          <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
-          <Route exact path="/dashboard" element={ <DashboardPage/> }/>
-          <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
-          <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
-
-          <Route path='*' exact={true} element={ <ErrorPage/>} />
+          <Route path="/" element={ <Homepage/> }/>
+          <Route path="/loaderpage" element={ <LoaderPage/> }/>
+          <Route path="/session" element={ <SessionChoicePage/> }/>
+          <Route path="/windowsloader" element={<WindowsLoader/> }/>
+          <Route path="/dashboard" element={ <DashboardPage/> }/>
+          <Route path="/error" element={ <ErrorPage/> }/>
+          <Route path="/jeu-pingouins" element={ <JeuPingouins/> }/>
+          <Route path="/settings-modal" element={ <SettingsModal/> }/>
         </Routes>
       </Router>
     </div>
