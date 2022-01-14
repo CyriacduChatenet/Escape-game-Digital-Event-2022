@@ -6,6 +6,7 @@ import { Missions } from '../../components/Missions/Missions';
 import { Dock } from '../../components/Dock/Dock';
 import { ShortTerminal } from '../../components/ShortTerminal/ShortTerminal';
 import { Modal } from "../../components/Modal/Modal";
+import { Dossier } from '../../components/Dossier/Dossier';
 export const DashboardPage = () => {
     return (
         <div>
@@ -15,6 +16,12 @@ export const DashboardPage = () => {
                 </video>
                 <Terminal/>
                 <ProgressBar/>
+                <div className = 'dossierDivDashboard'>
+                    <Dossier/>
+                    <Dossier/>
+                    <Dossier/>
+                    <Dossier/>
+                </div>
                 <Chat/>
                 <Missions/>
                 <Dock/>

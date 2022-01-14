@@ -3,12 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.container{
+    position: relative;
+}
+.nameDossierDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
 .dossierItem{
     width: 88px;
     height: 72px;
     background: url('./img/Group\ 14.png');
     margin: 2vw;
+    margin-bottom: 0.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .second{
     background-color: pink;
@@ -24,14 +37,22 @@
     left: 200px;
     width: 50%;
     padding: 100px;
-    display: flex;
     flex-direction: row;
 }
 .closeDossier{
-    width: 2vw;
+    width: 2.5vw;
     height: 2vw;
-    background-color: green;
+    background: url('../../../public/assets/images/terminal-bar/Bar-top-right.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
     position: absolute;
-    top: 5%;
-    right: 5%;
+    bottom: 97%;
+    left: 94%;
+}
+.loaderCircle{
+    width: 2.1vw;
+    height: 2.1vw;
+    background-color: red;
+    border-radius: 100%;
+    margin-top: 5%;
 }
