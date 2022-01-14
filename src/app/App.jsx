@@ -12,8 +12,10 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
 import socketIOClient from "socket.io-client";
 import firebaseConfig from "../firebaseConfig";
-const ENDPOINT = "http://127.0.0.1:4001";
+import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 
+
+const ENDPOINT = "http://127.0.0.1:4001";
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyBni909mGq1PPCwnXZIViumjO6JdP4fUBQ",
@@ -24,8 +26,6 @@ const ENDPOINT = "http://127.0.0.1:4001";
 //   messagingSenderId: "447258039553",
 //   appId: "1:447258039553:web:37615cc46a9d09c8ed3700",
 // };
-import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins"
-import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 
 function App() {
   const app = initializeApp(firebaseConfig);
@@ -33,12 +33,12 @@ function App() {
   const [response, setResponse] = useState("");
 
   useEffect(()=> {
-    getDataFireStore()
+    // getDataFireStore()
 
-    const socket = socketIOClient(ENDPOINT);
-    socket.on("connection", data => {
-      setResponse(data);
-    });
+    // const socket = socketIOClient(ENDPOINT);
+    // socket.on("connection", data => {
+    //   setResponse(data);
+    // });
   },[])
 
   const getDataFireStore = async () => {
@@ -59,6 +59,7 @@ function App() {
           <Route path="/dashboard" element={ <DashboardPage/> }/>
           <Route path="/error" element={ <ErrorPage/> }/>
           <Route path="/jeu-pingouins" element={ <JeuPingouins/> }/>
+          <Route path="/jeu-dechets" element={ <JeuDechets/> }/>
           <Route path="/settings-modal" element={ <SettingsModal/> }/>
         </Routes>
       </Router>

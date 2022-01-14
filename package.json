@@ -10,12 +10,9 @@
     "firebase": "^9.6.3",
     "gsap": "^3.9.1",
     "mapbox-gl": "^2.6.1",
-<<<<<<< HEAD
-=======
-    "progressbar.js": "^1.1.0",
->>>>>>> William
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-map-gl": "^6.1.18",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-speech-recognition": "^3.9.0",

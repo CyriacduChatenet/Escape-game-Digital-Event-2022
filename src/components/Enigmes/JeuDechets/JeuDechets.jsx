@@ -1,55 +1,97 @@
 import "./JeuDechets.scss";
-import mapboxgl from "mapbox-gl";
+
 import geoJson from "./dechets.json";
 import { useState, useEffect, useRef } from "react";
 
+import ControlPanel from './control-panel';
+import Pins from './pins';
+import CityInfo from './city-info';
+
+import CITIES from './cities.json';
+
+import MapGL, {
+  Popup,
+  NavigationControl,
+  FullscreenControl,
+  ScaleControl,
+  GeolocateControl
+} from 'react-map-gl';
+
 export const JeuDechets = () => {
   
-  mapboxgl.accessToken = "pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg"
+  // mapboxgl.accessToken = "pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg"
 
-  const mapContainer = useRef(null);
-  const map = useRef(null);
-  const [lng, setLng] = useState(-0.57);
-  const [lat, setLat] = useState(44.83);
-  const [zoom, setZoom] = useState(9);
-  const data = [
-    {
-        "id" : 1,
-        "lat" : 44.8357766,
-        "lng" : -0.571498
-    },
-    {
-        "id" : 2,
-        "lat" : 44.8404,
-        "lng" : -0.5805
-    },
-    {
-        "id" : 3,
-        "lat" : 44.83115005493164,
-        "lng" : -0.5727508664131165
-    } 
-]
 
-  useEffect(() => {
-    if (map.current) return; // initialize map only once
-    map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [lng, lat],
-        zoom: zoom,
-    });
+  const TOKEN = 'pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg'; // Set your mapbox token here
 
-    // const marker1 = new mapboxgl.Marker()
-    // .setLngLat([-0.571498, 44.8357766])
-    // .addTo(map)
+  const geolocateStyle = {
+    top: 0,
+    left: 0,
+    padding: '10px'
+  };
+  
+  const fullscreenControlStyle = {
+    top: 36,
+    left: 0,
+    padding: '10px'
+  };
+  
+  const navStyle = {
+    top: 72,
+    left: 0,
+    padding: '10px'
+  };
+  
+  const scaleControlStyle = {
+    bottom: 36,
+    left: 0,
+    padding: '10px'
+  };
 
-  });
+const [viewport, setViewport] = useState({
+  latitude: 40,
+  longitude: -100,
+  zoom: 3.5,
+  bearing: 0,
+  pitch: 0
+});
+const [popupInfo, setPopupInfo] = useState(null);
+ 
 
   return (
     <div className="JeuDechets">
       <h1>Jeu Dechets</h1>
       <div className="mapbox-container">
-        <div ref={mapContainer} id="mapbox-dechets"/>
+          <MapGL
+            {...viewport}
+            width="100%"
+            height="100%"
+            mapStyle="mapbox://styles/mapbox/dark-v9"
+            onViewportChange={setViewport}
+            mapboxApiAccessToken={TOKEN}
+          >
+            <Pins data={CITIES} onClick={setPopupInfo} />
+
+            {popupInfo && (
+              <Popup
+                tipSize={5}
+                anchor="top"
+                longitude={popupInfo.longitude}
+                latitude={popupInfo.latitude}
+                closeOnClick={false}
+                onClose={setPopupInfo}
+              >
+                <CityInfo info={popupInfo} />
+              </Popup>
+            )}
+
+            <GeolocateControl style={geolocateStyle} />
+            <FullscreenControl style={fullscreenControlStyle} />
+            <NavigationControl style={navStyle} />
+            <ScaleControl style={scaleControlStyle} />
+          </MapGL>
+
+          <ControlPanel />
       </div>
     </div>
   );
