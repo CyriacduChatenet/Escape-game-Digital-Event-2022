@@ -5,6 +5,7 @@ import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage"
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
 import {WindowsLoader} from '../pages/WindowsLoader/WindowsLoader'
+import { JeuPingouins } from "../pages/Enigmes/JeuPingouins/JeuPingouins"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/windowsloader" element={<WindowsLoader/> }/>
           <Route path="/dashboard" element={ <DashboardPage/> }/>
           <Route path="/error" element={ <ErrorPage/> }/>
+          <Route path="/jeu-pingouins" element={ <JeuPingouins/> }/>
         </Routes>
       </Router>
     </div>

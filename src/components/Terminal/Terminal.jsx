@@ -12,7 +12,7 @@ export const Terminal = () => {
                 </div>
                 <div className = 'text-div'>  
                     <h4 className="terminal-title">{terminalTitle}</h4>
-                    <p className='terminal-text'>{ terminalText} <br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolorem cupiditate sequi. <br /> Lorem, ipsum dolor.</p>
+                    <p className='terminal-text' >{ terminalText} <br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolorem cupiditate sequi. <br /> Lorem, ipsum dolor.</p>
                 </div>
             </div>
         </div>
