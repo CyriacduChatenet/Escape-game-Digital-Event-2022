@@ -16,6 +16,11 @@
 //     }
 // }
 
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('opentype');
+}
+
 .session-page {
     background-image: url("../../../public/assets/images/background-desktop/bg_matr.jpg");
     width: 100vw;
@@ -25,25 +30,36 @@
     align-items: center;
     flex-direction: column;
 
-    img {
-        margin-bottom: 2em;
+    h1 {
+        color: white;
     }
 
-    .session-form {
+    .personnages {
         display: flex;
-        flex-direction: column;
 
-        input {
-            border: 1px solid black;
-            padding: 6px;
+        .personnage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 3em;
+
+            img {
+                filter: brightness(0.2);
+            }
+
+            img:hover {
+                filter: brightness(1);
+            }
+
+            p {
+                font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
+                margin-top: 1em;
+                color: white;
+                font-size: 14px;
+            }
         }
-
-        a {
-            color: white;
-            margin-top: 2em;
-            text-align: center;
-        }
-
     }
+
 }
 
