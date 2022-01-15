@@ -7,6 +7,8 @@ import { Dock } from '../../components/Dock/Dock';
 import { ShortTerminal } from '../../components/ShortTerminal/ShortTerminal';
 import { Modal } from "../../components/Modal/Modal";
 import { Dossier } from '../../components/Dossier/Dossier';
+import JusticeDossier from '../../components/Enigmes/justice/JusticeDossier';
+import ClimatDossier from '../../components/Enigmes/climat/ClimatDossie';
 export const DashboardPage = () => {
     return (
         <div>
@@ -14,20 +16,18 @@ export const DashboardPage = () => {
                 <video autoPlay className='video' muted loop>
                     <source src="/assets/video/background-loop.mp4" type="video/mp4" />
                 </video>
-                <Terminal/>
-                <ProgressBar/>
-                <div className = 'dossierDivDashboard'>
-                    <Dossier/>
-                    <Dossier/>
-                    <Dossier/>
-                    <Dossier/>
-                </div>
-                <Chat/>
-                <Missions/>
-                <Dock/>
-                <ShortTerminal/>
-                <Modal/>
             </div>
+            <Terminal/>
+            <ProgressBar/>
+            <div className = 'dossierDivDashboard'>
+                <JusticeDossier/>
+                <ClimatDossier/>
+            </div>
+            <Chat/>
+            <Missions/>
+            <Dock/>
+            <ShortTerminal/>
+            <Modal/>
         </div>
     )
 }

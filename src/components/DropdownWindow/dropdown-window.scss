@@ -1,0 +1,29 @@
+.window-content{
+    background: linear-gradient(90.13deg, rgba(63, 137, 141, 0.19) 0.43%, rgba(196, 196, 196, 0) 145.64%);
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(63, 137, 141, 0.19);
+    // margin: 10px;
+    color: #fff;
+
+    &:not(.show){
+        display:none;
+    }
+    &.show{
+        display: block;
+    }
+}
+.window-header{
+    display: flex;
+    justify-content: flex-end;
+
+    img{
+        margin: 0 -7px;
+    }
+}
+
+.terminal-btn{
+    &:hover{
+        cursor: pointer;
+    }
+}

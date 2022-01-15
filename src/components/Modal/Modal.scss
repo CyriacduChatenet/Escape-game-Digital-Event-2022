@@ -29,7 +29,9 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 10;
     background-color: rgba(34, 34, 34, 0.76);
-    transform: translateY(-10vh);
+    // transform: translateY(-10vh);
 }

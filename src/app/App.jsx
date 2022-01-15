@@ -15,6 +15,8 @@ import firebaseConfig from "../firebaseConfig";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 
+import "./index.scss"
+
 const ENDPOINT = "http://127.0.0.1:4001";
 
 // const firebaseConfig = {
