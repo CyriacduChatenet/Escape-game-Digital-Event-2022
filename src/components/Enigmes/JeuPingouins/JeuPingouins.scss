@@ -1,16 +1,7 @@
 @import '../../../../public/assets/styles/import.scss';
 
-.mapbox-container {
-    width: 60vw;
-    height: 60vh;
-    transform: translateX(35%) translateY(30%);
-}
-
-#mapbox-pingouins {
-    width: 100%;
-    height: 100%;
-}
-
-.mapboxgl-ctrl-attrib-inner {
-    display: none;
+.jeuPingouins {
+  width: 50vw;
+  height: 50vh;
+  background-color: red;
 }

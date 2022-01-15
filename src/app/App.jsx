@@ -10,7 +10,6 @@ import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
-import socketIOClient from "socket.io-client";
 import firebaseConfig from "../firebaseConfig";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
