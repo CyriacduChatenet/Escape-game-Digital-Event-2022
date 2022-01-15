@@ -1,20 +1,20 @@
 import { useEffect } from 'react';
 import './Homepage.scss';
+import {LoaderPage} from "../LoaderPage/LoaderPage"
+import { useNavigate } from "react-router-dom"
 
 export const Homepage = () => {
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const Redirection = () => {
-            setTimeout(() => {
-            }, 3000)
-        }
-
-        Redirection();
+        setTimeout(() => {
+            navigate("/session");
+        }, 3000)
     },[])
 
     return (
         <div>
-            <h1>Homepage</h1>
+            <LoaderPage />
         </div>
     )
 }

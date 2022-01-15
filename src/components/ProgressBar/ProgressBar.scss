@@ -1,16 +1,18 @@
 @import '../../../public/assets/styles/import.scss';
 
 .progress-bar {
-    width: 32vw;
-    height: 5vh;
-    position: absolute;
-    z-index: 2;
-    transform: translateX(34vw) translateY(3vh);
-}
+    height: 100px;
+    position: fixed;
+    top: -20px;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    text-align: center;
 
-.progress-bar-bg{
-    position: absolute;
-    z-index: 1;
+    img{
+        width: 500px;
+        height: 100px;
+    }
 }
 
 .progress-bar-chart {

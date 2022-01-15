@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Switch,Routes,Route } from "react-router-dom"
 import {Homepage} from '../pages/Homepage/Homepage'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
 import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage";
@@ -10,10 +10,11 @@ import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
-import socketIOClient from "socket.io-client";
 import firebaseConfig from "../firebaseConfig";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
+
+import "./index.scss"
 
 const ENDPOINT = "http://127.0.0.1:4001";
 
@@ -50,21 +51,21 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route exact path="/" element={ <Homepage/> }/>
-          <Route path="/session" element={ <SessionChoicePage/> }/>
-          <Route path="/settings-modal" element={ <SettingsModal/> }/>
-          <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
-          <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
-          <Route exact path="/dashboard" element={ <DashboardPage/> }/>
-          <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
-          <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
-          <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
+      <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={ <Homepage/> }/>
+            <Route path="/session" element={ <SessionChoicePage/> }/>
+            <Route path="/settings-modal" element={ <SettingsModal/> }/>
+            <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
+            <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
+            <Route exact path="/dashboard" element={ <DashboardPage/> }/>
+            <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
+            <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
+            <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
 
-          <Route path='*' exact={true} element={ <ErrorPage/>} />
-        </Routes>
-      </Router>
+            <Route path='*' exact={true} element={ <ErrorPage/>} />
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
