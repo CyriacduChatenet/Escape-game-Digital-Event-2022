@@ -54,7 +54,7 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route exact path="/" element={ <Homepage/> }/>
-            <Route path="/choix-des-personnages" element={ <CharacterChoicePage/> }/>
+            <Route path="/choix-de-personnages" element={ <CharacterChoicePage/> }/>
             <Route path="/settings-modal" element={ <SettingsModal/> }/>
             <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
             <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
