@@ -1,59 +1,20 @@
+import { useState } from "react";
 import "./JeuPingouins.scss";
 import SpeechRecognition from 'react-speech-recognition/lib/SpeechRecognition';
 import { useSpeechRecognition } from 'react-speech-recognition';
-import { useState, useRef } from "react";
 
 export const JeuPingouins = () => {
 
+  const [translateXValue, setTranslateXValue] = useState(0)
+
   const commands = [
     {
-      command: "open *",
-      callback: (website) => {
-        window.open("http://" + website.split(" ").join("") +".com");
-      },
-    },
-    {
-      command: "change background colour to *",
-      callback: (color) => {
-        document.body.style.background = color;
-      },
-    },
-    {
-      command: "reset",
-      callback: () => {
-        handleReset();
-      },
-    },
-    ,
-    {
-      command: "reset background colour",
-      callback: () => {
-        document.body.style.background = `rgba(0, 0, 0, 0.8)`;
-      },
-    },
-  ];
+      command : "Go right",
+      callback : () => {setTranslateXValue(100)}
+    }
+  ]
 
-  const [isListening, setIsListening] = useState(false)
-  const {transcript, resetTranscript} = useSpeechRecognition({commands})
-  const microphoneRef = useRef(null)
-
-  const handleListening = () => {
-    setIsListening(true);
-    SpeechRecognition.startListening({
-      continuous : true 
-    })
-  }
-
-  const handleStopListening = () => {
-    setIsListening(false);
-    SpeechRecognition.stopListening();
-  }
-
-  const handleReset = () => {
-    handleStopListening();
-    resetTranscript();
-
-  }
+  const {transcript} = useSpeechRecognition({commands})
 
   return (
     <div className="JeuPingouins">
@@ -72,10 +33,7 @@ export const JeuPingouins = () => {
       <div className="game-content">
         <div className="map-container">
           <div className="animals-container">
-            <div className="animals"></div>
-            <div className="animals"></div>
-            <div className="animals"></div>
-            <div className="animals"></div>
+            <div className="animals" style={{transform:`translateX(${translateXValue}px)`}}></div>
           </div>
         </div>
         <div className="controlls-container">
@@ -132,7 +90,9 @@ export const JeuPingouins = () => {
             </div>
           </div>
           <div className="controlls-row">
-            <div className="controlls-item"></div>
+            <div className="controlls-item">
+              <button className="record-button"><img src="/assets/images/polar-game/microphone-icon.png" alt="" className="micro" onClick={SpeechRecognition.startListening} /></button>
+            </div>
           </div>
         </div>
       </div>
