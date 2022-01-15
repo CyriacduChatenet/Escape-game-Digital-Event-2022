@@ -1,24 +1,13 @@
 @import '/public/assets/styles/import.scss';
 
-// @media all and (min-width : 1200px) {
-//     .Session-page {
-//         width: 100vw;
-//         height: 100vh;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//     }
-
-//     .Session-img {
-//         width: 10vw;
-//         height: 15vh;
-//         background-color: rebeccapurple;
-//     }
-// }
-
 @font-face {
     font-family: "MonumentExtendedLight";
     src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('opentype');
+}
+
+@font-face {
+    font-family: "MonumentExtendedBlack";
+    src: url("../../../public/assets/fonts/MonumentExtended-Black.otf") format('opentype');
 }
 
 .session-page {
@@ -30,36 +19,183 @@
     align-items: center;
     flex-direction: column;
 
-    h1 {
+    h1, p {
         color: white;
+    }
+
+    p {
+        font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
     }
 
     .personnages {
         display: flex;
+        justify-content: center;
+        align-items: center;
 
         .personnage {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 3em;
+            text-align: center;
+            margin: 2em;
 
-            img {
-                filter: brightness(0.2);
+            .personnage-detail {
+
+                img {
+                    filter: brightness(0.3);
+                    cursor: pointer;
+                    &:hover {
+                        filter: brightness(1);
+                    }
+                }
+
+                .personnage-onclic {
+                    display: none;
+                }
+
             }
 
-            img:hover {
-                filter: brightness(1);
-            }
-
-            p {
-                font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
-                margin-top: 1em;
-                color: white;
-                font-size: 14px;
-            }
         }
+
     }
 
 }
+
+
+
+
+// .personnage-detail:hover {
+//     padding: 1em;
+//     background-color: rgba(196, 196, 196, .5);
+
+//     img {
+//         filter: brightness(1);
+//     }
+
+//     .personnage-onclic {
+//         display: block;
+
+//         p {
+//             font-size: 11px;
+//             margin: 8px 0 8px 0;
+//         }
+
+//         button {
+//             background-color: rgba(196, 196, 196, .7);
+//             width: 140px;
+//             padding: 6px 12px 4px 12px;
+//             color: white;
+//             font-family: "MonumentExtendedBlack", Arial, Helvetica, sans-serif;
+//             cursor: pointer;
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+
+
+// .session-page {
+//     background-image: url("../../../public/assets/images/background-desktop/bg_matr.jpg");
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+
+//     h1, p {
+//         color: white;
+//     }
+
+//     .personnages {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         .personnage {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             flex-direction: column;
+//             margin: 2em;
+
+
+//             .personnage-test {
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 justify-content: center;
+
+//                 .personnage-details-test {
+//                     display: none;
+//                 }
+            
+//             }
+
+//         }
+
+//         .personnage:hover {
+//             width: 300px;
+//             height: 400px;
+
+//             .personnage-test:hover {
+//                 padding: 1em;
+//                 background-color: rgba(196, 196, 196, .5);
+
+//                 .personnage-details-test {
+//                     display: block;
+//                     display: flex;
+//                     flex-direction: column;
+//                     align-items: center;
+//                     justify-content: center;
+//                     text-align: center;
+//                 }
+
+//             }
+
+//         }
+
+//     }
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .personnage {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 3em;
+
+//     img {
+//         filter: brightness(0.2);
+//     }
+
+//     img:hover {
+//         filter: brightness(1);
+//     }
+
+
+
+//     p {
+//         font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
+//         margin-top: 1em;
+//         color: white;
+//         font-size: 14px;
+//     }
+// }
 
