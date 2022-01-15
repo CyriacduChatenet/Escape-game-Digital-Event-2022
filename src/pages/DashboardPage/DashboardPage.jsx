@@ -23,6 +23,7 @@ export const DashboardPage = () => {
                 <JusticeDossier/>
                 <ClimatDossier/>
             </div>
+            
             <Chat/>
             <Missions/>
             <Dock/>
