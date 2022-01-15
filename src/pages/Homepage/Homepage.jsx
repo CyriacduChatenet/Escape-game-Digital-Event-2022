@@ -8,7 +8,7 @@ export const Homepage = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            navigate("/session");
+            navigate("/choix-de-personnages");
         }, 3000)
     },[])
 

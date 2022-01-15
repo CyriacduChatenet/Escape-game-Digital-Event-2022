@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './SessionChoicePage.scss';
+import './CharacterChoicePage.scss';
 
 
-export const SessionChoicePage = () => {
+export const CharacterChoicePage = () => {
     const [credentials, setCredentials] = useState({
         username: "",
     });
@@ -14,13 +14,13 @@ export const SessionChoicePage = () => {
     };
 
     return (
-        <div className="session-page">
-            <h1>Qui es-tu</h1>
+        <div className="character-page">
+            <h1>QUI ES-TU</h1>
             <div className="personnages">
 
                 <div className="personnage">
                     <div className="personnage-detail">
-                        <img src="/assets/images/personnages/le-pecheur.png" alt="session-img" className="Session-img" />
+                        <img src="/assets/images/personnages/le-pecheur.png" alt="character-img" className="character-img" />
                         <div className="personnage-onclic">
                             <p>“Le pêcheur”, homme âgé de 68 ans, retraité, a pour passion d’aller pêcher tous les après-midis. Il ne pense pas du tout aux conséquences que sa passion pour la pêche pourrait entraîner sur le long terme. En effet, une pêche régulière comme celle qu’exerce Marin peut engendrer une extinction de certaines espèces marines.</p>
                             <button>Choisir</button>
@@ -31,21 +31,21 @@ export const SessionChoicePage = () => {
 
                 <div className="personnage">
                     <div className="personnage-detail">
-                        <img src="/assets/images/personnages/la-pollueuse.png" alt="session-img" className="Session-img" />
+                        <img src="/assets/images/personnages/la-pollueuse.png" alt="character-img" className="character-img" />
                     </div>
                     <p>La pollueuse</p>
                 </div>
 
                 <div className="personnage">
                     <div className="personnage-detail">
-                        <img src="/assets/images/personnages/le-campagnard.png" alt="session-img" className="Session-img" />
+                        <img src="/assets/images/personnages/le-campagnard.png" alt="character-img" className="character-img" />
                     </div>
                     <p>Le campagnard</p>
                 </div>
 
                 <div className="personnage">
                     <div className="personnage-detail">
-                        <img src="/assets/images/personnages/la-depensiere.png" alt="session-img" className="Session-img" />
+                        <img src="/assets/images/personnages/la-depensiere.png" alt="character-img" className="character-img" />
                     </div>
                     <p>La dépensière</p>
                 </div>
@@ -55,7 +55,7 @@ export const SessionChoicePage = () => {
     )
 }
 
-/* <form className="session-form">
+/* <form className="character-form">
 <input 
     type="text" 
     name="username" 
