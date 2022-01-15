@@ -2,31 +2,52 @@ import { ChatInput } from '../ChatInput/ChatInput';
 import { ChatReciever } from '../ChatReciever/ChatReciever';
 import { ChatSender } from '../ChatSender/ChatSender';
 import DropdownWindow from '../DropdownWindow/DropdownWindow';
+import firebaseConfig from "../../firebaseConfig";
+import { initializeApp } from 'firebase/app';
+import {getFirestore, collection, onSnapshot, doc} from 'firebase/firestore';
+import { useEffect, useRef, useState } from 'react';
 import './Chat.scss';
+
+
 export const Chat = () => {
+    const [chatMessages, setChatMessages] = useState([])
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const chatColleftionRef = collection(db, 'chat');
+    const chatRef = useRef();
+
+    useEffect(()=> {
+        getMessages()
+    },[])
+
+    useEffect(()=>{
+
+    },[chatMessages])
+
+    const getMessages = async () => {
+        onSnapshot(chatColleftionRef, (querySnapshot) => {
+            const messages = [];
+            querySnapshot.forEach((doc) => {
+                messages.push(doc.data());
+            });
+            messages.sort(function(a,b){
+                return a.createdAt.seconds - b.createdAt.seconds;
+              });
+            setChatMessages(messages)
+            chatRef.current.scrollTop = chatRef.current.scrollHeight
+        })
+    }
+
+
+
     return (
-        <DropdownWindow position={{bottom:50,right:0}}>
-            <div className="chat">
-                <ChatReciever/>
-                <ChatSender/>
-                <ChatReciever/>
-                <ChatSender/>
+        <DropdownWindow position={{bottom:50,right:0,zIndex:9999999}}>
+            <div className="chat" ref={chatRef}>
+                {chatMessages.map(chatObj => (
+                    <ChatReciever chatObj={chatObj} />
+                ))}
             </div>
             <ChatInput/>
         </DropdownWindow>
-        
-        // <div className="chat-container">
-        //      <div className="chat-header">
-        //         <img src="/assets/images/terminal-bar/bar-top-left.png" alt="" className="chat-head" />
-        //         <img src="/assets/images/terminal-bar/Bar-top-right.png" alt="" className="chat-btn" />
-        //     </div>
-        //     <div className="chat">
-        //         <ChatReciever/>
-        //         <ChatSender/>
-        //         <ChatReciever/>
-        //         <ChatSender/>
-        //     </div>
-        //     <ChatInput/>
-        // </div>
     )
 }
