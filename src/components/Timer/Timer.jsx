@@ -3,7 +3,7 @@ import './Timer.scss'
 
 export const Timer = () => {
 
-    const [seconds, setSeconds] = useState(00)
+    const [seconds, setSeconds] = useState(0)
     const [minutes, setMinutes] = useState(30)
     let intervalTime;
     useEffect(()=>{

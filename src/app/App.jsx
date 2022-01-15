@@ -8,6 +8,7 @@ import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
 import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins";
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
+import { JeuJustice } from '../components/Enigmes/JeuJustice/JeuJustice';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
           <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
           <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
+          <Route exact path="/jeu-justice" element={ <JeuJustice/> }/>
 
           <Route path='*' exact={true} element={ <ErrorPage/>} />
         </Routes>

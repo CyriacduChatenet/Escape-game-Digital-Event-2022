@@ -27,19 +27,24 @@
     background-color: pink;
 }
 .popUpDossier{
-    background: rgba( 255, 255, 255, 0.3 );
-    backdrop-filter: blur( 7px );
-    -webkit-backdrop-filter: blur( 7px );
-    border-radius: 10px;
+    background: rgba( 94, 156, 152, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: absolute;
-    top: -20%;
-    right: 150%;
-    width: 200%;
-    height: 25vw;
-    padding: 25px;
+    top: -50%;
+    right: 130%;
+    width: 250%;
+    height: 30vw;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.leftNavDossier{
+    background-color: #62BAB3;
+    border-right: 3px solid #86EBD9;
+    width: 30%;
+    height: 100%;
 }
 .closeDossier{
     width: 2.5vw;
@@ -57,4 +62,26 @@
     background-color: red;
     border-radius: 100%;
     margin-top: 5%;
+}
+.topNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoSystem{
+    background-image: url(../../../public/assets/images/folder-icon/logo-system.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 30px;
+}
+.topDossierNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    width: 60%;
+    margin-left: 10%;
 }
