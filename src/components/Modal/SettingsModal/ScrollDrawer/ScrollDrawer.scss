@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'MonumentExtendedLight';
+    src: url('../../../../../public/assets/fonts/MonumentExtended-Light.ttf');
+}
+
+.scrollDrawerContainer{
+        border: #86EBD9 solid 1px;
+        width: 600px;
+        height: 40px;
+        background-color: transparent;
+        display: flex;
+        gap: 450px;
+        align-items: center;
+        position: relative;
+        
+        .scrollDrawerText{
+            color: white;
+            font-family: 'MonumentExtendedLight';
+        }
+}
+
+.chevronIcon{
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+
+    &:hover{
+        transform: rotate(90deg);
+        transition: .5s;
+    }
+
+    &:not(:hover){
+        transition: .5s;
+    }
+}
