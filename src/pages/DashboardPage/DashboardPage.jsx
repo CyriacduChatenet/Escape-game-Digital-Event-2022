@@ -12,6 +12,7 @@ import ClimatDossier from '../../components/Enigmes/climat/ClimatDossie';
 import { useSelector } from 'react-redux';
 
 export const DashboardPage = () => {
+    // Récupérer le personnage selectionné (dans Redux)
     const {user} = useSelector(state=> state.userReducer)
 
     return (
