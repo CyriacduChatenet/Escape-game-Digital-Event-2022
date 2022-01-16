@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch,Routes,Route } from "react-router-dom"
+import { BrowserRouter,Routes,Route } from "react-router-dom"
 import {Homepage} from '../pages/Homepage/Homepage'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
 import { CharacterChoicePage } from "../pages/CharacterChoicePage/CharacterChoicePage";
@@ -7,25 +7,12 @@ import { WindowsLoader } from '../pages/WindowsLoader/WindowsLoader';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
 import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins";
 import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
-import { initializeApp } from 'firebase/app';
-import { useEffect } from 'react';
-import firebaseConfig from "../firebaseConfig";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
-import { useSelector } from 'react-redux'
-import {getFirestore, doc, updateDoc} from 'firebase/firestore';
 
 import "./index.scss"
 
 function App() {
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  const {user} = useSelector(state=> state.userReducer)
-
-  useEffect(()=> {
-    
-  },[])
-
   return (
       <div className="app">
         <BrowserRouter>
