@@ -1,17 +1,17 @@
 @font-face {
     font-family: "MonumentExtendedBlack";
-    src : url("./fonts/MonumentExtended-Black.otf") format('opentype');
+    src : url("../../../public/assets/fonts/MonumentExtended-Black.otf") format('opentype');
 
    }
 
 @font-face {
     font-family: "MonumentExtendedRegular";
-    src: url("./fonts/MonumentExtended-Regular.otf") format('opentype');
+    src: url("../../../public/assets/fonts/MonumentExtended-Regular.otf") format('opentype');
 }
 
 @font-face {
     font-family: "MonumentExtendedLight";
-    src: url("./fonts/MonumentExtended-Light.ttf") format('truetype');
+    src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
 }
 
 $color-primary: white;

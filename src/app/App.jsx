@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch,Routes,Route } from "react-router-dom"
 import {Homepage} from '../pages/Homepage/Homepage'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
-import { SessionChoicePage } from "../pages/SessionChoicePage/SessionChoicePage";
+import { CharacterChoicePage } from "../pages/CharacterChoicePage/CharacterChoicePage";
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { WindowsLoader } from '../pages/WindowsLoader/WindowsLoader';
 import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
@@ -44,7 +44,7 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route exact path="/" element={ <Homepage/> }/>
-            <Route path="/session" element={ <SessionChoicePage/> }/>
+            <Route path="/choix-de-personnages" element={ <CharacterChoicePage/> }/>
             <Route path="/settings-modal" element={ <SettingsModal/> }/>
             <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
             <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
