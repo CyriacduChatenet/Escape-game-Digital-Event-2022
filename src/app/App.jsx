@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch,Routes,Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch,Routes,Route } from "react-router-dom"
 import {Homepage} from '../pages/Homepage/Homepage'
 import { LoaderPage } from '../pages/LoaderPage/LoaderPage';
 import { CharacterChoicePage } from "../pages/CharacterChoicePage/CharacterChoicePage";
@@ -15,11 +15,9 @@ import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import {store} from "../redux/store"
 import { Provider } from 'react-redux'
+import { JeuJustice } from '../components/Enigmes/JeuJustice/JeuJustice';
 
 import "./index.scss"
-
-const ENDPOINT = "http://127.0.0.1:4001";
-import { JeuJustice } from '../components/Enigmes/JeuJustice/JeuJustice';
 
 function App() {
   const app = initializeApp(firebaseConfig);
@@ -48,7 +46,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={ <Homepage/> }/>
           <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
-          <Route exact path="/session" element={ <SessionChoicePage/> }/>
+          
           <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
           <Route exact path="/dashboard" element={ <DashboardPage/> }/>
           <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
