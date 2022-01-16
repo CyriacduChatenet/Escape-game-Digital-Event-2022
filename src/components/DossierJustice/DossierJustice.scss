@@ -6,17 +6,17 @@
 // .dossierContainer{
 //     position: relative;
 // }
-.nameDossierDiv{
+.nameDossierJusticeDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
 }
-.dossierItem{
+.dossierJusticeItem{
     width: 88px;
     height: 72px;
-    background: url('./img/Group\ 14.png');
+    background: url('../../../public/assets/images/folder-icon/folder-icon.png');
     margin: 2vw;
     margin-bottom: 0.2vw;
     display: flex;
@@ -26,27 +26,24 @@
 .second{
     background-color: pink;
 }
-.popUpDossier{
+.popUpDossierJustice{
     background: rgba( 94, 156, 152, 0.5 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 10.5px );
     -webkit-backdrop-filter: blur( 10.5px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    position: absolute;
-    top: -50%;
-    right: 130%;
-    width: 250%;
+    width: 50%;
     height: 30vw;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.leftNavDossier{
+.leftNavDossierJustice{
     background-color: #62BAB3;
-    border-right: 3px solid #86EBD9;
+    border-right: 2px solid #86EBD9;
     width: 30%;
     height: 100%;
 }
-.closeDossier{
+.closeDossierJustice{
     width: 2.5vw;
     height: 2vw;
     background: url('../../../public/assets/images/terminal-bar/Bar-top-right.png');
@@ -56,32 +53,95 @@
     bottom: 97%;
     left: 94%;
 }
-.loaderCircle{
+.loaderCircleJustice{
     width: 2.1vw;
     height: 2.1vw;
     background-color: red;
     border-radius: 100%;
     margin-top: 5%;
 }
-.topNav{
+.topNavJustice{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 30%;
+    margin-bottom: 1%;
 }
-.logoSystem{
+.lineBottom{
+    border-bottom: 2px solid #86EBD9;
+}
+.logoSystemJustice{
     background-image: url(../../../public/assets/images/folder-icon/logo-system.png);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 20px;
     height: 30px;
 }
-.topDossierNav{
+.logoDossierJustice{
+    background-image: url(../../../public/assets/images/folder-icon/folder-icon.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+    margin-right: 5%;
+}
+.topDossierNavJustice{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     color: #FFF;
-    width: 60%;
+    width: 100%;
     margin-left: 10%;
+}
+.rightNavDossierJustice{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 70%;
+}
+.chevron{
+    margin-left: 10%;
+    color: #FFF;
+}
+.middleNavJustice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #86EBD9;
+    padding:1% 0;
+    color: #FFF;
+}
+.nameMiddle{
+    width: 30%;
+}
+.flexName{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modifiedMiddle{
+    width: 30%;
+}
+.widthMiddle{
+    width: 20%;
+}
+.typeMiddle{
+    width: 25%;
+}
+.paddingRightMiddle{
+    padding: 5% 6%;
+}
+.lineRight{
+    padding: 5% 6%;
+    border-right: 2px solid #86EBD9;
+}
+.lineLeft{
+    padding: 5% 6%;
+    border-left: 2px solid #86EBD9;
+}
+.chevronMiddle{
+    transform: rotate(90deg);
 }
