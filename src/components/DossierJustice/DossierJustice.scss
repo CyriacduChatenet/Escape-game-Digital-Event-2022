@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// .dossierContainer{
+//     position: relative;
+// }
+.nameDossierDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.dossierItem{
+    width: 88px;
+    height: 72px;
+    background: url('./img/Group\ 14.png');
+    margin: 2vw;
+    margin-bottom: 0.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second{
+    background-color: pink;
+}
+.popUpDossier{
+    background: rgba( 94, 156, 152, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: absolute;
+    top: -50%;
+    right: 130%;
+    width: 250%;
+    height: 30vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.leftNavDossier{
+    background-color: #62BAB3;
+    border-right: 3px solid #86EBD9;
+    width: 30%;
+    height: 100%;
+}
+.closeDossier{
+    width: 2.5vw;
+    height: 2vw;
+    background: url('../../../public/assets/images/terminal-bar/Bar-top-right.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 97%;
+    left: 94%;
+}
+.loaderCircle{
+    width: 2.1vw;
+    height: 2.1vw;
+    background-color: red;
+    border-radius: 100%;
+    margin-top: 5%;
+}
+.topNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoSystem{
+    background-image: url(../../../public/assets/images/folder-icon/logo-system.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 30px;
+}
+.topDossierNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    width: 60%;
+    margin-left: 10%;
+}

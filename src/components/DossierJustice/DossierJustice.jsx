@@ -1,24 +1,24 @@
-import { useState } from 'react';
-import './Dossier.scss';
+import { useState, useEffect } from 'react'
+import '../Dossier/Dossier.scss'
 
-export const Dossier = () => {
+export const DossierJustice = () => {
 
-    const [dossierJustice, setDossierJustice] = useState(false)
-    console.log('dossierJustice :', dossierJustice);
+    const [dossier, setDossier] = useState(false)
+    console.log('dossierJustice :', dossier);
 
-    const [openJustice, setOpenJustice] = useState(false)
-    console.log('PopUp Open :', openJustice)
+    const [open, setOpen] = useState(false)
+    console.log('PopUp OpenJustice :', open)
 
     return(
-            <div className = 'dossierContainer'>
+        <div className = 'dossierContainer'>
                 <div className = 'nameDossierDiv'>
-                    <div className = 'dossierItem' onDoubleClick={()=>{setDossierJustice(true);setOpenJustice(true);}}>
+                    <div className = 'dossierItem' onDoubleClick={()=>{setDossier(true);setOpen(true);}}>
                         <div className ='loaderCircle'></div>
                     </div>
                     <p>Ecologie</p>
                 </div>
-                <div className ='popUpDossier' style={dossierJustice === false ? {display:'none'} : {display:'flex'}}>
-                    <div className = 'closeDossier' onClick={()=>{setDossierJustice(false)}}></div>
+                <div className ='popUpDossier' style={dossier === false ? {display:'none'} : {display:'flex'}}>
+                    <div className = 'closeDossier' onClick={()=>{setDossier(false)}}></div>
                     <div className = 'leftNavDossier'>
                         <div className = 'dossierItem second'></div>
                     </div>
