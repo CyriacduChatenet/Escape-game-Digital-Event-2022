@@ -9,17 +9,9 @@
     color: white;
 }
 
-.people-picture {
-    width: 3vw;
-    height: 5vh;
-    border: 1px solid #86EBD9;
-    border-radius: 10px;
-    margin-left: 1vw ;
-}
-
 .people-name {
-    margin-right: 2vw;
-    font-size: 2vh;
+    margin-right: 5px;
+    font-size: 14px;
     display: flex;
     justify-content: flex-end;
 }
@@ -27,6 +19,7 @@
     font-size: 1.6vh;
     display: flex;
     justify-content: flex-end;
+    padding-right: 10px;
 }
 .people-info-sender {
     display: flex;

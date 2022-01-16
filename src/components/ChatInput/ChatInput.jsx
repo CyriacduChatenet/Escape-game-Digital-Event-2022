@@ -4,7 +4,7 @@ import firebaseConfig from "../../firebaseConfig";
 import { useState } from 'react';
 import './ChatInput.scss';
 import { v4 as uuidv4 } from 'uuid';
-
+import { useSelector } from 'react-redux'
 
 export const ChatInput = () => {
     const app = initializeApp(firebaseConfig);
@@ -13,6 +13,7 @@ export const ChatInput = () => {
         pseudo: "Username",
         message: "",
     });
+    const {user} = useSelector(state=> state.userReducer)
 
     const handleChange = ({ currentTarget }) => {
         const { value, name } = currentTarget;
@@ -24,7 +25,9 @@ export const ChatInput = () => {
         e.currentTarget.reset()
         const message = {
             ...credentials,
-            createdAt: new Date()
+            createdAt: new Date(),
+            img:user.img,
+            type: user.type
         }
         setDoc(doc(db, "chat",uuidv4()), message);
     }

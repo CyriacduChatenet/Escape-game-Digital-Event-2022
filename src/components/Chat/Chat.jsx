@@ -7,6 +7,7 @@ import { initializeApp } from 'firebase/app';
 import {getFirestore, collection, onSnapshot, doc} from 'firebase/firestore';
 import { useEffect, useRef, useState } from 'react';
 import './Chat.scss';
+import { useSelector } from 'react-redux'
 
 
 export const Chat = () => {
@@ -15,6 +16,7 @@ export const Chat = () => {
     const db = getFirestore(app);
     const chatColleftionRef = collection(db, 'chat');
     const chatRef = useRef();
+    const {user} = useSelector(state=> state.userReducer)
 
     useEffect(()=> {
         getMessages()
@@ -34,13 +36,18 @@ export const Chat = () => {
         })
     }
 
-
-
     return (
         <DropdownWindow position={{bottom:50,right:0,zIndex:9999999}}>
             <div className="chat" ref={chatRef}>
                 {chatMessages.map(chatObj => (
-                    <ChatReciever chatObj={chatObj} />
+                    <>
+                    {console.log("chatObj : ",chatObj)}
+                        {chatObj.type === user.type ? (
+                            <ChatSender chatObj={chatObj} />
+                        ): (
+                            <ChatReciever chatObj={chatObj} />
+                        )}
+                    </>
                 ))}
             </div>
             <ChatInput/>
