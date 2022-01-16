@@ -1,18 +1,13 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Character } from '../../components/Character/Character';
 import './CharacterChoicePage.scss';
+import {store} from "../../redux/store"
 
 
 export const CharacterChoicePage = () => {
-    const [credentials, setCredentials] = useState({
-        username: "",
-    });
-
-    const handleChange = ({ currentTarget }) => {
-        const { value, name } = currentTarget;
-        setCredentials({ ...credentials, [name]: value });
-    };
+    let navigate = useNavigate();
+    const [charChoice,setCharChoice] = useState(null)
 
     const [pecheur, setPecheur] = useState(false);
     const [pollueuse, setPollueuse] = useState(false);
@@ -29,22 +24,37 @@ export const CharacterChoicePage = () => {
     const togglePecheur = (e) => {
         hideAll();
         setPecheur(!pecheur);
+        setCharChoice('pecheur')
     }
 
     const togglePollueuse = (e) => {
         hideAll();
         setPollueuse(!pollueuse);
+        setCharChoice('pollueuse')
     }
 
     const toggleCampagnard = (e) => {
         hideAll();
         setCampagnard(!campagnard);
+        setCharChoice('campagnard')
     }
 
     const toggleDepensiere = (e) => {
         hideAll();
         setDepensiere(!depensiere);
+        setCharChoice('depensiere')
     }
+
+    const handleSelect = () => {
+        const user = {
+            type: charChoice
+        }
+        store.dispatch({ type: 'user/update', payload: {
+            user
+        }})
+        navigate('/dashboard');
+    }
+
 
     return (
         <div className="character-page">
@@ -59,6 +69,7 @@ export const CharacterChoicePage = () => {
                  engendrer une extinction de certaines espèces marines."
                  c_click={(e) => togglePecheur(e)}
                  open={pecheur}
+                 select={handleSelect}
                  />
 
                 <Character img="/assets/images/personnages/la-pollueuse.png"
@@ -68,6 +79,7 @@ export const CharacterChoicePage = () => {
                  des actualités quotidiennes en rapport avec l’écologie."
                  c_click={(e) => togglePollueuse(e)}
                  open={pollueuse}
+                 select={handleSelect}
                  />
 
                 <Character img="/assets/images/personnages/le-campagnard.png"
@@ -76,6 +88,7 @@ export const CharacterChoicePage = () => {
                  history="“Le campagnard”, agriculteur de 42 ans qui utilise des pesticides pour une culture des sols artificielle et contrôlée entraînant un dérèglement de la biodiversité qui n’est plus naturelle suite à la production qui s’intensifie devenant ainsi une production de masse."
                  c_click={(e) => toggleCampagnard(e)}
                  open={campagnard}
+                 select={handleSelect}
                  />
 
                 <Character img="/assets/images/personnages/la-depensiere.png"
@@ -84,6 +97,7 @@ export const CharacterChoicePage = () => {
                  history="“La dépensière”, femme âgée de 20 ans, qui surconsomme quasiment tous les jours en allant faire du shopping dans les magasins alors que de nombreux sites tel que Vinted sont disponibles pour empêcher ce problème et essayer de sauver la planète."
                  c_click={(e) => toggleDepensiere(e)}
                  open={depensiere}
+                 select={handleSelect}
                  />
 
             </div>

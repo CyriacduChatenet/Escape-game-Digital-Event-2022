@@ -1,1 +1,1 @@
-export let UPDATE_USER = "user/update"
+export let USER_UPDATE_ACTION = "user/update"

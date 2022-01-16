@@ -9,7 +9,11 @@ import { Modal } from "../../components/Modal/Modal";
 import { Dossier } from '../../components/Dossier/Dossier';
 import JusticeDossier from '../../components/Enigmes/justice/JusticeDossier';
 import ClimatDossier from '../../components/Enigmes/climat/ClimatDossie';
+import { useSelector } from 'react-redux';
+
 export const DashboardPage = () => {
+    const {user} = useSelector(state=> state.userReducer)
+
     return (
         <div>
             <div className="video-container">
