@@ -20,10 +20,6 @@ export const Chat = () => {
         getMessages()
     },[])
 
-    useEffect(()=>{
-
-    },[chatMessages])
-
     const getMessages = async () => {
         onSnapshot(chatColleftionRef, (querySnapshot) => {
             const messages = [];

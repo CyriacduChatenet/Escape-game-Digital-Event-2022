@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Character } from '../../components/Character/Character';
 import './CharacterChoicePage.scss';
 import {store} from "../../redux/store"
 import characteres from "./characters.json"
+import { initializeApp } from 'firebase/app';
+import {getFirestore, collection, onSnapshot, doc, updateDoc,setDoc} from 'firebase/firestore';
+import firebaseConfig from "../../firebaseConfig";
 
 const initialsToggleState = {
     pecheur: false,
@@ -13,25 +16,63 @@ const initialsToggleState = {
 }
 
 export const CharacterChoicePage = () => {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const characteresColleftionRef = collection(db, 'characters');
     const [toggleState, setToggleState] = useState(initialsToggleState)
+    const [characteresList, setCharactersList] = useState({})
+    
+    useEffect(()=>{
+        // Reset all characters selected in firestore
+        window.addEventListener('keydown', (e) => {
+            if(e.key === 'r' && e.ctrlKey){
+                updateDoc(doc(db, "characters","selected"), initialsToggleState);
+            }
+        })
+        getCharacters()
+        // Don't delete : Init default values in firestore
+        // setDoc(doc(db, "characters","selected"), initialsToggleState);
+    },[])
 
-    const handleSelect = (charactere) => {
-        store.dispatch({ type: 'user/update', payload: {
-            user : {...charactere}
-        }})
-        navigate('/dashboard');
-    }
-
-    const handleToggle = (e,charactere) => {
-        setToggleState({
-            ...initialsToggleState,
-            [charactere.type]: !toggleState[charactere.type]
+    const getCharacters = async () => {
+        onSnapshot(characteresColleftionRef, (querySnapshot) => {
+            let characters = {};
+            querySnapshot.forEach((doc) => {
+                characters = doc.data()
+            });
+            setCharactersList(characters)
         })
     }
 
+    const handleToggle = (e,charactere) => {
+        const isSelected = characteresList[charactere.type]
+        
+        if(!isSelected){
+            setToggleState({
+                ...initialsToggleState,
+                [charactere.type]: !toggleState[charactere.type]
+            })
+        }
+    }
+
+    const handleSelect = (charactere) => {
+        const isSelected = characteresList[charactere.type]
+        // Si le joueur as déja été sélectionné par une autre personnes
+        if(!isSelected){
+            store.dispatch({ type: 'user/update', payload: {
+                user : {...charactere}
+            }})
+    
+            updateDoc(doc(db, "characters","selected"), {
+                [charactere.type]: true
+            });
+            navigate('/dashboard');
+        }
+    }
+
     return (
-        <div className="character-page">
+        <div className="character-page" >
             <h1>QUI ES-TU</h1>
 
             <div className="personnages">
@@ -47,16 +88,7 @@ export const CharacterChoicePage = () => {
                     />
                 ))}
             </div>
+            
         </div>
     )
 }
-
-/* <form className="character-form">
-<input 
-    type="text" 
-    name="username" 
-    placeholder="Enter username" 
-    onChange={handleChange}
-    />
-<NavLink to='/dashboard'><a>Se connecter</a></NavLink>
-</form> */

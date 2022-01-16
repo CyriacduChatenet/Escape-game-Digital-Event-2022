@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, setDoc, doc } from 'firebase/firestore/lite';
-import { useState } from 'react';
 import firebaseConfig from "../../firebaseConfig";
+import { useState } from 'react';
 import './ChatInput.scss';
 import { v4 as uuidv4 } from 'uuid';
 

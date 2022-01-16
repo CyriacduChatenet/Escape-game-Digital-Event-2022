@@ -8,42 +8,26 @@ import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
 import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins";
 import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import firebaseConfig from "../firebaseConfig";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
-import {store} from "../redux/store"
-import { Provider } from 'react-redux'
+import { useSelector } from 'react-redux'
+import {getFirestore, doc, updateDoc} from 'firebase/firestore';
 
 import "./index.scss"
-
-const ENDPOINT = "http://127.0.0.1:4001";
 
 function App() {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
-  const [response, setResponse] = useState("");
+  const {user} = useSelector(state=> state.userReducer)
 
   useEffect(()=> {
-    // getDataFireStore()
-
-    // const socket = socketIOClient(ENDPOINT);
-    // socket.on("connection", data => {
-    //   setResponse(data);
-    // });
+    
   },[])
 
-  const getDataFireStore = async () => {
-    const roomsCol = collection(db, 'rooms');
-    const roomSnapshot = await getDocs(roomsCol);
-    const cityList = roomSnapshot.docs.map(doc => doc.data());
-    console.log(cityList)
-  }
-
   return (
-    <Provider store={store}>
-      <div className="App">
+      <div className="app">
         <BrowserRouter>
             <Routes>
               <Route exact path="/" element={ <Homepage/> }/>
@@ -59,8 +43,7 @@ function App() {
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
         </BrowserRouter>
-      </div>
-    </Provider>
+    </div>
   );
 }
 
