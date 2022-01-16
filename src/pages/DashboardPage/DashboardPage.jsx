@@ -10,10 +10,17 @@ import { Dossier } from '../../components/Dossier/Dossier';
 import JusticeDossier from '../../components/Enigmes/justice/JusticeDossier';
 import ClimatDossier from '../../components/Enigmes/climat/ClimatDossie';
 import { useSelector } from 'react-redux';
+import { useState } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 
 export const DashboardPage = () => {
     // Récupérer le personnage selectionné (dans Redux)
     const {user} = useSelector(state=> state.userReducer)
+
+    useEffect(() => {
+        console.log(user)
+        console.log(user.img)
+    })
 
     return (
         <div>
