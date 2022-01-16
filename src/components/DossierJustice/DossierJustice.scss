@@ -36,10 +36,13 @@
     height: 30vw;
     flex-direction: row;
     flex-wrap: wrap;
+    color: #FFF;
 }
 .leftNavDossierJustice{
     background-color: #62BAB3;
     border-right: 2px solid #86EBD9;
+    padding-top: 12%;
+    padding-left: 3%;
     width: 30%;
     height: 100%;
 }
@@ -95,6 +98,9 @@
     width: 100%;
     margin-left: 10%;
 }
+.systemeDivTop{
+    width: 50%;
+}
 .rightNavDossierJustice{
     display: flex;
     flex-direction: column;
@@ -144,4 +150,59 @@
 }
 .chevronMiddle{
     transform: rotate(90deg);
+}
+.dossierFirst{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1%;
+}
+.dossierJusticeItemsecond{
+    width: 20px;
+    height: 20px;
+    background: url('../../../public/assets/images/folder-icon/folder-icon.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nameBottom{
+    padding-left: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.marginLeftName{
+    margin-left: 5%;
+}
+.marginRightName{
+    margin-right: 7%;
+}
+.dossierSecond, .dossierThird, .dossierFour, .dossierFive, .dossierSix{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+.widthLeftTextAlign{
+    text-align: end;
+}
+.logoSystemesecond{
+    background-image: url(../../../public/assets/images/folder-icon/logo-system.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 15px;
+    height: 25px;
+}
+.leftNavSysteme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
 }
