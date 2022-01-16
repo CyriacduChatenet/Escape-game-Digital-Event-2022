@@ -15,11 +15,10 @@ import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import {store} from "../redux/store"
 import { Provider } from 'react-redux'
-
+import { JeuJustice } from '../components/Enigmes/JeuJustice/JeuJustice';
 import "./index.scss"
 
 const ENDPOINT = "http://127.0.0.1:4001";
-import { JeuJustice } from '../components/Enigmes/JeuJustice/JeuJustice';
 
 function App() {
   const app = initializeApp(firebaseConfig);
@@ -44,21 +43,21 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route exact path="/" element={ <Homepage/> }/>
+          <Route path="/choix-de-personnages" element={ <CharacterChoicePage/> }/>
+          <Route path="/settings-modal" element={ <SettingsModal/> }/>
           <Route exact path="/loaderpage" element={ <LoaderPage/> }/>
-          <Route exact path="/session" element={ <SessionChoicePage/> }/>
           <Route exact path="/windowsloader" element={<WindowsLoader/> }/>
           <Route exact path="/dashboard" element={ <DashboardPage/> }/>
           <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
           <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
           <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
-          <Route exact path="/jeu-justice" element={ <JeuJustice/> }/>
 
           <Route path='*' exact={true} element={ <ErrorPage/>} />
         </Routes>
-      </Router>
+        </BrowserRouter>
     </div>
   );
 }
