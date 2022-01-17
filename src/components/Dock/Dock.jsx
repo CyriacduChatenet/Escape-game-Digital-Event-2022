@@ -1,4 +1,5 @@
 import { DockIcon } from '../DockIcon/DockIcon';
+import { DossierJustice } from '../DossierJustice/DossierJustice';
 import { JeuDechets } from '../Enigmes/JeuDechets/JeuDechets';
 import { JeuPingouins } from '../Enigmes/JeuPingouins/JeuPingouins';
 import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
@@ -12,24 +13,7 @@ export const Dock = () => {
             <div className="row-dock">
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" >
                     {/* Theo remplacer appel component */}
-                </DockIcon>
-                <DockIcon dockText="Justice" dockIcon="/assets/images/dock-icon/justice.png" >
-                    <JeuJustice />
-                </DockIcon>
-                <DockIcon dockText="Extinction" dockIcon="/assets/images/dock-icon/extinction.png" >
-                    <JeuPingouins/>
-                </DockIcon>
-                <DockIcon dockText="Ecologie" dockIcon="/assets/images/dock-icon/ecologie.png" >
-                    <JeuFeuForet />
-                </DockIcon>
-                <DockIcon dockText="Partage" dockIcon="/assets/images/dock-icon/partage.png" >
-
-                </DockIcon>
-                <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >
-                    <JeuClimat/>
-                </DockIcon>
-                <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >
-                    <JeuDechets />
+                    <DossierJustice/>
                 </DockIcon>
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" ></DockIcon>
                 <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />
