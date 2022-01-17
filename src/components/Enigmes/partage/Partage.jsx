@@ -28,7 +28,7 @@ const Partage = (e) => {
                 <Tuyau tuyau={tuyau} key={index} setSelected={setSelected} selected={selected} />
             ))}
 
-            <button onClick={handleClick}>Valier</button>
+            <button className="partage-validated" onClick={handleClick}>Valier</button>
             {showResult && (
                 <p id="result">
                     {isValid ? "Good job" : "Perdu"}
