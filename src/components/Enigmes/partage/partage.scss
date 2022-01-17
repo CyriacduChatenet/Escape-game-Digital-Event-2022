@@ -1,0 +1,20 @@
+.tuyau{
+    position: absolute;
+    z-index: 9;
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
+.draggable-container{
+    height: 100vh;
+    
+}
+.place-tuyau{
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+}
