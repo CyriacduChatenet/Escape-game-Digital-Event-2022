@@ -7,12 +7,19 @@ const Partage = (e) => {
     const [tuyaux, setTuyaux] = useState(initialsTuyaux)
     const [selected, setSelected] = useState([])
     const [isValid,setIsValid] = useState(false)
+    const [showResult, setShowResult] =useState(false)
 
     const handleClick = () => {
         // console.log(selected)
         let results = []
         selected.map(el => results.push(el.good))
         results.includes(false) ? setIsValid(false) : setIsValid(true)
+
+        setShowResult(true)
+
+        setTimeout(() => {
+            setShowResult(false)
+        }, 4000);
     }
 
     return ( 
@@ -22,9 +29,11 @@ const Partage = (e) => {
             ))}
 
             <button onClick={handleClick}>Valier</button>
-            <p id="result">
-                {isValid ? "Good job" : "Perdu"}
-            </p>
+            {showResult && (
+                <p id="result">
+                    {isValid ? "Good job" : "Perdu"}
+                </p>
+            )}
         </div>
      );
 }
