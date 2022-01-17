@@ -9,8 +9,10 @@ import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins";
 import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
+import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 
 import "./index.scss"
+import { Modal } from "@mui/material";
 
 function App() {
   return (
@@ -25,7 +27,6 @@ function App() {
               <Route exact path="/dashboard" element={ <DashboardPage/> }/>
               <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
               <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
-              <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
