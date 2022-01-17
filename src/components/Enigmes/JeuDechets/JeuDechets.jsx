@@ -22,7 +22,6 @@ export const JeuDechets = () => {
 
     return (
         <div className="JeuDechets">
-            <h1>Jeu Dechets</h1>
             <div className="mapbox-container">
                 <MapGL
                     {...viewport}

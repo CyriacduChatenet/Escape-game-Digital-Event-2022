@@ -1,26 +1,19 @@
 @import '../../../../public/assets/styles/import.scss';
 
 .JeuPingouins{
+<<<<<<< HEAD
     width: 100%;
     height: 100%;
     // transform: translateX(20%) translateY(10vh);
 }
 
 .JeuPingouins-header{
+=======
+>>>>>>> aeda1fdb88e848bd248bdc691c63770971710f43
     width: 100%;
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.header-cross {
-    margin: 0 3vw 0 5vw;
-    transform: scale(2);
-}
-
-.header-banner {
-    transform: scale(2);
+    height: 100%;
+    position: absolute;
+    z-index: 3;
 }
 
 .game-content {
