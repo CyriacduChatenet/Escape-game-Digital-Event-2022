@@ -3,8 +3,6 @@ import "./SettingsModal.scss";
 import  { DropdownChild } from './ScrollDrawer/DropdownChild'
 import { useState } from "react";
 
-
-
 export const SettingsModal = () => {
     const [contentDropdown , setContentDropdown] = useState([
       'TU','NE','VAS','RIEN', 'TROUVER',  'ICI', ':P'
