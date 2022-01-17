@@ -11,7 +11,7 @@ import { JeuClimat } from '../../components/Enigmes/JeuClimat/JeuClimat';
 import DraggableFolder from '../../components/DraggableFolder/DraggableFolder';
 
 export const DashboardPage = () => {
-   
+
     return (
         <div>
             <div className="video-container">

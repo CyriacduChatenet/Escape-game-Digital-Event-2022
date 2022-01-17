@@ -22,3 +22,24 @@
     font-weight: 100;
     margin-left: 1vw;
 }
+
+.mission{
+    position: relative;
+
+    input{
+        position: absolute;
+        top: -999999999px;
+    }
+
+    .checked::before{
+        content: "";
+        width: 8px;
+        height: 8px;
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        opacity: .8;
+        top: 4px;
+        left: 3px;
+    }
+}
