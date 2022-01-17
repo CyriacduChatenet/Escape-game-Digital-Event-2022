@@ -26,7 +26,7 @@ export const CharacterChoicePage = () => {
     useEffect(()=>{
         // Reset all characters selected in firestore
         window.addEventListener('keydown', (e) => {
-            if(e.key === 'r' && e.ctrlKey){
+            if(e.key === 'a' && e.ctrlKey){
                 updateDoc(doc(db, "characters","selected"), initialsToggleState);
             }
         })
