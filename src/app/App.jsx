@@ -10,6 +10,7 @@ import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
+import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 
 import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
@@ -30,6 +31,7 @@ function App() {
               <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
               <Route exact path="/jeu-justice" element={ <JeuJustice/> }/>
               <Route exact path="/Partage" element={ <Partage /> }/>
+              <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
