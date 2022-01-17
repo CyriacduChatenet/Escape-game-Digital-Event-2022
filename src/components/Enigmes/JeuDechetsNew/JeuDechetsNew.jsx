@@ -13,7 +13,6 @@ export const JeuDechetsNew = () => {
 
     return (
         <div className="JeuDechetsNew">
-            <h1>jeu dechets new</h1>
             {
                 trash1 === true ? <div className="dechet1" onClick={() => {setTrash1(false)}}></div> : null
             }

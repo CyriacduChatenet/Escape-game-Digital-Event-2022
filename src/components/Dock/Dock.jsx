@@ -1,6 +1,7 @@
 import { DockIcon } from '../DockIcon/DockIcon';
 import { DossierJustice } from '../DossierJustice/DossierJustice';
-import { JeuDechets } from '../Enigmes/JeuDechets/JeuDechets';
+// import { JeuDechets } from '../Enigmes/JeuDechets/JeuDechets';
+import { JeuDechetsNew } from '../Enigmes/JeuDechetsNew/JeuDechetsNew';
 import { JeuPingouins } from '../Enigmes/JeuPingouins/JeuPingouins';
 import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
 import { JeuClimat } from '../Enigmes/JeuClimat/JeuClimat';
@@ -19,7 +20,7 @@ export const Dock = () => {
                     <JeuPingouins/>
                 </DockIcon>
                 <DockIcon dockText="Ecologie" dockIcon="/assets/images/dock-icon/ecologie.png" >
-                    <JeuDechets />
+                    <JeuDechetsNew />
                 </DockIcon>
                 <DockIcon dockText="Partage" dockIcon="/assets/images/dock-icon/partage.png" >
 
