@@ -10,6 +10,7 @@ import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
+import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 
 import "./index.scss"
 import { Modal } from "@mui/material";
@@ -27,6 +28,7 @@ function App() {
               <Route exact path="/dashboard" element={ <DashboardPage/> }/>
               <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
               <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
+              <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
