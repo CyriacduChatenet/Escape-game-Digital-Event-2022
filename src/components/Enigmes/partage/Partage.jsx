@@ -1,37 +1,30 @@
-import Draggable from "react-draggable";
-import React, { useState, useRef } from "react";
+import { useState } from "react";
+import initialsTuyaux from "./tuyaux.json"
 import "./partage.scss";
+import Tuyau from "./Tuyau";
 
 const Partage = (e) => {
-    const nodeRef = useRef(null);
-    const [Opacity, setOpacity] = useState(false);
-    
-    const handleStart = () => {
-        setOpacity(true);
-    };
-    const handleEnd = () => { 
-        setOpacity(false);
-    };
+    const [tuyaux, setTuyaux] = useState(initialsTuyaux)
+    const [selected, setSelected] = useState([])
+    const [isValid,setIsValid] = useState(false)
+
+    const handleClick = () => {
+        // console.log(selected)
+        let results = []
+        selected.map(el => results.push(el.good))
+        results.includes(false) ? setIsValid(false) : setIsValid(true)
+    }
 
     return ( 
         <div className='draggable-container'>
-            <Draggable
-                onStart={handleStart}
-                // onDrag={handleDrag}
-                onStop={handleEnd}
-                >
-                    <div 
-                        className='tuyau' 
-                        ref={nodeRef}
-                        style={{ opacity: Opacity ? "0.6" : "1" }}
-                        >
-                        <div className="handle">Drag from here</div>
-                        <div>This readme is really dragging on...</div>
-                    </div>
-            </Draggable>
+            {tuyaux.map((tuyau, index) => (
+                <Tuyau tuyau={tuyau} key={index} setSelected={setSelected} selected={selected} />
+            ))}
 
-            <div className="place-tuyau"></div>
-
+            <button onClick={handleClick}>Valier</button>
+            <p id="result">
+                {isValid ? "Good job" : "Perdu"}
+            </p>
         </div>
      );
 }
