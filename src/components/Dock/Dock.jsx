@@ -19,16 +19,16 @@ export const Dock = () => {
                     <JeuPingouins/>
                 </DockIcon>
                 <DockIcon dockText="Ecologie" dockIcon="/assets/images/dock-icon/ecologie.png" >
-                    <JeuFeuForet />
+                    <JeuDechets />
                 </DockIcon>
                 <DockIcon dockText="Partage" dockIcon="/assets/images/dock-icon/partage.png" >
 
                 </DockIcon>
                 <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >
-                    <JeuClimat/>
+                    <JeuFeuForet />
                 </DockIcon>
                 <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >
-                    <JeuDechets />
+                    
                 </DockIcon>
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" ></DockIcon>
                 <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />
