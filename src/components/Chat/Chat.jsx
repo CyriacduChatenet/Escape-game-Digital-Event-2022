@@ -36,7 +36,7 @@ export const Chat = () => {
     }
 
     return (
-        <DropdownWindow position={{bottom:50,right:0,zIndex:9999999}}>
+        <DropdownWindow position={{bottom:50,right:0,zIndex:9}}>
             <div className="chat" ref={chatRef}>
                 {chatMessages.map(chatObj => (
                     <>
