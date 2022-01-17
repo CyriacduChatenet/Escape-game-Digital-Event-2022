@@ -3,10 +3,10 @@ import './DossierJustice.scss'
 
 export const DossierJustice = () => {
 
-    const [dossierJustice, setDossierJustice] = useState(false)
+    const [dossierJustice, setDossierJustice] = useState(true)
     console.log('dossierJustice :', dossierJustice);
 
-    const [openJustice, setOpenJustice] = useState(false)
+    const [openJustice, setOpenJustice] = useState(true)
     console.log('PopUp OpenJustice :', openJustice)
 
     const [dossierFirst, setDossierFirst] = useState(false)
@@ -25,12 +25,6 @@ export const DossierJustice = () => {
 
     return(
         <div className = 'dossierJusticeContainer'>
-                <div className = 'nameDossierJusticeDiv'>
-                    <div className = 'dossierJusticeItem' onDoubleClick={()=>{setDossierJustice(true)}}>
-                        <div className ='loaderCircleJustice'></div>
-                    </div>
-                    <p>Ecologie</p>
-                </div>
                 <div className ='popUpDossierJustice' style={dossierJustice === false ? {display : 'none'} : {display : 'flex'} }>
                     <div className = 'closeDossierJustice' onClick={()=>{setDossierJustice(false)}}></div>
                     <div className = 'leftNavDossierJustice'>
