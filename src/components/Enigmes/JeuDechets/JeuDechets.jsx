@@ -1,6 +1,6 @@
 import "./JeuDechets.scss";
 import { useState, useEffect, useRef } from "react";
-import Pins from './Pins';
+import Pins from './pins.jsx';
 import initialTrash from './trash.json';
 import MapGL from 'react-map-gl';
 
@@ -18,20 +18,10 @@ export const JeuDechets = () => {
         pitch: 0
     });
 
-    const [displayTrash, setDisplayTrash] = useState(true)
-
-    function handleClick(trash,index) {
-
+    function hideTrash(trash,index) {
         // ne change que si on bouge la map
         trashList[index].hidden = true
-
-        setTrashList(trashList)
-
-        // console.log(trashList[index].hidden)
-        // console.log(trashList[index].latitude)
-        // console.log(trashList[index].longitude)
-
-        // setDisplayTrash(false)
+        setTrashList(trashList)        
     }
 
     return (
@@ -45,11 +35,10 @@ export const JeuDechets = () => {
                     onViewportChange={setViewport}
                     mapboxApiAccessToken={TOKEN}
                 >
-                    {
-                        // trashList[index].show === true ? <Pins data={trashList} onClick={handleClick}/> : null
-                        displayTrash === true ? <Pins data={trashList} onClick={handleClick} id="test"/> : null
+                    { 
+                        // trashList[0].hidden === false ? <Pins data={trashList} onClick={handleClick}/> : null
+                        <Pins data={trashList} onClick={handleClick} />                        
                     }      
-                    {/* <Pins data={trashList} onClick={handleClick} /> */}
                 </MapGL>
             </div>
         </div>
