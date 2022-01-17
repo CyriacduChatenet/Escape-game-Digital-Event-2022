@@ -8,6 +8,7 @@ import { JeuClimat } from '../Enigmes/JeuClimat/JeuClimat';
 import { JeuFeuForet } from '../Enigmes/JeuFeuForet/JeuFeuForet';
 import { SettingsModal } from '../Modal/SettingsModal/SettingsModal'
 import './Dock.scss';
+import Partage from '../Enigmes/partage/Partage';
 
 export const Dock = () => {
     return (
@@ -23,7 +24,7 @@ export const Dock = () => {
                     <JeuDechetsNew />
                 </DockIcon>
                 <DockIcon dockText="Partage" dockIcon="/assets/images/dock-icon/partage.png" >
-
+                    <Partage />
                 </DockIcon>
                 <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >
                     <JeuFeuForet />

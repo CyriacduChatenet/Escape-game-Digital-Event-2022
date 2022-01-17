@@ -31,10 +31,7 @@ function App() {
               <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
               <Route exact path="/jeu-justice" element={ <JeuJustice/> }/>
               <Route exact path="/Partage" element={ <Partage /> }/>
-<<<<<<< HEAD
-=======
               <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
->>>>>>> fde65a744125e96e8879f714618dfc2ed2e4144b
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
