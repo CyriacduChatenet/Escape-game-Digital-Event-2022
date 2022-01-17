@@ -28,7 +28,7 @@ export const Dossier = () => {
                                 <div className = 'logoSystem'></div>
                                 <p>Système</p>
                             </div>
-                            <p>></p>
+                            <p></p>
                             <div className = 'topDossierNav'>
                                 <div className = 'logoSystem'></div>
                                 <p>folder</p>
