@@ -15,7 +15,7 @@ export const Character = ({img, alt, title, history, open = false, c_click, sele
                     <div className="personnage-details">
                         <img src={img}  alt={alt}  className="character-img" />
                         <p>{history}</p>
-                        <button onClick={(e) => select(title, e)}>Choisir</button>
+                        <button onClick={(e) => select(title, e)}>Start</button>
                     </div>
                     <p>{title}</p>
                 </div>
