@@ -20,7 +20,7 @@ export const ProgressBar = () => {
         },1000)
 
         return ()=> clearInterval(intervalTime)
-    },[])
+    })
     
     return (
         <div className="progress-bar">
