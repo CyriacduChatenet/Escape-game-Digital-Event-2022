@@ -7,6 +7,7 @@ import { JeuClimat } from '../Enigmes/JeuClimat/JeuClimat';
 import { JeuFeuForet } from '../Enigmes/JeuFeuForet/JeuFeuForet';
 import { SettingsModal } from '../Modal/SettingsModal/SettingsModal'
 import './Dock.scss';
+import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
 
 export const Dock = () => {
     return (
@@ -28,7 +29,7 @@ export const Dock = () => {
                     <JeuClimat/>
                 </DockIcon>
                 <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >
-                    <JeuDechets />
+                    <JeuSurconsommation />
                 </DockIcon>
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" ></DockIcon>
                 <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />

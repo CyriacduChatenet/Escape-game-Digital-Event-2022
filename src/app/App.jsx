@@ -13,6 +13,7 @@ import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 
 import "./index.scss"
 import { Modal } from "@mui/material";
+import { JeuSurconsommation } from "../components/Enigmes/JeuSurconsommation/JeuSurconsommation";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route exact path="/dashboard" element={ <DashboardPage/> }/>
               <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
               <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
+              <Route exact path="/jeu-surconsommation" element={ <JeuSurconsommation/> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
