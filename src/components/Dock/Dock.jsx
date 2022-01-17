@@ -7,6 +7,7 @@ export const Dock = () => {
         <div className="dock-container">
             <div className="row-dock">
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" >
+                    {/* Theo remplacer appel component */}
                     <JeuDechets />
                 </DockIcon>
                 <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />
