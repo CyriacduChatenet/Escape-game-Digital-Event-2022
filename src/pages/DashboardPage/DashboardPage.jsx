@@ -7,8 +7,8 @@ import { Dock } from '../../components/Dock/Dock';
 import { ShortTerminal } from '../../components/ShortTerminal/ShortTerminal';
 import { Modal } from "../../components/Modal/Modal";
 import JusticeDossier from '../../components/Enigmes/justice/JusticeDossier';
-import ClimatDossier from '../../components/Enigmes/climat/ClimatDossie';
 import DraggableFolder from '../../components/DraggableFolder/DraggableFolder';
+import { JeuClimat } from '../../components/Enigmes/JeuClimat/JeuClimat';
 
 export const DashboardPage = () => {
    
@@ -26,7 +26,7 @@ export const DashboardPage = () => {
                     <JusticeDossier/>
                 </DraggableFolder>
                 <DraggableFolder defaultPosition={{ top: 200, right: 200 }}>
-                    <ClimatDossier/>
+                    <JeuClimat/>
                 </DraggableFolder>
             </div>
             
