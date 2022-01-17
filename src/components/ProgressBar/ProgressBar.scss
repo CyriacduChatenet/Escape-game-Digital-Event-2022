@@ -4,20 +4,24 @@
     height: 100px;
     position: fixed;
     top: -20px;
-    z-index: -1;
     width: 100%;
-    left: 0;
-    text-align: center;
+    left: 35%;
+    display: flex;
+    align-items: center;
 
-    img{
+    .progress-bar-bg{
         width: 500px;
         height: 100px;
+        position: absolute;
+        z-index: -2;
     }
-}
 
-.progress-bar-chart {
-    width: 10vw;
-    height: 5vh;
-    background-color: #86EBD9;
-    transform: translateY(5.5vh) translateX(3vw);
+    .progress-bar-chart {
+        width: 25%;
+        height: 35%;
+        position: absolute;
+        z-index: 2;
+        left: 2.25%;
+        background-color: #86EBD9;
+    }
 }
