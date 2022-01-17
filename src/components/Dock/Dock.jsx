@@ -11,9 +11,23 @@ export const Dock = () => {
     return (
         <div className="dock-container">
             <div className="row-dock">
-                <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" >
-                    {/* Theo remplacer appel component */}
-                    <DossierJustice/>
+                <DockIcon dockText="Justice" dockIcon="/assets/images/dock-icon/justice.png" >
+                    <JeuJustice />
+                </DockIcon>
+                <DockIcon dockText="Extinction" dockIcon="/assets/images/dock-icon/extinction.png" >
+                    <JeuPingouins/>
+                </DockIcon>
+                <DockIcon dockText="Ecologie" dockIcon="/assets/images/dock-icon/ecologie.png" >
+                    <JeuFeuForet />
+                </DockIcon>
+                <DockIcon dockText="Partage" dockIcon="/assets/images/dock-icon/partage.png" >
+
+                </DockIcon>
+                <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >
+                    <JeuClimat/>
+                </DockIcon>
+                <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >
+                    <JeuDechets />
                 </DockIcon>
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" ></DockIcon>
                 <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />
