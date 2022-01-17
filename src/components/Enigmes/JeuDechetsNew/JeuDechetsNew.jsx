@@ -1,6 +1,13 @@
 import "./JeuDechetsNew.scss";
 import { useState } from "react";
 
+// TODO : 
+// Le quizz avant de lancer le mini jeu
+// Ajouter les images des déchets
+// Ajouter le timer de 3 minutes
+// Si un déchet a été ramassé, celui-ci doit être ajouté à un inventaire (ou tout simplement écrit de côté)
+// Si jeu réussi : affichage de l'écran "défi réussi", Sinon écran ""défi échoué"" avec choix de recommencer
+
 export const JeuDechetsNew = () => {
 
     const [trash1, setTrash1] = useState(true)
