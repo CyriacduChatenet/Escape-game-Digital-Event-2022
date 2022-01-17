@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-// .dossierContainer{
-//     position: relative;
-// }
 .nameDossierJusticeDiv{
     display: flex;
     flex-direction: column;
@@ -95,7 +92,6 @@
     align-items: center;
     justify-content: space-between;
     color: #FFF;
-    width: 100%;
     margin-left: 10%;
 }
 .systemeDivTop{
@@ -205,4 +201,32 @@
     justify-content: space-between;
     align-items: center;
     width: 50%;
+    color: #86EBD9;
+}
+.leftNavSecondSysteme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 10%;
+    color: #86EBD9;
+}
+.leftNavSecondSystemeClose{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 10%;
+    color: #86EBD9;
+}
+.leftNavChildSecondSysteme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 25%;
+    color: #86EBD9;
 }

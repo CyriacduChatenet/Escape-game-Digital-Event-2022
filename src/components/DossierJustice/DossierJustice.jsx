@@ -35,10 +35,32 @@ export const DossierJustice = () => {
                     <div className = 'closeDossierJustice' onClick={()=>{setDossierJustice(false)}}></div>
                     <div className = 'leftNavDossierJustice'>
                         <div className = 'leftNavSysteme'>
+                        <span className='chevronMiddle'>{chevron}</span>
                             <div className = 'logoSystemJustice'></div>
                             &nbsp;
                             <p>Système</p>
+                            
+                        </div>
+                        <div className = 'leftNavSecondSysteme'>
                             <span className='chevronMiddle'>{chevron}</span>
+                            <div className = 'dossierJusticeItemsecond espece'></div>
+                            &nbsp;
+                            <p>Extinction...</p>
+                        </div>
+                        <div className='leftNavChildSecondSysteme'>
+                            <div className = 'dossierJusticeItemsecond'></div>
+                                &nbsp;
+                                <p>Dossier1</p>
+                        </div>
+                        <div className='leftNavChildSecondSysteme'>
+                            <div className = 'dossierJusticeItemsecond'></div>
+                                &nbsp;
+                                <p>Dossier2</p>
+                        </div>
+                        <div className = 'leftNavSecondSystemeClose'>
+                            <div className = 'dossierJusticeItemsecond'></div>
+                            &nbsp;
+                            <p>Folder</p>
                         </div>
                     </div>
                     <div className = 'rightNavDossierJustice'>
@@ -54,7 +76,7 @@ export const DossierJustice = () => {
                                     <div className = 'topDossierNavJustice'>
                                         <div className = 'logoDossierJustice'></div>
                                         &nbsp;
-                                        <p>Folder</p>
+                                        <p>Extinction...</p>
                                     </div>
                                 </div>
                             </div>
