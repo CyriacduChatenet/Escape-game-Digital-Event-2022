@@ -10,6 +10,7 @@ import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
+import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
 
 import "./index.scss"
 
@@ -28,6 +29,7 @@ function App() {
               <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
               <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
               <Route exact path="/jeu-justice" element={ <JeuJustice/> }/>
+              <Route exact path="/jeu-tuyau" element={ <JeuTuyau/> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
