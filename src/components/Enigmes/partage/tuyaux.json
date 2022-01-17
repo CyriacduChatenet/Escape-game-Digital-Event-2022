@@ -1,0 +1,23 @@
+[
+    {
+        "style": {
+            "top": 10,
+            "left": 10
+        },
+        "good":true
+    },
+    {
+        "style": {
+            "top": 10,
+            "left": 600
+        },
+        "good":true
+    },
+    {
+        "style":{
+            "top": 300,
+            "left": 400
+        },
+        "good":false
+    }
+]
