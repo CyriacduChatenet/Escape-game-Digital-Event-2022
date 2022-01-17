@@ -1,27 +1,37 @@
 import "./JeuDechets.scss";
 import { useState, useEffect, useRef } from "react";
-import Pins from './pins';
-import TRASH from './trash.json';
+import Pins from './Pins';
+import initialTrash from './trash.json';
 import MapGL from 'react-map-gl';
 
 export const JeuDechets = () => {
+
+    const [trashList, setTrashList] = useState(initialTrash)
 
     const TOKEN = 'pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg';
 
     const [viewport, setViewport] = useState({
         latitude: -24.36844269983584,
         longitude: -128.32643204046312,
-        // zoom: 12,
         minZoom: 12,
         bearing: 0,
         pitch: 0
     });
 
-    // Récupérer la clé du markeur, le markeur sur lequel on clic
-    const [displayCurrentMarker, setDisplayCurrentMarker] = useState(true);
+    const [displayTrash, setDisplayTrash] = useState(true)
 
-    function handleClick() {
-        setDisplayCurrentMarker(false);
+    function handleClick(trash,index) {
+
+        // ne change que si on bouge la map
+        trashList[index].hidden = true
+
+        setTrashList(trashList)
+
+        // console.log(trashList[index].hidden)
+        // console.log(trashList[index].latitude)
+        // console.log(trashList[index].longitude)
+
+        // setDisplayTrash(false)
     }
 
     return (
@@ -37,8 +47,10 @@ export const JeuDechets = () => {
                     mapboxApiAccessToken={TOKEN}
                 >
                     {
-                        displayCurrentMarker === true ? <Pins data={TRASH} onClick={handleClick}/> : null
-                    }
+                        // trashList[index].show === true ? <Pins data={trashList} onClick={handleClick}/> : null
+                        displayTrash === true ? <Pins data={trashList} onClick={handleClick} id="test"/> : null
+                    }      
+                    {/* <Pins data={trashList} onClick={handleClick} /> */}
                 </MapGL>
             </div>
         </div>
