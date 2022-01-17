@@ -1,0 +1,37 @@
+.jeuSurconsommationModal{
+
+    margin-top: 100px;
+
+    .topImgDisplaying{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+        align-items: center;
+
+    }
+
+    .bottomImgDisplaying{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .ImgDisplay1, .ImgDisplay2, .ImgDisplay3, .ImgDisplay4, .ImgDisplay5, .ImgDisplay6{
+        position: relative;
+
+        .img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .delete-btn{
+        width: auto;
+        position: absolute;
+        bottom: 4px;
+        right: 26px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
