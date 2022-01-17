@@ -1,9 +1,31 @@
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal'
+import style from "../PrimaryModal/style"
+import React, { useState, useRef } from "react";
+import "../PrimaryModal/primary-modal.scss"
 import './DockIcon.scss';
-export const DockIcon = ({dockText, dockIcon}) => {
+
+export const DockIcon = ({children,dockText, dockIcon}) => {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    
     return (
-        <div className="dock-icon-container">
+        <div className="dock-icon-container" onDoubleClick={handleOpen}>
             <img src={dockIcon} alt="" className="dock-icon" />
             <p className="dock-text">{dockText}</p>
+
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                    {children}
+                </Box>
+            </Modal>
         </div>
     )
 }
