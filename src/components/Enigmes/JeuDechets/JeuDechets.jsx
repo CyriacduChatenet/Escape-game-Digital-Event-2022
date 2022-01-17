@@ -1,23 +1,27 @@
 import "./JeuDechets.scss";
 import { useState, useEffect, useRef } from "react";
 import Pins from './pins';
-import CITIES from './dechets.json';
+import TRASH from './trash.json';
 import MapGL from 'react-map-gl';
 
 export const JeuDechets = () => {
 
-    const TOKEN = 'pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg'; // Set your mapbox token here
+    const TOKEN = 'pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg';
 
     const [viewport, setViewport] = useState({
         latitude: -24.36844269983584,
         longitude: -128.32643204046312,
-        zoom: 12,
+        // zoom: 12,
+        minZoom: 12,
         bearing: 0,
         pitch: 0
     });
 
+    // Récupérer la clé du markeur, le markeur sur lequel on clic
+    const [displayCurrentMarker, setDisplayCurrentMarker] = useState(true);
+
     function handleClick() {
-        console.log('Le lien a été cliqué.');
+        setDisplayCurrentMarker(false);
     }
 
     return (
@@ -32,7 +36,9 @@ export const JeuDechets = () => {
                     onViewportChange={setViewport}
                     mapboxApiAccessToken={TOKEN}
                 >
-                    <Pins data={CITIES} onClick={handleClick}/> 
+                    {
+                        displayCurrentMarker === true ? <Pins data={TRASH} onClick={handleClick}/> : null
+                    }
                 </MapGL>
             </div>
         </div>
