@@ -33,6 +33,7 @@ function App() {
               <Route exact path="/Partage" element={ <Partage /> }/>
               <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
 
+
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
         </BrowserRouter>

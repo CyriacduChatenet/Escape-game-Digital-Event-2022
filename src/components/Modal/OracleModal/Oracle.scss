@@ -1,0 +1,321 @@
+@font-face {
+    font-family: "MonumentExtendedRegular";
+    src: url("../../../../public/assets/fonts/MonumentExtended-Regular.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("../../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
+.oracle_modal_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.modal_container{
+    width: 81%;
+    height: 81%;
+    // display: flex;
+    // align-items: center;
+    background-color: transparent;
+    position: relative;
+    right: 450px;
+}
+
+
+.video_container{
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: -183px;
+    transform: scale(70%);
+}
+
+.outside_button_displaying{
+    position: absolute;
+    top: -45px;
+    right: 100px;
+
+    .reduce_btn{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.input_displaying{
+    position: absolute;
+    top: 25px;
+    right: 150px;
+    width: 550px;
+    height: 28px;
+    background: linear-gradient(80deg, rgba(63, 137, 141, 0.1) 30%, rgba(255, 255, 255, 0.1) 90%);
+
+    .search_input{
+        background-color: transparent;
+        font-size: 12px;
+        font-family: "MonumentExtendedLight";
+        display: flex;
+        position: absolute;
+        top: 7px;
+        left: 56px;
+    }
+    .search_input::placeholder{
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .search_input:focus::placeholder{
+        color: transparent;
+        transition: .5s;
+    }
+
+    .search_input:enabled{
+        color: white;
+    }
+
+    .search_img{
+        position: absolute;
+        top: 4px;
+        left: 17px;
+        width: 20px;
+        height: 20px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .vocal_img{
+        position: absolute;
+        top: 4px;
+        right: 17px;
+        width: 20px;
+        height: 20px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+}
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1)
+  } 
+
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba( 134, 235, 217, .8);
+    border-radius: 10px;
+  }
+
+
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+.treestructure_container{
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 720px;
+    height: 225px;
+    overflow-y: scroll;
+    border-radius: 2px;
+    background: linear-gradient(100deg, rgba(63, 137, 141, 0.1) 30%, rgba(255, 255, 255, 0.1) 90%);
+
+    .first_folder_displaying{
+        padding: 15px 20px;
+        display: flex;
+        gap: 100px;
+        position: relative;
+
+        &:hover{
+            background-color: rgba( 134, 235, 217, .8);
+            transition: .5s;
+        }
+
+        &:not(:hover){
+            transition: .5s;
+        }
+
+        .folder_displaying{
+            width: 20px;
+            height: 20px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .second_folder_displaying{
+        padding: 15px 20px;
+        display: flex;
+        gap: 100px;
+        position: relative;
+
+        &:hover{
+            background-color: rgba( 134, 235, 217, .8);
+            transition: .5s;
+        }
+
+        &:not(:hover){
+            transition: .5s;
+        }
+
+        .folder_displaying{
+            width: 20px;
+            height: 20px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .first_txt_displaying{
+        padding: 15px 20px;
+        display: flex;
+        gap: 100px;
+        position: relative;
+
+        &:hover{
+            background-color: rgba( 134, 235, 217, .8);
+            transition: .5s;
+        }
+
+        &:not(:hover){
+            transition: .5s;
+        }
+
+        .file_displaying{
+            width: 20px;
+            height: 20px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .second_txt_displaying{
+        padding: 15px 20px;
+        display: flex;
+        gap: 100px;
+        position: relative;
+
+        &:hover{
+            background-color: rgba( 134, 235, 217, .8);
+            transition: .5s;
+        }
+
+        &:not(:hover){
+            transition: .5s;
+        }
+
+        .file_displaying{
+            width: 20px;
+            height: 20px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .third_txt_displaying{
+        padding: 15px 20px;
+        display: flex;
+        gap: 100px;
+        position: relative;
+
+        &:hover{
+            background-color: rgba( 134, 235, 217, .8);
+            transition: .5s;
+        }
+
+        &:not(:hover){
+            transition: .5s;
+        }
+
+        .file_displaying{
+            width: 20px;
+            height: 20px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .fourth_txt_displaying{
+        padding: 15px 20px;
+        display: flex;
+        gap: 100px;
+        position: relative;
+
+        &:hover{
+            background-color: rgba( 134, 235, 217, .8);
+            transition: .5s;
+        }
+
+        &:not(:hover){
+            transition: .5s;
+        }
+
+        .oracle_icon_displaying{
+            width: 20px;
+            height: 20px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .treestructure_text{
+        font-size: 14px;
+        font-family: "MonumentExtendedRegular";
+        color: white;
+        position: absolute;
+        left: 55px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .treestructure_date{
+        font-size: 18px;
+        font-family: "MonumentExtendedLight";
+        color: white;
+        position: absolute;
+        left: 230px;
+    }
+
+    .file_weight{
+        font-size: 18px;
+        font-family: "MonumentExtendedLight";
+        color: white;
+        position: absolute;
+        left: 480px;
+    }
+}
+
