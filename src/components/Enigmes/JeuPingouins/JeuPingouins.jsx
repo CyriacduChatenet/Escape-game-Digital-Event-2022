@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./JeuPingouins.scss";
 import SpeechRecognition from 'react-speech-recognition/lib/SpeechRecognition';
 import { useSpeechRecognition } from 'react-speech-recognition';
+import { Box } from "@mui/system";
 
 export const JeuPingouins = () => {
   const [translateXValue, setTranslateXValue] = useState(0)
@@ -9,6 +10,7 @@ export const JeuPingouins = () => {
   const [mapSrc, SetMapSrc] = useState("/assets/images/polar-game/polar-map.png")
   const [hour, setHour] = useState(7)
   const [minutes, setMinutes] = useState(50)
+  const [numberAnimals, setNumberAnimals] = useState(20)
 
   const commands = [
     {
@@ -38,9 +40,37 @@ export const JeuPingouins = () => {
   const [isListening, setIsListening] = useState(false)
   const {transcript, resetTranscript,listening} = useSpeechRecognition({commands})
 
+  let animalsPoints = []
+  let interval
+
+  for (let index = 0; index < numberAnimals; index++) {
+    const top = Math.floor(Math.random() * 90)
+    const left = Math.floor(Math.random() * 90)
+
+    const style = {
+      "position": "absolute",
+      "top": top,
+      "left": left
+    }
+    animalsPoints.push(<div className="animalPoint" style={style}></div>)
+  }
+
+  useEffect (() => {
+    interval=setInterval(()=>{
+      if(minutes < 59) {
+        setMinutes(minutes + 1)
+      }
+      if(minutes >= 59){
+        setMinutes(0)
+        setHour(hour + 1)
+      }
+    },1000)
+
+    return ()=> clearInterval(interval)
+  }, [])
+
   const handleListening = () => {
     setIsListening(true);
-    
     SpeechRecognition.startListening({
       continuous : true 
     })
@@ -68,22 +98,6 @@ export const JeuPingouins = () => {
     }, 180000)
   }
 
-  let interval
-
-  useEffect (() => {
-    interval=setInterval(()=>{
-      if(minutes < 59) {
-        setMinutes(minutes + 1)
-      }
-      if(minutes >= 59){
-        setMinutes(0)
-        setHour(hour + 1)
-      }
-  },1000)
-
-  return ()=> clearInterval(interval)
-  })
-
   return (
     <>
       <div className="JeuPingouins">
@@ -95,7 +109,11 @@ export const JeuPingouins = () => {
         </div>
         <div className="map-container" style={{backgroundImage: `url(${mapSrc})`}}>
           <div className="animals-container">
-            <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}></div>
+            <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}>
+              <Box>
+                {animalsPoints.map(el => el)}
+              </Box>
+            </div>
           </div>
         </div>
         <div className="controlls-container">
@@ -147,7 +165,7 @@ export const JeuPingouins = () => {
             <div className="controlls-item">
             <p className="controlls-item-title">Microphone</p>
               <p className="controlls-item-desc-desc-red">
-                <p>{listening ? 'on' : 'off'}</p>
+                <Box sx={{color: listening ? "green" : "red"}}>{listening ? 'ON' : 'OFF'}</Box>
               </p>
             </div>
           </div>
