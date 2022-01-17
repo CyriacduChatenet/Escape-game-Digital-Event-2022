@@ -5,6 +5,7 @@ import { JeuPingouins } from '../Enigmes/JeuPingouins/JeuPingouins';
 import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
 import { JeuClimat } from '../Enigmes/JeuClimat/JeuClimat';
 import { JeuFeuForet } from '../Enigmes/JeuFeuForet/JeuFeuForet';
+import { SettingsModal} from '../Modal/SettingsModal/SettingsModal'
 import './Dock.scss';
 
 export const Dock = () => {
@@ -31,7 +32,9 @@ export const Dock = () => {
                 </DockIcon>
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" ></DockIcon>
                 <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />
-                <DockIcon dockText="Réglages"dockIcon="/assets/images/dock-icon/settings.png" />
+                <DockIcon dockText="Réglages"dockIcon="/assets/images/dock-icon/settings.png">
+                    <SettingsModal/>
+                </DockIcon>
                 <DockIcon dockText="Galerie" dockIcon="/assets/images/dock-icon/galerie.png"/>
                 <DockIcon dockText="Corbeille" dockIcon="/assets/images/dock-icon/bin.png" />
             </div>
