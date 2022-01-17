@@ -12,7 +12,7 @@ import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 
 import "./index.scss"
-import { Modal } from "@mui/material";
+import Partage from "../components/Enigmes/partage/Partage";
 
 function App() {
   return (
@@ -27,6 +27,9 @@ function App() {
               <Route exact path="/dashboard" element={ <DashboardPage/> }/>
               <Route exact path="/jeu-pingouins" element={ <JeuPingouins/> }/>
               <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
+              <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
+              <Route exact path="/jeu-justice" element={ <JeuJustice/> }/>
+              <Route exact path="/Partage" element={ <Partage /> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>

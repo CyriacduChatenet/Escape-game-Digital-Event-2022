@@ -5,9 +5,15 @@
     position: fixed;
     top: -20px;
     width: 100%;
-    left: 35%;
     display: flex;
+    justify-content: center;
     align-items: center;
+
+    &>div{
+        position: relative;
+        width: 500px;
+        height: 100%;
+    }
 
     .progress-bar-bg{
         width: 500px;
@@ -17,11 +23,19 @@
     }
 
     .progress-bar-chart {
-        width: 25%;
-        height: 35%;
+        height: 30px;
         position: absolute;
-        z-index: 2;
-        left: 2.25%;
+        z-index: -1;
+        left: 43px;
         background-color: #86EBD9;
+        top: 35px;
+    }
+
+    .timer {
+        position: absolute;
+        z-index: 10;
+        left: 200px;
+        width: 100px;
+        top: 33px;
     }
 }
