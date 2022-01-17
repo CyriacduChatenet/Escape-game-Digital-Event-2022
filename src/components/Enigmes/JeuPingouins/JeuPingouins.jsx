@@ -114,19 +114,6 @@ export const JeuPingouins = () => {
     <>
       {open === false ? null : 
       <div className="JeuPingouins">
-      <div className="JeuPingouins-header">
-        <img
-          src="/assets/images/terminal-bar/bar-top-left.png"
-          alt=""
-          className="header-banner"
-        />
-        <img
-          onClick={openModal}
-          src="/assets/images/terminal-bar/Bar-top-right.png"
-          alt=""
-          className="header-cross"
-        />
-      </div>
       <div className="game-content">
         <div className="tv-effect" style={{backgroundImage : `url(/assets/images/polar-game/tv-effect.png)`}}>
           <div className="radar" style={{backgroundImage : `url(/assets/images/polar-game/radar-base.png)`}}>

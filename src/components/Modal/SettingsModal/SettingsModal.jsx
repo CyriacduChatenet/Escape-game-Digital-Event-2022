@@ -41,8 +41,6 @@ export const SettingsModal = () => {
 
   return (
     <div className="settingsModalPage">
-          <img src="/assets/images/terminal-bar/bar-top-left-king-size.png" alt="" className="barTopLeft"/>
-          <img src="/assets/images/terminal-bar/bar-top-right-king-size.png" alt="" className="barTopRight" />
       <div className="settingsModal">
         <div className="leftSideMenu">
           <div className="userAvatar">
