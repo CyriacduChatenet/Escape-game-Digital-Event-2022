@@ -1,6 +1,8 @@
 @import '../../../../public/assets/styles/import.scss';
 
-.JeuDechets {    
+.JeuDechets {   
+  width: 100vw;
+  height: 100vh;
   .mapbox-container {
     width: 59.5vw;
     height: 65vh;

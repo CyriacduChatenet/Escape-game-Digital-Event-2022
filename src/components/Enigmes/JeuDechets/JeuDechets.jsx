@@ -1,6 +1,6 @@
 import "./JeuDechets.scss";
 import { useState, useEffect, useRef } from "react";
-import Pins from './pins';
+import Pins from './pins.jsx';
 import initialTrash from './trash.json';
 import MapGL from 'react-map-gl';
 

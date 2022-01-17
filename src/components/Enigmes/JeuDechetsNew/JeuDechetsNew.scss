@@ -1,0 +1,65 @@
+@import '../../../../public/assets/styles/import.scss';
+
+.JeuDechetsNew {   
+  width: 80vw;
+  height: 80vh;
+  background-image: url('../../../../public/assets/images/jeu-dechets/plage-dechets.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  .dechet1 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 0%; left: 0%px;
+    cursor: pointer;
+  }
+  .dechet2 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 10%; left: 10%;
+    cursor: pointer;
+  }
+  .dechet3 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 20%; left: 20%;
+    cursor: pointer;
+  }
+  .dechet4 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 30%; left: 30%;
+    cursor: pointer;
+  }
+  .dechet5 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 40%; left: 40%;
+    cursor: pointer;
+  }
+  .dechet6 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 50%; left: 50%;
+    cursor: pointer;
+  }
+  .dechet7 {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 60%; left: 60%;
+    cursor: pointer;
+  }
+}
