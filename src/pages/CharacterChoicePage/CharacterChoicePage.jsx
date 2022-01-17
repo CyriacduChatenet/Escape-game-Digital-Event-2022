@@ -98,7 +98,7 @@ export const CharacterChoicePage = () => {
       <video autoPlay className="loader_video" loop muted>
         <source src="/assets/video/background-loop.mp4" type="video/mp4" />
       </video>
-      <h1>QUI ES-TU</h1>
+      <h1>QUI ES-TU ?</h1>
 
       <div className="personnages">
         {characteres.map((charactere) => (

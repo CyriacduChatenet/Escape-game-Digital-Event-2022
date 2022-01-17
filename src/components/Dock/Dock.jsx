@@ -5,7 +5,7 @@ import { JeuPingouins } from '../Enigmes/JeuPingouins/JeuPingouins';
 import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
 import { JeuClimat } from '../Enigmes/JeuClimat/JeuClimat';
 import { JeuFeuForet } from '../Enigmes/JeuFeuForet/JeuFeuForet';
-import { SettingsModal} from '../Modal/SettingsModal/SettingsModal'
+import { SettingsModal } from '../Modal/SettingsModal/SettingsModal'
 import './Dock.scss';
 
 export const Dock = () => {

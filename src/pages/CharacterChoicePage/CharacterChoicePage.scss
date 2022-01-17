@@ -66,6 +66,11 @@
                 cursor: pointer;
                 &:hover {
                     filter: brightness(1);
+                    transition: .5s;
+                    transform: scale(110%);
+                }
+                &:not(:hover){
+                    transition: .5s;
                 }
             }
 
@@ -84,8 +89,9 @@
                 width: 350px;
                 min-height: 380px;
                 padding: 1em;
-                background-color: rgba(196, 196, 196, .5);
+                background: linear-gradient(90deg, rgba(63, 137, 141, 0.1) 70%, rgba(255, 255, 255, 0.1) 95%);
                 margin-bottom: 1em;
+                border-radius: 3px;
 
                 img {
                     margin-bottom: 1em;
@@ -99,7 +105,8 @@
                 button {
                     margin-top: 1em;
                     background-color: rgba(196, 196, 196, .7);
-                    width: 140px;
+                    width: 200px;
+                    height: 35px;
                     padding: 6px 12px 4px 12px;
                     color: white;
                     font-family: "MonumentExtendedBlack", Arial, Helvetica, sans-serif;
@@ -107,7 +114,7 @@
                     font-size: 16px;
 
                     &:hover{
-                        opacity: 60%;
+                        transform: scale(110%);
                         transition: .5s;
                     }
 
