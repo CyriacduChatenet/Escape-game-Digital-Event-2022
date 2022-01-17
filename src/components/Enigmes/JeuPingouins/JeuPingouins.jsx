@@ -91,28 +91,24 @@ export const JeuPingouins = () => {
     ChangeMap();
   }, [])
 
-  const [coordNS, setCoordNS] = useState()
-  const [coordNSFloat, setCoordNSFloat] = useState()
-  const [coordEW, setCoordEW] = useState()
-  const [coordEWFloat, setCoordEWFloat] = useState()
   const [hour, setHour] = useState(7)
   const [minutes, setMinutes] = useState(50)
 
-  /*useEffect(() => {
-    let interval = setInterval(() => {
-      if (minutes <= 59) {
+  let interval
+
+  useEffect (() => {
+    interval=setInterval(()=>{
+      if(minutes < 59) {
         setMinutes(minutes + 1)
       }
-      if (minutes >= 59){
+      if(minutes >= 59){
         setMinutes(0)
         setHour(hour + 1)
       }
-    },60000)
+  },1000)
 
-    return () => {
-      clearInterval(interval)
-    }
-  })*/
+  return ()=> clearInterval(interval)
+  })
 
   return (
     <>
