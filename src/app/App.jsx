@@ -13,6 +13,7 @@ import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 
 import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
+import { QCM } from "../components/QCM/QCM";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route exact path="/jeu-foret" element={ <JeuFeuForet/> }/>
               <Route exact path="/jeu-justice" element={ <JeuJustice/> }/>
               <Route exact path="/Partage" element={ <Partage /> }/>
+              <Route exact path="/QCM" element={ <QCM /> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
