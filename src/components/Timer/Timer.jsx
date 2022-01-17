@@ -22,7 +22,7 @@ export const Timer = () => {
 
 
     return(
-        <div>
+        <div className='timer'>
             <p className='timer-text'>{minutes} : {seconds}</p>
         </div>
     )

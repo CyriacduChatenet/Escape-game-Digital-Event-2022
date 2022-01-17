@@ -9,6 +9,12 @@
     justify-content: center;
     align-items: center;
 
+    &>div{
+        position: relative;
+        width: 500px;
+        height: 100%;
+    }
+
     .progress-bar-bg{
         width: 500px;
         height: 100px;
@@ -17,16 +23,19 @@
     }
 
     .progress-bar-chart {
-        width: 0%;
-        height: 35%;
+        height: 30px;
         position: absolute;
         z-index: -1;
-        left: 37.5%;
+        left: 43px;
         background-color: #86EBD9;
+        top: 35px;
     }
 
     .timer {
         position: absolute;
         z-index: 10;
+        left: 200px;
+        width: 100px;
+        top: 33px;
     }
 }

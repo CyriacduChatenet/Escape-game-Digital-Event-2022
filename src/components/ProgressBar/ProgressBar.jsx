@@ -20,12 +20,15 @@ export const ProgressBar = () => {
         },1000)
 
         return ()=> clearInterval(intervalTime)
-    })
+    },[])
+    
     return (
         <div className="progress-bar">
-            <img src="/assets/images/progress-bar/progress-bar-bg.png" alt="" className='progress-bar-bg' />
-            <div className="progress-bar-chart" style={{width: `${progressChart}%`}}></div>
-            <Timer className="timer"/>
+            <div>
+                <img src="/assets/images/progress-bar/progress-bar-bg.png" alt="" className='progress-bar-bg' />
+                <div className="progress-bar-chart" style={{width: `${progressChart}%`}}></div>
+                <Timer className="timer"/>
+            </div>
         </div>
     )
 }
