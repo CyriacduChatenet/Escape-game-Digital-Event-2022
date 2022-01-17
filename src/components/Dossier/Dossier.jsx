@@ -31,11 +31,7 @@ export const Dossier = () => {
                                 &nbsp;
                                 <p>Système</p>
                             </div>
-<<<<<<< HEAD
-                            <p></p>
-=======
                             <p>{chevron}</p>
->>>>>>> 7a22c387a58cc5e1863fe2c5faf969178a410d56
                             <div className = 'topDossierNav'>
                                 <div className = 'logoSystem'></div>
                                 &nbsp;
