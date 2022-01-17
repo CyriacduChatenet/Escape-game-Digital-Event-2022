@@ -5,7 +5,7 @@ import Modal from '@mui/material/Modal'
 import style from "../../PrimaryModal/style"
 import "../../PrimaryModal/primary-modal.scss"
 
-const ClimatDossier = () => {
+export const JeuClimat = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -34,5 +34,3 @@ const ClimatDossier = () => {
         </div>
      );
 }
- 
-export default ClimatDossier;

@@ -64,7 +64,7 @@ export const DossierJustice = () => {
                                     &nbsp;
                                     <p>Système</p>
                                 </div>
-                                <div className = 'folderLinkOpen' style={openJustice === true ? {display:'none'} : {display:'flex'}}>
+                                <div className = 'folderLinkOpen' style={openJustice === false ? {display:'none'} : {display:'flex'}}>
                                     <p className = 'chevron'>{chevron}</p>
                                     <div className = 'topDossierNavJustice'>
                                         <div className = 'logoDossierJustice'></div>
