@@ -9,6 +9,8 @@ export const Dossier = () => {
     const [open, setOpen] = useState(false)
     console.log('PopUp Open :', open)
 
+    const [chevron, setChevron] = useState(">")
+
     return(
             <div className = 'dossierContainer'>
                 <div className = 'nameDossierDiv'>
@@ -26,11 +28,13 @@ export const Dossier = () => {
                         <div className = 'topNav'>
                             <div className = 'topDossierNav'>
                                 <div className = 'logoSystem'></div>
+                                &nbsp;
                                 <p>Système</p>
                             </div>
-                            <p>></p>
+                            <p>{chevron}</p>
                             <div className = 'topDossierNav'>
                                 <div className = 'logoSystem'></div>
+                                &nbsp;
                                 <p>folder</p>
                             </div>
                         </div>

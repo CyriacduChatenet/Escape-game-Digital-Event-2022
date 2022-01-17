@@ -1,4 +1,5 @@
 import { DockIcon } from '../DockIcon/DockIcon';
+import { DossierJustice } from '../DossierJustice/DossierJustice';
 import { JeuDechets } from '../Enigmes/JeuDechets/JeuDechets';
 import './Dock.scss';
 
@@ -8,7 +9,7 @@ export const Dock = () => {
             <div className="row-dock">
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" >
                     {/* Theo remplacer appel component */}
-                    <JeuDechets />
+                    <DossierJustice/>
                 </DockIcon>
                 <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />
                 <DockIcon dockText="Réglages"dockIcon="/assets/images/dock-icon/settings.png" />
