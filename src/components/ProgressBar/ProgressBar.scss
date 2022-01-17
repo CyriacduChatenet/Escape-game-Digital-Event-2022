@@ -5,8 +5,8 @@
     position: fixed;
     top: -20px;
     width: 100%;
-    left: 35%;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     .progress-bar-bg{
@@ -17,11 +17,16 @@
     }
 
     .progress-bar-chart {
-        width: 25%;
+        width: 0%;
         height: 35%;
         position: absolute;
-        z-index: 2;
-        left: 2.25%;
+        z-index: -1;
+        left: 37.5%;
         background-color: #86EBD9;
+    }
+
+    .timer {
+        position: absolute;
+        z-index: 10;
     }
 }
