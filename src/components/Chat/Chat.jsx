@@ -9,7 +9,6 @@ import { useEffect, useRef, useState } from 'react';
 import './Chat.scss';
 import { useSelector } from 'react-redux'
 
-
 export const Chat = () => {
     const [chatMessages, setChatMessages] = useState([])
     const app = initializeApp(firebaseConfig);
@@ -41,7 +40,6 @@ export const Chat = () => {
             <div className="chat" ref={chatRef}>
                 {chatMessages.map(chatObj => (
                     <>
-                    {console.log("chatObj : ",chatObj)}
                         {chatObj.type === user.type ? (
                             <ChatSender chatObj={chatObj} />
                         ): (

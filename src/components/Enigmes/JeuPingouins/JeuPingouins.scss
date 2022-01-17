@@ -32,7 +32,6 @@
 .map-container {
     width: 70%;
     height: 100%;
-    background-image: url("../../../../public/assets/images/polar-game/polar-map.png");
     background-size: cover;
 }
 
@@ -110,4 +109,48 @@
 .record-button {
     background-color: transparent;
     border: none;
+}
+
+.tv-effect {
+    width: 63.5%;
+    height: 95%;
+    position: absolute;
+    z-index: 1;
+}
+
+.radar {
+    width: 100%;
+    height: 100%;
+    background-size: 90%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.radar-line {
+    width: 90%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: 47.5%;
+    transform: translateY(6vh) translateX(1.7vw) rotate(0);
+    animation: 30s 0s infinite linear spinRadar;
+}
+
+@keyframes spinRadar {
+    0% {
+        transform: translateY(6vh) translateX(1.7vw) rotate(0);
+    }
+    25% {
+        transform: translateY(7.5vh) translateX(-1vw) rotate(90deg);
+    }
+    50% {
+        transform: translateY(3vh) translateX(-1.5vw) rotate(180deg) scale(0.95);
+    }
+    75% {
+        transform: translateY(2vh) translateX(1vw) rotate(270deg) scale(0.975);
+    }
+    100% {
+        transform: translateY(6vh) translateX(1.7vw) rotate(360deg);
+    }
 }

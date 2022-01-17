@@ -6,22 +6,12 @@ import { Missions } from '../../components/Missions/Missions';
 import { Dock } from '../../components/Dock/Dock';
 import { ShortTerminal } from '../../components/ShortTerminal/ShortTerminal';
 import { Modal } from "../../components/Modal/Modal";
-import { Dossier } from '../../components/Dossier/Dossier';
 import JusticeDossier from '../../components/Enigmes/justice/JusticeDossier';
 import ClimatDossier from '../../components/Enigmes/climat/ClimatDossie';
-import { useSelector } from 'react-redux';
-import { useState } from 'react/cjs/react.development';
-import { useEffect } from 'react';
+import DraggableFolder from '../../components/DraggableFolder/DraggableFolder';
 
 export const DashboardPage = () => {
-    // Récupérer le personnage selectionné (dans Redux)
-    const {user} = useSelector(state=> state.userReducer)
-
-    useEffect(() => {
-        console.log(user)
-        console.log(user.img)
-    })
-
+   
     return (
         <div>
             <div className="video-container">
@@ -32,8 +22,12 @@ export const DashboardPage = () => {
             <Terminal/>
             <ProgressBar/>
             <div className = 'dossierDivDashboard'>
-                <JusticeDossier/>
-                <ClimatDossier/>
+                <DraggableFolder defaultPosition={{ top: 200, right: 100 }}>
+                    <JusticeDossier/>
+                </DraggableFolder>
+                <DraggableFolder defaultPosition={{ top: 200, right: 200 }}>
+                    <ClimatDossier/>
+                </DraggableFolder>
             </div>
             
             <Chat/>

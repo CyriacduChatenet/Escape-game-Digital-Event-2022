@@ -2,15 +2,36 @@
 
 
 @font-face {
-    font-family: 'MonumentExtended';
-    src: url('../../../../public/assets/fonts/MonumentExtended-Regular.otf');
+    font-family: 'MonumentExtendedLight';
+    src: url('../../../../public/assets/fonts/MonumentExtended-Light.ttf');
 }
 
 .settingsModalPage{
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-color: #2F404D;
+    background-color:black;
+
+    .barTopLeft{
+        position: absolute;
+        right: 280px;
+        top: 25px;
+    }
+
+    .barTopRight{
+        position: absolute;
+        top: 25px;
+        right: 150px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .reduceBar{
+        color: white;
+        width: 50px;
+    }
 
     .settingsModal{
         position: absolute;
@@ -21,18 +42,17 @@
         display: flex;
         border: solid 1px #86EBD9;
         
-        
         .leftSideMenu{
             width: 25%;
             height: 100%;
             border-right: solid 1px #86EBD9;
-            background: linear-gradient(98deg, rgba(63, 137, 141, 44%), rgba(196, 196, 196,0) 70.71%),
+            background: linear-gradient(90deg, rgba(63, 137, 141, 0.7) 30%, rgba(255, 255, 255, 0.2) 100%),
         } 
 
         .rightSideMenu{
             width: 75%;
             height: 100%;
-            background: linear-gradient(217deg, rgba(63, 137, 141,.8), rgba(255,0,0,0) 70.71%), 
+            background: linear-gradient(90deg, rgba(63, 137, 141, 0.4) 1%, rgba(255, 255, 255, 0.2) 80%),
         }
     }
 }
@@ -44,7 +64,6 @@
 
     .avatarImg{
         padding: 20px;
-        margin-top: 20px;
         border-radius: 100px;
     }
 
@@ -54,22 +73,71 @@
 }
 
 .settingsList{
-    margin-top: 10px;
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-left: 65px;
     font-size: 12px;
 
-    .settingsItem{
+    .currentSelec{
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        background-color: rgba(63, 137, 141, 44%);
+        border: #86EBD9 solid 1px;
+        border-radius: 2px;
         color: #86EBD9;
-        font-family: 'MonumentExtended', Arial, Helvetica, sans-serif;
+    }
+
+    .settingsItem{
+        display: flex;
+        justify-content: start;
+        margin-left: 30px;
+        color: #86EBD9;
+        font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
+
         &:hover{
-            cursor: pointer;
+            cursor: default;
         }
     }
-} 
+}
+
+.settingsItemNotSelec{
+    display: flex;
+    justify-content: start;
+    margin-left: 30px;
+    color: #86EBD9;
+    font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(110%);
+        transition: .5s;
+    }
+
+    &:not(:hover){
+        transition: .5s;
+    }
+}
+
+
+.rightSideText{
+    color: white;
+    font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.scrollDrawerDisplaying{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
 
 
 
