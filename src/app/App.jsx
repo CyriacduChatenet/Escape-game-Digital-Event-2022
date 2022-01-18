@@ -10,11 +10,13 @@ import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
+import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
 
 import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
 import { QCM } from "../components/QCM/QCM";
+import { Galerie } from "../components/Galerie/Galerie";
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
               <Route exact path="/Partage" element={ <Partage /> }/>
               <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
               <Route exact path="/QCM" element={ <QCM /> }/>
+              <Route exact path="/jeu-tuyau" element={ <JeuTuyau/> }/>
+              <Route exact path="/Galerie" element={ <Galerie/> }/>
+
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>

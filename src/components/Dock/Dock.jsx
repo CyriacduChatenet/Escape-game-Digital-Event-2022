@@ -10,6 +10,7 @@ import { SettingsModal } from '../Modal/SettingsModal/SettingsModal'
 import './Dock.scss';
 import Partage from '../Enigmes/partage/Partage';
 import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
+import { Galerie } from '../Galerie/Galerie';
 
 export const Dock = () => {
     return (
@@ -38,7 +39,9 @@ export const Dock = () => {
                 <DockIcon dockText="Réglages"dockIcon="/assets/images/dock-icon/settings.png">
                     <SettingsModal/>
                 </DockIcon>
-                <DockIcon dockText="Galerie" dockIcon="/assets/images/dock-icon/galerie.png"/>
+                <DockIcon dockText="Galerie" dockIcon="/assets/images/dock-icon/galerie.png">
+                    <Galerie/>
+                </DockIcon>
                 <DockIcon dockText="Corbeille" dockIcon="/assets/images/dock-icon/bin.png" />
             </div>
         </div>
