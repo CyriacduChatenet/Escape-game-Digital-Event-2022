@@ -12,6 +12,7 @@ import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
+import { StartPage } from "../pages/StartPage/StartPage";
 
 import Partage from "../components/Enigmes/partage/Partage";
 import { QCM } from "../components/QCM/QCM";
@@ -19,6 +20,7 @@ import { Galerie } from "../components/Galerie/Galerie";
 import "./index.scss"
 import { Victory } from "../components/Victory/Victory";
 import { Defeat } from "../components/Defeat/Defeat";
+import { Canadair } from "../components/Canadair/Canadair";
 
 function App() {
   return (
@@ -45,6 +47,7 @@ function App() {
               <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
               <Route exact path="/victory" element={ <Victory/> }/>
               <Route exact path="/defeat" element={ <Defeat/> }/>
+              <Route exact path="/canadair" element={ <Canadair/> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>

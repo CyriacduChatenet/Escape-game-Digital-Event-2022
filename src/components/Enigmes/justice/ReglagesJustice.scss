@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Raleway-light";
+    src: url("../../../../public/assets/fonts/Raleway-Light.ttf") format('trueType');
+}
+
+@font-face {
+    font-family: "Raleway-regular";
+    src: url("../../../../public/assets/fonts/Raleway-Regular.ttf") format('trueType');
+}
+@font-face {
+    font-family: "Raleway-bold";
+    src: url("../../../../public/assets/fonts/Raleway-Bold.ttf") format('trueType');
+}
 .reglageJustice{
     background: url(../../../../public/assets/images/background-justice/Regl.png);
     background-position: center;
@@ -7,7 +20,6 @@
     height: 600px;
     position: absolute;
     left: 0px;
-    z-index: -1;
 }
 .inputOnglet{
     position: absolute;
@@ -16,4 +28,7 @@
     top: 71%;
     left: 12.8%;
     border: 1px solid #B6AFAF;
+    z-index: 100;
+    font-size: 0.5em;
+    font-family: "Raleway-light";
 }

@@ -1,0 +1,32 @@
+.containerCanadair{
+    background: url(../../../public/assets/images/canadair/mapCanadair.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 900px;
+    height: 600px;
+    position: relative;
+}
+.codeCanadair{
+    position: absolute;
+    top: 40%;
+    right: 4%;
+    width: 220px;
+    height: 34px;
+    border: #86EBD9 solid 1px;
+    background-color: #24272E;
+    border-radius: 3px;
+    color: #FFF;
+    padding-left: 10px;
+}
+.buttonCanadair{
+    width: 180px;
+    height: 34px;
+    background-color: powderblue;
+    background: url(../../../public/assets/images/canadair/buttonCanadair.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 47.5%;
+    right: 6%;
+}

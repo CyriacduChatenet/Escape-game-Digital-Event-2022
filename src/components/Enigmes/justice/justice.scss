@@ -1,6 +1,21 @@
+@font-face {
+    font-family: "Raleway-light";
+    src: url("../../../../public/assets/fonts/Raleway-Light.ttf") format('trueType');
+}
+
+@font-face {
+    font-family: "Raleway-regular";
+    src: url("../../../../public/assets/fonts/Raleway-Regular.ttf") format('trueType');
+}
+@font-face {
+    font-family: "Raleway-bold";
+    src: url("../../../../public/assets/fonts/Raleway-Bold.ttf") format('trueType');
+}
 .justiceList li {
-    padding: 20px 12px;
+    padding: 20px 19px;
     cursor: pointer;
+    font-size: 0.8em;
+    font-family: "Raleway-regular";
 }
 .containerJustice{
     width: 100%;
@@ -12,4 +27,5 @@
 }
 .nav-bar{
     margin-top: 100px;
+    z-index: 2;
 }
