@@ -23,24 +23,24 @@ const initialsToggleState = {
 };
 
 export const CharacterChoicePage = () => {
-    const navigate = useNavigate();
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const characteresColleftionRef = collection(db, 'characters');
-    const [toggleState, setToggleState] = useState(initialsToggleState)
-    const [characteresList, setCharactersList] = useState({})
-    
-    useEffect(()=>{
-        // Reset all characters selected in firestore
-        window.addEventListener('keydown', (e) => {
-            if(e.key === 'a' && e.ctrlKey){
-                updateDoc(doc(db, "characters","selected"), initialsToggleState);
-            }
-        })
-        getCharacters()
-        // Don't delete : Init default values in firestore
-        // setDoc(doc(db, "characters","selected"), initialsToggleState);
-    },[])
+  const navigate = useNavigate();
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const characteresColleftionRef = collection(db, 'characters');
+  const [toggleState, setToggleState] = useState(initialsToggleState)
+  const [characteresList, setCharactersList] = useState({})
+
+  useEffect(() => {
+    // Reset all characters selected in firestore
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'a' && e.ctrlKey) {
+        updateDoc(doc(db, "characters", "selected"), initialsToggleState);
+      }
+    })
+    getCharacters()
+    // Don't delete : Init default values in firestore
+    // setDoc(doc(db, "characters","selected"), initialsToggleState);
+  }, [])
 
   useEffect(() => {
     // Reset all characters selected in firestore

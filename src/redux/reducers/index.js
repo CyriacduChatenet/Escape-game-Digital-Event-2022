@@ -4,7 +4,7 @@ import missionsReducer from "./missionsReducer"
 import ecologieReducer from "./ecologieReducer";
 
 export default combineReducers({
-    userReducer,
-    missionsReducer,
-    ecologieReducer
+  userReducer,
+  missionsReducer,
+  ecologieReducer
 })
