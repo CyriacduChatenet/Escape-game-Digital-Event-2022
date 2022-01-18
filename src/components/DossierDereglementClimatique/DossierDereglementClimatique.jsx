@@ -100,8 +100,6 @@ export const DossierDereglementClimatique = () => {
                         <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'dossierDereglementClimatiqueItemsecond'></div>
-                                <p className='marginLeftName'>dossier1</p>
-                                <div className = 'dossierJusticeItemsecond'></div>
                                 <p className='marginLeftName'>Enigme</p>
                             </div>
                             <div className = 'modifiedMiddle'>
@@ -116,9 +114,7 @@ export const DossierDereglementClimatique = () => {
                         </div>
                         <div className = 'dossierThird' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierDereglementClimatiqueItemsecond'></div>
-                                <p className='marginLeftName'>dossier2</p>
-                                <div className = 'logoSystemesecond'></div>
+                                <div className = 'dossierDereglementClimatiqueItemsecond logoSystemesecond'></div>
                                 <p className='marginLeftName'>tableau.txt</p>
                             </div>
                             <div className = 'modifiedMiddle'>
