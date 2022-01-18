@@ -8,12 +8,8 @@ export const StartPage = () => {
         <div className="start_page">
 
             <video autoPlay loop muted className='video_container'>
-                <source src='/assets/video/start-page-earth.mp4'type='video/mp4'/>
+                <source src='/assets/video/start-page-code.mp4'type='video/mp4'/>
             </video>
-
-            {/* <video autoPlay loop muted className="video_container2">
-                <source src='/assets/video/start-page-number.mp4' type='video/mp4'/>
-            </video> */}
 
             <div className="start_page_content_displaying">
                 <h1 className="start_page_title">THE LAST CHANCE</h1>
