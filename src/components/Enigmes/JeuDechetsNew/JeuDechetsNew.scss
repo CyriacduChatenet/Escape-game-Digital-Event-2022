@@ -86,50 +86,40 @@
         text-align: center;
       }
     }
-
-
   }
 
   .dechets {
-    .dechet1 {
+    .dechet {
       width: 40px;
       height: 40px;
+      cursor: pointer;
+      object-fit: contain;
+    }
+    .dechet1 {
       position: absolute;
       top: 88%; 
       left: 25%;
-      cursor: pointer;
     }
     .dechet2 {
-      width: 40px;
-      height: 40px;
       position: absolute;
       top: 82%; 
       left: 38%;
-      cursor: pointer;
     }
     .dechet3 {
-      width: 40px;
-      height: 40px;
       position: absolute;
       top: 90%; 
       left: 50%;
-      cursor: pointer;
     }
     .dechet4 {
-      width: 40px;
-      height: 40px;
       position: absolute;
       top: 78%; 
       left: 65%;
-      cursor: pointer;
     }
     .dechet5 {
-      width: 40px;
-      height: 40px;
       position: absolute;
       top: 85%; 
       left: 85%;
-      cursor: pointer;
     }
   }
+  
 }

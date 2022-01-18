@@ -1,23 +1,14 @@
 import "./JeuDechetsNew.scss";
 import { useState } from "react";
 
-// TODO : 
-
 // Si le quizz n'a pas été fait, rien n'est débloqué
-
 // Si le quizz a été fait :
-
 // Le contenu du terminal change : "Quels type de déchets sont sur la plage ? Encore 5 restants..."
-
-// On peut entrer des mots dans l'input
-
+// On peut entrer des mots dans l'input :
 // Si le bon mot clé est entré (ex : cigarette), l'image de la cigarette apparait sur la place à la place du point d'interrogation ET apparait dans l'espace déchet à l'écrit en bas à droite 
-
 // Il est alors possible de rammasser le déchet en cliquant dessus
-
-// Quand le déchet a été rammassé, le mot en bas à droite se barre, l'objet est ajouté à l'inventaire, et dans le terminal le nombre d'objet restant décrémente
-
-// Quand ils ont tousété ramassés, le mini jeu est gagné : écran de win avec petite transition
+// Quand le déchet a été rammassé, le mot en bas à droite se barre et le nombre d'objet restant décrémente dans le terminal
+// Quand ils ont tous été ramassés, le mini jeu est gagné : écran de win avec petite transition
 
 export const JeuDechetsNew = () => {
 
@@ -53,19 +44,19 @@ export const JeuDechetsNew = () => {
       </div>
       <div className="dechets">
         {
-          trash1 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet1" onClick={() => { setTrash1(false) }}></img> : null
+          trash1 === true ? <img src="/assets/images/jeu-dechets/bouteille-plastique.png" className="dechet dechet1" onClick={() => { setTrash1(false) }}></img> : null
         }
         {
-          trash2 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet2" onClick={() => { setTrash2(false) }}></img> : null
+          trash2 === true ? <img src="/assets/images/jeu-dechets/megot-cigarette.png" className="dechet dechet2" onClick={() => { setTrash2(false) }}></img> : null
         }
         {
-          trash3 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet3" onClick={() => { setTrash3(false) }}></img> : null
+          trash3 === true ? <img src="/assets/images/jeu-dechets/sac-plastique.png" className="dechet dechet3" onClick={() => { setTrash3(false) }}></img> : null
         }
         {
-          trash4 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet4" onClick={() => { setTrash4(false) }}></img> : null
+          trash4 === true ? <img src="/assets/images/jeu-dechets/canette.png" className="dechet dechet4" onClick={() => { setTrash4(false) }}></img> : null
         }
         {
-          trash5 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet5" onClick={() => { setTrash5(false) }}></img> : null
+          trash5 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet5" onClick={() => { setTrash5(false) }}></img> : null
         }
       </div>
 
