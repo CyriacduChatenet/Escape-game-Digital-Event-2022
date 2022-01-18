@@ -10,7 +10,7 @@ import { JeuDechets } from "../components/Enigmes/JeuDechets/JeuDechets";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
-import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
+import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
 
 import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
