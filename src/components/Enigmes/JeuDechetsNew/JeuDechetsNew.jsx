@@ -21,7 +21,7 @@ export const JeuDechetsNew = () => {
             <div className="terminal">
                 <table className="table" border="1">
                     <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
-                    <tr><td className="middle"><span className="middle-text1">C:\hacker></span><br/>
+                    <tr><td className="middle"><span className="middle-text1">C:\hacker</span><br/>
                     Débloquez la compétence “Tri des déchets“ avant de pouvoir commencer ce mini-jeu...</td></tr>
                     <tr><td className="bottom"><input type="text" placeholder="Tapez votre réponse..."/></td></tr>
                 </table>
