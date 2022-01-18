@@ -1,12 +1,11 @@
+import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal'
 import style from "../../PrimaryModal/style"
-import React, { useState, useRef } from "react";
-
 import "../../PrimaryModal/primary-modal.scss"
 
-const JusticeDossier = () => {
+export const EcologieDossier = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -15,7 +14,7 @@ const JusticeDossier = () => {
         <div onDoubleClick={handleOpen}>
             <div className="folder">
                 <img src="/assets/images/folder-icon/folder-icon.png" alt=""  />
-                <p>Justice</p>
+                <p>Ecologie</p>
             </div>
             <Modal
                 open={open}
@@ -35,5 +34,3 @@ const JusticeDossier = () => {
         </div>
      );
 }
- 
-export default JusticeDossier;
