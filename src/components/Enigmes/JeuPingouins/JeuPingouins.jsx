@@ -7,7 +7,7 @@ import { Box } from "@mui/system";
 export const JeuPingouins = () => {
   const [translateXValue, setTranslateXValue] = useState(0)
   const [translateYValue, setTranslateYValue] = useState(0)
-  const [mapSrc, SetMapSrc] = useState("/assets/images/polar-game/polar-map.png")
+  const [mapSrc, SetMapSrc] = useState("/assets/images/polar-game/thermique-bg.png")
   const [hour, setHour] = useState(7)
   const [minutes, setMinutes] = useState(50)
   const [numberAnimals, setNumberAnimals] = useState(20)
@@ -75,9 +75,9 @@ export const JeuPingouins = () => {
       continuous : true 
     })
 
-    // setTimeout(() => {
-    //   SpeechRecognition.stopListening()
-    // }, 4000);
+    setTimeout(() => {
+      SpeechRecognition.stopListening()
+    }, 4000);
   }
 
   const handleStopListening = () => {
@@ -102,13 +102,16 @@ export const JeuPingouins = () => {
     <>
       <div className="JeuPingouins">
       <div className="game-content">
-        <div className="tv-effect" style={{backgroundImage : `url(/assets/images/polar-game/tv-effect.png)`}}>
-          <div className="radar" style={{backgroundImage : `url(/assets/images/polar-game/radar-base.png)`}}>
-            <div className="radar-line" style={{backgroundImage : `url(/assets/images/polar-game/radar-line.png)`}}></div>
+        {/* <div className="tv-effect" style={{backgroundImage : `url(/assets/images/polar-game/tv-effect.png)`}}> */}
+        <div className="tv-effect" >
+          <div className="radar" >
+          {/* <div className="radar" style={{backgroundImage : `url(/assets/images/polar-game/radar-base.png)`}}> */}
+            <div className="radar-line" ></div>
+            {/* <div className="radar-line" style={{backgroundImage : `url(/assets/images/polar-game/radar-line.png)`}}></div> */}
           </div>
         </div>
         <div className="map-container" style={{backgroundImage: `url(${mapSrc})`}}>
-          <div className="animals-container">
+          <div className="animals-container" >
             <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}>
               <Box>
                 {animalsPoints.map(el => el)}
@@ -171,7 +174,16 @@ export const JeuPingouins = () => {
           </div>
           <div className="controlls-row">
             <div className="controlls-item">
-              <button className="record-button"><img src="/assets/images/polar-game/microphone-icon.png" alt="" className="micro" onClick={StartListening} /></button>
+                {listening ? (
+                  <img src="/assets/images/polar-game/sound_wavess.gif" alt="" className="micro"  />
+                ): (
+                  <button onClick={StartListening}>
+                    <span></span>
+                    Record
+                    </button>
+                )}
+                {/* <img src="/assets/images/polar-game/microphone-icon.png" alt="" className="micro" onClick={StartListening} /> */}
+                
             </div>
           </div>
         </div>

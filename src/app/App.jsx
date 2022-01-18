@@ -13,11 +13,10 @@ import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
 
-import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
 import { QCM } from "../components/QCM/QCM";
 import { Galerie } from "../components/Galerie/Galerie";
-import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
+import "./index.scss"
 
 function App() {
   return (

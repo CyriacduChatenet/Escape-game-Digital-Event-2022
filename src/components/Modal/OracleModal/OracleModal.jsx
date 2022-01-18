@@ -64,10 +64,7 @@ export const OracleModal = () => {
 
             </div>
 
-            <div className="outside_button_displaying">
-                <img src="/assets/images/terminal-bar/bar-top-left-king-size.png" alt="" />
-                <img src="/assets/images/terminal-bar/Bar-top-right-king-size.png" alt="" className="reduce_btn"/>
-            </div>
+            
 
             <div className="bg-black"></div>
         </div> 

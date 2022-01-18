@@ -45,12 +45,43 @@
 }
 
 .controlls-item {
-    width: 7vw;
-    height: 100%;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.controlls-item button{
+    cursor: pointer;
+    font-size: 1.4em;
+    width: 130px;
+    text-align: right;
+    padding: 13px;
+    border-radius: 3px;
+    background-color: rgba(212, 19, 19,.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+
+    span{
+        background-color: #fff;
+        opacity: .8;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        display: block;
+    }
+
+    &:hover{
+        background-color: rgba(212, 19, 19,1);
+
+        span{
+            opacity: 1;
+        }
+    }
 }
 
 .controlls-item-coord {
@@ -112,7 +143,7 @@
 }
 
 .radar {
-    width: 100%;
+    width: 70%;
     height: 100%;
     background-size: 90%;
     background-position: center;
@@ -122,8 +153,8 @@
 }
 
 .radar-line {
-    width: 90%;
-    height: 90%;
+    width: 78%;
+    height: 94%;
     background-repeat: no-repeat;
     background-size: 47.5%;
     transform: translateY(6vh) translateX(1.7vw) rotate(0);
@@ -149,11 +180,19 @@
 }
 
 
+$animal-thermique: rgb(160,87,93);
+
 .animalPoint{
     width: 10px;
     height: 10px;
-    background-color: rgb(138,234,217);
+    background-color: $animal-thermique;
     border-radius: 40px;
-    box-shadow: 0 0 5px 1px rgb(138,234,217);
+    box-shadow: 0 0 5px 1px $animal-thermique;
     transition: all .3s;
+    animation: animal 2s infinite ease-in-out;
+}
+
+@keyframes animal {
+    0%{opacity: 1;}
+    100%{opacity: .2;}
 }
