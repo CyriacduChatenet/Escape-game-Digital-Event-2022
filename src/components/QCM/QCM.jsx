@@ -4,101 +4,77 @@ import "./QCM.scss";
 
 export const QCM = () => {
 
-    const [question1Response1, setQuestion1Response1] = useState(false)
-    const [question1Response2, setQuestion1Response2] = useState(false)
-    const [question1Response3, setQuestion1Response3] = useState(false)
+  const [selectedRadioQ1, setSelectedRadioQ1] = useState('');
+  const radiosQ1 = ["Answer 1", "Answer 2", "Answer 3"]
 
-    const [question2Response1, setQuestion2Response1] = useState(false)
-    const [question2Response2, setQuestion2Response2] = useState(false)
-    const [question2Response3, setQuestion2Response3] = useState(false)
+  const [selectedRadioQ2, setSelectedRadioQ2] = useState('');
+  const radiosQ2 = ["Answer 1", "Answer 2", "Answer 3"]
 
-    const [question3Response1, setQuestion3Response1] = useState(false)
-    const [question3Response2, setQuestion3Response2] = useState(false)
-    const [question3Response3, setQuestion3Response3] = useState(false)
+  const [selectedRadioQ3, setSelectedRadioQ3] = useState('');
+  const radiosQ3 = ["Answer 1", "Answer 2", "Answer 3"]
 
-    const [questionState, setQuestionState] = useState(false)
+  const [questionState, setQuestionState] = useState(null)
 
-    const QuestionState = () => {
-        if(question1Response3 === true && question2Response1 === true && question3Response2 === true){
-            setQuestionState(true)
-        }else {
-            setQuestionState(false)
-        }
+  const CalculResponse = () => {
+    if(selectedRadioQ1 === "Answer 3" && selectedRadioQ2 === "Answer 1" && selectedRadioQ3 === "Answer 2"){
+      setQuestionState(true)
     }
-
-    useEffect(() => {
-        if(question1Response1 === false && question1Response2 === false && question1Response3 === false && question2Response1 === false && 
-            question2Response2 === false && question2Response3 === false && question3Response1 === false && question3Response2 === false && question3Response3 === false){
-                setQuestionState(null)
-            } 
-    })
+    if(selectedRadioQ1 === "Answer 1" && selectedRadioQ2 === "Answer 1" && selectedRadioQ3 === "Answer 1"){
+      setQuestionState(false)
+    }
+    if(selectedRadioQ1 === "Answer 2" && selectedRadioQ2 === "Answer 2" && selectedRadioQ3 === "Answer 2"){
+      setQuestionState(false)
+    }
+    if(selectedRadioQ1 === "Answer 3" && selectedRadioQ2 === "Answer 3" && selectedRadioQ3 === "Answer 3"){
+      setQuestionState(false)
+    }
+    if(selectedRadioQ1 === "Answer 1" && selectedRadioQ2 === "Answer 2" && selectedRadioQ3 === "Answer 1"){
+      setQuestionState(false)
+    }
+    if(selectedRadioQ1 === "Answer 2" && selectedRadioQ2 === "Answer 3" && selectedRadioQ3 === "Answer 3"){
+      setQuestionState(false)
+    }
+    if(selectedRadioQ1 === " " && selectedRadioQ2 === " " && selectedRadioQ3 === " "){
+      setQuestionState(null)
+    }
+  }
 
   return (
     <div className="QCM">
       <Question question="Question 1">
-        <div className="answer">
-          <div className="checkbox" onClick={() => {setQuestion1Response1(true)}}>
-          {question1Response1 === false | null ? null : <p>v</p>}
-          </div>
-          <p>first answer</p>
-        </div>
-        <div className="answer">
-        <div className="checkbox" onClick={() => {setQuestion1Response2(true)}}>
-          {question1Response2 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>second answer</p>
-        </div>
-        <div className="answer">
-        <div className="checkbox" onClick={() => {setQuestion1Response3(true)}}>
-          {question1Response3 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>third answer</p>
-        </div>
+      {radiosQ1.map((radio) => {
+                        return (
+                            <div key={radio}> 
+                                <input type="radio" value={radio} id={radio} checked={radio == selectedRadioQ1} onChange={(e) => setSelectedRadioQ1(e.target.value)}/>
+                                <label htmlFor={radio}>{radio}</label>
+                            </div>
+                        );
+                    })}
       </Question>
       <Question question="Question 2">
-      <div className="answer">
-          <div className="checkbox" onClick={() => {setQuestion2Response1(true)}}>
-          {question2Response1 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>first answer</p>
-        </div>
-        <div className="answer">
-        <div className="checkbox" onClick={() => {setQuestion2Response2(true)}}>
-          {question2Response2 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>second answer</p>
-        </div>
-        <div className="answer">
-        <div className="checkbox" onClick={() => {setQuestion2Response3(true)}}>
-          {question2Response3 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>third answer</p>
-        </div>
+      {radiosQ2.map((radio) => {
+                        return (
+                            <div key={radio}> 
+                                <input type="radio" value={radio} id={radio} checked={radio == selectedRadioQ2} onChange={(e) => setSelectedRadioQ2(e.target.value)}/>
+                                <label htmlFor={radio}>{radio}</label>
+                            </div>
+                        );
+                    })}
       </Question>
       <Question question="Question 3">
-      <div className="answer">
-          <div className="checkbox" onClick={() => {setQuestion3Response1(true)}}>
-          {question3Response1 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>first answer</p>
-        </div>
-        <div className="answer">
-        <div className="checkbox" onClick={() => {setQuestion3Response2(true)}}>
-          {question3Response2 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>second answer</p>
-        </div>
-        <div className="answer">
-        <div className="checkbox" onClick={() => {setQuestion3Response3(true)}}>
-          {question3Response3 === false | null  ? null : <p>v</p>}
-          </div>
-          <p>third answer</p>
-        </div>
+      {radiosQ3.map((radio) => {
+                        return (
+                            <div key={radio}> 
+                                <input type="radio" value={radio} id={radio} checked={radio == selectedRadioQ3} onChange={(e) => setSelectedRadioQ3(e.target.value)}/>
+                                <label htmlFor={radio}>{radio}</label>
+                            </div>
+                        );
+                    })}
       </Question>
-      <button className="submit-qcm" onClick={QuestionState}>Submit</button>
-      {questionState === true ? <p>Good job</p> : null}
-      {questionState === false ? <p>Loose</p> : null}
-      {questionState === null ? <p>Pas de réponse, merci de répondre au questionnaire</p> : null}
+      <button className="submit-qcm" onClick={CalculResponse}>Submit</button>
+      {questionState === null ? <p>Aucune réponses enregistrées </p> : null}
+      {questionState === true ? <p>Good job </p> : null}
+      {questionState === false ? <p>Loose </p> : null}
     </div>
   );
 };
