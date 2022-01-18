@@ -2,12 +2,77 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: scroll;
+    height: 495px;
 }
 .picture{
     margin: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &1,&2,&3,&4,&5,&6,&7,&8,&9,&10{
         width: 75px;
         height: 75px;
         background-color: orange;
+    }
+    &1{
+        background: url(../../../public/assets/images/picture/picture1.jpg);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: center;
+    }
+    &2{
+        background: url(../../../public/assets/images/picture/picture2.jpg);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: center;
+    }
+    &3{
+        background: url(../../../public/assets/images/picture/picture3.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+    }
+    &4{
+        background: url(../../../public/assets/images/picture/picture4.jpg);
+        background-repeat: no-repeat;
+        background-size: 160%;
+        background-position: center;
+    }
+    &5{
+        background: url(../../../public/assets/images/picture/picture5.jpg);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: center;
+    }
+    &6{
+        background: url(../../../public/assets/images/picture/picture6.jpg);
+        background-repeat: no-repeat;
+        background-size: 160%;
+        background-position: center;
+    }
+    &7{
+        background: url(../../../public/assets/images/picture/picture7.jpg);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center;
+    }
+    &8{
+        background: url(../../../public/assets/images/picture/picture8.jpg);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center;
+    }
+    &9{
+        background: url(../../../public/assets/images/picture/picture9.jpg);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center;
+    }
+    &10{
+        background: url(../../../public/assets/images/picture/picture10.jpg);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center;
     }
 }

@@ -17,7 +17,6 @@ import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
 import { QCM } from "../components/QCM/QCM";
 import { Galerie } from "../components/Galerie/Galerie";
-import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 
 function App() {
   return (
