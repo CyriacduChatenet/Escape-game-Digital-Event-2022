@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react/cjs/react.development";
+import { useState } from "react/cjs/react.development";
 import { Question } from "../Question/Question";
 import "./QCM.scss";
 
