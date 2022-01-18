@@ -4,8 +4,6 @@ import SpeechRecognition from 'react-speech-recognition/lib/SpeechRecognition';
 import { useSpeechRecognition } from 'react-speech-recognition';
 import { Box } from "@mui/system";
 
-
-
 export const JeuPingouins = () => {
   const [translateXValue, setTranslateXValue] = useState(0)
   const [translateYValue, setTranslateYValue] = useState(0)
@@ -45,38 +43,23 @@ export const JeuPingouins = () => {
   const {transcript, resetTranscript,listening} = useSpeechRecognition({commands})
 
   const [animalsPoints, setAnimalsPoints] = useState([])
-  let interval
 
   useEffect(() => {
-    const translateXValue2 = 0
-    const intervalTranslate = setInterval(() => {
-      console.log('This will run every second!');
-      const newX = translateXValue2 + 10
-      console.log(newX)
-      setTranslateXValue(newX)
-    }, 300);
+    let intervalTranslate = setInterval(() => {
+      setTranslateXValue(translateXValue + 1)
+    }, 1000);
     return () => clearInterval(intervalTranslate);
-  }, []);
+  });
 
   useEffect(() => {
-    // const intervalTranslate = setInterval(() => {
-    //   const newX = translateXValue + 10
-    //   setTranslateXValue(newX)
-    // }, 1000);
-
-    // return () => clearInterval(intervalTranslate);
-
-
-    // initTimer()
-    
     if(initGame){
       initPositionsAnimals()
       setInitGame(false)
     }
-  })
+  },[])
 
-  const initTimer = () => {
-    interval=setInterval(()=>{
+  useEffect(() => {
+    let interval = setInterval(()=>{
       if(minutes < 59) {
         setMinutes(minutes + 1)
       }
@@ -86,13 +69,12 @@ export const JeuPingouins = () => {
       }
     },1000)
 
-    // return ()=> clearInterval(interval)
-  }
+    return ()=> clearInterval(interval)
+  })
 
   const initPositionsAnimals = () => {
     const animalsCreated = []
     for (let index = 0; index < numberAnimals; index++) {
-      console.log('animal created')
       const top = Math.floor(Math.random() * 90)
       const left = Math.floor(Math.random() * 90)
   
