@@ -1,16 +1,21 @@
-@import '../../../../public/assets/styles/import.scss';
-
-
 @font-face {
-    font-family: 'MonumentExtendedLight';
-    src: url('../../../../public/assets/fonts/MonumentExtended-Light.ttf');
+    font-family: 'MonumentExtendedBlack';
+    src: url('../../../../public/assets/fonts/MonumentExtended-Black.otf');
 }
 
-.settingsModalPage{
+.corbeille_page{
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90.13deg, rgba(63, 137, 141, 0.19) 0.43%, rgba(196, 196, 196, 0) 145.64%);
+    z-index: 2;
+    position: relative;
 
     .barTopLeft{
         position: absolute;
-        right: 280px;
+        right: 100px;
         top: 25px;
     }
 
@@ -35,19 +40,22 @@
         height: 100%;
         display: flex;
         border: solid 1px #86EBD9;
-        
-        .leftSideMenu{
-            width: 25%;
-            height: 100%;
-            border-right: solid 1px #86EBD9;
-            background: linear-gradient(90deg, rgba(63, 137, 141, 0.7) 30%, rgba(255, 255, 255, 0.2) 100%),
-        } 
+    }
+    
 
-        .rightSideMenu{
-            width: 75%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(63, 137, 141, 0.4) 1%, rgba(255, 255, 255, 0.2) 80%),
-        }
+    .leftSideMenu{
+        // position: absolute;
+        // left: 0;
+        width: 25%;
+        height: 100%;
+        border-right: solid 1px #86EBD9;
+        background: linear-gradient(90deg, rgba(63, 137, 141, 0.7) 30%, rgba(255, 255, 255, 0.2) 100%),
+    } 
+
+    .rightSideMenu{
+        width: 75%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(63, 137, 141, 0.4) 1%, rgba(255, 255, 255, 0.2) 80%),
     }
 }
 
@@ -124,10 +132,37 @@
     font-size: 14px;
 }
 
+.scrollDrawerContainerCorbeille{
+    border: #86EBD9 solid 1px;
+    width: 600px;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    gap: 450px;
+    align-items: center;
+    position: relative;
+    margin-left: 75px;
+    margin-top: 35px;
+    
+    .scrollDrawerText{
+        color: white;
+        font-family: 'MonumentExtendedLight';
+        padding-left: 20px;
+    }
 
+}
 
-
-
-
+.chevronIconCorbeille{
+    position: absolute ;
+    right: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    background-color: #86EBD9;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'MonumentExtendedBlack';
+}
 
 
