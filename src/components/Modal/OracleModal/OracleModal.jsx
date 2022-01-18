@@ -14,11 +14,11 @@ export const OracleModal = () => {
                 <img src="/assets/images/OracleBDD/navbar.png" alt="" className="navbar" />
             </div>
 
-            <div className="input_displaying">
+            {/* <div className="input_displaying">
                 <input type="text" placeholder="Recherches..." className="search_input"/>
                 <img src="assets/images/folder-icon/search.png" alt="" className="search_img"/>
                 <img src="assets/images/folder-icon/vocal.png" alt="" className="vocal_img"/>
-            </div>
+            </div> */}
 
             <div className="treestructure_container">
 
@@ -68,6 +68,8 @@ export const OracleModal = () => {
                 <img src="/assets/images/terminal-bar/bar-top-left-king-size.png" alt="" />
                 <img src="/assets/images/terminal-bar/Bar-top-right-king-size.png" alt="" className="reduce_btn"/>
             </div>
+
+            <div className="bg-black"></div>
         </div> 
     </div>
   );
