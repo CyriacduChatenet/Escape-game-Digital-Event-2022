@@ -15,6 +15,7 @@ import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
 import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
 import { QCM } from "../components/QCM/QCM";
+import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 
 function App() {
   return (
