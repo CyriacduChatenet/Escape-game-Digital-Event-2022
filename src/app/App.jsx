@@ -11,6 +11,8 @@ import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
+import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
+import { StartPage } from "../pages/StartPage/StartPage";
 
 import "./index.scss"
 import Partage from "../components/Enigmes/partage/Partage";
@@ -34,6 +36,7 @@ function App() {
               <Route exact path="/Partage" element={ <Partage /> }/>
               <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
               <Route exact path="/QCM" element={ <QCM /> }/>
+              <Route exact path="/start-page" element={ <StartPage /> }/>
 
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
