@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from "react";
 
 const PrimaryModal = () => {
     const [showModal, setShowModal] = useState(false);
