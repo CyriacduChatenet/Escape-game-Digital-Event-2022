@@ -16,12 +16,14 @@ export const JeuDechetsNew = () => {
     const [trash4, setTrash4] = useState(true)
     const [trash5, setTrash5] = useState(true)
 
+    const terminalText = "C:\hacker>"
+
     return (
         <div className="JeuDechetsNew">
             <div className="terminal">
                 <table className="table" border="1">
                     <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
-                    <tr><td className="middle"><span className="middle-text1">C:\hacker</span><br/>
+                    <tr><td className="middle"><span className="middle-text1">{ terminalText }</span><br/>
                     Débloquez la compétence “Tri des déchets“ avant de pouvoir commencer ce mini-jeu...</td></tr>
                     <tr><td className="bottom"><input type="text" placeholder="Tapez votre réponse..."/></td></tr>
                 </table>
