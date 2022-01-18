@@ -8,7 +8,7 @@
 .JeuDechetsNew {   
   width: 1000px;
   height: 600px;
-  background-image: url('../../../../public/assets/images/jeu-dechets/plage.png');
+  background-image: url('../../../../public/assets/images/jeu-ecologie/plage.png');
   background-size: 1000px 600px;
   background-repeat: no-repeat;
   position: relative;
@@ -62,16 +62,17 @@
   }
 
   .inventaire {
-    background-image: url('../../../../public/assets/images/jeu-dechets/cadre-inventaire.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+    // background-image: url('../../../../public/assets/images/jeu-ecologie/cadre-inventaire.png');
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    background: rgba(134, 235, 217, 0.3);
     padding: 1em;
     position: absolute;
     height: 214px;
     width: 200px;
-    bottom: 0;
+    bottom: 2%;
+    left: 1%;
     .section-img-sac-inventaire {
-      height: 33px;
       .img-sac-inventaire {
         position: absolute;
         left: 150px;
@@ -81,9 +82,10 @@
       .dechet-inventaire {
         color: white;
         font-family: "MonumentExtendedLight";
-        margin: 4px;
-        font-size: 18px;
+        margin: 6px;
+        font-size: 14px;
         text-align: center;
+        text-shadow: #000 2px 0 5px;
       }
     }
   }
@@ -119,6 +121,11 @@
       position: absolute;
       top: 85%; 
       left: 85%;
+    }
+    .dechet6 {
+      position: absolute;
+      top: 68%; 
+      left: 25%;
     }
   }
   

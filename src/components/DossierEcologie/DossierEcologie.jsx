@@ -3,7 +3,7 @@ import './DossierEcologie.scss'
 import Modal from '@mui/material/Modal'
 import style from "../../components/PrimaryModal/style"
 import Box from '@mui/material/Box';
-import { JeuDechetsNew } from '../Enigmes/JeuDechetsNew/JeuDechetsNew';
+import { JeuEcologie } from '../Enigmes/JeuEcologie/JeuEcologie';
 import { QCM } from '../QCM/QCM'
 
 export const DossierEcologie = () => {
@@ -142,7 +142,7 @@ export const DossierEcologie = () => {
                                 aria-describedby="modal-modal-description"
                             >
                                 <Box sx={style}>
-                                    <JeuDechetsNew />
+                                    <JeuEcologie />
                                 </Box>
                             </Modal>
                         </div>
