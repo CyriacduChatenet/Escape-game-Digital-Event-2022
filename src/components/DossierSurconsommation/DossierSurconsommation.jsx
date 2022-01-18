@@ -3,11 +3,11 @@ import './DossierSurconsommation.scss'
 
 export const DossierSurconsommation = () => {
 
-    const [dossierJustice, setDossierJustice] = useState(true)
-    // console.log('dossierJustice :', dossierJustice);
+    const [dossierSurconsommation, setDossierSurconsommation] = useState(true)
+    // console.log('dossierSurconsommation :', dossierSurconsommation);
 
-    const [openJustice, setOpenJustice] = useState(true)
-    // console.log('PopUp OpenJustice :', openJustice)
+    const [openSurconsommation, setOpenSurconsommation] = useState(true)
+    // console.log('PopUp OpenSurconsommation :', openSurconsommation)
 
     const [dossierFirst, setDossierFirst] = useState(false)
 
@@ -24,57 +24,57 @@ export const DossierSurconsommation = () => {
     const [chevron, setChevron] = useState(">")
 
     return(
-        <div className = 'dossierJusticeContainer'>
-                <div className ='popUpDossierJustice' style={dossierJustice === false ? {display : 'none'} : {display : 'flex'} }>
-                    <div className = 'leftNavDossierJustice'>
+        <div className = 'dossierSurconsommationContainer'>
+                <div className ='popUpDossierSurconsommation' style={dossierSurconsommation === false ? {display : 'none'} : {display : 'flex'} }>
+                    <div className = 'leftNavDossierSurconsommation'>
                         <div className = 'leftNavSysteme'>
                         <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'logoSystemJustice'></div>
+                            <div className = 'logoSystemSurconsommation'></div>
                             &nbsp;
                             <p>Système</p>
                             
                         </div>
                         <div className = 'leftNavSecondSysteme'>
                             <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'dossierJusticeItemsecond espece'></div>
+                            <div className = 'dossierSurconsommationItemsecond espece'></div>
                             &nbsp;
                             <p>Surconsommation</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierSurconsommationItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier1</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierSurconsommationItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier2</p>
                         </div>
                         <div className = 'leftNavSecondSystemeClose'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierSurconsommationItemsecond'></div>
                             &nbsp;
                             <p>Folder</p>
                         </div>
                     </div>
-                    <div className = 'rightNavDossierJustice'>
+                    <div className = 'rightNavDossierSurconsommation'>
                         <div className = 'lineBottom'>
-                            <div className = 'topNavJustice'>
-                                <div className = 'topDossierNavJustice systemeDivTop'>
-                                    <div className = 'logoSystemJustice'></div>
+                            <div className = 'topNavSurconsommation'>
+                                <div className = 'topDossierNavSurconsommation systemeDivTop'>
+                                    <div className = 'logoSystemSurconsommation'></div>
                                     &nbsp;
                                     <p>Système</p>
                                 </div>
-                                <div className = 'folderLinkOpen' style={openJustice === false ? {display:'none'} : {display:'flex'}}>
+                                <div className = 'folderLinkOpen' style={openSurconsommation === false ? {display:'none'} : {display:'flex'}}>
                                     <p className = 'chevron'>{chevron}</p>
-                                    <div className = 'topDossierNavJustice'>
-                                        <div className = 'logoDossierJustice'></div>
+                                    <div className = 'topDossierNavSurconsommation'>
+                                        <div className = 'logoDossierSurconsommation'></div>
                                         &nbsp;
                                         <p>Surconsommation</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className ='middleNavJustice'>
+                        <div className ='middleNavSurconsommation'>
                             <div className = 'nameMiddle'>
                                 <div className = 'lineRight flexName'>
                                     <p>Nom</p>
@@ -99,7 +99,7 @@ export const DossierSurconsommation = () => {
                         </div>
                         <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierSurconsommationItemsecond'></div>
                                 <p className='marginLeftName'>dossier1</p>
                             </div>
                             <div className = 'modifiedMiddle'>
@@ -114,7 +114,7 @@ export const DossierSurconsommation = () => {
                         </div>
                         <div className = 'dossierSecond' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierSurconsommationItemsecond'></div>
                                 <p className='marginLeftName'>dossier2</p>
                             </div>
                             <div className = 'modifiedMiddle'>

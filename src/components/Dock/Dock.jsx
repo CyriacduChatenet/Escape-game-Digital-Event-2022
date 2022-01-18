@@ -13,6 +13,7 @@ import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsomma
 import { Galerie } from '../Galerie/Galerie';
 import { OracleModal } from '../Modal/OracleModal/OracleModal';
 import IndexJustice from '../Enigmes/justice/IndexJustice';
+import { CorbeilleModal } from '../Modal/CorbeilleModal/CorbeilleModal';
 
 export const Dock = () => {
     return (
@@ -47,7 +48,9 @@ export const Dock = () => {
                 <DockIcon dockText="Galerie" dockIcon="/assets/images/dock-icon/galerie.png">
                     <Galerie/>
                 </DockIcon>
-                <DockIcon dockText="Corbeille" dockIcon="/assets/images/dock-icon/bin.png" />
+                <DockIcon dockText="Corbeille" dockIcon="/assets/images/dock-icon/bin.png" >
+                    <CorbeilleModal/>
+                </DockIcon>
             </div>
         </div>
     )

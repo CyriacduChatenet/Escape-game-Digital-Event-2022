@@ -3,11 +3,11 @@ import './DossierRepartition.scss'
 
 export const DossierRepartition = () => {
 
-    const [dossierJustice, setDossierJustice] = useState(true)
-    // console.log('dossierJustice :', dossierJustice);
+    const [dossierRepartition, setDossierRepartition] = useState(true)
+    // console.log('dossierRepartition :', dossierRepartition);
 
-    const [openJustice, setOpenJustice] = useState(true)
-    // console.log('PopUp OpenJustice :', openJustice)
+    const [openRepartition, setOpenRepartition] = useState(true)
+    // console.log('PopUp OpenRepartition :', openRepartition)
 
     const [dossierFirst, setDossierFirst] = useState(false)
 
@@ -24,57 +24,57 @@ export const DossierRepartition = () => {
     const [chevron, setChevron] = useState(">")
 
     return(
-        <div className = 'dossierJusticeContainer'>
-                <div className ='popUpDossierJustice' style={dossierJustice === false ? {display : 'none'} : {display : 'flex'} }>
-                    <div className = 'leftNavDossierJustice'>
+        <div className = 'dossierRepartitionContainer'>
+                <div className ='popUpDossierRepartition' style={dossierRepartition === false ? {display : 'none'} : {display : 'flex'} }>
+                    <div className = 'leftNavDossierRepartition'>
                         <div className = 'leftNavSysteme'>
                         <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'logoSystemJustice'></div>
+                            <div className = 'logoSystemRepartition'></div>
                             &nbsp;
                             <p>Système</p>
                             
                         </div>
                         <div className = 'leftNavSecondSysteme'>
                             <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'dossierJusticeItemsecond espece'></div>
+                            <div className = 'dossierRepartitionItemsecond espece'></div>
                             &nbsp;
                             <p>Répartition...</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierRepartitionItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier1</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierRepartitionItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier2</p>
                         </div>
                         <div className = 'leftNavSecondSystemeClose'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierRepartitionItemsecond'></div>
                             &nbsp;
                             <p>Folder</p>
                         </div>
                     </div>
-                    <div className = 'rightNavDossierJustice'>
+                    <div className = 'rightNavDossierRepartition'>
                         <div className = 'lineBottom'>
-                            <div className = 'topNavJustice'>
-                                <div className = 'topDossierNavJustice systemeDivTop'>
-                                    <div className = 'logoSystemJustice'></div>
+                            <div className = 'topNavRepartition'>
+                                <div className = 'topDossierNavRepartition systemeDivTop'>
+                                    <div className = 'logoSystemRepartition'></div>
                                     &nbsp;
                                     <p>Système</p>
                                 </div>
-                                <div className = 'folderLinkOpen' style={openJustice === false ? {display:'none'} : {display:'flex'}}>
+                                <div className = 'folderLinkOpen' style={openRepartition === false ? {display:'none'} : {display:'flex'}}>
                                     <p className = 'chevron'>{chevron}</p>
-                                    <div className = 'topDossierNavJustice'>
-                                        <div className = 'logoDossierJustice'></div>
+                                    <div className = 'topDossierNavRepartition'>
+                                        <div className = 'logoDossierRepartition'></div>
                                         &nbsp;
                                         <p>Répartition...</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className ='middleNavJustice'>
+                        <div className ='middleNavRepartition'>
                             <div className = 'nameMiddle'>
                                 <div className = 'lineRight flexName'>
                                     <p>Nom</p>
@@ -99,7 +99,7 @@ export const DossierRepartition = () => {
                         </div>
                         <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierRepartitionItemsecond'></div>
                                 <p className='marginLeftName'>dossier1</p>
                             </div>
                             <div className = 'modifiedMiddle'>
@@ -114,7 +114,7 @@ export const DossierRepartition = () => {
                         </div>
                         <div className = 'dossierSecond' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierRepartitionItemsecond'></div>
                                 <p className='marginLeftName'>dossier2</p>
                             </div>
                             <div className = 'modifiedMiddle'>
