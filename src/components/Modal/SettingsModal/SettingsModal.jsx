@@ -37,11 +37,11 @@ export const SettingsModal = () => {
         <div className="leftSideMenu">
           <div className="userAvatar">
             <img
-              src="https://via.placeholder.com/75"
+              src="assets/images/corbeille/userIcon.png"
               alt=""    
               className="avatarImg"
             />
-            <p className="avatarName">Insérer variable (ex : AVATARNAME)</p>
+            <p className="avatarName">Profil Utilisateur</p>
           </div>
 
           <ul className="settingsList">
