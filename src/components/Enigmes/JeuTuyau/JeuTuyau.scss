@@ -1,0 +1,52 @@
+.tuyauFirst{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 10%;
+    left: 10%;
+    background-color: yellow;
+}
+.tuyauSecond{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 70%;
+    left: 80%;
+    background-color: yellow;
+}
+.tuyauThird{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 55%;
+    left: 25%;
+    background-color: yellow;
+}
+.firstPlace{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 40%;
+    right: 35%;
+    background-color: red;
+}
+.secondPlace{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 80%;
+    left: 5%;
+    background-color: red;
+}
+.thirdPlace{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 2%;
+    right: 15%;
+    background-color: red;
+}
+.initPosition{
+    top: 0;
+    left: 0;
+}
