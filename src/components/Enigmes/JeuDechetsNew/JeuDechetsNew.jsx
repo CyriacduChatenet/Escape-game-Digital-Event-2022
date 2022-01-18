@@ -12,16 +12,11 @@ import { useState } from "react";
 
 export const JeuDechetsNew = () => {
 
-  const [trash1, setTrash1] = useState(true)
-  const [trash2, setTrash2] = useState(true)
-  const [trash3, setTrash3] = useState(true)
-  const [trash4, setTrash4] = useState(true)
-  const [trash5, setTrash5] = useState(true)
-
   const terminalText = "C:\hacker>"
 
   return (
     <div className="JeuDechetsNew">
+
       <div className="terminal">
         <table className="table" border="1">
           <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
@@ -30,6 +25,7 @@ export const JeuDechetsNew = () => {
           <tr><td className="bottom"><input type="text" placeholder="Tapez votre réponse..." /></td></tr>
         </table>
       </div>
+
       <div className="inventaire">
         <div className="section-img-sac-inventaire">
           <img src="/assets/images/jeu-dechets/sac-inventaire.png" className="img-sac-inventaire" />
@@ -42,25 +38,42 @@ export const JeuDechetsNew = () => {
           <p className="dechet-inventaire">?</p>
         </div>
       </div>
+
       <div className="dechets">
-        {
-          trash1 === true ? <img src="/assets/images/jeu-dechets/bouteille-plastique.png" className="dechet dechet1" onClick={() => { setTrash1(false) }}></img> : null
-        }
-        {
-          trash2 === true ? <img src="/assets/images/jeu-dechets/megot-cigarette.png" className="dechet dechet2" onClick={() => { setTrash2(false) }}></img> : null
-        }
-        {
-          trash3 === true ? <img src="/assets/images/jeu-dechets/sac-plastique.png" className="dechet dechet3" onClick={() => { setTrash3(false) }}></img> : null
-        }
-        {
-          trash4 === true ? <img src="/assets/images/jeu-dechets/canette.png" className="dechet dechet4" onClick={() => { setTrash4(false) }}></img> : null
-        }
-        {
-          trash5 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet5" onClick={() => { setTrash5(false) }}></img> : null
-        }
+        {/* <img src="/assets/images/jeu-dechets/bouteille-plastique.png" className="dechet dechet1"/>
+        <img src="/assets/images/jeu-dechets/megot-cigarette.png" className="dechet dechet2"/>
+        <img src="/assets/images/jeu-dechets/sac-plastique.png" className="dechet dechet3"/>
+        <img src="/assets/images/jeu-dechets/canette.png" className="dechet dechet4"/> */}
+        <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet1"/>
+        <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet2"/>
+        <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet3"/>
+        <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet4"/>
+        <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet5"/>
       </div>
 
     </div>
   );
 
 };
+
+// const [trash1, setTrash1] = useState(true)
+// const [trash2, setTrash2] = useState(true)
+// const [trash3, setTrash3] = useState(true)
+// const [trash4, setTrash4] = useState(true)
+// const [trash5, setTrash5] = useState(true)
+
+// {
+//   trash1 === true ? <img src="/assets/images/jeu-dechets/bouteille-plastique.png" className="dechet dechet1" onClick={() => { setTrash1(false) }}></img> : null
+// }
+// {
+//   trash2 === true ? <img src="/assets/images/jeu-dechets/megot-cigarette.png" className="dechet dechet2" onClick={() => { setTrash2(false) }}></img> : null
+// }
+// {
+//   trash3 === true ? <img src="/assets/images/jeu-dechets/sac-plastique.png" className="dechet dechet3" onClick={() => { setTrash3(false) }}></img> : null
+// }
+// {
+//   trash4 === true ? <img src="/assets/images/jeu-dechets/canette.png" className="dechet dechet4" onClick={() => { setTrash4(false) }}></img> : null
+// }
+// {
+//   trash5 === true ? <img src="/assets/images/jeu-dechets/dechet-a-decouvrir.png" className="dechet dechet5" onClick={() => { setTrash5(false) }}></img> : null
+// }
