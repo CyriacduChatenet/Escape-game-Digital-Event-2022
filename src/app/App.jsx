@@ -19,7 +19,6 @@ import { Galerie } from "../components/Galerie/Galerie";
 import "./index.scss"
 import { Victory } from "../components/Victory/Victory";
 import { Defeat } from "../components/Defeat/Defeat";
-import { StartPage } from "../pages/StartPage/StartPage";
 
 function App() {
   return (

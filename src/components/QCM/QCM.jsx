@@ -1,5 +1,6 @@
 import { useState } from "react/cjs/react.development";
 import { Question } from "../Question/Question";
+import {store} from "../../redux/store"
 import "./QCM.scss";
 
 export const QCM = () => {
@@ -18,6 +19,12 @@ export const QCM = () => {
   const CalculResponse = () => {
     if(selectedRadioQ1 === "Answer 3" && selectedRadioQ2 === "Answer 1" && selectedRadioQ3 === "Answer 2"){
       setQuestionState(true)
+
+      store.dispatch({
+        type: "unlock/ecologie",
+        payload: true,
+      });
+      
     }
     if(selectedRadioQ1 === "Answer 1" && selectedRadioQ2 === "Answer 1" && selectedRadioQ3 === "Answer 1"){
       setQuestionState(false)

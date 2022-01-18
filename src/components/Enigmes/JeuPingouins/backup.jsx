@@ -13,27 +13,31 @@ export const JeuPingouins = () => {
   const [minutes, setMinutes] = useState(50)
   const [numberAnimals, setNumberAnimals] = useState(20)
   const [initGame, setInitGame] = useState(true)
-  const [animalsTop, setAnimalsTop] = useState(0)
-  const [animalsLeft, setAnimalsLeft] = useState(0)
 
   const [isListening, setIsListening] = useState(false)
 
   const commands = [
     {
-      command : ["A1"],
-      callback : () => {mooveAnimals(0)}
+      command : ['Allez',"Droite", "Avancer"],
+      callback : () => {setTranslateXValue(translateXValue + 100)}
     },
     {
-      command : ["A2"],
-      callback : () => {mooveAnimals(1)}
+      command : ['Gauche', 'Reculer'],
+      callback : () => {setTranslateXValue(translateXValue -100)}
     },
     {
-      command : ["A3"],
-      callback : () => {mooveAnimals(2)}
+      command : ['En-bas', 'descendre'],
+      callback : () => {setTranslateYValue(translateYValue +100)}
     },
     {
-      command : ["A4"],
-      callback : () => {mooveAnimals(3)}
+      command : ['En-haut', 'monter'],
+      callback : () => {setTranslateYValue(translateYValue -100)}
+    },
+    {
+      command: "reset",
+      callback: () => {
+        handleReset();
+      },
     },
   ]
 
@@ -41,15 +45,15 @@ export const JeuPingouins = () => {
 
   const [animalsPoints, setAnimalsPoints] = useState([])
 
-  const mooveAnimals = (positionIndex) => {
-    setAnimalsTop(icebergs[positionIndex].style.top)
-    setAnimalsLeft(icebergs[positionIndex].style.left)
-  }
+  useEffect(() => {
+    let intervalTranslate = setInterval(() => {
+      setTranslateXValue(translateXValue + 1)
+    }, 1000);
+    return () => clearInterval(intervalTranslate);
+  });
 
   useEffect(() => {
     if(initGame){
-      setAnimalsTop(icebergs[0].style.top)
-      setAnimalsLeft(icebergs[0].style.left)
       initPositionsAnimals()
       setInitGame(false)
     }
@@ -134,7 +138,7 @@ export const JeuPingouins = () => {
             ))}
           </div>
           <div className="animals-container" >
-            <div className="animals" style={{top: animalsTop, left: animalsLeft}}>
+            <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}>
               <Box>
                 {animalsPoints.map(el => el)}
               </Box>
