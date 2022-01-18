@@ -27,7 +27,6 @@ export const StartPage = () => {
                 <img src="/assets/images/start-page/play-btn.png" alt="" className='start_btn'/>
             </div>
 
-
         </div>
     )
 }
