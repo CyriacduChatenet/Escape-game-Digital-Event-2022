@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nameDossierJusticeDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.dossierJusticeItem{
+    width: 88px;
+    height: 72px;
+    background: url('../../../public/assets/images/folder-icon/folder-icon.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second{
+    background-color: pink;
+}
+.popUpDossierJustice{
+    background: rgba( 94, 156, 152, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #FFF;
+    height: 600px;
+    border-radius: 10px;
+}
+.leftNavDossierJustice{
+    background-color: #62BAB3;
+    border-right: 2px solid #86EBD9;
+    padding-top: 12%;
+    padding-left: 3%;
+    width: 30%;
+}
+.closeDossierJustice{
+    width: 2.5vw;
+    height: 2vw;
+    background: url('../../../public/assets/images/terminal-bar/Bar-top-right.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 97%;
+    left: 94%;
+}
+.loaderCircleJustice{
+    width: 2.1vw;
+    height: 2.1vw;
+    background-color: red;
+    border-radius: 100%;
+    margin-top: 5%;
+}
+.topNavJustice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 1%;
+}
+.lineBottom{
+    border-bottom: 2px solid #86EBD9;
+}
+.logoSystemJustice{
+    background-image: url(../../../public/assets/images/folder-icon/logo-system.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 30px;
+}
+.logoDossierJustice{
+    background-image: url(../../../public/assets/images/folder-icon/folder-icon.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+    margin-right: 5%;
+}
+.topDossierNavJustice{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    margin-left: 10%;
+}
+.systemeDivTop{
+    width: 50%;
+}
+.rightNavDossierJustice{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 70%;
+}
+.chevron{
+    margin-left: 10%;
+    color: #FFF;
+}
+.middleNavJustice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #86EBD9;
+    padding:1% 0;
+    color: #FFF;
+}
+.nameMiddle{
+    width: 30%;
+}
+.flexName{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modifiedMiddle{
+    width: 30%;
+}
+.widthMiddle{
+    width: 20%;
+}
+.typeMiddle{
+    width: 25%;
+}
+.paddingRightMiddle{
+    padding: 5% 6%;
+}
+.lineRight{
+    padding: 5% 6%;
+    border-right: 2px solid #86EBD9;
+}
+.lineLeft{
+    padding: 5% 6%;
+    border-left: 2px solid #86EBD9;
+}
+.chevronMiddle{
+    transform: rotate(90deg);
+}
+.dossierFirst{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1%;
+}
+.dossierJusticeItemsecond{
+    width: 20px;
+    height: 20px;
+    background: url('../../../public/assets/images/folder-icon/folder-icon.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nameBottom{
+    padding-left: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.marginLeftName{
+    margin-left: 5%;
+}
+.marginRightName{
+    margin-right: 7%;
+}
+.dossierSecond, .dossierThird, .dossierFour, .dossierFive, .dossierSix{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+.widthLeftTextAlign{
+    text-align: end;
+}
+.logoSystemesecond{
+    background-image: url(../../../public/assets/images/folder-icon/logo-system.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 15px;
+    height: 25px;
+}
+.leftNavSysteme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    color: #86EBD9;
+}
+.leftNavSecondSysteme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 10%;
+    color: #86EBD9;
+}
+.leftNavSecondSystemeClose{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 10%;
+    color: #86EBD9;
+}
+.leftNavChildSecondSysteme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 25%;
+    color: #86EBD9;
+}
