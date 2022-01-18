@@ -39,7 +39,6 @@ function App() {
               <Route exact path="/jeu-tuyau" element={ <JeuTuyau/> }/>
               <Route exact path="/Galerie" element={ <Galerie/> }/>
 
-
               <Route path='*' exact={true} element={ <ErrorPage/>} />
             </Routes>
         </BrowserRouter>

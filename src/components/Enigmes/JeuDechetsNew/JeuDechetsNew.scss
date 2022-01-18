@@ -6,17 +6,18 @@
 }
 
 .JeuDechetsNew {   
-  width: 100vw;
-  height: 100vh;
+  width: 1000px;
+  height: 600px;
   background-image: url('../../../../public/assets/images/jeu-dechets/plage.png');
-  background-size: contain;
+  background-size: 1000px 600px;
   background-repeat: no-repeat;
+  position: relative;
 
   .terminal {
     .table {
       border: 1px solid #FFF; 
       border-collapse: collapse; 
-      width:300px;      
+      width:350px;      
       .top {
         border: 1px solid #FFF; 
         font-family: "MonumentExtendedLight";
@@ -33,7 +34,7 @@
         background-color:#030303;
         color: white;
         vertical-align: top;
-        height: 100px;
+        height: 130px;
         padding: 8px 12px;
         .middle-text1 {
           font-family: "MonumentExtendedLight";
@@ -60,60 +61,51 @@
     } 
   }
 
-  .dechet1 {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    top: 0%; left: 0%px;
-    cursor: pointer;
-  }
-  .dechet2 {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    top: 10%; left: 10%;
-    cursor: pointer;
-  }
-  .dechet3 {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    top: 20%; left: 20%;
-    cursor: pointer;
-  }
-  .dechet4 {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    top: 30%; left: 30%;
-    cursor: pointer;
-  }
-  .dechet5 {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    top: 40%; left: 40%;
-    cursor: pointer;
-  }
-  .dechet6 {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    top: 50%; left: 50%;
-    cursor: pointer;
-  }
-  .dechet7 {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    top: 60%; left: 60%;
-    cursor: pointer;
+  .dechets {
+    .dechet1 {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      position: absolute;
+      top: 90%; 
+      left: 25%;
+      cursor: pointer;
+    }
+    .dechet2 {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      position: absolute;
+      top: 85%; 
+      left: 38%;
+      cursor: pointer;
+    }
+    .dechet3 {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      position: absolute;
+      top: 95%; 
+      left: 50%;
+      cursor: pointer;
+    }
+    .dechet4 {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      position: absolute;
+      top: 80%; 
+      left: 65%;
+      cursor: pointer;
+    }
+    .dechet5 {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      position: absolute;
+      top: 85%; 
+      left: 85%;
+      cursor: pointer;
+    }
   }
 }
