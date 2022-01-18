@@ -12,13 +12,15 @@ import Partage from '../Enigmes/partage/Partage';
 import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
 import { Galerie } from '../Galerie/Galerie';
 import { OracleModal } from '../Modal/OracleModal/OracleModal';
+import IndexJustice from '../Enigmes/justice/IndexJustice';
 
 export const Dock = () => {
     return (
         <div className="dock-container">
             <div className="row-dock">
                 <DockIcon dockText="Justice" dockIcon="/assets/images/dock-icon/justice.png" >
-                    <JeuJustice />
+                    {/* <JeuJustice /> */}
+                    <IndexJustice />
                 </DockIcon>
                 <DockIcon dockText="Extinction" dockIcon="/assets/images/dock-icon/extinction.png" >
                     <JeuPingouins/>

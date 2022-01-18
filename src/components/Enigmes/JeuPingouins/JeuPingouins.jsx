@@ -48,9 +48,11 @@ export const JeuPingouins = () => {
   let interval
 
   useEffect(() => {
+    const translateXValue2 = 0
     const intervalTranslate = setInterval(() => {
       console.log('This will run every second!');
-      const newX = translateXValue + 10
+      const newX = translateXValue2 + 10
+      console.log(newX)
       setTranslateXValue(newX)
     }, 300);
     return () => clearInterval(intervalTranslate);
