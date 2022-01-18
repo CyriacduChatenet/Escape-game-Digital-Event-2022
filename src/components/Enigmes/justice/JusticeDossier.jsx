@@ -5,6 +5,7 @@ import style from "../../PrimaryModal/style"
 import React, { useState, useRef } from "react";
 
 import "../../PrimaryModal/primary-modal.scss"
+import { DossierJustice } from '../../DossierJustice/DossierJustice';
 
 const JusticeDossier = () => {
     const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ const JusticeDossier = () => {
         <div onDoubleClick={handleOpen}>
             <div className="folder">
                 <img src="/assets/images/folder-icon/folder-icon.png" alt=""  />
-                <p>Justice</p>
+                <p>justice</p>
             </div>
             <Modal
                 open={open}
@@ -24,12 +25,7 @@ const JusticeDossier = () => {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Text in a modal
-                </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                </Typography>
+                    <DossierJustice/>
                 </Box>
             </Modal>
         </div>

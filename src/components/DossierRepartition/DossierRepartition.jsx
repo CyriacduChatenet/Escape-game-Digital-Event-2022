@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import './DossierJustice.scss'
+import './DossierRepartition.scss'
 
-export const DossierJustice = () => {
+export const DossierRepartition = () => {
 
     const [dossierJustice, setDossierJustice] = useState(true)
     // console.log('dossierJustice :', dossierJustice);
@@ -38,7 +38,7 @@ export const DossierJustice = () => {
                             <span className='chevronMiddle'>{chevron}</span>
                             <div className = 'dossierJusticeItemsecond espece'></div>
                             &nbsp;
-                            <p>Justice</p>
+                            <p>Répartition...</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
                             <div className = 'dossierJusticeItemsecond'></div>
@@ -69,7 +69,7 @@ export const DossierJustice = () => {
                                     <div className = 'topDossierNavJustice'>
                                         <div className = 'logoDossierJustice'></div>
                                         &nbsp;
-                                        <p>Justice</p>
+                                        <p>Répartition...</p>
                                     </div>
                                 </div>
                             </div>
