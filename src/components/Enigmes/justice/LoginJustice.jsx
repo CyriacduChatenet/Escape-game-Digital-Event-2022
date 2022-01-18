@@ -19,7 +19,7 @@ const LoginJustice = ({setIsLogin, setCurrentPage}) => {
 
                 <input type="text" className="login_input_username" />
                 <label className='label_input_username'>Nom d'utilisateur administrateur</label>
-                <input type="text" className="login_input_password" />
+                <input type="password" className="login_input_password" />
                 <label className='label_input_password'>Mot de passe administrateur</label>
                 <button className='login_btn' onClick={handleClick}>Connexion</button>
 
