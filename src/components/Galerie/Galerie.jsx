@@ -167,6 +167,7 @@ export const Galerie = () => {
                                 <div className="picture10"></div>
                                 <p>Picture 10</p>
                             </div>
+                            <h1>Crédit</h1>
                         </div>
                     </div>
                 </div>
