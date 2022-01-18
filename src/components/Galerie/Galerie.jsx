@@ -127,6 +127,46 @@ export const Galerie = () => {
                                 <div className="picture10"></div>
                                 <p>Picture 10</p>
                             </div>
+                            <div className="picture">
+                                <div className="picture1"></div>
+                                <p>Picture 1</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture2"></div>
+                                <p>Picture 2</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture3"></div>
+                                <p>Picture 3</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture4"></div>
+                                <p>Picture 4</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture5"></div>
+                                <p>Picture 5</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture6"></div>
+                                <p>Picture 6</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture7"></div>
+                                <p>Picture 7</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture8"></div>
+                                <p>Picture 8</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture9"></div>
+                                <p>Picture 9</p>
+                            </div>
+                            <div className="picture">
+                                <div className="picture10"></div>
+                                <p>Picture 10</p>
+                            </div>
                         </div>
                     </div>
                 </div>
