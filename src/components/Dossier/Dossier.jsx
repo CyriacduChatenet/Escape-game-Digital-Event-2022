@@ -4,10 +4,10 @@ import './Dossier.scss';
 export const Dossier = () => {
 
     const [dossier, setDossier] = useState(false)
-    console.log('dossierJustice :', dossier);
+    // console.log('dossierJustice :', dossier);
 
     const [open, setOpen] = useState(false)
-    console.log('PopUp Open :', open)
+    // console.log('PopUp Open :', open)
 
     const [chevron, setChevron] = useState(">")
 

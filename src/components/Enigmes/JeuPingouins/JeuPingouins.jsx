@@ -4,6 +4,8 @@ import SpeechRecognition from 'react-speech-recognition/lib/SpeechRecognition';
 import { useSpeechRecognition } from 'react-speech-recognition';
 import { Box } from "@mui/system";
 
+
+
 export const JeuPingouins = () => {
   const [translateXValue, setTranslateXValue] = useState(0)
   const [translateYValue, setTranslateYValue] = useState(0)
@@ -11,6 +13,9 @@ export const JeuPingouins = () => {
   const [hour, setHour] = useState(7)
   const [minutes, setMinutes] = useState(50)
   const [numberAnimals, setNumberAnimals] = useState(20)
+  const [initGame, setInitGame] = useState(true)
+
+  const [isListening, setIsListening] = useState(false)
 
   const commands = [
     {
@@ -36,26 +41,39 @@ export const JeuPingouins = () => {
       },
     },
   ]
-  
-  const [isListening, setIsListening] = useState(false)
+
   const {transcript, resetTranscript,listening} = useSpeechRecognition({commands})
 
-  let animalsPoints = []
+  const [animalsPoints, setAnimalsPoints] = useState([])
   let interval
 
-  for (let index = 0; index < numberAnimals; index++) {
-    const top = Math.floor(Math.random() * 90)
-    const left = Math.floor(Math.random() * 90)
+  useEffect(() => {
+    const intervalTranslate = setInterval(() => {
+      console.log('This will run every second!');
+      const newX = translateXValue + 10
+      setTranslateXValue(newX)
+    }, 300);
+    return () => clearInterval(intervalTranslate);
+  }, []);
 
-    const style = {
-      "position": "absolute",
-      "top": top,
-      "left": left
+  useEffect(() => {
+    // const intervalTranslate = setInterval(() => {
+    //   const newX = translateXValue + 10
+    //   setTranslateXValue(newX)
+    // }, 1000);
+
+    // return () => clearInterval(intervalTranslate);
+
+
+    // initTimer()
+    
+    if(initGame){
+      initPositionsAnimals()
+      setInitGame(false)
     }
-    animalsPoints.push(<div className="animalPoint" style={style}></div>)
-  }
+  })
 
-  useEffect (() => {
+  const initTimer = () => {
     interval=setInterval(()=>{
       if(minutes < 59) {
         setMinutes(minutes + 1)
@@ -66,8 +84,26 @@ export const JeuPingouins = () => {
       }
     },1000)
 
-    return ()=> clearInterval(interval)
-  }, [])
+    // return ()=> clearInterval(interval)
+  }
+
+  const initPositionsAnimals = () => {
+    const animalsCreated = []
+    for (let index = 0; index < numberAnimals; index++) {
+      console.log('animal created')
+      const top = Math.floor(Math.random() * 90)
+      const left = Math.floor(Math.random() * 90)
+  
+      const style = {
+        "position": "absolute",
+        "top": top,
+        "left": left
+      }
+      
+      animalsCreated.push(<div className="animalPoint" style={style}></div>)
+    }
+    setAnimalsPoints(animalsCreated)
+  }
 
   const handleListening = () => {
     setIsListening(true);
@@ -183,7 +219,6 @@ export const JeuPingouins = () => {
                     </button>
                 )}
                 {/* <img src="/assets/images/polar-game/microphone-icon.png" alt="" className="micro" onClick={StartListening} /> */}
-                
             </div>
           </div>
         </div>
