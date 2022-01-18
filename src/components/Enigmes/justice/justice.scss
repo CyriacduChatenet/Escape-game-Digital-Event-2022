@@ -1,4 +1,15 @@
 .justiceList li {
-    margin: 10px;
+    padding: 20px 12px;
     cursor: pointer;
+}
+.containerJustice{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+.content{
+    height: 600px;
+}
+.nav-bar{
+    margin-top: 100px;
 }

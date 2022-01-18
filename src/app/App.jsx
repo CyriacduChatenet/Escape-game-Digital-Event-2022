@@ -12,7 +12,6 @@ import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
-import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 import { StartPage } from "../pages/StartPage/StartPage";
 
 import Partage from "../components/Enigmes/partage/Partage";

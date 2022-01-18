@@ -1,9 +1,10 @@
 import React from 'react';
+import './ReglagesJustice.scss'
 
 const ReglagesJustice = () => {
     return ( 
-        <div>
-            <h1>Page Réglages</h1>
+        <div className='reglageJustice'>
+            <input type="text" className='inputOnglet'/>
         </div>
      );
 }
