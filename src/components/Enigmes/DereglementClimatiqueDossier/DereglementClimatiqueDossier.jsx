@@ -5,7 +5,7 @@ import Modal from '@mui/material/Modal'
 import style from "../../PrimaryModal/style"
 import "../../PrimaryModal/primary-modal.scss"
 
-export const JeuClimat = () => {
+export const DereglementClimatiqueDossier = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -14,7 +14,7 @@ export const JeuClimat = () => {
         <div onDoubleClick={handleOpen}>
             <div className="folder">
                 <img src="/assets/images/folder-icon/folder-icon.png" alt=""  />
-                <p>Climat</p>
+                <p>Déreglement climatique</p>
             </div>
             <Modal
                 open={open}
