@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "RalewayRegular";
+    src: url("../../../../public/assets/fonts/Raleway-Regular.ttf") format('truetype');
+}
+
+
+.login_Page{
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    position: relative;
+
+    .ministere_img{
+        width: 200px;
+        height: 150px;
+        background-image: url(../../../../public//assets/images/justice/ministere.png);
+        background-size: cover;
+        position: absolute;
+    }
+
+    .ministere_title_displaying{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 115px;
+        top: -50px;
+
+        .ministere_title{
+            transform: scale(50%);
+        }
+    }
+
+    .input_container{
+        position: absolute;
+        top: 55px;
+        left: 270px;
+        width: 500px;
+        height: 500px;
+        border: solid 1px black;
+        display: flex;
+        flex-direction: column;
+
+        .test{
+            color: black;
+        }
+
+        .login_input_username{
+            width: 350px;
+            height: 40px;
+            border: solid 1px black;
+            position: absolute;
+            top: 235px;
+            left: 50px;
+        }
+
+        .login_input_username:enabled{
+            padding-left: 10px;
+        }
+
+        .login_input_password:enabled{
+            padding-left: 10px;
+        }
+
+        .login_input_password{
+            width: 350px;
+            height: 40px;
+            border: solid 1px black;
+            position: absolute;
+            top: 320px;
+            left: 50px;
+
+        }
+
+        .label_input_username{
+            position: absolute;
+            top: 205px;
+            left: 50px;
+            font-family: "RalewayRegular"
+        }
+
+        .label_input_password{
+            position: absolute;
+            top: 295px;
+            left: 50px;
+            font-family: "RalewayRegular"
+        }
+
+        .login_btn{
+            position: absolute;
+            top: 400px;
+            left: 50px;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            width: 200px;
+            font-size: 15px;
+            font-family: "RalewayRegular";
+
+            &:hover{
+                cursor: pointer;
+                opacity: 80%;
+                transition: .5s;
+            }
+
+            &:not(:hover){
+                transition: .5s;
+            }
+        }
+    }
+
+}
+
+
+
+
