@@ -37,7 +37,7 @@ export const JeuFeuForet = () => {
         }
     })
     return(
-        <div>
+        <div className="jeu-feu-foret">
             <h1>{three}</h1>
             <h1>{minutes} : {seconds}</h1>
             <h1>{secondAll}</h1>
