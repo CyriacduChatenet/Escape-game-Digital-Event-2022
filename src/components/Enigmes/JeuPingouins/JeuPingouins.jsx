@@ -3,6 +3,7 @@ import "./JeuPingouins.scss";
 import SpeechRecognition from 'react-speech-recognition/lib/SpeechRecognition';
 import { useSpeechRecognition } from 'react-speech-recognition';
 import { Box } from "@mui/system";
+import icebergs from "./icebergs.json"
 
 export const JeuPingouins = () => {
   const [translateXValue, setTranslateXValue] = useState(0)
@@ -131,6 +132,11 @@ export const JeuPingouins = () => {
           </div>
         </div>
         <div className="map-container" style={{backgroundImage: `url(${mapSrc})`}}>
+          <div className="icebergs">
+            {icebergs.map(iceberg => (
+              <div className="iceberg" style={iceberg.style}>{iceberg.name}</div>
+            ))}
+          </div>
           <div className="animals-container" >
             <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}>
               <Box>

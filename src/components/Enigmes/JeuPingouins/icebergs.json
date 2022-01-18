@@ -1,0 +1,29 @@
+[
+    {
+        "name":"A1",
+        "style":{
+            "top": 297,
+            "left": 229,
+            "width":50,
+            "height":50
+        }
+    },
+    {
+        "name":"A2",
+        "style":{
+            "top": 133,
+            "left": 282,
+            "width":50,
+            "height":50
+        }
+    },
+    {
+        "name":"A3",
+        "style":{
+            "top": 200,
+            "left": 200,
+            "width":50,
+            "height":50
+        }
+    }
+]
