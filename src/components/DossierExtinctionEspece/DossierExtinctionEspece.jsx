@@ -3,11 +3,11 @@ import './DossierExtinctionEspece.scss'
 
 export const DossierExtinctionEspece = () => {
 
-    const [dossierJustice, setDossierJustice] = useState(true)
-    // console.log('dossierJustice :', dossierJustice);
+    const [dossierExtinctionEspece, setDossierExtinctionEspece] = useState(true)
+    // console.log('dossierExtinctionEspece :', dossierExtinctionEspece);
 
-    const [openJustice, setOpenJustice] = useState(true)
-    // console.log('PopUp OpenJustice :', openJustice)
+    const [openExtinctionEspece, setOpenExtinctionEspece] = useState(true)
+    // console.log('PopUp OpenExtinctionEspece :', openExtinctionEspece)
 
     const [dossierFirst, setDossierFirst] = useState(false)
 
@@ -24,57 +24,57 @@ export const DossierExtinctionEspece = () => {
     const [chevron, setChevron] = useState(">")
 
     return(
-        <div className = 'dossierJusticeContainer'>
-                <div className ='popUpDossierJustice' style={dossierJustice === false ? {display : 'none'} : {display : 'flex'} }>
-                    <div className = 'leftNavDossierJustice'>
+        <div className = 'dossierExtinctionEspeceContainer'>
+                <div className ='popUpDossierExtinctionEspece' style={dossierExtinctionEspece === false ? {display : 'none'} : {display : 'flex'} }>
+                    <div className = 'leftNavDossierExtinctionEspece'>
                         <div className = 'leftNavSysteme'>
                         <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'logoSystemJustice'></div>
+                            <div className = 'logoSystemExtinctionEspece'></div>
                             &nbsp;
                             <p>Système</p>
                             
                         </div>
                         <div className = 'leftNavSecondSysteme'>
                             <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'dossierJusticeItemsecond espece'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond espece'></div>
                             &nbsp;
                             <p>Extinction...</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier1</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier2</p>
                         </div>
                         <div className = 'leftNavSecondSystemeClose'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond'></div>
                             &nbsp;
                             <p>Folder</p>
                         </div>
                     </div>
-                    <div className = 'rightNavDossierJustice'>
+                    <div className = 'rightNavDossierExtinctionEspece'>
                         <div className = 'lineBottom'>
-                            <div className = 'topNavJustice'>
-                                <div className = 'topDossierNavJustice systemeDivTop'>
-                                    <div className = 'logoSystemJustice'></div>
+                            <div className = 'topNavExtinctionEspece'>
+                                <div className = 'topDossierNavExtinctionEspece systemeDivTop'>
+                                    <div className = 'logoSystemExtinctionEspece'></div>
                                     &nbsp;
                                     <p>Système</p>
                                 </div>
-                                <div className = 'folderLinkOpen' style={openJustice === false ? {display:'none'} : {display:'flex'}}>
+                                <div className = 'folderLinkOpen' style={openExtinctionEspece === false ? {display:'none'} : {display:'flex'}}>
                                     <p className = 'chevron'>{chevron}</p>
-                                    <div className = 'topDossierNavJustice'>
-                                        <div className = 'logoDossierJustice'></div>
+                                    <div className = 'topDossierNavExtinctionEspece'>
+                                        <div className = 'logoDossierExtinctionEspece'></div>
                                         &nbsp;
                                         <p>Extinction...</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className ='middleNavJustice'>
+                        <div className ='middleNavExtinctionEspece'>
                             <div className = 'nameMiddle'>
                                 <div className = 'lineRight flexName'>
                                     <p>Nom</p>
@@ -99,7 +99,7 @@ export const DossierExtinctionEspece = () => {
                         </div>
                         <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierExtinctionEspeceItemsecond'></div>
                                 <p className='marginLeftName'>dossier1</p>
                             </div>
                             <div className = 'modifiedMiddle'>
@@ -114,7 +114,7 @@ export const DossierExtinctionEspece = () => {
                         </div>
                         <div className = 'dossierSecond' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierExtinctionEspeceItemsecond'></div>
                                 <p className='marginLeftName'>dossier2</p>
                             </div>
                             <div className = 'modifiedMiddle'>

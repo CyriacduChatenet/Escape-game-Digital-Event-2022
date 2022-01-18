@@ -3,11 +3,11 @@ import './DossierDereglementClimatique.scss'
 
 export const DossierDereglementClimatique = () => {
 
-    const [dossierJustice, setDossierJustice] = useState(true)
-    // console.log('dossierJustice :', dossierJustice);
+    const [dossierDereglementClimatique, setDossierDereglementClimatique] = useState(true)
+    // console.log('dossierDereglementClimatique :', dossierDereglementClimatique);
 
-    const [openJustice, setOpenJustice] = useState(true)
-    // console.log('PopUp OpenJustice :', openJustice)
+    const [openDereglementClimatique, setOpenDereglementClimatique] = useState(true)
+    // console.log('PopUp OpenDereglementClimatique :', openDereglementClimatique)
 
     const [dossierFirst, setDossierFirst] = useState(false)
 
@@ -24,57 +24,57 @@ export const DossierDereglementClimatique = () => {
     const [chevron, setChevron] = useState(">")
 
     return(
-        <div className = 'dossierJusticeContainer'>
-                <div className ='popUpDossierJustice' style={dossierJustice === false ? {display : 'none'} : {display : 'flex'} }>
-                    <div className = 'leftNavDossierJustice'>
+        <div className = 'dossierDereglementClimatiqueContainer'>
+                <div className ='popUpDossierDereglementClimatique' style={dossierDereglementClimatique === false ? {display : 'none'} : {display : 'flex'} }>
+                    <div className = 'leftNavDossierDereglementClimatique'>
                         <div className = 'leftNavSysteme'>
                         <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'logoSystemJustice'></div>
+                            <div className = 'logoSystemDereglementClimatique'></div>
                             &nbsp;
                             <p>Système</p>
                             
                         </div>
                         <div className = 'leftNavSecondSysteme'>
                             <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'dossierJusticeItemsecond espece'></div>
+                            <div className = 'dossierDereglementClimatiqueItemsecond espece'></div>
                             &nbsp;
                             <p>Déréglemenet...</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierDereglementClimatiqueItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier1</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierDereglementClimatiqueItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier2</p>
                         </div>
                         <div className = 'leftNavSecondSystemeClose'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierDereglementClimatiqueItemsecond'></div>
                             &nbsp;
                             <p>Folder</p>
                         </div>
                     </div>
-                    <div className = 'rightNavDossierJustice'>
+                    <div className = 'rightNavDossierDereglementClimatique'>
                         <div className = 'lineBottom'>
-                            <div className = 'topNavJustice'>
-                                <div className = 'topDossierNavJustice systemeDivTop'>
-                                    <div className = 'logoSystemJustice'></div>
+                            <div className = 'topNavDereglementClimatique'>
+                                <div className = 'topDossierNavDereglementClimatique systemeDivTop'>
+                                    <div className = 'logoSystemDereglementClimatique'></div>
                                     &nbsp;
                                     <p>Système</p>
                                 </div>
-                                <div className = 'folderLinkOpen' style={openJustice === false ? {display:'none'} : {display:'flex'}}>
+                                <div className = 'folderLinkOpen' style={openDereglementClimatique === false ? {display:'none'} : {display:'flex'}}>
                                     <p className = 'chevron'>{chevron}</p>
-                                    <div className = 'topDossierNavJustice'>
-                                        <div className = 'logoDossierJustice'></div>
+                                    <div className = 'topDossierNavDereglementClimatique'>
+                                        <div className = 'logoDossierDereglementClimatique'></div>
                                         &nbsp;
                                         <p>Déréglement...</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className ='middleNavJustice'>
+                        <div className ='middleNavDereglementClimatique'>
                             <div className = 'nameMiddle'>
                                 <div className = 'lineRight flexName'>
                                     <p>Nom</p>
@@ -99,7 +99,7 @@ export const DossierDereglementClimatique = () => {
                         </div>
                         <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierDereglementClimatiqueItemsecond'></div>
                                 <p className='marginLeftName'>dossier1</p>
                             </div>
                             <div className = 'modifiedMiddle'>
@@ -114,7 +114,7 @@ export const DossierDereglementClimatique = () => {
                         </div>
                         <div className = 'dossierSecond' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierDereglementClimatiqueItemsecond'></div>
                                 <p className='marginLeftName'>dossier2</p>
                             </div>
                             <div className = 'modifiedMiddle'>

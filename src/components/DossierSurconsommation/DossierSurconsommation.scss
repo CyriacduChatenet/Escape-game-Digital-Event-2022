@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-.nameDossierJusticeDiv{
+.nameDossierSurconsommationDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
 }
-.dossierJusticeItem{
+.dossierSurconsommationItem{
     width: 88px;
     height: 72px;
     background: url('../../../public/assets/images/folder-icon/folder-icon.png');
@@ -21,7 +21,7 @@
 .second{
     background-color: pink;
 }
-.popUpDossierJustice{
+.popUpDossierSurconsommation{
     background: rgba( 94, 156, 152, 0.5 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 10.5px );
@@ -33,14 +33,14 @@
     height: 600px;
     border-radius: 10px;
 }
-.leftNavDossierJustice{
+.leftNavDossierSurconsommation{
     background-color: #62BAB3;
     border-right: 2px solid #86EBD9;
     padding-top: 12%;
     padding-left: 3%;
     width: 30%;
 }
-.closeDossierJustice{
+.closeDossierSurconsommation{
     width: 2.5vw;
     height: 2vw;
     background: url('../../../public/assets/images/terminal-bar/Bar-top-right.png');
@@ -50,14 +50,14 @@
     bottom: 97%;
     left: 94%;
 }
-.loaderCircleJustice{
+.loaderCircleSurconsommation{
     width: 2.1vw;
     height: 2.1vw;
     background-color: red;
     border-radius: 100%;
     margin-top: 5%;
 }
-.topNavJustice{
+.topNavSurconsommation{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,14 +68,14 @@
 .lineBottom{
     border-bottom: 2px solid #86EBD9;
 }
-.logoSystemJustice{
+.logoSystemSurconsommation{
     background-image: url(../../../public/assets/images/folder-icon/logo-system.png);
     background-repeat: no-repeat;
     background-size: 100%;
     width: 20px;
     height: 30px;
 }
-.logoDossierJustice{
+.logoDossierSurconsommation{
     background-image: url(../../../public/assets/images/folder-icon/folder-icon.png);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -83,7 +83,7 @@
     height: 25px;
     margin-right: 5%;
 }
-.topDossierNavJustice{
+.topDossierNavSurconsommation{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -94,7 +94,7 @@
 .systemeDivTop{
     width: 50%;
 }
-.rightNavDossierJustice{
+.rightNavDossierSurconsommation{
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -104,7 +104,7 @@
     margin-left: 10%;
     color: #FFF;
 }
-.middleNavJustice{
+.middleNavSurconsommation{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -151,7 +151,7 @@
     align-items: center;
     margin-top: 1%;
 }
-.dossierJusticeItemsecond{
+.dossierSurconsommationItemsecond{
     width: 20px;
     height: 20px;
     background: url('../../../public/assets/images/folder-icon/folder-icon.png');
