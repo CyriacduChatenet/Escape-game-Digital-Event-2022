@@ -1,9 +1,9 @@
 import React from 'react';
+import './PagesJustice.scss'
 
 const PagesJustice = () => {
     return ( 
-        <div>
-            <h1>PagesJustice</h1>
+        <div className='pageBloque'>
         </div>
      );
 }
