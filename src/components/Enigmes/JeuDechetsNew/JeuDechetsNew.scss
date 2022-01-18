@@ -61,47 +61,71 @@
     } 
   }
 
+  .inventaire {
+    background-image: url('../../../../public/assets/images/jeu-dechets/cadre-inventaire.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em;
+    position: absolute;
+    height: 214px;
+    width: 200px;
+    bottom: 0;
+    .section-img-sac-inventaire {
+      height: 33px;
+      .img-sac-inventaire {
+        position: absolute;
+        left: 150px;
+      }
+    }
+    .section-dechet-inventaire {
+      .dechet-inventaire {
+        color: white;
+        font-family: "MonumentExtendedLight";
+        margin: 4px;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+
+  }
+
   .dechets {
     .dechet1 {
-      width: 20px;
-      height: 20px;
-      background-color: red;
+      width: 40px;
+      height: 40px;
       position: absolute;
-      top: 90%; 
+      top: 88%; 
       left: 25%;
       cursor: pointer;
     }
     .dechet2 {
-      width: 20px;
-      height: 20px;
-      background-color: red;
+      width: 40px;
+      height: 40px;
       position: absolute;
-      top: 85%; 
+      top: 82%; 
       left: 38%;
       cursor: pointer;
     }
     .dechet3 {
-      width: 20px;
-      height: 20px;
-      background-color: red;
+      width: 40px;
+      height: 40px;
       position: absolute;
-      top: 95%; 
+      top: 90%; 
       left: 50%;
       cursor: pointer;
     }
     .dechet4 {
-      width: 20px;
-      height: 20px;
-      background-color: red;
+      width: 40px;
+      height: 40px;
       position: absolute;
-      top: 80%; 
+      top: 78%; 
       left: 65%;
       cursor: pointer;
     }
     .dechet5 {
-      width: 20px;
-      height: 20px;
-      background-color: red;
+      width: 40px;
+      height: 40px;
       position: absolute;
       top: 85%; 
       left: 85%;
