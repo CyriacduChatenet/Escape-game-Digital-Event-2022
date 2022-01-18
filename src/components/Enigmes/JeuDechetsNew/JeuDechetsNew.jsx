@@ -20,6 +20,14 @@ export const JeuDechetsNew = () => {
 
     return (
         <div className="JeuDechetsNew">
+            <div className="terminal">
+                <table class="table" border="1">
+                    <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
+                    <tr><td className="middle"><span className="middle-text1">C:\hacker></span><br/>
+                    Débloquez la compétence “Tri des déchets“ avant de pouvoir commencer ce mini-jeu...</td></tr>
+                    <tr><td className="bottom"><input type="text" placeholder="Tapez votre réponse..."/></td></tr>
+                </table>
+            </div>
             {
                 trash1 === true ? <div className="dechet1" onClick={() => {setTrash1(false)}}></div> : null
             }
@@ -41,13 +49,6 @@ export const JeuDechetsNew = () => {
             {
                 trash7 === true ? <div className="dechet7" onClick={() => {setTrash7(false)}}></div> : null
             }
-            
-            {/* <div className="dechet2" onClick={handleClick}></div>
-            <div className="dechet3" onClick={handleClick}></div>
-            <div className="dechet4" onClick={handleClick}></div>
-            <div className="dechet5" onClick={handleClick}></div>
-            <div className="dechet6" onClick={handleClick}></div>
-            <div className="dechet7" onClick={handleClick}></div> */}
         </div>
     );
 
