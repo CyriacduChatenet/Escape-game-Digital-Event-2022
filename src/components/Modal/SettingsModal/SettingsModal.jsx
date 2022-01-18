@@ -16,8 +16,6 @@ export const SettingsModal = () => {
         contentTab.push(contentDropdown[i])
       }
       setCurrentContent(contentTab)
-
-      console.log(contentTab)
     }, [])
 
     const handleClick = () => {
@@ -25,16 +23,12 @@ export const SettingsModal = () => {
         const newIndex = indexOfContent + 1
         setIndexOfContent(newIndex)
       }
-      console.log(indexOfContent)
 
       const contentTab = []
       for(let i = 0; i < indexOfContent; i++){
         contentTab.push(contentDropdown[i])
       }
       setCurrentContent(contentTab)
-
-      console.log(contentTab)
-      
     }
 
   return (

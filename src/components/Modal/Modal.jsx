@@ -16,7 +16,6 @@ export const Modal = () => {
   setTimeout(function() {
     const video = document.querySelector('.modal-video')
     video.setAttribute('Controls', 'true')
-    console.log(video)
   }, 10000);
 
   return (

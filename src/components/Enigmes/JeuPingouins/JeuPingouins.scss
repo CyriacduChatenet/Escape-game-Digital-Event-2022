@@ -118,8 +118,13 @@
 .animals-container {
     width: 100%;
     height: 100%;
-    position: relative;
+    // position: relative;
     z-index: 99;
+
+    .animals{
+        top: 400px;
+        left: 240px;
+    }
 }
 
 .animals {

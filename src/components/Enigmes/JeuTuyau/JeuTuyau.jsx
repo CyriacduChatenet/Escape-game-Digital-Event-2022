@@ -5,35 +5,35 @@ import './JeuTuyau.scss'
 export const JeuTuyau = () => {
 
     const [tuyauFirst, setTuyauFirst] = useState(false)
-    console.log('First tuyau :',tuyauFirst);
+    // console.log('First tuyau :',tuyauFirst);
     
     const [tuyauSecond, setTuyauSecond] = useState(false)
-    console.log('Second Tuyau :',tuyauSecond);
+    // console.log('Second Tuyau :',tuyauSecond);
 
     const [tuyauThird, setTuyauThird] = useState(false)
-    console.log('Third Tuyau :',tuyauThird);
+    // console.log('Third Tuyau :',tuyauThird);
 
     const [placeFirst, setPlaceFirst] = useState(false)
-    console.log('First place :',placeFirst);
+    // console.log('First place :',placeFirst);
     
     const [placeSecond, setPlaceSecond] = useState(false)
-    console.log('Second place :',placeSecond);
+    // console.log('Second place :',placeSecond);
 
     const [placeThird, setPlaceThird] = useState(false)
-    console.log('Third place :',placeThird);
+    // console.log('Third place :',placeThird);
 
     
     const [firstIn, setFirstIn] = useState(false)
-    console.log('FIRST IN', firstIn);
+    // console.log('FIRST IN', firstIn);
     
     const [secondIn, setSecondIn] = useState(false)
-    console.log('SECOND IN', secondIn);
+    // console.log('SECOND IN', secondIn);
     
     const [thirdIn, setThirdIn] = useState(false)
-    console.log('THIRD IN', thirdIn);
+    // console.log('THIRD IN', thirdIn);
 
     const [counterClick, setCounterClick] = useState(0)
-    console.log(counterClick);
+    // console.log(counterClick);
     
     
 

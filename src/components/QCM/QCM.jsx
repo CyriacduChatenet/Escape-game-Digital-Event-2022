@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react/cjs/react.development";
+import { useState } from "react/cjs/react.development";
 import { Question } from "../Question/Question";
 import "./QCM.scss";
 
@@ -42,31 +42,31 @@ export const QCM = () => {
   return (
     <div className="QCM">
       <Question question="Question 1">
-      {radiosQ1.map((radio) => {
+      {radiosQ1.map((radio,index) => {
                         return (
                             <div key={radio}> 
-                                <input type="radio" value={radio} id={radio} checked={radio == selectedRadioQ1} onChange={(e) => setSelectedRadioQ1(e.target.value)}/>
-                                <label htmlFor={radio}>{radio}</label>
+                                <input type="radio" name="q1" value={radio} id={"q1-" + index} checked={radio == selectedRadioQ1} onChange={(e) => setSelectedRadioQ1(e.target.value)}/>
+                                <label htmlFor={"q1-" + index}>{radio}</label>
                             </div>
                         );
                     })}
       </Question>
       <Question question="Question 2">
-      {radiosQ2.map((radio) => {
+      {radiosQ2.map((radio,index) => {
                         return (
                             <div key={radio}> 
-                                <input type="radio" value={radio} id={radio} checked={radio == selectedRadioQ2} onChange={(e) => setSelectedRadioQ2(e.target.value)}/>
-                                <label htmlFor={radio}>{radio}</label>
+                                <input name="q2" type="radio" value={radio} id={"q2-" + index}  checked={radio == selectedRadioQ2} onChange={(e) => setSelectedRadioQ2(e.target.value)}/>
+                                <label htmlFor={"q2-" + index}>{radio}</label>
                             </div>
                         );
                     })}
       </Question>
       <Question question="Question 3">
-      {radiosQ3.map((radio) => {
+      {radiosQ3.map((radio,index) => {
                         return (
                             <div key={radio}> 
-                                <input type="radio" value={radio} id={radio} checked={radio == selectedRadioQ3} onChange={(e) => setSelectedRadioQ3(e.target.value)}/>
-                                <label htmlFor={radio}>{radio}</label>
+                                <input name="q3" type="radio" value={radio} id={"q3-" + index} checked={radio == selectedRadioQ3} onChange={(e) => setSelectedRadioQ3(e.target.value)}/>
+                                <label htmlFor={"q3-" + index}>{radio}</label>
                             </div>
                         );
                     })}

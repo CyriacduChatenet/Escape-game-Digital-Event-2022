@@ -4,10 +4,10 @@ import './DossierJustice.scss'
 export const DossierJustice = () => {
 
     const [dossierJustice, setDossierJustice] = useState(true)
-    console.log('dossierJustice :', dossierJustice);
+    // console.log('dossierJustice :', dossierJustice);
 
     const [openJustice, setOpenJustice] = useState(true)
-    console.log('PopUp OpenJustice :', openJustice)
+    // console.log('PopUp OpenJustice :', openJustice)
 
     const [dossierFirst, setDossierFirst] = useState(false)
 
