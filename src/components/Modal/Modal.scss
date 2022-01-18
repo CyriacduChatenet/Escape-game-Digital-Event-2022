@@ -23,6 +23,9 @@
     position: absolute;
     z-index: 4;
     transform: translateY(-33vh) translateX(27vw);
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .dark-bg {

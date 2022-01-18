@@ -2,29 +2,31 @@ import { useState, useEffect } from "react";
 import "./JeuPingouins.scss";
 import SpeechRecognition from 'react-speech-recognition/lib/SpeechRecognition';
 import { useSpeechRecognition } from 'react-speech-recognition';
+import { Box } from "@mui/system";
 
 export const JeuPingouins = () => {
-
   const [translateXValue, setTranslateXValue] = useState(0)
   const [translateYValue, setTranslateYValue] = useState(0)
-  const [open, setOpen] = useState(true);
   const [mapSrc, SetMapSrc] = useState("/assets/images/polar-game/polar-map.png")
+  const [hour, setHour] = useState(7)
+  const [minutes, setMinutes] = useState(50)
+  const [numberAnimals, setNumberAnimals] = useState(20)
 
   const commands = [
     {
-      command : "Go right",
+      command : ['Allez',"Droite", "Avancer"],
       callback : () => {setTranslateXValue(translateXValue + 100)}
     },
     {
-      command : "Go left",
+      command : ['Gauche', 'Reculer'],
       callback : () => {setTranslateXValue(translateXValue -100)}
     },
     {
-      command : "Go down",
+      command : ['En-bas', 'descendre'],
       callback : () => {setTranslateYValue(translateYValue +100)}
     },
     {
-      command : "Go up",
+      command : ['En-haut', 'monter'],
       callback : () => {setTranslateYValue(translateYValue -100)}
     },
     {
@@ -36,21 +38,46 @@ export const JeuPingouins = () => {
   ]
   
   const [isListening, setIsListening] = useState(false)
-  const {transcript, resetTranscript} = useSpeechRecognition({commands})
+  const {transcript, resetTranscript,listening} = useSpeechRecognition({commands})
 
-  const openModal = () => {
-    if (openModal === false ) {
-      setOpen(true)
-    } else {
-      setOpen(false)
+  let animalsPoints = []
+  let interval
+
+  for (let index = 0; index < numberAnimals; index++) {
+    const top = Math.floor(Math.random() * 90)
+    const left = Math.floor(Math.random() * 90)
+
+    const style = {
+      "position": "absolute",
+      "top": top,
+      "left": left
     }
+    animalsPoints.push(<div className="animalPoint" style={style}></div>)
   }
+
+  useEffect (() => {
+    interval=setInterval(()=>{
+      if(minutes < 59) {
+        setMinutes(minutes + 1)
+      }
+      if(minutes >= 59){
+        setMinutes(0)
+        setHour(hour + 1)
+      }
+    },1000)
+
+    return ()=> clearInterval(interval)
+  }, [])
 
   const handleListening = () => {
     setIsListening(true);
     SpeechRecognition.startListening({
       continuous : true 
     })
+
+    // setTimeout(() => {
+    //   SpeechRecognition.stopListening()
+    // }, 4000);
   }
 
   const handleStopListening = () => {
@@ -63,70 +90,17 @@ export const JeuPingouins = () => {
     resetTranscript();
   }
 
-  const ChangeMap = () => {
-    setTimeout(() => {
-      SetMapSrc("https://media.istockphoto.com/photos/night-map-of-usa-with-city-lights-illumination-picture-id1293496370?b=1&k=20&m=1293496370&s=170667a&w=0&h=aPDRphnLuE8E2UyTLI6MBLK3JI-8mf0unj-aCH0OiBc=")
-    }, 30000)
-    setTimeout(() => {
-      SetMapSrc("https://media.istockphoto.com/photos/brazil-3d-render-topographic-map-color-border-picture-id1335251137?b=1&k=20&m=1335251137&s=170667a&w=0&h=RqC157yA2YTwYDq9eomyLwmbN1QCHH0hHdXjLSqsXew=")
-    }, 60000)
-    setTimeout(() => {
-      SetMapSrc("https://media.istockphoto.com/photos/brazil-3d-render-topographic-map-color-border-picture-id1335251137?b=1&k=20&m=1335251137&s=170667a&w=0&h=RqC157yA2YTwYDq9eomyLwmbN1QCHH0hHdXjLSqsXew=")
-    }, 90000)
-    setTimeout(() => {
-      SetMapSrc("https://media.istockphoto.com/photos/blue-world-map-background-global-business-news-and-media-finance-and-picture-id1300113567?b=1&k=20&m=1300113567&s=170667a&w=0&h=Rz604QF4tSjJUGQJTh_rwNOeBi2Ob9vpzSzpNKIkUtY=")
-    }, 120000)
-  }
-
   const StartListening = () => {
     handleListening();
     setTimeout(() => {
       handleStopListening();
       handleReset();
     }, 180000)
-
   }
-
-  useEffect(() => {
-    ChangeMap();
-  }, [])
-
-  const [hour, setHour] = useState(7)
-  const [minutes, setMinutes] = useState(50)
-
-  let interval
-
-  useEffect (() => {
-    interval=setInterval(()=>{
-      if(minutes < 59) {
-        setMinutes(minutes + 1)
-      }
-      if(minutes >= 59){
-        setMinutes(0)
-        setHour(hour + 1)
-      }
-  },1000)
-
-  return ()=> clearInterval(interval)
-  })
 
   return (
     <>
-      {open === false ? null : 
       <div className="JeuPingouins">
-      <div className="JeuPingouins-header">
-        <img
-          src="/assets/images/terminal-bar/bar-top-left.png"
-          alt=""
-          className="header-banner"
-        />
-        <img
-          onClick={openModal}
-          src="/assets/images/terminal-bar/Bar-top-right.png"
-          alt=""
-          className="header-cross"
-        />
-      </div>
       <div className="game-content">
         <div className="tv-effect" style={{backgroundImage : `url(/assets/images/polar-game/tv-effect.png)`}}>
           <div className="radar" style={{backgroundImage : `url(/assets/images/polar-game/radar-base.png)`}}>
@@ -135,7 +109,11 @@ export const JeuPingouins = () => {
         </div>
         <div className="map-container" style={{backgroundImage: `url(${mapSrc})`}}>
           <div className="animals-container">
-            <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}></div>
+            <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}>
+              <Box>
+                {animalsPoints.map(el => el)}
+              </Box>
+            </div>
           </div>
         </div>
         <div className="controlls-container">
@@ -185,9 +163,9 @@ export const JeuPingouins = () => {
               </p>
             </div>
             <div className="controlls-item">
-            <p className="controlls-item-title">Boost</p>
+            <p className="controlls-item-title">Microphone</p>
               <p className="controlls-item-desc-desc-red">
-                off
+                <Box sx={{color: listening ? "green" : "red"}}>{listening ? 'ON' : 'OFF'}</Box>
               </p>
             </div>
           </div>
@@ -199,7 +177,6 @@ export const JeuPingouins = () => {
         </div>
       </div>
     </div>
-      }
     </>
   );
 };

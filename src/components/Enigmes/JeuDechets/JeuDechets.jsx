@@ -1,28 +1,41 @@
 import "./JeuDechets.scss";
 import { useState, useEffect, useRef } from "react";
-import Pins from './pins';
-import CITIES from './dechets.json';
+import Pins from './pins.jsx';
+import initialTrash from './trash.json';
 import MapGL from 'react-map-gl';
 
 export const JeuDechets = () => {
 
-    const TOKEN = 'pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg'; // Set your mapbox token here
+    const [trashList, setTrashList] = useState(initialTrash)
+
+    const TOKEN = 'pk.eyJ1IjoiZXVsYWxpZW1vcmVhdSIsImEiOiJja3llZXc2OGgwMjgxMnBxcnVyeHRvM3p3In0.RSi02tf789hSAqrwOJu2zg';
 
     const [viewport, setViewport] = useState({
         latitude: -24.36844269983584,
         longitude: -128.32643204046312,
-        zoom: 12,
+        minZoom: 12,
         bearing: 0,
         pitch: 0
     });
 
-    function handleClick() {
-        console.log('Le lien a été cliqué.');
+    const [displayTrash, setDisplayTrash] = useState(true)
+
+    function handleClick(trash,index) {
+
+        // ne change que si on bouge la map
+        trashList[index].hidden = true
+
+        setTrashList(trashList)
+
+        // console.log(trashList[index].hidden)
+        // console.log(trashList[index].latitude)
+        // console.log(trashList[index].longitude)
+
+        // setDisplayTrash(false)
     }
 
     return (
         <div className="JeuDechets">
-            <h1>Jeu Dechets</h1>
             <div className="mapbox-container">
                 <MapGL
                     {...viewport}
@@ -32,7 +45,11 @@ export const JeuDechets = () => {
                     onViewportChange={setViewport}
                     mapboxApiAccessToken={TOKEN}
                 >
-                    <Pins data={CITIES} onClick={handleClick}/> 
+                    {
+                        // trashList[index].show === true ? <Pins data={trashList} onClick={handleClick}/> : null
+                        displayTrash === true ? <Pins data={trashList} onClick={handleClick} id="test"/> : null
+                    }      
+                    {/* <Pins data={trashList} onClick={handleClick} /> */}
                 </MapGL>
             </div>
         </div>

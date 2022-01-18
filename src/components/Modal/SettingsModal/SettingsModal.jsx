@@ -3,8 +3,6 @@ import "./SettingsModal.scss";
 import  { DropdownChild } from './ScrollDrawer/DropdownChild'
 import { useState } from "react";
 
-
-
 export const SettingsModal = () => {
     const [contentDropdown , setContentDropdown] = useState([
       'TU','NE','VAS','RIEN', 'TROUVER',  'ICI', ':P'
@@ -41,8 +39,6 @@ export const SettingsModal = () => {
 
   return (
     <div className="settingsModalPage">
-          <img src="/assets/images/terminal-bar/bar-top-left-king-size.png" alt="" className="barTopLeft"/>
-          <img src="/assets/images/terminal-bar/bar-top-right-king-size.png" alt="" className="barTopRight" />
       <div className="settingsModal">
         <div className="leftSideMenu">
           <div className="userAvatar">

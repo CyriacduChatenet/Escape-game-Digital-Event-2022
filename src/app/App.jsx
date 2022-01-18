@@ -13,6 +13,7 @@ import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
 
 import "./index.scss"
+import Partage from "../components/Enigmes/partage/Partage";
 
 function App() {
   return (

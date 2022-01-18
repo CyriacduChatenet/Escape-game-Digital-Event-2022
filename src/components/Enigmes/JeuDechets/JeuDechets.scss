@@ -1,10 +1,11 @@
 @import '../../../../public/assets/styles/import.scss';
 
-.JeuDechets {    
+.JeuDechets {   
+  width: 100vw;
+  height: 100vh;
   .mapbox-container {
-    width: 50vw;
-    height: 50vh;
-    transform: translateX(50%) translateY(30%);
+    width: 59.5vw;
+    height: 65vh;
     background-color: rgb(217, 201, 233);
 
     #mapbox-dechets {

@@ -7,11 +7,11 @@ import { Dock } from '../../components/Dock/Dock';
 import { ShortTerminal } from '../../components/ShortTerminal/ShortTerminal';
 import { Modal } from "../../components/Modal/Modal";
 import JusticeDossier from '../../components/Enigmes/justice/JusticeDossier';
-import DraggableFolder from '../../components/DraggableFolder/DraggableFolder';
 import { JeuClimat } from '../../components/Enigmes/JeuClimat/JeuClimat';
+import DraggableFolder from '../../components/DraggableFolder/DraggableFolder';
 
 export const DashboardPage = () => {
-   
+
     return (
         <div>
             <div className="video-container">
