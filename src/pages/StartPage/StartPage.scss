@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "MonumentExtendedRegular";
+    src: url("../../../public/assets/fonts/MonumentExtended-Regular.otf") format('opentype');
+}
+
+
+
+.start_page{
+    width: 100vw;
+    height: 100vh;
+
+    .video_container{
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .start_page_content_displaying{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .start_page_title{
+        font-size: 100px;
+        color: white;
+        text-align: center;
+        margin-top: 500px;
+        font-family: "MonumentExtendedLight", Arial, Helvetica, sans-serif;
+    }
+
+
+    .border_bottom_displaying{
+        display: flex;
+        justify-content: center;
+
+        .border_bottom{
+            background-color: white;
+            width: 1350px;
+            height: 4px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .start_page_text{
+        text-align: center;
+        font-size: 35px;
+        color: white;
+        font-family: "MonumentExtendedRegular", Arial, Helvetica, sans-serif;
+    }
+
+    .start_btn_displaying{
+        display: flex;
+        justify-content: center;
+        margin-top: 180px;
+        cursor: pointer;
+    }
+
+    .start_btn{
+        transform: scale(110%);
+    }
+}
+
+

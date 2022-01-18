@@ -12,6 +12,8 @@ import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
 import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuDechetsNew } from "../components/Enigmes/JeuDechetsNew/JeuDechetsNew";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
+import { StartPage } from "../pages/StartPage/StartPage";
+
 import Partage from "../components/Enigmes/partage/Partage";
 import { QCM } from "../components/QCM/QCM";
 import { Galerie } from "../components/Galerie/Galerie";
@@ -37,6 +39,7 @@ function App() {
               <Route exact path="/QCM" element={ <QCM /> }/>
               <Route exact path="/jeu-tuyau" element={ <JeuTuyau/> }/>
               <Route exact path="/Galerie" element={ <Galerie/> }/>
+              <Route exact path="/start-page" element={ <StartPage /> }/>
 
               {/* Routes test */}
               <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>

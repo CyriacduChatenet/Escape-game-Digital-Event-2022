@@ -1,4 +1,5 @@
 import React from 'react';
+import './LoginJustice.scss'
 
 const LoginJustice = ({setIsLogin, setCurrentPage}) => {
 
@@ -8,10 +9,21 @@ const LoginJustice = ({setIsLogin, setCurrentPage}) => {
     }
 
     return ( 
-        <div>
-            Login Page
+        <div className="login_Page">
+            <div className="ministere_img"></div>
+            <div className="ministere_title_displaying">
+                <img src="assets/images/justice/ministere_title.png" alt="" className='ministere_title'/ >
+            </div>
 
-            <button onClick={handleClick}>login</button>
+            <div className="input_container">
+
+                <input type="text" className="login_input_username" />
+                <label className='label_input_username'>Nom d'utilisateur administrateur</label>
+                <input type="text" className="login_input_password" />
+                <label className='label_input_password'>Mot de passe administrateur</label>
+                <button className='login_btn' onClick={handleClick}>Connexion</button>
+
+            </div>
         </div>
      );
 }
