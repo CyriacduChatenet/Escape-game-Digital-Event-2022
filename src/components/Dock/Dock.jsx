@@ -10,6 +10,7 @@ import { SettingsModal } from '../Modal/SettingsModal/SettingsModal'
 import './Dock.scss';
 import Partage from '../Enigmes/partage/Partage';
 import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
+import { OracleModal } from '../Modal/OracleModal/OracleModal';
 
 export const Dock = () => {
     return (
@@ -34,7 +35,9 @@ export const Dock = () => {
                     <JeuSurconsommation />
                 </DockIcon>
                 <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" ></DockIcon>
-                <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" />
+                <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" >
+                    <OracleModal/>
+                </DockIcon>
                 <DockIcon dockText="Réglages"dockIcon="/assets/images/dock-icon/settings.png">
                     <SettingsModal/>
                 </DockIcon>
