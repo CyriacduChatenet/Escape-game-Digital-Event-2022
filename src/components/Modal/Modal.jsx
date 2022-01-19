@@ -7,7 +7,7 @@ export const Modal = () => {
 
   useEffect(() => {
     setTimeout(() => {setShowModal(true)}, 6000)
-    setTimeout(ControlVideo, 9000);
+    setTimeout(ControlVideo, 75000);
   }, []);
   const ControlVideo = () => {
     setShowCross(true);
@@ -16,7 +16,7 @@ export const Modal = () => {
   setTimeout(function() {
     const video = document.querySelector('.modal-video')
     video.setAttribute('Controls', 'true')
-  }, 10000);
+  }, 75000);
 
   return (
     <>
@@ -25,7 +25,7 @@ export const Modal = () => {
 		      <div className="modal">
 			      {showCross === true ? <img className="cross" onClick={() => setShowModal(false)} src="/assets/images/terminal-bar/Bar-top-right.png" alt=""/>: null}
               <video className="modal-video" autoPlay loop>
-                <source src="/assets/video/loadingVideo.mp4" type="video/mp4" />
+                <source src="/assets/video/video_hacker.mp4" type="video/mp4" />
               </video>
     	      </div>
           </div>
