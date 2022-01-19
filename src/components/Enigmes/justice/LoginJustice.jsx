@@ -1,11 +1,23 @@
 import React from 'react';
+import { useState } from 'react/cjs/react.development';
 import './LoginJustice.scss'
 
 export const LoginJustice = ({setIsLogin, setCurrentPage}) => {
+    const [credentials, setCredentials] = useState({
+        username : "",
+        password: ""
+    });
+
+    const handleChange = ({ currentTarget }) => {
+        const { value, name } = currentTarget;
+        setCredentials({ ...credentials, [name]: value });
+    };
 
     const handleClick = () => {
-        setCurrentPage("dashboard")
-        setIsLogin(true)
+        if(credentials.username === "admin" && credentials.password === "admin"){
+            setCurrentPage("dashboard")
+            setIsLogin(true)
+        }
     }
 
     return ( 
@@ -17,9 +29,9 @@ export const LoginJustice = ({setIsLogin, setCurrentPage}) => {
 
             <div className="input_container">
 
-                <input type="text" className="login_input_username" />
+                <input type="text" className="login_input_username" name="username" onChange={handleChange} />
                 <label className='label_input_username'>Nom d'utilisateur administrateur</label>
-                <input type="password" className="login_input_password" />
+                <input type="password" className="login_input_password" name='password'  onChange={handleChange} />
                 <label className='label_input_password'>Mot de passe administrateur</label>
                 <button className='login_btn' onClick={handleClick}>Connexion</button>
 

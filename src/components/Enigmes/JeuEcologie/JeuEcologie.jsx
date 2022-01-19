@@ -33,17 +33,19 @@ export const JeuEcologie = () => {
   const [userValue, setUservalue] = useState("")
 
   useEffect(() => {
-    if(missions[0].completed){
+    if(missions[0].completed === true){
       setIsCompleted(true)
     }
   },[])
 
   useEffect(() => {
-    dechetsList.map(dechet => {
-      dechet.collect = true
-      dechet.trouve = true
-    })
-    setDechetsList(dechetsList)
+    if(isCompleted === true){
+      dechetsList.map(dechet => {
+        dechet.collect = true
+        dechet.trouve = true
+      })
+      setDechetsList(dechetsList)
+    }
   },[isCompleted])
 
   const handleChange = (e) => {
@@ -80,8 +82,9 @@ export const JeuEcologie = () => {
 
   const checkGameIsValid = () => {
     let numberOfCollect = 0
+
     dechetsList.map(dechet => {
-      if(dechet.collect) numberOfCollect++
+      if(dechet.collect === true) numberOfCollect++
     })
 
     if(numberOfCollect >= 6) {

@@ -18,6 +18,7 @@ export const QCM = () => {
   const [questionState, setQuestionState] = useState(null)
 
   const CalculResponse = () => {
+    console.log('click')
     if (selectedRadioQ1 === "1 douche" && selectedRadioQ2 === "1 mois" && selectedRadioQ3 === "50 ans") {
       console.log('good')
       setQuestionState(true)
