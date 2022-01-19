@@ -54,7 +54,7 @@ export const Canadair = () => {
                 className="codeCanadair" 
                 onChange={handleChange}
                 readOnly={!unlock ? true : false}
-                defaultValue={credentials}
+                defaultValue={isCompled ? credentials : ""}
                 />
                 <div className='buttonCanadair' onClick={verification}></div>
         </div>
