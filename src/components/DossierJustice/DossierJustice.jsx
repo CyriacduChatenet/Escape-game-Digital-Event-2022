@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react'
+import Modal from '@mui/material/Modal'
+import Box from '@mui/material/Box';
+import style from "../../components/PrimaryModal/style"
 import './DossierJustice.scss'
 
 export const DossierJustice = () => {
@@ -12,16 +15,12 @@ export const DossierJustice = () => {
     const [dossierFirst, setDossierFirst] = useState(false)
 
     const [dossierSecond, setDossierSecond] = useState(false)
-
-    const [dossierThird, setDossierThird] = useState(false)
-    
-    const [dossierFour, setDossierFour] = useState(false)
-    
-    const [dossierFive, setDossierFive] = useState(false)
-    
-    const [dossierSix, setDossierSix] = useState(false)
     
     const [chevron, setChevron] = useState(">")
+
+    const [openQuizz, setOpenQuizz] = useState(false);
+    const handleOpenQuizz = () => setOpenQuizz(true);
+    const handleCloseQuizz = () => setOpenQuizz(false);
 
     return(
         <div className = 'dossierJusticeContainer'>
@@ -97,10 +96,20 @@ export const DossierJustice = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFirst' onDoubleClick={handleOpenQuizz} style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'dossierJusticeItemsecond'></div>
                                 <p className='marginLeftName'>Enigme</p>
+                                <Modal
+                                open={openQuizz}
+                                onClose={handleCloseQuizz}
+                                aria-labelledby="modal-modal-title"
+                                aria-describedby="modal-modal-description"
+                            >
+                                <Box sx={style}>
+                                 
+                                </Box>
+                            </Modal>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
