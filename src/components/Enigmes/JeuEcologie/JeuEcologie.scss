@@ -1,0 +1,135 @@
+@import '../../../../public/assets/styles/import.scss';
+
+@font-face {
+  font-family: "MonumentExtendedLight";
+  src: url("../../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
+.JeuDechetsNew {   
+  width: 1000px;
+  height: 600px;
+  background-image: url('../../../../public/assets/images/jeu-ecologie/plage.png');
+  background-size: 1000px 600px;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .terminal {
+    .table {
+      border: 1px solid #FFF; 
+      border-collapse: collapse; 
+      width:350px;      
+      .top {
+        border: 1px solid #FFF; 
+        font-family: "MonumentExtendedLight";
+        font-size:9px;
+        background-color:#FFF;
+        color: #030303;
+        padding: 8px 12px;
+        text-align:left;
+      }
+      .middle {
+        border: 1px solid #FFF; 
+        font-family: "MonumentExtendedLight";
+        font-size:9px;
+        background-color:#030303;
+        color: white;
+        vertical-align: top;
+        height: 130px;
+        padding: 8px 12px;
+        .middle-text1 {
+          font-family: "MonumentExtendedLight";
+          display: inline-block;
+          margin-bottom: 12px;
+        }
+      }
+      .bottom {
+        border: 1px solid #FFF; 
+        background-color:#030303;
+        padding: 4px 12px 8px 12px;
+        input {
+          font-family: "MonumentExtendedLight";
+          font-size:9px;
+          background-color:#030303;
+          color: white;
+          &::placeholder {
+            font-family: "MonumentExtendedLight";
+            font-size:9px;
+            color: white;
+          }
+        }
+      }
+    } 
+  }
+
+  .inventaire {
+    background: rgba(134, 235, 217, 0.3);
+    padding: 1em;
+    position: absolute;
+    height: 214px;
+    width: 200px;
+    bottom: 2%;
+    left: 1%;
+    .img-cadre-inventaire {
+      position: absolute;
+      width: 220px;
+      bottom: -5%;
+      left: -5%;
+    }
+    .section-img-sac-inventaire {
+      .img-sac-inventaire {
+        position: absolute;
+        left: 150px;
+      }
+    }
+    .section-dechet-inventaire {
+      .dechet-inventaire {
+        color: white;
+        font-family: "MonumentExtendedLight";
+        margin: 6px;
+        font-size: 14px;
+        text-align: center;
+        text-shadow: #000 2px 0 5px;
+      }
+    }
+  }
+
+  .dechets {
+    .dechet {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      object-fit: contain;
+    }
+    .dechet1 {
+      position: absolute;
+      top: 88%; 
+      left: 25%;
+    }
+    .dechet2 {
+      position: absolute;
+      top: 82%; 
+      left: 38%;
+    }
+    .dechet3 {
+      position: absolute;
+      top: 90%; 
+      left: 50%;
+    }
+    .dechet4 {
+      position: absolute;
+      top: 78%; 
+      left: 65%;
+    }
+    .dechet5 {
+      position: absolute;
+      top: 85%; 
+      left: 85%;
+    }
+    .dechet6 {
+      position: absolute;
+      top: 68%; 
+      left: 25%;
+    }
+  }
+  
+}
