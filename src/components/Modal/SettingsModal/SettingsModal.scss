@@ -8,22 +8,6 @@
 
 .settingsModalPage{
 
-    .barTopLeft{
-        position: absolute;
-        right: 130px;
-        top: -50px;
-    }
-
-    .barTopRight{
-        position: absolute;
-        top: -50px;
-        right: 0px;
-
-        &:hover{
-            cursor: pointer;
-        }
-    }
-
     .reduceBar{
         color: white;
         width: 50px;
