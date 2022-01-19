@@ -15,7 +15,7 @@ export const RepartitionDossier = () => {
         <div onDoubleClick={handleOpen}>
             <div className="folder">
                 <img src="/assets/images/folder-icon/folder-icon.png" alt=""  />
-                <p>Répartition des Richesses / Ressources </p>
+                <p>Répartition des Ressources </p>
             </div>
             <Modal
                 open={open}

@@ -1,7 +1,24 @@
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
 .folder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: #fff;
     margin: 10px;
+    img {
+        width: 50px;
+    }
+    p {
+        margin-top: 4px;
+        font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
+        font-size: 10px;
+    }
 }
 .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
     background-color: rgba(0, 0, 0, 0.2) !important;
