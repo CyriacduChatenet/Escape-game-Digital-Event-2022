@@ -40,10 +40,6 @@ export const Dock = () => {
           <Surconsommation/>
         </DockIcon>
 
-        <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" >
-          {/* ? */}
-        </DockIcon>
-
         <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" >
           <OracleModal />
         </DockIcon>
