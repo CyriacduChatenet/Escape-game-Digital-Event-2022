@@ -53,6 +53,10 @@ export const OracleModal = () => {
                     <p className="treestructure_text">fichier3.nao</p>
                     <p className="treestructure_date">21/12/2017 2:38</p>
                     <p className="file_weight">28 191 Ko</p>
+                    {/* 
+                    TODO : Débloquer les tuyaux du jeu Répartition 
+                    Faire l'affichage qui dit qu'on a débloqué les tuyaux
+                    */}
                 </div>
 
                 <div className="fourth_txt_displaying">
