@@ -24,7 +24,7 @@ export const Dock = () => {
           <JeuPingouins />
         </DockIcon>
 
-        <DockIcon dockText="Ecologie" dockIcon="/assets/images/dock-icon/ecologie.png" >
+        <DockIcon dockText="Pollution" dockIcon="/assets/images/dock-icon/ecologie.png" >
           <JeuEcologie />
         </DockIcon>
 
