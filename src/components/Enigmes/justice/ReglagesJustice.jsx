@@ -8,7 +8,7 @@ import './ReglagesJustice.scss'
 // écran de victoire ?
 // Coche dans le dashboard
 
-const ReglagesJustice = () => {
+const ReglagesJustice = ({setSelectValue}) => {
 
   const terminalText1 = "C:\hacker>"
 
@@ -18,12 +18,20 @@ const ReglagesJustice = () => {
     console.log('select')
   }
 
+  const handleChange = (e) => {
+      const {value} = e.currentTarget
+      if(value === "acces-all-utilisateurs"){
+        setSelectValue("acces-all-utilisateurs")
+      }
+      
+  }
+
   return (
     <div className='reglageJustice'>
-      <select name="" className="inputOnglet">
+      <select name="" className="inputOnglet" onChange={handleChange}>
         <option value="bloque-pour-tout-les-utilisateurs">Bloqué pour tous les utilisateurs</option>
         <option selected value="acces-only-administrateurs">Accès pour les administrateurs</option>
-        <option onSelect={onSelect} value="acces-only-administrateurs">Accès pour tous les utilisateurs</option>
+        <option value="acces-all-utilisateurs">Accès pour tous les utilisateurs</option>
       </select>
       <div className="terminal">
         <table className="table" border="1">

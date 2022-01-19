@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react/cjs/react.development";
 import "./DereglementClimatique.scss";
+import {store} from "../../../redux/store"
+import { useSelector } from "react-redux";
 
 export const DereglementClimatique = () => {
   const [openHackMenu, setOpenHackMenu] = useState(false);
@@ -7,10 +9,17 @@ export const DereglementClimatique = () => {
   const [userPassword, setUserPassword] = useState("");
   const [displayLoader, setDisplayLoader] = useState(true);
   const [displayNews, setDisplayNews] = useState(false);
+  const missions = useSelector(state=> state.missionsReducer)
 
   const AnalysePassword = () => {
     if (password === userPassword) {
       alert("good job");
+
+      missions[2].completed = true
+      store.dispatch({
+          type: "missions/update",
+          payload: missions,
+        });
     } else {
       alert("loose");
     }

@@ -14,6 +14,8 @@ const IndexJustice = () => {
     const updatePage = (page) => {
         setCurrentPage(page)
     }
+    const [validatedSelect, setValidatedSelect] = useState(false)
+    const [selectValue, setSelectValue] = useState("")
 
     return ( 
         <div className = 'containerJustice'>
@@ -30,8 +32,8 @@ const IndexJustice = () => {
                 </div>
                 <div className="content">
                     {currentPage === "dashboard" && <DashboardJustice />}
-                    {currentPage === "reglages" && <ReglagesJustice />}
-                    {currentPage === "pages" && <PagesJustice />}
+                    {currentPage === "reglages" && <ReglagesJustice setSelectValue={setSelectValue} />}
+                    {currentPage === "pages" && <PagesJustice selectValue={selectValue} />}
                     {currentPage === "goodLayer" && <CodeFakeJustice />}
                 </div>
             </>

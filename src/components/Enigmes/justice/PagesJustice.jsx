@@ -1,12 +1,34 @@
 import React from 'react';
+import { useEffect, useState } from 'react/cjs/react.development';
+import { useSelector } from 'react-redux'
+import {store} from "../../../redux/store"
 import './PagesJustice.scss'
 
-const PagesJustice = () => {
+const PagesJustice = ({selectValue}) => {
+  const [background,setBackground] = useState('')
+  const missions = useSelector(state=> state.missionsReducer)
 
   const terminalText1 = "C:\hacker>"
 
+  useEffect(() => {
+    if(selectValue === "acces-all-utilisateurs" ){
+      setBackground("./assets/images/justice/pages-non-bloque.png")
+    }else{
+      setBackground("./assets/images/justice/Pages-bloqué.png")
+    }
+  },[])
+
+  const handleClick = () => {
+    console.log('click')
+    missions[5].completed = true
+    store.dispatch({
+        type: "missions/update",
+        payload: missions,
+      });
+  }
+
   return (
-    <div className='pageBloque'>
+    <div className='pageBloque' style={{backgroundImage: `url(${background})`}}>
       <div className="terminal">
         <table className="table" border="1">
           <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
@@ -19,9 +41,12 @@ retrouvez les et mettez les en ligne pour révéler au monde la vérité.</span>
         </table>
       </div>
       {/* Button a afficher seulement si le select a bien été cliqué */}
-      <div className='btn-publier'>
-        <button>Publier les données</button>
-      </div>
+      {selectValue === "acces-all-utilisateurs" && 
+        <div className='btn-publier'>
+          <button onClick={handleClick}>Publier les données</button>
+        </div>
+      }
+
       
       {/* OnClick : le mini jeu est validé, retour au dashboard, coche du mini jeu, écran final WIN */}
     </div>

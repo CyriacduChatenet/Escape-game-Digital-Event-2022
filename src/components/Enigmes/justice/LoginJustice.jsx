@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react/cjs/react.development';
 import './LoginJustice.scss'
 
 export const LoginJustice = ({ setIsLogin, setCurrentPage }) => {
@@ -11,11 +13,25 @@ export const LoginJustice = ({ setIsLogin, setCurrentPage }) => {
   const terminalText5 = "  nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK;"
   const terminalText6 = "}"
   const terminalText7 = "pass_info = kmalloc(sizeof(mo2P@ss) + nblocks*sizeof(gid_t *), GFP_USER);"
+
+  const missions = useSelector(state=> state.missionsReducer)
   
   const [credentials, setCredentials] = useState({
     username: "",
     password: ""
   });
+
+  const [unlock,setUnlock] = useState(false)
+
+  useEffect(()=>{
+    if(missions[0].completed === true
+      && missions[1].completed === true
+      && missions[2].completed === true
+      && missions[3].completed === true
+      ){
+        setUnlock(true)
+      }
+  },[])
 
   const handleChange = ({ currentTarget }) => {
     const { value, name } = currentTarget;
@@ -39,11 +55,11 @@ export const LoginJustice = ({ setIsLogin, setCurrentPage }) => {
       </div>
 
       <div className="input_container">
-        <input type="text" className="login_input_username" name="username" onChange={handleChange} />
+        <input type="text" className="login_input_username" name="username" onChange={handleChange} readOnly={!unlock} />
         <label className='label_input_username'>Nom d'utilisateur administrateur</label>
-        <input type="password" className="login_input_password" name='password' onChange={handleChange} />
+        <input type="password" className="login_input_password" name='password' onChange={handleChange} readOnly={!unlock} />
         <label className='label_input_password'>Mot de passe administrateur</label>
-        <button className='login_btn' onClick={handleClick}>Connexion</button>
+        <button className='login_btn' onClick={handleClick} disabled={!unlock}>Connexion</button>
       </div>
 
       <div className="terminal">
