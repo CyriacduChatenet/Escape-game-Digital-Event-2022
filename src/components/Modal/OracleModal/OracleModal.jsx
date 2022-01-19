@@ -5,6 +5,7 @@ import style from "../../PrimaryModal/style"
 import "../../PrimaryModal/primary-modal.scss"
 import "./Oracle.scss";
 import { useState } from 'react';
+import { OracleModalArticleFolder } from './OracleModalArticleFolder/OracleModalArticleFolder';
 
 export const OracleModal = () => {
     const [open, setOpen] = useState(false);
@@ -39,8 +40,22 @@ export const OracleModal = () => {
                 </div>
 
                 <div className="first_txt_displaying">
-                    <img src="assets/images/folder-icon/folder-icon.png" alt="" className="folder_displaying"/>
-                    <p className="treestructure_text">instruction</p>
+                    <div className="dock-icon-container" onDoubleClick={handleOpen}>
+                        <img src="assets/images/folder-icon/folder-icon.png" alt="" className="folder_displaying"/>
+                        <p className="treestructure_text">Instructions</p>
+
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box sx={style}>
+                                <OracleModalArticleFolder />
+                            </Box>
+                        </Modal>
+                    </div>
+
                     <p className="treestructure_date">21/12/2017 2:38</p>
                     <p className="file_weight">490 Ko</p>
                 </div>
@@ -69,10 +84,7 @@ export const OracleModal = () => {
                     <p className="treestructure_date">21/12/2017 2:38</p>
                     <p className="file_weight">74 Ko</p>
                 </div>
-
             </div>
-
-            
 
             <div className="bg-black"></div>
         </div> 

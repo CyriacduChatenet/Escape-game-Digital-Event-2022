@@ -1,4 +1,6 @@
 import "./OracleModalArticleFolder.scss";
+import {ModalArticle} from "../components/ModalArticle"
+import { OracleModalArticle1 } from "./OracleModalArticle1/OracleModalArticle1";
 
 export const OracleModalArticleFolder = () => {
   return (
@@ -16,11 +18,15 @@ export const OracleModalArticleFolder = () => {
             <div className="treestructure_container">
 
                 <div className="first_folder_displaying">
-                    <img src="assets/images/folder-icon/file.png" alt="" className="folder_displaying"/>
-                    <p className="treestructure_text_instruction">Déchets plastique <br>
-                    </br>sur les plages.txt</p>
-                    <p className="treestructure_date">21/12/2017 2:38</p>
-                    <p className="file_weight">666 Ko</p>
+                    <ModalArticle 
+                        dockText="Déchets plastique" 
+                        dockIcon="./assets/images/folder-icon/file.png" 
+                        br="sur les plages.txt"
+                        date="21/12/2017 2:38"
+                        fileSize="666 Ko"
+                    >
+                        <OracleModalArticle1 />
+                    </ModalArticle>
                 </div>
 
                 <div className="second_folder_displaying">
