@@ -11,8 +11,8 @@ export const Defeat = () => {
             <div className="defeat-content">
                 <div className="defeat-text">
                     <h1>Last chance [ version 10.0.2000 ]</h1>
-                    <h2>Echec mission</h2>
-                    <p className="text-p1">Vous n’avez pas réussi à nettoyer la plage mais vous pouvez le faire sur les plages de France afin de préserver notre planète.</p>
+                    <h2>Echec de la mission</h2>
+                    <p className="text-p1">Vous n’avez pas réussi le défi, recommencez si vous voulez sauver la planette !</p>
                 </div>
                 <img src='/assets/images/cadre-bouton.png' className='img-cadre-bouton-rejouer'/>
                 <img src='/assets/images/cadre-bouton.png' className='img-cadre-bouton-quitter'/>
