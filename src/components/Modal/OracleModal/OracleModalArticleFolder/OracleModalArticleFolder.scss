@@ -1,0 +1,25 @@
+.oracle_modal_instruction{
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 150px;
+    left: 450px;
+}
+
+.treestructure_text_instruction{
+    font-size: 9px;
+        font-family: "MonumentExtendedRegular";
+        color: white;
+        position: absolute;
+        left: 55px;
+        padding-top: 2px;
+
+        &:hover{
+            cursor: pointer;
+        }
+}
+
+.file_displaying2{
+    width: 20px;
+    height: 20px;
+}

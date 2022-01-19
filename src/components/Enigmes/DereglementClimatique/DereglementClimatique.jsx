@@ -42,16 +42,12 @@ export const DereglementClimatique = () => {
           </video>
           <div className="tv-interface">
             <div className="logo-tv-container">
-              <div className="logo-tv">
-                <img src="assets/images/canad-air/logoTv.png" alt="" className="logoTV" />
-              </div>
             </div>
-            {/* <div className="breaking-news-overflow-x"></div> */}
             <div className="tv-effect"></div>
             <div className="news-link">
               <p className="news">
                 <strong>Canada :</strong> Pour plus d'informations sur ce sujet
-                et bien d'autres ... rendez-vous sur ce site <br />{" "}
+                et bien d'autres ... rendez-vous sur ce site {" "}
                 <span
                   className="link-news"
                   onClick={() => {
@@ -95,6 +91,7 @@ export const DereglementClimatique = () => {
           <div className="airplane-normal"></div>
         </div>
       ) : null}
+      
       {openHackMenu ? (
         <div className="canad-air-piratage">
           <div className="canad-air-hack-form">
