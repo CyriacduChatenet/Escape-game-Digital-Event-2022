@@ -62,9 +62,6 @@
   }
 
   .inventaire {
-    // background-image: url('../../../../public/assets/images/jeu-ecologie/cadre-inventaire.png');
-    // background-repeat: no-repeat;
-    // background-size: contain;
     background: rgba(134, 235, 217, 0.3);
     padding: 1em;
     position: absolute;
@@ -72,6 +69,12 @@
     width: 200px;
     bottom: 2%;
     left: 1%;
+    .img-cadre-inventaire {
+      position: absolute;
+      width: 220px;
+      bottom: -5%;
+      left: -5%;
+    }
     .section-img-sac-inventaire {
       .img-sac-inventaire {
         position: absolute;

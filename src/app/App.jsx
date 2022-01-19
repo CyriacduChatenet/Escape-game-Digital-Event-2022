@@ -40,10 +40,11 @@ function App() {
           <Route exact path="/Galerie" element={<Galerie />} />
           <Route exact path="/start-page" element={<StartPage />} />
 
-              {/* Routes test */}
-              <Route exact path="/victory" element={ <Victory/> }/>
-              <Route exact path="/defeat" element={ <Defeat/> }/>
-              <Route exact path="/canadair" element={ <Canadair/> }/>
+          {/* Routes test */}
+          <Route exact path="/victory" element={<Victory />} />
+          <Route exact path="/defeat" element={<Defeat />} />
+          <Route exact path="/canadair" element={<Canadair />} />
+          <Route exact path="/jeu-ecologie" element={<JeuEcologie />} />
 
           <Route path='*' exact={true} element={<ErrorPage />} />
         </Routes>

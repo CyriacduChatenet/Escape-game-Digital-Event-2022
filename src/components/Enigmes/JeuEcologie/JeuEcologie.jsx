@@ -4,7 +4,11 @@ import { useSelector } from "react-redux";
 import { display } from "@mui/system";
 
 // TODO :
-// Si tous les déchets ont été ramassés -> affichage de l'écran "Mission réussie"
+// BUG : décallage lors de l'entrée du mot dans le terminal et du ramassage du déchet
+// Gérer la casse : que Mégot ou mégot fonctionnent dans l'input
+// Gérer la persistance 
+// Affichage de l'écran "Mission réussie" quand tous les déchets ont été ramassés
+// Cocher la mission "Ecologie" dans le dashboard
 
 export const JeuEcologie = () => {
 
@@ -64,12 +68,13 @@ export const JeuEcologie = () => {
           <tr><td className="middle"><span className="middle-text1">{terminalText}</span>
             <br />
             {
-              unlock ? (<p>"Quels sont les déchets sur la plage ?"</p>) 
-              : (<p>Débloquez la compétence “Tri des déchets“ avant de pouvoir commencer ce mini-jeu...</p>)
+              unlock ? ("Quels sont les déchets sur la plage ?")
+                : ("Débloquez la compétence “Tri des déchets“ avant de pouvoir commencer ce mini-jeu...")
             }
           </td></tr>
           <tr>
-            {unlock &&
+            {
+              unlock &&
               <td className="bottom">
                 <form onSubmit={handleSubmit}>
                   <input type="text" placeholder="Tapez votre réponse..." onChange={handleChange} />
@@ -81,13 +86,16 @@ export const JeuEcologie = () => {
       </div>
 
       <div className="inventaire">
+        <img src="/assets/images/jeu-ecologie/cadre-inventaire.png" className="img-cadre-inventaire" />
         <div className="section-img-sac-inventaire">
           <img src="/assets/images/jeu-ecologie/sac-inventaire.png" className="img-sac-inventaire" />
         </div>
         <div className="section-dechet-inventaire">
-          {dechetsList.map(dechet => (
-            <p className="dechet-inventaire" style={{ textDecoration: dechet.collect ? 'line-through' : 'none' }}>{dechet.trouve ? dechet.name : "?"}</p>
-          ))}
+          {
+            dechetsList.map(dechet => (
+              <p className="dechet-inventaire" style={{ textDecoration: dechet.collect ? 'line-through' : 'none' }}>{dechet.trouve ? dechet.name : "?"}</p>
+            ))
+          }
         </div>
       </div>
 
@@ -95,8 +103,8 @@ export const JeuEcologie = () => {
         {
           dechetsList.map((dechet, index) => (
             dechet.trouve === false ? (<img src="/assets/images/jeu-ecologie/dechet-a-decouvrir.png" className={"dechet " + dechet.className} />)
-            : dechet.trouve && !dechet.collect ? (<img src={dechet.img} className={"dechet " + dechet.className} onClick={() => handleClick(index)} />) 
-            : (dechet.collect && dechet.trouve) && null
+              : dechet.trouve && !dechet.collect ? (<img src={dechet.img} className={"dechet " + dechet.className} onClick={() => handleClick(index)} />)
+                : (dechet.collect && dechet.trouve) && null
           ))
         }
       </div>
