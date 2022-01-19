@@ -1,5 +1,10 @@
 @import '../../../public/assets/styles/import.scss';
 
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+  }
+
 .dock-icon-container {
     display: flex;
     flex-direction: column;
@@ -15,4 +20,6 @@
 .dock-text {
     margin-top: 0.5vh;
     color: white;
+    font-size: 12px;
+    font-family: "MonumentExtendedLight";
 }

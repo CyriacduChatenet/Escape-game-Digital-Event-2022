@@ -1,12 +1,17 @@
 @import './variables.scss';
 @import '../config/fonts.scss';
-body {
+
+@font-face {
+    font-family: "MonumentExtended";
+    src: url("../../fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+* {
     margin: 0;
     padding: 0;
     border: none;
     box-sizing: border-box;
-    font-family: sans-serif;
     outline: none;
     list-style: none;
+    font-family: "MonumentExtended";
     text-decoration: none;
 }
