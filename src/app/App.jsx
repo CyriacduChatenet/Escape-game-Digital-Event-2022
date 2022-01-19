@@ -20,6 +20,7 @@ import "./index.scss"
 import { Victory } from "../components/Victory/Victory";
 import { Defeat } from "../components/Defeat/Defeat";
 import { Canadair } from "../components/Canadair/Canadair";
+import { SurconsommationPasswordDecryptor } from "../components/SurconsommationPasswordDecryptor/SurconsommationPasswordDecryptor";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route exact path="/victory" element={<Victory />} />
           <Route exact path="/defeat" element={<Defeat />} />
           <Route exact path="/canadair" element={<Canadair />} />
+          <Route exact path="/decryptor" element={<SurconsommationPasswordDecryptor />} />
           <Route exact path="/jeu-ecologie" element={<JeuEcologie />} />
 
           <Route path='*' exact={true} element={<ErrorPage />} />
