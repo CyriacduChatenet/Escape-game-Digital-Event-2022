@@ -15,7 +15,7 @@ export const EcologieDossier = () => {
         <div onDoubleClick={handleOpen}>
             <div className="folder">
                 <img src="/assets/images/folder-icon/folder-icon.png" alt=""  />
-                <p>Ecologie</p>
+                <p>Pollution</p>
             </div>
             <Modal
                 open={open}

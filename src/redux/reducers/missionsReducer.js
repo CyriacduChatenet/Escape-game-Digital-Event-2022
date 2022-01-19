@@ -1,7 +1,7 @@
 import { MISSIONS_UPDATE_ACTION } from "../actions"
 
 const initialState = [
-  { name: "Ecologie", completed: false },
+  { name: "Pollution", completed: false },
   { name: "Répartition des ressources", completed: false },
   { name: "Dérèglement climatique", completed: false },
   { name: "Surconsommation", completed: false },

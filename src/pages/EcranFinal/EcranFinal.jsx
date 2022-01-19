@@ -40,7 +40,7 @@ export const EcranFinal = () => {
                 </div>
                 <div className='missions'>
                     <div className='mission'>
-                        <p>Mission Ecologie :</p>
+                        <p>Mission Pollution :</p>
                         <img src="" alt="" />
                         {/* Icone dynamique si réussite ou échec */}
                     </div>
