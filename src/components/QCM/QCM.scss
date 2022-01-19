@@ -1,5 +1,25 @@
 @import '../../../public/assets/styles/import.scss';
 
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "MonumentExtendedBlack";
+    src: url("../../../public/assets/fonts/MonumentExtended-Black.otf") format('opentype');
+}
+
+.QCM{
+    width: 1000px;
+    min-height: 600px;
+    background: linear-gradient(90.13deg, rgba(63, 137, 141, 0.5) 0.43%, rgba(196, 196, 196, 0.5) 130%);
+    border: solid 1px #86EBD9;
+    padding: 32px;
+    border-radius: 3px;
+    
+}
+
 .answer {
     margin: 1% 0;
     display: flex;
@@ -21,4 +41,62 @@
 
 .response {
     margin: 1% 2%;
+    
+}
+
+.q2{
+    color: white;
+}
+
+.QCM {
+
+   input{
+       position: absolute;
+       top: -99999999px;
+   }
+
+    label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-family: "MonumentExtendedLight";
+        color: white;
+        font-size: 15px;
+
+        span{
+            border: solid 1px white;
+            height: 10px;
+            width: 10px;
+            display: block;
+            border-radius: 100px;
+            margin-right: 10px;
+        }
+    }
+
+    input:checked + label span{
+        background-color: white;
+        transition: .2s;
+    }
+}
+
+.submit-qcm{
+    position: absolute;
+    left: 420px;
+    bottom: 30px;
+    background: rgba(63, 137, 141, 1);
+    color: white;
+    padding: 25px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "MonumentExtendedBlack";
+
+    &:hover{
+        color: rgba(63, 137, 141, 1);
+        background-color: white;
+        transition: .5s;
+    }
+
+    &:not(:hover){
+        transition: .5s;
+    }
 }

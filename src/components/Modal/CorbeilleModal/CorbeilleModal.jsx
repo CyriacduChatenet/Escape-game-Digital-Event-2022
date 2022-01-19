@@ -12,6 +12,8 @@ export const CorbeilleModal = () => {
 
   return (
     <div className="corbeille_page">
+      <img src="/assets/images/terminal-bar/bar-top-left-king-size.png" alt="" className="barTopLeft" />
+        <img src="/assets/images/terminal-bar/Bar-top-right-king-size.png" alt="" className="barTopRight" />
       <div className="leftSideMenu">
         <div className="userAvatar">
           <img
