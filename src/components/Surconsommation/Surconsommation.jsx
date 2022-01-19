@@ -26,7 +26,6 @@ export const Surconsommation = () => {
 
             <div className="dock-icon-container" onDoubleClick={handleOpen}>
                 <div className = 'productContainer' >
-
                 <Modal
                     open={open}
                     onClose={handleClose}
@@ -42,15 +41,13 @@ export const Surconsommation = () => {
             {isValide == false ? 
                 <div className='scrollDiv'>
                     <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
-                    <div className = 'product1'></div>
+                    <div className = 'product2'></div>
+                    <div className = 'product3'></div>
+                    <div className = 'product4'></div>
+                    <div className = 'product5'></div>
+                    <div className = 'product6'></div>
+                    <div className = 'product7'></div>
+                    <div className = 'product3'></div>
                 </div>
                 : null}
 

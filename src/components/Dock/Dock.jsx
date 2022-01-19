@@ -8,7 +8,7 @@ import { SettingsModal } from '../Modal/SettingsModal/SettingsModal';
 import { Galerie } from '../Galerie/Galerie';
 import { CorbeilleModal } from '../Modal/CorbeilleModal/CorbeilleModal';
 import { JeuRepartition } from '../Enigmes/JeuRepartition/JeuRepartition';
-import { Canadair } from '../Canadair/Canadair';
+import { DereglementClimatique } from '../Enigmes/DereglementClimatique/DereglementClimatique'
 import { Surconsommation } from '../Surconsommation/Surconsommation';
 
 export const Dock = () => {
@@ -24,7 +24,7 @@ export const Dock = () => {
           <JeuPingouins />
         </DockIcon>
 
-        <DockIcon dockText="Ecologie" dockIcon="/assets/images/dock-icon/ecologie.png" >
+        <DockIcon dockText="Pollution" dockIcon="/assets/images/dock-icon/ecologie.png" >
           <JeuEcologie />
         </DockIcon>
 
@@ -33,7 +33,7 @@ export const Dock = () => {
         </DockIcon>
 
         <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >
-          <Canadair/>
+          <DereglementClimatique />
         </DockIcon>
 
         <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >

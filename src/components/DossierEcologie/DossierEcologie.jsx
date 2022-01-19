@@ -76,7 +76,7 @@ export const DossierEcologie = () => {
                 <div className='topDossierNavEcologie'>
                   <div className='logoDossierEcologie'></div>
                   &nbsp;
-                  <p>Ecologie</p>
+                  <p>Pollution</p>
                 </div>
               </div>
             </div>

@@ -24,6 +24,7 @@ export const DereglementClimatique = () => {
       setDisplayNews(true);
     }, 3000);
   }, []);
+  
   return (
     <div className="DereglementClimatique">
       {displayLoader ? (
