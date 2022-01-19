@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './JeuRepartition.scss'
-import Tuyau from './Tuyau';
+import Tuyau from './Tuyau'
 
 const tuyaux = [
   {
