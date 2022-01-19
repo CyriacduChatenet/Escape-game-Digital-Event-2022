@@ -15,6 +15,7 @@ export const JeuPingouins = () => {
   const [initGame, setInitGame] = useState(true)
   const [animalsTop, setAnimalsTop] = useState(0)
   const [animalsLeft, setAnimalsLeft] = useState(0)
+  const [displayLoader, setDisplayLoader] = useState(true)
 
   const [isListening, setIsListening] = useState(false)
 
@@ -53,6 +54,12 @@ export const JeuPingouins = () => {
       initPositionsAnimals()
       setInitGame(false)
     }
+  },[])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDisplayLoader(false)
+    },3000)
   },[])
 
   useEffect(() => {
@@ -118,6 +125,9 @@ export const JeuPingouins = () => {
   return (
     <>
       <div className="JeuPingouins">
+      {displayLoader ? <video autoPlay className="loader-video" >
+        <source src="assets/video/loader/loader-extinction.mp4" type="video/mp4" />
+      </video> : null}
       <div className="game-content">
         {/* <div className="tv-effect" style={{backgroundImage : `url(/assets/images/polar-game/tv-effect.png)`}}> */}
         <div className="tv-effect" >

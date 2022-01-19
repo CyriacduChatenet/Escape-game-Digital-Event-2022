@@ -2,25 +2,27 @@ import { useState } from 'react';
 import './Canadair.scss'
 
 export const Canadair = () => {
-    const [credentials, setCredentials] = useState({
-        message: "",
-    });
+    const [credentials, setCredentials] = useState("");
 
-    const [password, setPassword] = useState("Test")
 
-    const [TOF, setTOF] = useState(false)
+    const [isValide, setIsValide] = useState(false)
 
     const handleChange = ({ currentTarget }) => {
         const {value} = currentTarget;
-        setCredentials({ ...credentials,value });
-            if(setCredentials(value) == password){
-                setTOF(true)
+            if(value == 'test'){
+                setIsValide(true)
             }else{
-                setTOF(false)
+                setIsValide(false)
             }
     };
-    console.log(TOF);
-    console.log(credentials);
+
+    const verification = () => {
+        if(isValide === true){
+            console.log('Mdp Trouvé')
+        }else{
+            console.log('Wrong Mdp')
+        }
+    }
 
     
     return(
@@ -32,7 +34,7 @@ export const Canadair = () => {
                 className="codeCanadair" 
                 onChange={handleChange}
                 />
-                <div className='buttonCanadair'></div>
+                <div className='buttonCanadair' onClick={verification}></div>
         </div>
     )
 }

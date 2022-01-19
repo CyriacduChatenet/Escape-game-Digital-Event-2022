@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react'
 import './DossierSurconsommation.scss'
+import Modal from '@mui/material/Modal'
+import style from "../../components/PrimaryModal/style"
+import Box from '@mui/material/Box';
+import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
 
 export const DossierSurconsommation = () => {
+
+    const [openQuizz, setOpenQuizz] = useState(false);
+    const handleOpenQuizz = () => setOpenQuizz(true);
+    const handleCloseQuizz = () => setOpenQuizz(false);
 
     const [dossierSurconsommation, setDossierSurconsommation] = useState(true)
     // console.log('dossierSurconsommation :', dossierSurconsommation);
@@ -97,10 +105,20 @@ export const DossierSurconsommation = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFirst' onDoubleClick={handleOpenQuizz} style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'dossierSurconsommationItemsecond'></div>
-                                <p className='marginLeftName'>dossier1</p>
+                                <p className='marginLeftName'>Enigme</p>
+                                <Modal
+                                open={openQuizz}
+                                onClose={handleCloseQuizz}
+                                aria-labelledby="modal-modal-title"
+                                aria-describedby="modal-modal-description"
+                            >
+                                <Box sx={style}>
+                                    < JeuSurconsommation/>
+                                </Box>
+                            </Modal>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
