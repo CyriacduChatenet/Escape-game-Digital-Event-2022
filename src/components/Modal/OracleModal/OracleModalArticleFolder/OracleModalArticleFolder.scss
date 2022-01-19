@@ -2,9 +2,11 @@
     width: 1000px;
     height: 600px;
     position: absolute;
-    top: 150px;
-    left: 450px;
+    top: -30px;
+
 }
+
+
 
 .treestructure_text_instruction{
     font-size: 9px;
@@ -20,6 +22,11 @@
 }
 
 .file_displaying2{
+    width: 20px;
+    height: 20px;
+}
+
+.folder_displaying{
     width: 20px;
     height: 20px;
 }
