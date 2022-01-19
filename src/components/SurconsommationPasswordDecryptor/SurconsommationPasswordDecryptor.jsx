@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react/cjs/react.development";
 import { store } from "../../redux/store";
 import "./SurconsommationPasswordDecryptor.scss"
+import {Victory} from "../Victory/Victory"
 
 export const SurconsommationPasswordDecryptor = () => {
   const [minutes, setMinutes] = useState(10);
@@ -157,7 +158,7 @@ export const SurconsommationPasswordDecryptor = () => {
         </div>
       </div>
 
-          {gameIsValidated && <h1 className="victorySurconso">Victory</h1>}
+          {gameIsValidated && <Victory/>}
     </div>
   );
 };

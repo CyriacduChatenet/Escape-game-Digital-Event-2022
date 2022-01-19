@@ -41,6 +41,7 @@ function App() {
           <Route exact path="/victory" element={<Victory />} />
           <Route exact path="/defeat" element={<Defeat />} />
           <Route exact path="/canadair" element={<Canadair />} />
+          <Route exact path="/decryptor" element={<SurconsommationPasswordDecryptor />} />
           <Route exact path="/jeu-ecologie" element={<JeuEcologie />} />
           <Route exact path="/jeu-repartition" element={<JeuRepartition />} />
           <Route exact path="/SurconsommationPasswordDecryptor" element={<SurconsommationPasswordDecryptor />} />

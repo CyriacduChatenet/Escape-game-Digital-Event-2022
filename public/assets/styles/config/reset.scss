@@ -1,5 +1,6 @@
 @import './variables.scss';
-* {
+@import '../config/fonts.scss';
+body {
     margin: 0;
     padding: 0;
     border: none;

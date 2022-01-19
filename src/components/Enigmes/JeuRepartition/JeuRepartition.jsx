@@ -1,94 +1,91 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './JeuRepartition.scss'
+import Tuyau from './Tuyau';
 
-// TODO :
-// Changer l'image sans les tuyaux
+const tuyaux = [
+  {
+    type: "tuyau1",
+    img: "/assets/images/jeu-repartition/tuyau-vertical.png",
+    position: {
+      bottom: 10,
+      left: 50
+    },
+    selected: false,
+    drop: false,
+  },
+  {
+    type: "tuyau2",
+    img: "/assets/images/jeu-repartition/tuyau-en-T.png",
+    position: {
+      bottom: 10,
+      left: 100
+    },
+    selected: false,
+    drop: false,
+  },
+  {
+    type: "tuyau3",
+    img: "/assets/images/jeu-repartition/tuyau-horizontal.png",
+    position: {
+      bottom: 10,
+      left: 200
+    },
+    selected: false,
+    drop: false,
+  },
+]
 
-// Afficher les tuyaux manquant QUE quans ils ont executé le fichier qui se trouve dans Oracle
-// Compléter le chemin avec les tuyaux
-// Afficher l'écran de victoire
-// Cocher Répartition dans le dashboard
+const emplacements = [
+  {
+    position: {
+      top:500,
+      left: 500
+    },
+    isValidated: false,
+    isBusy: false,
+    img:""
+  },
+  {
+    position: {
+      top:500,
+      left: 500
+    },
+    isValidated: false,
+    isBusy: false,
+    img:""
+  },
+  {
+    position: {
+      top:500,
+      left: 500
+    },
+    isValidated: false,
+    isBusy: false,
+    img:""
+  }
+]
 
 export const JeuRepartition = () => {
-
   const terminalText = "C:\hacker>"
+  const [tuyauxList, setTuyauxList] = useState(tuyaux)
+  const [changeSelected, setChangeSelected] = useState(false)
 
-  const [tuyauFirst, setTuyauFirst] = useState(false)
-  // console.log('First tuyau :',tuyauFirst);
+  useState(()=>{},[changeSelected])
 
-  const [tuyauSecond, setTuyauSecond] = useState(false)
-  // console.log('Second Tuyau :',tuyauSecond);
-
-  const [tuyauThird, setTuyauThird] = useState(false)
-  // console.log('Third Tuyau :',tuyauThird);
-
-  const [placeFirst, setPlaceFirst] = useState(false)
-  // console.log('First place :',placeFirst);
-
-  const [placeSecond, setPlaceSecond] = useState(false)
-  // console.log('Second place :',placeSecond);
-
-  const [placeThird, setPlaceThird] = useState(false)
-  // console.log('Third place :',placeThird);
-
-  const [firstIn, setFirstIn] = useState(false)
-  // console.log('FIRST IN', firstIn);
-
-  const [secondIn, setSecondIn] = useState(false)
-  // console.log('SECOND IN', secondIn);
-
-  const [thirdIn, setThirdIn] = useState(false)
-  // console.log('THIRD IN', thirdIn);
-
-  const [counterClick, setCounterClick] = useState(0)
-  // console.log(counterClick);
-
-  const initState = () => {
-    setCounterClick(1)
-    setTuyauFirst(false)
-    setPlaceFirst(false)
-    setTuyauSecond(false)
-    setPlaceSecond(false)
-    setTuyauThird(false)
-    setPlaceThird(false)
-  }
-
-  const verifyFirst = () => {
-    if (counterClick < 2) {
-      setCounterClick(counterClick + 1)
-      if (tuyauFirst === true && placeFirst === true) {
-        setFirstIn(true)
-        initState()
-      }
-      if (tuyauSecond === true && placeSecond === true) {
-        setSecondIn(true)
-        initState()
-      }
-      if (tuyauThird === true && placeThird === true) {
-        setThirdIn(true)
-        initState()
-      }
-    } else {
-      setCounterClick(1)
-      if (tuyauFirst === true && placeFirst === true) {
-        setFirstIn(true)
-        initState()
-      }
-      if (tuyauSecond === true && placeSecond === true) {
-        setSecondIn(true)
-        initState()
-      }
-      if (tuyauThird === true && placeThird === true) {
-        setThirdIn(true)
-        initState()
-      }
-    }
+  const handleSelectTuyau = (tuyau, index) => {
+    setChangeSelected(true)
+    tuyauxList.map(tuyau => {
+      tuyau.selected = false
+    })
+    tuyauxList[index].selected = true
+    console.log(tuyauxList)
+    setTuyauxList(tuyauxList)
+    setChangeSelected(false)
   }
 
   return (
     <div className='JeuRepartition'>
-
       <div className="terminal">
         <table className="table" border="1">
           <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
@@ -105,23 +102,26 @@ export const JeuRepartition = () => {
         <img className='img-circuit' src="/assets/images/jeu-repartition/carte.png" />
       </div>
       <div className='filterImg filter1'></div>
-      <div className='filterImg'></div>
-      <div className='filterImg'></div>
-      <div className='filterImg'></div>
-      <div className='tuyauFirst' onClick={() => { setTuyauFirst(true); verifyFirst() }} style={firstIn == true ? { display: 'none' } : { display: 'block' }}>First</div>
-      <div className='tuyauSecond' onClick={() => { setTuyauSecond(true); verifyFirst() }} style={secondIn == true ? { display: 'none' } : { display: 'block' }}>Second</div>
-      <div className='tuyauThird' onClick={() => { setTuyauThird(true); verifyFirst() }} style={secondIn == true ? { display: 'none' } : { display: 'block' }}>Third</div>
-      <div className=' firstPlace' onClick={() => { setPlaceFirst(true); verifyFirst() }}>
+      <div className='filterImg filter2'></div>
+      <div className='filterImg filter3'></div>
+      <div className='filterImg filter4'></div>
+      <div className='filterImg filter5'></div>
+
+      {tuyauxList.map((tuyau, index) => (
+        <Tuyau tuyau={tuyau} index={index} handleSelectTuyau={handleSelectTuyau} />
+      ))}
+
+      <div className=' firstPlace'>
         First
-        <div className='tuyauFirst initPosition' style={firstIn == true ? { display: 'block' } : { display: 'none' }}></div>
+        <div className='tuyauFirst initPosition'></div>
       </div>
-      <div className=' secondPlace' onClick={() => { setPlaceSecond(true); verifyFirst() }}>
+      <div className=' secondPlace'>
         Second
-        <div className='tuyauSecond initPosition' style={secondIn == true ? { display: 'block' } : { display: 'none' }}></div>
+        <div className='tuyauSecond initPosition' ></div>
       </div>
-      <div className='thirdPlace' onClick={() => { setPlaceThird(true); verifyFirst() }}>
+      <div className='thirdPlace' >
         Third
-        <div className='tuyauThird initPosition' style={thirdIn == true ? { display: 'block' } : { display: 'none' }}></div>
+        <div className='tuyauThird initPosition' ></div>
       </div>
     </div>
   );
