@@ -1,13 +1,21 @@
 import { useState, useEffect } from 'react'
 import './DossierExtinctionEspece.scss'
+import Modal from '@mui/material/Modal'
+import style from "../../components/PrimaryModal/style"
+import Box from '@mui/material/Box';
+import {JeuPingouins} from '../Enigmes/JeuPingouins/JeuPingouins'
 
 export const DossierExtinctionEspece = () => {
 
-    const [dossierJustice, setDossierJustice] = useState(true)
-    // console.log('dossierJustice :', dossierJustice);
+    const [openQuizz, setOpenQuizz] = useState(false);
+    const handleOpenQuizz = () => setOpenQuizz(true);
+    const handleCloseQuizz = () => setOpenQuizz(false);
 
-    const [openJustice, setOpenJustice] = useState(true)
-    // console.log('PopUp OpenJustice :', openJustice)
+    const [dossierExtinctionEspece, setDossierExtinctionEspece] = useState(true)
+    // console.log('dossierExtinctionEspece :', dossierExtinctionEspece);
+
+    const [openExtinctionEspece, setOpenExtinctionEspece] = useState(true)
+    // console.log('PopUp OpenExtinctionEspece :', openExtinctionEspece)
 
     const [dossierFirst, setDossierFirst] = useState(false)
 
@@ -24,57 +32,57 @@ export const DossierExtinctionEspece = () => {
     const [chevron, setChevron] = useState(">")
 
     return(
-        <div className = 'dossierJusticeContainer'>
-                <div className ='popUpDossierJustice' style={dossierJustice === false ? {display : 'none'} : {display : 'flex'} }>
-                    <div className = 'leftNavDossierJustice'>
+        <div className = 'dossierExtinctionEspeceContainer'>
+                <div className ='popUpDossierExtinctionEspece' style={dossierExtinctionEspece === false ? {display : 'none'} : {display : 'flex'} }>
+                    <div className = 'leftNavDossierExtinctionEspece'>
                         <div className = 'leftNavSysteme'>
                         <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'logoSystemJustice'></div>
+                            <div className = 'logoSystemExtinctionEspece'></div>
                             &nbsp;
                             <p>Système</p>
                             
                         </div>
                         <div className = 'leftNavSecondSysteme'>
                             <span className='chevronMiddle'>{chevron}</span>
-                            <div className = 'dossierJusticeItemsecond espece'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond espece'></div>
                             &nbsp;
                             <p>Extinction...</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier1</p>
                         </div>
                         <div className='leftNavChildSecondSysteme'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond'></div>
                                 &nbsp;
                                 <p>Dossier2</p>
                         </div>
                         <div className = 'leftNavSecondSystemeClose'>
-                            <div className = 'dossierJusticeItemsecond'></div>
+                            <div className = 'dossierExtinctionEspeceItemsecond'></div>
                             &nbsp;
                             <p>Folder</p>
                         </div>
                     </div>
-                    <div className = 'rightNavDossierJustice'>
+                    <div className = 'rightNavDossierExtinctionEspece'>
                         <div className = 'lineBottom'>
-                            <div className = 'topNavJustice'>
-                                <div className = 'topDossierNavJustice systemeDivTop'>
-                                    <div className = 'logoSystemJustice'></div>
+                            <div className = 'topNavExtinctionEspece'>
+                                <div className = 'topDossierNavExtinctionEspece systemeDivTop'>
+                                    <div className = 'logoSystemExtinctionEspece'></div>
                                     &nbsp;
                                     <p>Système</p>
                                 </div>
-                                <div className = 'folderLinkOpen' style={openJustice === false ? {display:'none'} : {display:'flex'}}>
+                                <div className = 'folderLinkOpen' style={openExtinctionEspece === false ? {display:'none'} : {display:'flex'}}>
                                     <p className = 'chevron'>{chevron}</p>
-                                    <div className = 'topDossierNavJustice'>
-                                        <div className = 'logoDossierJustice'></div>
+                                    <div className = 'topDossierNavExtinctionEspece'>
+                                        <div className = 'logoDossierExtinctionEspece'></div>
                                         &nbsp;
                                         <p>Extinction...</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className ='middleNavJustice'>
+                        <div className ='middleNavExtinctionEspece'>
                             <div className = 'nameMiddle'>
                                 <div className = 'lineRight flexName'>
                                     <p>Nom</p>
@@ -97,10 +105,20 @@ export const DossierExtinctionEspece = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFirst' onDoubleClick={handleOpenQuizz} style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
-                                <p className='marginLeftName'>dossier1</p>
+                                <div className = 'dossierExtinctionEspeceItemsecond'></div>
+                                <p className='marginLeftName'>Enigmes</p>
+                                <Modal
+                                open={openQuizz}
+                                onClose={handleCloseQuizz}
+                                aria-labelledby="modal-modal-title"
+                                aria-describedby="modal-modal-description"
+                            >
+                                <Box sx={style}>
+                                   <JeuPingouins/>
+                                </Box>
+                            </Modal>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
@@ -112,25 +130,10 @@ export const DossierExtinctionEspece = () => {
                                 <p className='marginLeftName'></p>
                             </div>
                         </div>
-                        <div className = 'dossierSecond' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierThird' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
-                                <div className = 'dossierJusticeItemsecond'></div>
+                                <div className = 'dossierExtinctionEspeceItemsecond'></div>
                                 <p className='marginLeftName'>dossier2</p>
-                            </div>
-                            <div className = 'modifiedMiddle'>
-                                <p className='marginLeftName'>21/12/2017 2:38</p>
-                            </div>
-                            <div className = 'widthMiddle'>
-                                <p className='marginLeftName'></p>
-                            </div>
-                            <div className = 'typeMiddle'>
-                                <p className='marginLeftName'></p>
-                            </div>
-                        </div>
-                        <div className = 'dossierThird' style = {dossierThird === true ? {display:'none'} : {display:'flex'}}>
-                            <div className = 'nameMiddle nameBottom'>
-                                <div className = 'logoSystemesecond'></div>
-                                <p className='marginLeftName'>fichier1.nao</p>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
@@ -142,7 +145,7 @@ export const DossierExtinctionEspece = () => {
                                 <p className='marginLeftName'>Document NaO</p>
                             </div>
                         </div>
-                        <div className = 'dossierFour' style = {dossierFour === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFour' style = {dossierThird === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'logoSystemesecond'></div>
                                 <p className='marginLeftName'>fichier2.nao</p>
@@ -157,34 +160,64 @@ export const DossierExtinctionEspece = () => {
                                 <p className='marginLeftName'>Document NaO</p>
                             </div>
                         </div>
-                        <div className = 'dossierFive' style = {dossierFive === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFour' style = {dossierFour === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'logoSystemesecond'></div>
-                                <p className='marginLeftName'>instruction.txt</p>
+                                <p className='marginLeftName'>fichier3.nao</p>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
                             </div>
                             <div className = 'widthMiddle'>
-                                <p className='marginRightName widthLeftTextAlign'>28 191 Ko</p>
+                                <p className='marginRightName widthLeftTextAlign'>29 Ko</p>
                             </div>
                             <div className = 'typeMiddle'>
-                                <p className='marginLeftName'>Document Texte</p>
+                                <p className='marginLeftName'>Document NaO</p>
                             </div>
                         </div>
-                        <div className = 'dossierSix' style = {dossierSix === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFour' style = {dossierFour === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'logoSystemesecond'></div>
-                                <p className='marginLeftName'>général.orcl</p>
+                                <p className='marginLeftName'>fichier4.nao</p>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
                             </div>
                             <div className = 'widthMiddle'>
-                                <p className='marginRightName widthLeftTextAlign'>74 Ko</p>
+                                <p className='marginRightName widthLeftTextAlign'>6 Ko</p>
                             </div>
                             <div className = 'typeMiddle'>
-                                <p className='marginLeftName'>Document Oracle</p>
+                                <p className='marginLeftName'>Document NaO</p>
+                            </div>
+                        </div>
+                        <div className = 'dossierFour' style = {dossierFour === true ? {display:'none'} : {display:'flex'}}>
+                            <div className = 'nameMiddle nameBottom'>
+                                <div className = 'logoSystemesecond'></div>
+                                <p className='marginLeftName'>fichier5.nao</p>
+                            </div>
+                            <div className = 'modifiedMiddle'>
+                                <p className='marginLeftName'>21/12/2017 2:38</p>
+                            </div>
+                            <div className = 'widthMiddle'>
+                                <p className='marginRightName widthLeftTextAlign'>15 Ko</p>
+                            </div>
+                            <div className = 'typeMiddle'>
+                                <p className='marginLeftName'>Document NaO</p>
+                            </div>
+                        </div>
+                        <div className = 'dossierFour' style = {dossierFour === true ? {display:'none'} : {display:'flex'}}>
+                            <div className = 'nameMiddle nameBottom'>
+                                <div className = 'logoSystemesecond'></div>
+                                <p className='marginLeftName'>fichier6.nao</p>
+                            </div>
+                            <div className = 'modifiedMiddle'>
+                                <p className='marginLeftName'>21/12/2017 2:38</p>
+                            </div>
+                            <div className = 'widthMiddle'>
+                                <p className='marginRightName widthLeftTextAlign'>2 Ko</p>
+                            </div>
+                            <div className = 'typeMiddle'>
+                                <p className='marginLeftName'>Document NaO</p>
                             </div>
                         </div>
                     </div>

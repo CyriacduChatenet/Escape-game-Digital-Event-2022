@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
+import Modal from '@mui/material/Modal'
+import Box from '@mui/material/Box';
+import style from "../../components/PrimaryModal/style"
 import './DossierJustice.scss'
+import {LoginJustice} from '../Enigmes/justice/LoginJustice'
 
 export const DossierJustice = () => {
 
@@ -12,16 +16,12 @@ export const DossierJustice = () => {
     const [dossierFirst, setDossierFirst] = useState(false)
 
     const [dossierSecond, setDossierSecond] = useState(false)
-
-    const [dossierThird, setDossierThird] = useState(false)
-    
-    const [dossierFour, setDossierFour] = useState(false)
-    
-    const [dossierFive, setDossierFive] = useState(false)
-    
-    const [dossierSix, setDossierSix] = useState(false)
     
     const [chevron, setChevron] = useState(">")
+
+    const [openQuizz, setOpenQuizz] = useState(false);
+    const handleOpenQuizz = () => setOpenQuizz(true);
+    const handleCloseQuizz = () => setOpenQuizz(false);
 
     return(
         <div className = 'dossierJusticeContainer'>
@@ -97,10 +97,20 @@ export const DossierJustice = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className = 'dossierFirst' style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFirst' onDoubleClick={handleOpenQuizz} style = {dossierFirst === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'dossierJusticeItemsecond'></div>
-                                <p className='marginLeftName'>dossier1</p>
+                                <p className='marginLeftName'>Enigme</p>
+                                <Modal
+                                open={openQuizz}
+                                onClose={handleCloseQuizz}
+                                aria-labelledby="modal-modal-title"
+                                aria-describedby="modal-modal-description"
+                            >
+                                <Box sx={style}>
+                                 <LoginJustice/>
+                                </Box>
+                            </Modal>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
@@ -112,10 +122,10 @@ export const DossierJustice = () => {
                                 <p className='marginLeftName'></p>
                             </div>
                         </div>
-                        <div className = 'dossierSecond' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
+                        <div className = 'dossierFirst' style = {dossierSecond === true ? {display:'none'} : {display:'flex'}}>
                             <div className = 'nameMiddle nameBottom'>
                                 <div className = 'dossierJusticeItemsecond'></div>
-                                <p className='marginLeftName'>dossier2</p>
+                                <p className='marginLeftName'>Folder</p>
                             </div>
                             <div className = 'modifiedMiddle'>
                                 <p className='marginLeftName'>21/12/2017 2:38</p>
@@ -125,66 +135,6 @@ export const DossierJustice = () => {
                             </div>
                             <div className = 'typeMiddle'>
                                 <p className='marginLeftName'></p>
-                            </div>
-                        </div>
-                        <div className = 'dossierThird' style = {dossierThird === true ? {display:'none'} : {display:'flex'}}>
-                            <div className = 'nameMiddle nameBottom'>
-                                <div className = 'logoSystemesecond'></div>
-                                <p className='marginLeftName'>fichier1.nao</p>
-                            </div>
-                            <div className = 'modifiedMiddle'>
-                                <p className='marginLeftName'>21/12/2017 2:38</p>
-                            </div>
-                            <div className = 'widthMiddle'>
-                                <p className='marginRightName widthLeftTextAlign'>470 Ko</p>
-                            </div>
-                            <div className = 'typeMiddle'>
-                                <p className='marginLeftName'>Document NaO</p>
-                            </div>
-                        </div>
-                        <div className = 'dossierFour' style = {dossierFour === true ? {display:'none'} : {display:'flex'}}>
-                            <div className = 'nameMiddle nameBottom'>
-                                <div className = 'logoSystemesecond'></div>
-                                <p className='marginLeftName'>fichier2.nao</p>
-                            </div>
-                            <div className = 'modifiedMiddle'>
-                                <p className='marginLeftName'>21/12/2017 2:38</p>
-                            </div>
-                            <div className = 'widthMiddle'>
-                                <p className='marginRightName widthLeftTextAlign'>26 Ko</p>
-                            </div>
-                            <div className = 'typeMiddle'>
-                                <p className='marginLeftName'>Document NaO</p>
-                            </div>
-                        </div>
-                        <div className = 'dossierFive' style = {dossierFive === true ? {display:'none'} : {display:'flex'}}>
-                            <div className = 'nameMiddle nameBottom'>
-                                <div className = 'logoSystemesecond'></div>
-                                <p className='marginLeftName'>instruction.txt</p>
-                            </div>
-                            <div className = 'modifiedMiddle'>
-                                <p className='marginLeftName'>21/12/2017 2:38</p>
-                            </div>
-                            <div className = 'widthMiddle'>
-                                <p className='marginRightName widthLeftTextAlign'>28 191 Ko</p>
-                            </div>
-                            <div className = 'typeMiddle'>
-                                <p className='marginLeftName'>Document Texte</p>
-                            </div>
-                        </div>
-                        <div className = 'dossierSix' style = {dossierSix === true ? {display:'none'} : {display:'flex'}}>
-                            <div className = 'nameMiddle nameBottom'>
-                                <div className = 'logoSystemesecond'></div>
-                                <p className='marginLeftName'>général.orcl</p>
-                            </div>
-                            <div className = 'modifiedMiddle'>
-                                <p className='marginLeftName'>21/12/2017 2:38</p>
-                            </div>
-                            <div className = 'widthMiddle'>
-                                <p className='marginRightName widthLeftTextAlign'>74 Ko</p>
-                            </div>
-                            <div className = 'typeMiddle'>
-                                <p className='marginLeftName'>Document Oracle</p>
                             </div>
                         </div>
                     </div>

@@ -1,30 +1,30 @@
 [
-    {
-        "type": "pecheur",
-        "img":"/assets/images/personnages/le-pecheur.png",
-        "alt":"character-img",
-        "title":"Le pêcheur",
-        "history":"Le pêcheur, homme retraité âgé de 68 ans, exerce son hobby tous les jours dans des bassins non dédiés à la pêche régulière. Cette activité peut causer de graves conséquences sur le long terme."
-    },
-    {
-        "type": "pollueuse",
-        "img":"/assets/images/personnages/la-pollueuse.png",
-        "alt":"character-img",
-        "title":"La pollueuse",
-        "history":"La pollueuse, femme âgée de 27 ans qui utilise constamment sa voiture en ville. Elle n'a aucun intérêt envers l'écologie et l'environnement."
-    },
-    {
-        "type": "campagnard",
-        "img":"/assets/images/personnages/le-campagnard.png",
-        "alt":"character-img",
-        "title":"Le campagnard",
-        "history":"Le campagnard, agriculteur de 42 ans, utilise des pesticides afin de limiter les pertes sur ses récoltes et améliorer ses rendements."
-    },
-    {
-        "type": "depensiere",
-        "img":"/assets/images/personnages/la-depensiere.png",
-        "alt":"character-img",
-        "title":"La dépensière",
-        "history":"La dépensière, femme âgée de 20 ans, shopping--addict, elle commande constamment sur Internet et sur des sites de dropshipping."
-    }
+  {
+    "type": "pecheur",
+    "img": "/assets/images/personnages/le-pecheur.png",
+    "alt": "character-img",
+    "title": "Le pêcheur",
+    "history": "Le pêcheur, homme retraité âgé de 68 ans, exerce son hobby tous les jours dans des bassins non dédiés à la pêche régulière. Cette activité peut causer de graves conséquences sur le long terme."
+  },
+  {
+    "type": "pollueuse",
+    "img": "/assets/images/personnages/la-pollueuse.png",
+    "alt": "character-img",
+    "title": "La pollueuse",
+    "history": "La pollueuse, femme âgée de 27 ans qui utilise constamment sa voiture en ville. Elle n'a aucun intérêt envers l'écologie et l'environnement."
+  },
+  {
+    "type": "campagnard",
+    "img": "/assets/images/personnages/le-campagnard.png",
+    "alt": "character-img",
+    "title": "Le campagnard",
+    "history": "Le campagnard, agriculteur de 42 ans, utilise des pesticides afin de limiter les pertes sur ses récoltes et améliorer ses rendements."
+  },
+  {
+    "type": "depensiere",
+    "img": "/assets/images/personnages/la-depensiere.png",
+    "alt": "character-img",
+    "title": "La dépensière",
+    "history": "La dépensière, femme âgée de 20 ans, shopping--addict, elle commande constamment sur Internet et sur des sites de dropshipping."
+  }
 ]

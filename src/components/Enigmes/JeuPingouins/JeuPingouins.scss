@@ -132,7 +132,7 @@
     position: relative;
     width: 100px;
     height: 100px;
-    transform: translateX(10vw);
+    // transform: translateX(10vw);
     transition: all .9s;
 }
 
@@ -166,6 +166,13 @@
     background-size: 47.5%;
     transform: translateY(6vh) translateX(1.7vw) rotate(0);
     animation: 30s 0s infinite linear spinRadar;
+}
+
+.loader-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
 }
 
 @keyframes spinRadar {
@@ -205,14 +212,14 @@ $animal-thermique: rgb(160,87,93);
 }
 
 
-$iceberg-color: rgba(0,236,219,.9);
+$iceberg-color: rgba(0,236,219,.5);
 
 .iceberg{
     position: absolute;
     width: 100px;
     height: 100px;
     background-color: $iceberg-color;
-    box-shadow: 0 0 10px 2px rgba(255,255,255,.9);
+    box-shadow: 0 0 15px 5px rgba(255,255,255,.4);
     border-radius: 300px;
     display: flex;
     align-items: center;

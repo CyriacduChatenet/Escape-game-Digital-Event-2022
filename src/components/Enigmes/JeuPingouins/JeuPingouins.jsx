@@ -13,31 +13,28 @@ export const JeuPingouins = () => {
   const [minutes, setMinutes] = useState(50)
   const [numberAnimals, setNumberAnimals] = useState(20)
   const [initGame, setInitGame] = useState(true)
+  const [animalsTop, setAnimalsTop] = useState(0)
+  const [animalsLeft, setAnimalsLeft] = useState(0)
+  const [displayLoader, setDisplayLoader] = useState(true)
 
   const [isListening, setIsListening] = useState(false)
 
   const commands = [
     {
-      command : ['Allez',"Droite", "Avancer"],
-      callback : () => {setTranslateXValue(translateXValue + 100)}
+      command : ["A1"],
+      callback : () => {mooveAnimals(0)}
     },
     {
-      command : ['Gauche', 'Reculer'],
-      callback : () => {setTranslateXValue(translateXValue -100)}
+      command : ["A2"],
+      callback : () => {mooveAnimals(1)}
     },
     {
-      command : ['En-bas', 'descendre'],
-      callback : () => {setTranslateYValue(translateYValue +100)}
+      command : ["A3"],
+      callback : () => {mooveAnimals(2)}
     },
     {
-      command : ['En-haut', 'monter'],
-      callback : () => {setTranslateYValue(translateYValue -100)}
-    },
-    {
-      command: "reset",
-      callback: () => {
-        handleReset();
-      },
+      command : ["A4"],
+      callback : () => {mooveAnimals(3)}
     },
   ]
 
@@ -45,18 +42,24 @@ export const JeuPingouins = () => {
 
   const [animalsPoints, setAnimalsPoints] = useState([])
 
-  useEffect(() => {
-    let intervalTranslate = setInterval(() => {
-      setTranslateXValue(translateXValue + 1)
-    }, 1000);
-    return () => clearInterval(intervalTranslate);
-  });
+  const mooveAnimals = (positionIndex) => {
+    setAnimalsTop(icebergs[positionIndex].style.top)
+    setAnimalsLeft(icebergs[positionIndex].style.left)
+  }
 
   useEffect(() => {
     if(initGame){
+      setAnimalsTop(icebergs[0].style.top)
+      setAnimalsLeft(icebergs[0].style.left)
       initPositionsAnimals()
       setInitGame(false)
     }
+  },[])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDisplayLoader(false)
+    },3000)
   },[])
 
   useEffect(() => {
@@ -122,6 +125,9 @@ export const JeuPingouins = () => {
   return (
     <>
       <div className="JeuPingouins">
+      {displayLoader ? <video autoPlay className="loader-video" >
+        <source src="assets/video/loader/loader-extinction.mp4" type="video/mp4" />
+      </video> : null}
       <div className="game-content">
         {/* <div className="tv-effect" style={{backgroundImage : `url(/assets/images/polar-game/tv-effect.png)`}}> */}
         <div className="tv-effect" >
@@ -138,7 +144,7 @@ export const JeuPingouins = () => {
             ))}
           </div>
           <div className="animals-container" >
-            <div className="animals" style={{transform:`translate(${translateXValue}px, ${translateYValue}px)`}}>
+            <div className="animals" style={{top: animalsTop, left: animalsLeft}}>
               <Box>
                 {animalsPoints.map(el => el)}
               </Box>

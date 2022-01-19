@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoginJustice.scss'
 
-const LoginJustice = ({setIsLogin, setCurrentPage}) => {
+export const LoginJustice = ({setIsLogin, setCurrentPage}) => {
 
     const handleClick = () => {
         setCurrentPage("dashboard")

@@ -2,8 +2,8 @@
     {
         "name":"A1",
         "style":{
-            "top": 297,
-            "left": 229,
+            "top": 450,
+            "left": 300,
             "width":50,
             "height":50
         }
@@ -11,19 +11,55 @@
     {
         "name":"A2",
         "style":{
-            "top": 133,
-            "left": 282,
-            "width":50,
-            "height":50
+            "top": 297,
+            "left": 229,
+            "width":60,
+            "height":60
         }
     },
     {
         "name":"A3",
         "style":{
+            "top": 133,
+            "left": 282,
+            "width":80,
+            "height":80
+        }
+    },
+    {
+        "name":"A4",
+        "style":{
             "top": 200,
             "left": 200,
             "width":50,
             "height":50
+        }
+    },
+    {
+        "name":"A5",
+        "style":{
+            "top": 160,
+            "left": 441,
+            "width":130,
+            "height":130
+        }
+    },
+    {
+        "name":"A6",
+        "style":{
+            "top": 293,
+            "left": 373,
+            "width":80,
+            "height":80
+        }
+    },
+    {
+        "name":"A7",
+        "style":{
+            "top": 313,
+            "left": 517,
+            "width":90,
+            "height":90
         }
     }
 ]

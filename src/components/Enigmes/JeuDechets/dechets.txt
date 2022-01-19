@@ -1,7 +1,0 @@
-Ressources :
-https://www.codegrepper.com/code-examples/javascript/mapbox+remove+marker
-https://bl.ocks.org/tristen/3a433a1c7fb4bc0b01031a88ba5961da
-https://stackoverflow.com/questions/46155523/mapbox-clear-all-current-markers
-https://gis.stackexchange.com/questions/179913/how-to-remove-a-single-marker-in-mapbox-js
-
-
