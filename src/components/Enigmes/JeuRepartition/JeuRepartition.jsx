@@ -1,73 +1,55 @@
 import { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import './JeuRepartition.scss'
-import Tuyau from './Tuyau'
-
-const tuyaux = [
-  {
-    type: "tuyau1",
-    img: "/assets/images/jeu-repartition/tuyau-vertical.png",
-    position: {
-      bottom: 10,
-      left: 50
-    }
-  },
-  {
-    type: "tuyau2",
-    img: "/assets/images/jeu-repartition/tuyau-en-T.png",
-    position: {
-      bottom: 10,
-      left: 100
-    }
-  },
-  {
-    type: "tuyau3",
-    img: "/assets/images/jeu-repartition/tuyau-horizontal.png",
-    position: {
-      bottom: 10,
-      left: 200
-    }
-  },
-]
-
-const emplacements = [
-  {
-    position: {
-      top:500,
-      left: 500
-    },
-    isValidated: false,
-    isBusy: false,
-    img:""
-  },
-  {
-    position: {
-      top:500,
-      left: 500
-    },
-    isValidated: false,
-    isBusy: false,
-    img:""
-  },
-  {
-    position: {
-      top:500,
-      left: 500
-    },
-    isValidated: false,
-    isBusy: false,
-    img:""
-  }
-]
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal'
+import style from "./style.js"
+import "../../PrimaryModal/primary-modal.scss"
+import tuyaux from "./tuyaux.json"
+import emplacements from "./emplacements.json"
+import {store} from "../../../redux/store"
+import { useSelector } from 'react-redux'
 
 export const JeuRepartition = () => {
   const terminalText = "C:\hacker>"
   const [tuyauxList, setTuyauxList] = useState(tuyaux)
-  const [changeSelected, setChangeSelected] = useState(false)
+  const [emplacementsClick, setEmplacementsClick] = useState(emplacements)
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
+  const [selectedEmplacement,setSelectedEmplacement] = useState()
+  const [isValidated, setIsValidated] = useState(false)
+  const missions = useSelector(state=> state.missionsReducer)
 
-  const resetOpacities = () => {
-    // tuyauxRef.current.opacity =  0
-    // console.log(refs)
+  const handleClickEmplacement = (index) => {
+    setOpen(true)
+    setSelectedEmplacement(index)
+  }
+
+  const handleSelectTuyau = (index) => {
+
+    setOpen(false)
+    emplacementsClick[selectedEmplacement].tuyau = tuyauxList[index]
+    tuyauxList.splice(index, 1);
+    console.log(emplacementsClick)
+    setEmplacementsClick(emplacementsClick)
+    checkValidatedGame()
+  }
+
+  const checkValidatedGame = () => {
+    if(
+      emplacementsClick[0].tuyau.type === "tuyau3"
+      && emplacementsClick[5].tuyau.type === "tuyau2"
+      && emplacementsClick[7].tuyau.type === "tuyau1"
+    ){
+      setIsValidated(true)
+      
+      missions[1].completed = true
+      store.dispatch({
+        type: "missions/update",
+        payload: missions,
+      });
+    }
   }
 
   return (
@@ -85,7 +67,9 @@ export const JeuRepartition = () => {
       </div>
       
       <div className='circuit'>
-        <img className='img-circuit' src="/assets/images/jeu-repartition/carte.png" />
+        {isValidated && <img className='img-circuit' src="/assets/images/jeu-repartition/bg-validated2.png" />}
+        {!isValidated && <img className='img-circuit' src="/assets/images/jeu-repartition/carte.png" />}
+        
       </div>
       <div className='filterImg filter1'></div>
       <div className='filterImg filter2'></div>
@@ -93,22 +77,33 @@ export const JeuRepartition = () => {
       <div className='filterImg filter4'></div>
       <div className='filterImg filter5'></div>
 
-      {tuyauxList.map((tuyau, index) => (
-        <Tuyau tuyau={tuyau}  resetOpacities={resetOpacities} />
+      {emplacementsClick.map((emplacement, index) => (
+        <>
+        {emplacement.tuyau ? (
+          <img className='emplacement' src={emplacement.tuyau.img} style={emplacement.position} alt="" />
+          ): (
+          <div className='emplacement' style={emplacement.position} onClick={() => handleClickEmplacement(index)}></div>
+        )}
+        </>
       ))}
 
-      <div className=' firstPlace'>
-        First
-        <div className='tuyauFirst initPosition'></div>
-      </div>
-      <div className=' secondPlace'>
-        Second
-        <div className='tuyauSecond initPosition' ></div>
-      </div>
-      <div className='thirdPlace' >
-        Third
-        <div className='tuyauThird initPosition' ></div>
-      </div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          {tuyauxList.map((tuyau, index) => (
+            <img src={tuyau.img} className='tuyauItem' alt="" onClick={() => handleSelectTuyau(index)}/>
+          ))}
+        </Box>
+      </Modal>
+
+      {isValidated && (
+        <div className="victoryRepartition">Bravo</div>
+      )}
+      
     </div>
   );
 }

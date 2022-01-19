@@ -1,0 +1,83 @@
+[
+    {
+      "position": {
+        "top": 258,
+        "left": 406
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top":366,
+        "left": 429
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top":390,
+        "left": 595
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top": 331,
+        "left": 633
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top": 205,
+        "left": 598
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top": 159,
+        "left": 551
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top": 169,
+        "left": 653
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top": 310,
+        "left": 771
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    },
+    {
+      "position": {
+        "top": 403,
+        "left": 481
+      },
+      "isValidated": false,
+      "isBusy": false,
+      "img":""
+    }
+  ]

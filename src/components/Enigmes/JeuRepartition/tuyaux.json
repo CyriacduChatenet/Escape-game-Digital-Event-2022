@@ -1,0 +1,14 @@
+[
+    {
+      "type": "tuyau1",
+      "img": "/assets/images/jeu-repartition/tuyau-vertical.png"
+    },
+    {
+      "type": "tuyau2",
+      "img": "/assets/images/jeu-repartition/tuyau-en-T.png"
+    },
+    {
+      "type": "tuyau3",
+      "img": "/assets/images/jeu-repartition/tuyau-horizontal.png"
+    }
+  ]
