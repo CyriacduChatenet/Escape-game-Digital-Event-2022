@@ -72,8 +72,8 @@ export const DereglementClimatique = () => {
           >
             NOS AVIONS
           </li>
-          <li className="canad-air-nav-item">NOTRE HISTOIRE</li>
-          <li className="canad-air-nav-item">LOCALISATION</li>
+          <li className="canad-air-nav-item"><a href="/404" target="_blank">NOTRE HISTOIRE</a></li>
+          <li className="canad-air-nav-item"><a href="/404" target="_blank">LOCALISATION</a></li>
         </ul>
       </nav>
       {openHackMenu === false ? (
@@ -84,9 +84,9 @@ export const DereglementClimatique = () => {
               Canad-air lutte contre les incendies et le réchauffement cimatique
               depuis 1952.
             </p>
-            <button className="canad-air-watch-video">
+            <a className="canad-air-watch-video" href="/404" target="_blank">
               VISIONNEZ LA VIDEO
-            </button>
+            </a>
           </div>
           <div className="airplane-normal"></div>
         </div>
