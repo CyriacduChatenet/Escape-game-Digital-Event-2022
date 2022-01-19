@@ -1,17 +1,10 @@
 import "./JeuEcologie.scss";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { display } from "@mui/system";
 
 // TODO :
-//
-// Si le QCM n'a pas été fait, rien n'est débloqué ***
-// Si le QCM a été fait : ***
-// Le contenu du terminal change : "Quels type de déchets sont sur la plage ? Encore 5 restants..." ****
-// On peut entrer des mots dans l'input : 
-// Si le bon mot clé est entré (ex : cigarette), l'image de la cigarette apparait sur la place à la place du point d'interrogation ET apparait dans l'espace déchet à l'écrit en bas à droite 
-// Il est alors possible de rammasser le déchet en cliquant dessus
-// Quand le déchet a été rammassé, le mot en bas à droite se barre et le nombre d'objet restant décrémente dans le terminal
-// Quand ils ont tous été ramassés, le mini jeu est gagné : écran de win avec petite transition
+// Si tous les déchets ont été ramassés -> affichage de l'écran "Mission réussie"
 
 export const JeuEcologie = () => {
 
@@ -60,7 +53,6 @@ export const JeuEcologie = () => {
   const handleClick = (index) => {
     dechetsList[index].collect = true
     setDechetsList(dechetsList)
-    console.log("click dechet")
   }
 
   return (
@@ -71,11 +63,10 @@ export const JeuEcologie = () => {
           <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
           <tr><td className="middle"><span className="middle-text1">{terminalText}</span>
             <br />
-            {unlock ? (
-              <p>"Quels type de déchets sont sur la plage ? Encore 5 restants..."</p>
-            ) : (
-              <p>Débloquez la compétence “Tri des déchets“ avant de pouvoir commencer ce mini-jeu...</p>
-            )}
+            {
+              unlock ? (<p>"Quels sont les déchets sur la plage ?"</p>) 
+              : (<p>Débloquez la compétence “Tri des déchets“ avant de pouvoir commencer ce mini-jeu...</p>)
+            }
           </td></tr>
           <tr>
             {unlock &&
@@ -101,15 +92,13 @@ export const JeuEcologie = () => {
       </div>
 
       <div className="dechets">
-        {dechetsList.map((dechet, index) => (
-          <>
-            {dechet.trouve ? (
-              <img src={dechet.img} className={"dechet " + dechet.className} onClick={() => handleClick(index)} />
-            ) : (
-              <img src="/assets/images/jeu-ecologie/dechet-a-decouvrir.png" className={"dechet " + dechet.className} />
-            )}
-          </>
-        ))}
+        {
+          dechetsList.map((dechet, index) => (
+            dechet.trouve === false ? (<img src="/assets/images/jeu-ecologie/dechet-a-decouvrir.png" className={"dechet " + dechet.className} />)
+            : dechet.trouve && !dechet.collect ? (<img src={dechet.img} className={"dechet " + dechet.className} onClick={() => handleClick(index)} />) 
+            : (dechet.collect && dechet.trouve) && null
+          ))
+        }
       </div>
 
     </div>
