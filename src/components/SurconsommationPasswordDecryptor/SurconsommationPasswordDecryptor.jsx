@@ -88,13 +88,13 @@ export const SurconsommationPasswordDecryptor = () => {
 
   return (
     <div className="SurconsommationPasswordDecryptor">
-      <div className="chrono-password-decryptor">
+      {/* <div className="chrono-password-decryptor">
         <div className="chrono-decryptor">
           <p className="chrono">
             {minutes} : {seconds}
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="surconsommation-chart">
         <div className="bar" style={{height: barValue + "%"}}></div>
       </div>
