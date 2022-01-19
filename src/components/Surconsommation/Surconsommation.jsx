@@ -26,7 +26,6 @@ export const Surconsommation = () => {
 
             <div className="dock-icon-container" onDoubleClick={handleOpen}>
                 <div className = 'productContainer' >
-
                 <Modal
                     open={open}
                     onClose={handleClose}
