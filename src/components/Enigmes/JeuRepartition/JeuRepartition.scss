@@ -2,12 +2,13 @@
     width: 1000px;
     height: 600px;
     position: relative;
+    background-color: rgba($color: #000000, $alpha: 0.1);
 
     .terminal {
         .table {
           border: 1px solid #FFF; 
           border-collapse: collapse; 
-          width:350px;      
+          width:320px;      
           .top {
             border: 1px solid #FFF; 
             font-family: "MonumentExtendedLight";
@@ -35,52 +36,63 @@
         } 
       }
 
+      .circuit {
+        .img-circuit {
+          position: absolute;
+          width: 750px;
+          top: 10%;
+          right: 1%;
+        }
+      }
+
+
+
     .tuyauFirst{
         position: absolute;
-        width: 200px;
-        height: 100px;
-        top: 10%;
-        left: 10%;
+        width: 20px;
+        height: 40px;
+        bottom: 3%;
+        left: 3%;
         background-color: yellow;
     }
     .tuyauSecond{
         position: absolute;
-        width: 200px;
-        height: 100px;
-        top: 70%;
-        left: 80%;
+        width: 40px;
+        height: 40px;
+        bottom: 3%;
+        left: 8%;
         background-color: yellow;
     }
     .tuyauThird{
         position: absolute;
-        width: 200px;
-        height: 100px;
-        top: 55%;
-        left: 25%;
+        width: 40px;
+        height: 20px;
+        bottom: 3%;
+        left: 15%;
         background-color: yellow;
     }
     .firstPlace{
         position: absolute;
-        width: 200px;
-        height: 100px;
-        top: 40%;
-        right: 35%;
+        width: 20px;
+        height: 40px;
+        top: 53%;
+        right: 15.7%;
         background-color: red;
     }
     .secondPlace{
         position: absolute;
-        width: 200px;
-        height: 100px;
-        top: 80%;
-        left: 5%;
+        width: 40px;
+        height: 20px;
+        top: 0%;
+        right: 0%;
         background-color: red;
     }
     .thirdPlace{
         position: absolute;
-        width: 200px;
-        height: 100px;
-        top: 2%;
-        right: 15%;
+        width: 50px;
+        height: 30px;
+        top: 0%;
+        right: 0%;
         background-color: red;
     }
     .initPosition{

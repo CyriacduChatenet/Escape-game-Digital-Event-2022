@@ -43,7 +43,7 @@ function App() {
           <Route exact path="/defeat" element={<Defeat />} />
           <Route exact path="/canadair" element={<Canadair />} />
           <Route exact path="/jeu-ecologie" element={<JeuEcologie />} />
-          <Route exact path="/jeu-tuyau" element={<JeuRepartition />} />
+          <Route exact path="/jeu-repartition" element={<JeuRepartition />} />
 
           <Route path='*' exact={true} element={<ErrorPage />} />
         </Routes>

@@ -3,6 +3,8 @@ import { useState } from 'react';
 import './JeuRepartition.scss'
 
 // TODO :
+// Changer l'image sans les tuyaux
+
 // Afficher les tuyaux manquant QUE quans ils ont executé le fichier qui se trouve dans Oracle
 // Compléter le chemin avec les tuyaux
 // Afficher l'écran de victoire
@@ -97,6 +99,10 @@ export const JeuRepartition = () => {
             <span className="middle-text1">Ensuite, vous vous servirez des tuyaux pour compléter le réseau. Trois tuyaux sont nécessaires à la résolution du circuit. Il existe plusieurs solutions, mais une seule est juste, à vous de tester les différentes possibilités !</span><br />
           </td></tr>
         </table>
+      </div>
+
+      <div className='circuit'>
+        <img className='img-circuit' src="/assets/images/jeu-repartition/circuit.png" />
       </div>
 
       <div className='tuyauFirst' onClick={() => { setTuyauFirst(true); verifyFirst() }} style={firstIn == true ? { display: 'none' } : { display: 'block' }}>First</div>
