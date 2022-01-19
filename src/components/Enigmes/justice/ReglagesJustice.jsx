@@ -22,8 +22,8 @@ const ReglagesJustice = () => {
     <div className='reglageJustice'>
       <select name="" className="inputOnglet">
         <option value="bloque-pour-tout-les-utilisateurs">Bloqué pour tous les utilisateurs</option>
-        <option value="acces-only-administrateurs">Accès pour les administrateurs</option>
-        <option onSelect={onSelect}  value="acces-only-administrateurs">Accès pour tous les utilisateurs</option>
+        <option selected value="acces-only-administrateurs">Accès pour les administrateurs</option>
+        <option onSelect={onSelect} value="acces-only-administrateurs">Accès pour tous les utilisateurs</option>
       </select>
       <div className="terminal">
         <table className="table" border="1">

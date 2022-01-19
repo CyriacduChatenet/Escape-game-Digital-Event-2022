@@ -18,7 +18,9 @@ import { Victory } from "../components/Victory/Victory";
 import { Defeat } from "../components/Defeat/Defeat";
 import { Canadair } from "../components/Canadair/Canadair";
 import { JeuRepartition } from "../components/Enigmes/JeuRepartition/JeuRepartition";
-import {SurconsommationPasswordDecryptor} from "../components/SurconsommationPasswordDecryptor/SurconsommationPasswordDecryptor"
+import { SurconsommationPasswordDecryptor } from "../components/SurconsommationPasswordDecryptor/SurconsommationPasswordDecryptor"
+import { EcranFinal } from "../pages/EcranFinal/EcranFinal";
+import { Credits } from "../pages/Credits/Credits";
 
 function App() {
   return (
@@ -27,10 +29,13 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route path="/choix-de-personnages" element={<CharacterChoicePage />} />
+          <Route exact path="/dashboard" element={<DashboardPage />} />
+          <Route exact path="/fin-du-jeu" element={<EcranFinal />} />
+          <Route exact path="/credits" element={<Credits />} />
+
           <Route path="/settings-modal" element={<SettingsModal />} />
           <Route exact path="/loaderpage" element={<LoaderPage />} />
           <Route exact path="/windowsloader" element={<WindowsLoader />} />
-          <Route exact path="/dashboard" element={<DashboardPage />} />
           <Route exact path="/jeu-pingouins" element={<JeuPingouins />} />
           <Route exact path="/jeu-foret" element={<JeuFeuForet />} />
           <Route exact path="/Partage" element={<Partage />} />
