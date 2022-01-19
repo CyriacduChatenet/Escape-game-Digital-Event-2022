@@ -37,6 +37,7 @@ function App() {
           <Route exact path="/" element={<Homepage />} />
           <Route path="/choix-de-personnages" element={<CharacterChoicePage />} />
           <Route exact path="/dashboard" element={<DashboardPage />} />
+          {/* Dashboard a rename en tableau-de-bord (cohérence français) */}
           <Route exact path="/fin-du-jeu" element={<EcranFinal />} />
           <Route exact path="/credits" element={<Credits />} />
 
