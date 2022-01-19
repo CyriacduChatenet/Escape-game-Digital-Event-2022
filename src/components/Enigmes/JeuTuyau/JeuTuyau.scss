@@ -1,52 +1,90 @@
-.tuyauFirst{
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    top: 10%;
-    left: 10%;
-    background-color: yellow;
-}
-.tuyauSecond{
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    top: 70%;
-    left: 80%;
-    background-color: yellow;
-}
-.tuyauThird{
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    top: 55%;
-    left: 25%;
-    background-color: yellow;
-}
-.firstPlace{
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    top: 40%;
-    right: 35%;
-    background-color: red;
-}
-.secondPlace{
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    top: 80%;
-    left: 5%;
-    background-color: red;
-}
-.thirdPlace{
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    top: 2%;
-    right: 15%;
-    background-color: red;
-}
-.initPosition{
-    top: 0;
-    left: 0;
+.JeuTuyau {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+
+    .terminal {
+        .table {
+          border: 1px solid #FFF; 
+          border-collapse: collapse; 
+          width:350px;      
+          .top {
+            border: 1px solid #FFF; 
+            font-family: "MonumentExtendedLight";
+            font-size:9px;
+            background-color:#FFF;
+            color: #030303;
+            padding: 8px 12px;
+            text-align:left;
+          }
+          .middle {
+            border: 1px solid #FFF; 
+            font-family: "MonumentExtendedLight";
+            font-size:9px;
+            background-color:#030303;
+            color: white;
+            vertical-align: top;
+            height: 130px;
+            padding: 8px 12px;
+            .middle-text1 {
+              font-family: "MonumentExtendedLight";
+              display: inline-block;
+              margin-bottom: 12px;
+            }
+          }
+        } 
+      }
+
+    .tuyauFirst{
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        top: 10%;
+        left: 10%;
+        background-color: yellow;
+    }
+    .tuyauSecond{
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        top: 70%;
+        left: 80%;
+        background-color: yellow;
+    }
+    .tuyauThird{
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        top: 55%;
+        left: 25%;
+        background-color: yellow;
+    }
+    .firstPlace{
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        top: 40%;
+        right: 35%;
+        background-color: red;
+    }
+    .secondPlace{
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        top: 80%;
+        left: 5%;
+        background-color: red;
+    }
+    .thirdPlace{
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        top: 2%;
+        right: 15%;
+        background-color: red;
+    }
+    .initPosition{
+        top: 0;
+        left: 0;
+    }
 }
