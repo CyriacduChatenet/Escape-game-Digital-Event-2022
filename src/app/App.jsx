@@ -68,6 +68,8 @@ function App() {
           <Route path='*' exact={true} element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
+
+     
     </div>
   );
 }
