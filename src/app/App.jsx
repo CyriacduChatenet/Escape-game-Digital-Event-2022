@@ -8,7 +8,6 @@ import { ErrorPage } from '../pages/ErrorPage/ErrorPage';
 import { JeuPingouins } from "../components/Enigmes/JeuPingouins/JeuPingouins";
 import { SettingsModal } from '../components/Modal/SettingsModal/SettingsModal';
 import { JeuFeuForet } from "../components/Enigmes/JeuFeuForet/JeuFeuForet";
-import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuEcologie } from "../components/Enigmes/JeuEcologie/JeuEcologie";
 import { StartPage } from "../pages/StartPage/StartPage";
 import Partage from "../components/Enigmes/partage/Partage";
@@ -33,7 +32,6 @@ function App() {
           <Route exact path="/dashboard" element={<DashboardPage />} />
           <Route exact path="/jeu-pingouins" element={<JeuPingouins />} />
           <Route exact path="/jeu-foret" element={<JeuFeuForet />} />
-          <Route exact path="/jeu-justice" element={<JeuJustice />} />
           <Route exact path="/Partage" element={<Partage />} />
           <Route exact path="/Galerie" element={<Galerie />} />
           <Route exact path="/start-page" element={<StartPage />} />

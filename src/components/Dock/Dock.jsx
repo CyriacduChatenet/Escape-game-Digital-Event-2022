@@ -11,15 +11,6 @@ import { JeuRepartition } from '../Enigmes/JeuRepartition/JeuRepartition';
 import { Canadair } from '../Canadair/Canadair';
 import { Surconsommation } from '../Surconsommation/Surconsommation';
 
-// Non utilisé ?
-import { DossierJustice } from '../DossierJustice/DossierJustice';
-import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
-import { JeuClimat } from '../Enigmes/DereglementClimatiqueDossier/DereglementClimatiqueDossier';
-import Partage from '../Enigmes/partage/Partage';
-import { JeuFeuForet } from '../Enigmes/JeuFeuForet/JeuFeuForet';
-import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
-
-
 export const Dock = () => {
   return (
     <div className="dock-container">
@@ -42,12 +33,10 @@ export const Dock = () => {
         </DockIcon>
 
         <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >
-          {/* <JeuFeuForet /> */}
           <Canadair/>
         </DockIcon>
 
         <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >
-          {/* <JeuSurconsommation /> */}
           <Surconsommation/>
         </DockIcon>
 
