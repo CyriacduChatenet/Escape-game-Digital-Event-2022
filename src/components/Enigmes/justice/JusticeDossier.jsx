@@ -16,7 +16,7 @@ const JusticeDossier = () => {
         <div onDoubleClick={handleOpen}>
             <div className="folder">
                 <img src="/assets/images/folder-icon/folder-icon.png" alt=""  />
-                <p>Justice</p>
+                <p>Désinformation</p>
             </div>
             <Modal
                 open={open}

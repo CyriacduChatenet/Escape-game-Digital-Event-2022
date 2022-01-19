@@ -6,7 +6,7 @@ import LoginJustice from './LoginJustice';
 import "./justice.scss"
 import PagesJustice from './PagesJustice';
 import ReglagesJustice from './ReglagesJustice';
-import CodeFakeJustice from './CodeFakeJustice';
+import CodeFakeJustice from '../justice/CodeFakeJustice';
 
 const IndexJustice = () => {
     const [currentPage, setCurrentPage] = useState("login")

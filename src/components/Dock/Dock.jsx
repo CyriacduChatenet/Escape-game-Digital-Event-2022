@@ -16,7 +16,7 @@ export const Dock = () => {
     <div className="dock-container">
       <div className="row-dock">
 
-        <DockIcon dockText="Justice" dockIcon="/assets/images/dock-icon/justice.png" >
+        <DockIcon dockText="Désinformation" dockIcon="/assets/images/dock-icon/justice.png" >
           <IndexJustice />
         </DockIcon>
 

@@ -69,7 +69,7 @@ export const DossierJustice = () => {
                 <div className='topDossierNavJustice'>
                   <div className='logoDossierJustice'></div>
                   &nbsp;
-                  <p>Justice</p>
+                  <p>Désinformation</p>
                 </div>
               </div>
             </div>
