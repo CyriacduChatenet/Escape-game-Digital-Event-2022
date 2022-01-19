@@ -6,7 +6,7 @@ import Modal from '@mui/material/Modal'
 // import './DockIcon.scss';
 import React, { useState, useRef } from "react";
 
-export const ModalArticle = ({children,dockText, dockIcon,date,fileSize,br}) => {
+export const ModalArticle = ({children,dockText, dockIcon,date,fileSize,br,br2}) => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -17,6 +17,7 @@ export const ModalArticle = ({children,dockText, dockIcon,date,fileSize,br}) => 
             <p className="treestructure_text_instruction">
                 {dockText}
                 <br />{br}
+                <br />{br2}
             </p>
             <p className="treestructure_date">{date}</p>
             <p className="file_weight">{fileSize}</p>
