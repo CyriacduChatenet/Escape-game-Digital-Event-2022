@@ -16,6 +16,7 @@ import { DossierJustice } from '../DossierJustice/DossierJustice';
 import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
 import { JeuClimat } from '../Enigmes/DereglementClimatiqueDossier/DereglementClimatiqueDossier';
 import { Canadair } from '../Canadair/Canadair';
+import { Surconsommation } from '../Surconsommation/Surconsommation';
 
 export const Dock = () => {
   return (
@@ -44,7 +45,8 @@ export const Dock = () => {
         </DockIcon>
 
         <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >
-          <JeuSurconsommation />
+          {/* <JeuSurconsommation /> */}
+          <Surconsommation/>
         </DockIcon>
 
         <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" >

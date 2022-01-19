@@ -1,11 +1,16 @@
 .jeuSurconsommationModal{
 
-    margin-top: 100px;
+    .displayContainer{
+        background: url(../../../../public/assets/images/surconso/fenetre.png);
+        background-position: center;
+        background-position: 100%;
+    }
 
     .topImgDisplaying{
+        padding-top: 100px;
         display: flex;
         justify-content: space-around;
-        margin-bottom: 100px;
+        padding-bottom: 100px;
         align-items: center;
 
     }
@@ -38,6 +43,7 @@
 .loader-video {
     width: 100%;
     height: 100%;
+    top: 0;
     position: absolute;
     z-index: 10;
 }
