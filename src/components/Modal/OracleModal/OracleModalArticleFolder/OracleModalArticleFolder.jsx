@@ -51,8 +51,8 @@ export const OracleModalArticleFolder = () => {
             <ModalArticle
               dockText="Place de Deauville"
               dockIcon="./assets/images/folder-icon/file.png"
-              br="et détecteurs de métaux.txt"
-            //   br="métaux.txt"
+              br="et détecteurs de"
+              br2="métaux.txt"
               date="21/12/2017 2:38"
               fileSize="490 Ko"
             >
