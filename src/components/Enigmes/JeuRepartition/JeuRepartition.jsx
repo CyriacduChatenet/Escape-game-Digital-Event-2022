@@ -102,9 +102,10 @@ export const JeuRepartition = () => {
         <img className='img-circuit' src="/assets/images/jeu-repartition/carte.png" />
       </div>
       <div className='filterImg filter1'></div>
-      <div className='filterImg'></div>
-      <div className='filterImg'></div>
-      <div className='filterImg'></div>
+      <div className='filterImg filter2'></div>
+      <div className='filterImg filter3'></div>
+      <div className='filterImg filter4'></div>
+      <div className='filterImg filter5'></div>
 
       {tuyauxList.map((tuyau, index) => (
         <Tuyau tuyau={tuyau} index={index} handleSelectTuyau={handleSelectTuyau} />
