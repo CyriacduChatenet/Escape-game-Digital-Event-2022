@@ -19,6 +19,7 @@ import { Victory } from "../components/Victory/Victory";
 import { Defeat } from "../components/Defeat/Defeat";
 import { Canadair } from "../components/Canadair/Canadair";
 import { JeuRepartition } from "../components/Enigmes/JeuRepartition/JeuRepartition";
+import {SurconsommationPasswordDecryptor} from "../components/SurconsommationPasswordDecryptor/SurconsommationPasswordDecryptor"
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
           <Route exact path="/canadair" element={<Canadair />} />
           <Route exact path="/jeu-ecologie" element={<JeuEcologie />} />
           <Route exact path="/jeu-repartition" element={<JeuRepartition />} />
+          <Route exact path="/SurconsommationPasswordDecryptor" element={<SurconsommationPasswordDecryptor />} />
+
 
           <Route path='*' exact={true} element={<ErrorPage />} />
         </Routes>
