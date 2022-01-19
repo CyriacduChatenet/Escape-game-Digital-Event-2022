@@ -3,6 +3,7 @@ import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box';
 import style from "../../components/PrimaryModal/style"
 import './DossierJustice.scss'
+import {LoginJustice} from '../Enigmes/justice/LoginJustice'
 
 export const DossierJustice = () => {
 
@@ -107,7 +108,7 @@ export const DossierJustice = () => {
                                 aria-describedby="modal-modal-description"
                             >
                                 <Box sx={style}>
-                                 
+                                 <LoginJustice/>
                                 </Box>
                             </Modal>
                             </div>

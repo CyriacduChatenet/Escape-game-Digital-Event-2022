@@ -1,20 +1,32 @@
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
 import "./DereglementClimatique.scss";
 
 export const DereglementClimatique = () => {
   const [openHackMenu, setOpenHackMenu] = useState(false);
-  const [password, setPassword] = useState("rechauffement")
-  const [userPassword, setUserPassword] = useState("")
+  const [password, setPassword] = useState("rechauffement");
+  const [userPassword, setUserPassword] = useState("");
+  const [displayLoader, setDisplayLoader] = useState(true)
 
   const AnalysePassword = () => {
-    if(password === userPassword){
-      alert('good job')
-    }else {
-      alert("loose")
+    if (password === userPassword) {
+      alert("good job");
+    } else {
+      alert("loose");
     }
-  }
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDisplayLoader(false)
+    },3000)
+  },[])
   return (
     <div className="DereglementClimatique">
+
+      {displayLoader ? <video autoPlay className="loader-canad-air" >
+        <source src="assets/video/loader/loader-candad-air.mp4" type="video/mp4" />
+      </video> : null}
+
       <nav className="canad-air-nav">
         <ul className="canad-air-list">
           <li
@@ -48,8 +60,19 @@ export const DereglementClimatique = () => {
         <div className="canad-air-piratage">
           <div className="canad-air-hack-form">
             <label htmlFor="">ENTREZ LE MOT DE PASSE :</label>
-            <input type="text" className="canad-air-password-input" onChange={(e) => {setUserPassword(e.target.value)}} />
-            <div className="canad-air-submit-password-button" onClick={AnalysePassword}>Valider</div>
+            <input
+              type="text"
+              className="canad-air-password-input"
+              onChange={(e) => {
+                setUserPassword(e.target.value);
+              }}
+            />
+            <div
+              className="canad-air-submit-password-button"
+              onClick={AnalysePassword}
+            >
+              Valider
+            </div>
           </div>
         </div>
       ) : null}

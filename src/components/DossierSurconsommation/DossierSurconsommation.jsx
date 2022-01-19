@@ -3,7 +3,7 @@ import './DossierSurconsommation.scss'
 import Modal from '@mui/material/Modal'
 import style from "../../components/PrimaryModal/style"
 import Box from '@mui/material/Box';
-import { SurconsommationGame } from '../Enigmes/SurconsommationGame/SurconsommationGame';
+import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
 
 export const DossierSurconsommation = () => {
 
@@ -116,7 +116,7 @@ export const DossierSurconsommation = () => {
                                 aria-describedby="modal-modal-description"
                             >
                                 <Box sx={style}>
-                                    <SurconsommationGame />
+                                    < JeuSurconsommation/>
                                 </Box>
                             </Modal>
                             </div>
