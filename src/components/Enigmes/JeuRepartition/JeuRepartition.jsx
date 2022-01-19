@@ -102,7 +102,7 @@ export const JeuRepartition = () => {
       </div>
 
       <div className='circuit'>
-        <img className='img-circuit' src="/assets/images/jeu-repartition/circuit.png" />
+        <img className='img-circuit' src="/assets/images/jeu-repartition/carte.png" />
       </div>
 
       <div className='tuyauFirst' onClick={() => { setTuyauFirst(true); verifyFirst() }} style={firstIn == true ? { display: 'none' } : { display: 'block' }}>First</div>
