@@ -15,7 +15,7 @@ export const JeuRepartition = () => {
   const terminalText = "C:\hacker>"
 
   const [tuyauFirst, setTuyauFirst] = useState(false)
-  // console.log('First tuyau :',tuyauFirst);
+  console.log('First tuyau :',tuyauFirst);
 
   const [tuyauSecond, setTuyauSecond] = useState(false)
   // console.log('Second Tuyau :',tuyauSecond);
@@ -89,7 +89,7 @@ export const JeuRepartition = () => {
   return (
     <div className='JeuRepartition'>
 
-      <div className="terminal">
+      {/* <div className="terminal">
         <table className="table" border="1">
           <tr><th className="top">Terminal satellite n°Ec567ztBQx154y894</th></tr>
           <tr><td className="middle">
@@ -99,7 +99,7 @@ export const JeuRepartition = () => {
             <span className="middle-text1">Ensuite, vous vous servirez des tuyaux pour compléter le réseau. Trois tuyaux sont nécessaires à la résolution du circuit. Il existe plusieurs solutions, mais une seule est juste, à vous de tester les différentes possibilités !</span><br />
           </td></tr>
         </table>
-      </div>
+      </div> */}
       
       <div className='circuit'>
         <img className='img-circuit' src="/assets/images/jeu-repartition/carte.png" />
