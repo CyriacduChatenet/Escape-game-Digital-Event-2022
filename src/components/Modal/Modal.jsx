@@ -6,7 +6,7 @@ export const Modal = () => {
   const [showCross, setShowCross] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {setShowModal(true)}, 6000)
+    setTimeout(() => {setShowModal(true)}, 2000)
     setTimeout(ControlVideo, 75000);
   }, []);
   const ControlVideo = () => {
