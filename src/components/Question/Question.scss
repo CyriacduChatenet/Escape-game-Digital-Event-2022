@@ -1,5 +1,35 @@
 @import '../../../public/assets/styles/import.scss';
 
+
+@font-face {
+    font-family: "MonumentExtendedBlack";
+    src: url("../../../public/assets/fonts/MonumentExtended-Black.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "MonumentExtendedRegular";
+    src: url("../../../public/assets/fonts/MonumentExtended-Regular.otf") format('opentype');
+}
+
 .Question {
     margin: 5%;
+}
+
+.bottom_border{
+    background-color: #8CCDC4;
+    width: 250px;
+    height: 3px;
+    margin-bottom: 20px;
+}
+
+.question-title{
+    font-family: "MonumentExtendedBlack";
+    color: white;
+}
+
+.question-text{
+    margin-bottom: 10px;
+    color: white;
+    font-family: "MonumentExtendedRegular";
+    font-size: 14px;
 }

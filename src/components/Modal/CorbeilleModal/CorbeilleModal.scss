@@ -15,14 +15,14 @@
 
     .barTopLeft{
         position: absolute;
-        right: 100px;
-        top: 25px;
+        right: 130px;
+        top: -50px;
     }
 
     .barTopRight{
         position: absolute;
-        top: 25px;
-        right: 150px;
+        top: -50px;
+        right: 0px;
 
         &:hover{
             cursor: pointer;
