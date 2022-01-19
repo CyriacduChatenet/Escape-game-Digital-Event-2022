@@ -3,7 +3,7 @@ import './DossierRepartition.scss'
 import Modal from '@mui/material/Modal'
 import style from "../../components/PrimaryModal/style"
 import Box from '@mui/material/Box';
-import { RepartitionGame } from '../Enigmes/RepartitionGame/RepartitionGame';
+import { JeuRepartition } from '../Enigmes/JeuRepartition/JeuRepartition';
 
 export const DossierRepartition = () => {
 
@@ -116,7 +116,7 @@ export const DossierRepartition = () => {
                 aria-describedby="modal-modal-description"
               >
                 <Box sx={style}>
-                  <RepartitionGame />
+                  <JeuRepartition />
                 </Box>
               </Modal>
             </div>

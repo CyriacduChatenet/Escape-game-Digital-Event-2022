@@ -3,20 +3,22 @@ import { DockIcon } from '../DockIcon/DockIcon';
 import IndexJustice from '../Enigmes/justice/IndexJustice';
 import { JeuPingouins } from '../Enigmes/JeuPingouins/JeuPingouins';
 import { JeuEcologie } from '../Enigmes/JeuEcologie/JeuEcologie';
-import Partage from '../Enigmes/partage/Partage';
-import { JeuFeuForet } from '../Enigmes/JeuFeuForet/JeuFeuForet';
-import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
 import { OracleModal } from '../Modal/OracleModal/OracleModal';
 import { SettingsModal } from '../Modal/SettingsModal/SettingsModal';
 import { Galerie } from '../Galerie/Galerie';
 import { CorbeilleModal } from '../Modal/CorbeilleModal/CorbeilleModal';
+import { JeuRepartition } from '../Enigmes/JeuRepartition/JeuRepartition';
+import { Canadair } from '../Canadair/Canadair';
+import { Surconsommation } from '../Surconsommation/Surconsommation';
 
 // Non utilisé ?
 import { DossierJustice } from '../DossierJustice/DossierJustice';
 import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
 import { JeuClimat } from '../Enigmes/DereglementClimatiqueDossier/DereglementClimatiqueDossier';
-import { Canadair } from '../Canadair/Canadair';
-import { Surconsommation } from '../Surconsommation/Surconsommation';
+import Partage from '../Enigmes/partage/Partage';
+import { JeuFeuForet } from '../Enigmes/JeuFeuForet/JeuFeuForet';
+import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
+
 
 export const Dock = () => {
   return (
@@ -35,8 +37,8 @@ export const Dock = () => {
           <JeuEcologie />
         </DockIcon>
 
-        <DockIcon dockText="Partage" dockIcon="/assets/images/dock-icon/partage.png" >
-          <Partage />
+        <DockIcon dockText="Répartition" dockIcon="/assets/images/dock-icon/partage.png" >
+          <JeuRepartition />
         </DockIcon>
 
         <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >

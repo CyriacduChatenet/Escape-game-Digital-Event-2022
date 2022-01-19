@@ -3,6 +3,8 @@ import { Question } from "../Question/Question";
 import { store } from "../../redux/store"
 import "./QCM.scss";
 
+// TODO : Gérer l'envoie des réponses
+
 export const QCM = () => {
   const [selectedRadioQ1, setSelectedRadioQ1] = useState('');
   const radiosQ1 = ["3 douches", "5 douches", "1 douche"]

@@ -4,7 +4,7 @@ import { useState } from "react/cjs/react.development";
 import {store} from "../../../redux/store"
 
 export const CorbeilleModal = () => {
-  const [show,setShow] = useState(false)
+  const [show, setShow] = useState(false)
   const [restauration, setRestauration] = useState(false)
 
   const handleClick = () => setShow(true)
@@ -19,19 +19,15 @@ export const CorbeilleModal = () => {
 
   return (
     <div className="corbeille_page">
-      <img src="/assets/images/terminal-bar/bar-top-left-king-size.png" alt="" className="barTopLeft" />
-        <img src="/assets/images/terminal-bar/Bar-top-right-king-size.png" alt="" className="barTopRight" />
       <div className="leftSideMenu">
+
         <div className="userAvatar">
-          <img
-            src="assets/images/corbeille/userIcon.png"
-            alt=""
-            className="avatarImg"
-          />
+          <img src="assets/images/corbeille/userIcon.png" alt="" className="avatarImg" />
           <p className="avatarName">Profil Utilisateur</p>
         </div>
 
         <ul className="settingsList">
+
           <div className="currentSelec">
             <li className="settingsItem">Corbeille</li>
           </div>
@@ -46,6 +42,7 @@ export const CorbeilleModal = () => {
           <li className="settingsItemNotSelec">Accessibilité</li>
           <li className="settingsItemNotSelec">Confidentialité et securité</li>
           <li className="settingsItemNotSelec">Mises à jour</li>
+
         </ul>
       </div>
 
@@ -55,31 +52,29 @@ export const CorbeilleModal = () => {
           L'avenir de la planète se joue maintenant !
         </p>
         <div className="scrollDrawerContainerCorbeille">
-        <div className="scrollDrawerText" style={{flexDirection : show ? "column" : "row", paddingTop: show ? 20 : 0}}>
+          <div className="scrollDrawerText" style={{ flexDirection: show ? "column" : "row", paddingTop: show ? 20 : 0 }}>
             <img src="assets/images/corbeille/_..-..-_.-..._.png" alt="" />
-
-            {!restauration ? (
-              <>
-              {show ? (
-                <div className="trashShow">
-                  <div className="trashBtn" onClick={handleRestauration}>Restaurer</div>
-                  <div className="trashBtn">Supprimer</div>
-                  <div className="trashBtn">Voir</div>
-                </div> 
+            {
+              !restauration ? (
+                <>
+                  {show ? (
+                    <div className="trashShow">
+                      <div className="trashBtn" onClick={handleRestauration}>Restaurer</div>
+                      <div className="trashBtn">Supprimer</div>
+                      <div className="trashBtn">Voir</div>
+                    </div>
+                  ) : (
+                    <div className="chevronIconCorbeille" onClick={handleClick}>
+                      VOIR L'ÉLÉMENT<FaChevronRight />
+                    </div>
+                  )}
+                </>
               ) : (
-                <div className="chevronIconCorbeille" onClick={handleClick}>
-                  VOIR L'ÉLÉMENT<FaChevronRight />
-                </div>
-              )}
-              </>
-            ) : (
-              <img className="trashImg" src="assets/images/corbeille/codeEscapeGame-02 1.png" alt="" />
-            )}
-
-            
-
+                <img className="trashImg" src="assets/images/corbeille/codeEscapeGame-02 1.png" alt="" />
+              )
+            }
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
