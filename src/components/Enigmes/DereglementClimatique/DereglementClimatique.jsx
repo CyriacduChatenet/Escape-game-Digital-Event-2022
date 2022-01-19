@@ -5,7 +5,8 @@ export const DereglementClimatique = () => {
   const [openHackMenu, setOpenHackMenu] = useState(false);
   const [password, setPassword] = useState("rechauffement");
   const [userPassword, setUserPassword] = useState("");
-  const [displayLoader, setDisplayLoader] = useState(true)
+  const [displayLoader, setDisplayLoader] = useState(true);
+  const [displayNews, setDisplayNews] = useState(false);
 
   const AnalysePassword = () => {
     if (password === userPassword) {
@@ -17,15 +18,53 @@ export const DereglementClimatique = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setDisplayLoader(false)
-    },3000)
-  },[])
+      setDisplayLoader(false);
+    }, 3000);
+    setTimeout(() => {
+      setDisplayNews(true);
+    }, 3000);
+  }, []);
   return (
     <div className="DereglementClimatique">
+      {displayLoader ? (
+        <video autoPlay className="loader-canad-air">
+          <source
+            src="assets/video/loader/loader-candad-air.mp4"
+            type="video/mp4"
+          />
+        </video>
+      ) : null}
 
-      {displayLoader ? <video autoPlay className="loader-canad-air" >
-        <source src="assets/video/loader/loader-candad-air.mp4" type="video/mp4" />
-      </video> : null}
+      {displayNews === false ? null : (
+        <div className="breaking-news">
+          <video autoPlay className="breaking-news-video">
+            <source src="assets/video/earth.mp4" type="video/mp4" />
+          </video>
+          <div className="tv-interface">
+            <div className="logo-tv-container">
+              <div className="logo-tv">
+                <img src="assets/images/canad-air/logoTv.png" alt="" className="logoTV" />
+              </div>
+            </div>
+            <div className="breaking-news-overflow-x"></div>
+            <div className="tv-effect"></div>
+            <div className="news-link">
+              <p className="news">
+                <strong>Canada :</strong> Pour plus d'informations sur ce sujet
+                et bien d'autres ... rendez-vous sur ce site <br />{" "}
+                <span
+                  className="link-news"
+                  onClick={() => {
+                    setDisplayNews(false);
+                  }}
+                >
+                  https://bombardier.com/fr
+                </span>{" "}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <nav className="canad-air-nav">
         <ul className="canad-air-list">

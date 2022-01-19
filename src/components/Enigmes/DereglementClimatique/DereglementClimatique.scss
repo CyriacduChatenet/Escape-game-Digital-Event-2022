@@ -104,3 +104,59 @@
     position: absolute;
     z-index: 1;
 }
+.breaking-news{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    .breaking-news-video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    .tv-interface{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .tv-effect {
+            width: 100%;
+            height: 100%;
+            background-image: url('../../../../public/assets/images/polar-game/tv-effect.png');
+            position: absolute;
+            z-index: -2;
+        }
+        .breaking-news-overflow-x{
+            width: 100%;
+            height: 8%;
+            background-color: white;
+        }
+        .news-link{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            padding: 0 2.5%;
+            font-size: 20px;
+        }
+    }
+}
+.news {
+    color: white;
+}
+.logo-tv-container{
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    .logo-tv{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        padding: 0 2%;
+    }
+}
