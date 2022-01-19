@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import './JeuRepartition.scss'
 import Tuyau from './Tuyau'
@@ -10,9 +10,7 @@ const tuyaux = [
     position: {
       bottom: 10,
       left: 50
-    },
-    selected: false,
-    drop: false,
+    }
   },
   {
     type: "tuyau2",
@@ -20,9 +18,7 @@ const tuyaux = [
     position: {
       bottom: 10,
       left: 100
-    },
-    selected: false,
-    drop: false,
+    }
   },
   {
     type: "tuyau3",
@@ -30,9 +26,7 @@ const tuyaux = [
     position: {
       bottom: 10,
       left: 200
-    },
-    selected: false,
-    drop: false,
+    }
   },
 ]
 
@@ -71,17 +65,9 @@ export const JeuRepartition = () => {
   const [tuyauxList, setTuyauxList] = useState(tuyaux)
   const [changeSelected, setChangeSelected] = useState(false)
 
-  useState(()=>{},[changeSelected])
-
-  const handleSelectTuyau = (tuyau, index) => {
-    setChangeSelected(true)
-    tuyauxList.map(tuyau => {
-      tuyau.selected = false
-    })
-    tuyauxList[index].selected = true
-    console.log(tuyauxList)
-    setTuyauxList(tuyauxList)
-    setChangeSelected(false)
+  const resetOpacities = () => {
+    // tuyauxRef.current.opacity =  0
+    // console.log(refs)
   }
 
   return (
@@ -108,7 +94,7 @@ export const JeuRepartition = () => {
       <div className='filterImg filter5'></div>
 
       {tuyauxList.map((tuyau, index) => (
-        <Tuyau tuyau={tuyau} index={index} handleSelectTuyau={handleSelectTuyau} />
+        <Tuyau tuyau={tuyau}  resetOpacities={resetOpacities} />
       ))}
 
       <div className=' firstPlace'>
