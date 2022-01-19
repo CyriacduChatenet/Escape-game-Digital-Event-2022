@@ -40,20 +40,10 @@ function App() {
           <Route exact path="/Galerie" element={<Galerie />} />
           <Route exact path="/start-page" element={<StartPage />} />
 
-<<<<<<< HEAD
               {/* Routes test */}
-              <Route exact path="/jeu-dechets" element={ <JeuDechets/> }/>
-              <Route exact path="/jeu-dechets-new" element={ <JeuDechetsNew/> }/>
               <Route exact path="/victory" element={ <Victory/> }/>
               <Route exact path="/defeat" element={ <Defeat/> }/>
               <Route exact path="/canadair" element={ <Canadair/> }/>
-=======
-          {/* Routes test */}
-          <Route exact path="/QCM" element={<QCM />} />
-          <Route exact path="/jeu-ecologie" element={<JeuEcologie />} />
-          <Route exact path="/victory" element={<Victory />} />
-          <Route exact path="/defeat" element={<Defeat />} />
->>>>>>> 98c015913efdae374cce3f9d3b3f19114c609413
 
           <Route path='*' exact={true} element={<ErrorPage />} />
         </Routes>

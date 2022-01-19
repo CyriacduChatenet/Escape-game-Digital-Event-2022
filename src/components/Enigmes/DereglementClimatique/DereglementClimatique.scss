@@ -1,0 +1,162 @@
+@import '../../../../public/assets/styles/import.scss';
+
+.DereglementClimatique{
+    width: 1000px;
+    height: 600px;
+    background-image: url('../../../../public/assets/images/canad-air/navbar-background.png');
+    background-size: cover;
+}
+.canad-air-nav{
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .canad-air-list {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        color: white;
+    }
+}
+
+.canad-air-site-normal{
+    width: 100%;
+    height: 81%;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .airplane-normal {
+        background-image: url('../../../../public/assets/images/canad-air/airplane.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+    }
+    .canad-air-content {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 2vw;
+        justify-content: space-around;
+        color: white;
+        .canad-air-title {
+            font-size: 55px;
+        }
+        .canad-air-desc {
+            font-size: 30px;
+        }
+        .canad-air-watch-video {
+            border: none;
+            padding: 3% 2%;
+            border-radius: 10px;
+            background-color: #3F898D;
+            color: white;
+            width: 60%;
+            margin-left: 5%;
+            font-size: 20px;
+        }
+    }
+}
+.canad-air-piratage{
+    width: 100%;
+    height: 80%;
+    margin-top: 5%;
+    background-image: url('../../../../public/assets/images/canad-air/canad-air-piratage.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.canad-air-hack-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 22.5%;
+    height: 60%;
+    color: white;
+    margin-left: 66%;
+    padding-top: 5%;
+}
+.canad-air-password-input{
+    background-color: transparent;
+    color: white;
+    border: 2px solid #86EBD9;
+    border-radius: 10px;
+    padding: 2%;
+}
+.canad-air-submit-password-button{
+    background-image: url('../../../../public/assets/images/canad-air/canad-air-button-background.png');
+    background-size: cover;
+    width: 100%;
+    height: 37.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader-canad-air {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.breaking-news{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    .breaking-news-video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    .tv-interface{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .tv-effect {
+            width: 100%;
+            height: 100%;
+            background-image: url('../../../../public/assets/images/polar-game/tv-effect.png');
+            position: absolute;
+            z-index: -2;
+        }
+        .breaking-news-overflow-x{
+            width: 100%;
+            height: 8%;
+            background-color: white;
+        }
+        .news-link{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            padding: 0 2.5%;
+            font-size: 20px;
+        }
+    }
+}
+.news {
+    color: white;
+}
+.logo-tv-container{
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    .logo-tv{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        padding: 0 2%;
+    }
+}

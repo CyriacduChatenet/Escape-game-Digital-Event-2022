@@ -1,7 +1,15 @@
 import "./CorbeilleModal.scss";
 import { FaChevronRight } from 'react-icons/fa';
+import { useState } from "react/cjs/react.development";
 
 export const CorbeilleModal = () => {
+  const [show,setShow] = useState(false)
+  const [restauration, setRestauration] = useState(false)
+
+  const handleClick = () => setShow(true)
+
+  const handleRestauration = () => setRestauration(true)
+
   return (
     <div className="corbeille_page">
       <div className="leftSideMenu">
@@ -38,11 +46,29 @@ export const CorbeilleModal = () => {
           L'avenir de la planète se joue maintenant !
         </p>
         <div className="scrollDrawerContainerCorbeille">
-        <div className="scrollDrawerText">
+        <div className="scrollDrawerText" style={{flexDirection : show ? "column" : "row", paddingTop: show ? 20 : 0}}>
             <img src="assets/images/corbeille/_..-..-_.-..._.png" alt="" />
-        </div>
-        <div className="chevronIconCorbeille">
-          VOIR L'ÉLÉMENT<FaChevronRight />
+
+            {!restauration ? (
+              <>
+              {show ? (
+                <div className="trashShow">
+                  <div className="trashBtn" onClick={handleRestauration}>Restaurer</div>
+                  <div className="trashBtn">Supprimer</div>
+                  <div className="trashBtn">Voir</div>
+                </div> 
+              ) : (
+                <div className="chevronIconCorbeille" onClick={handleClick}>
+                  VOIR L'ÉLÉMENT<FaChevronRight />
+                </div>
+              )}
+              </>
+            ) : (
+              <img className="trashImg" src="assets/images/corbeille/codeEscapeGame-02 1.png" alt="" />
+            )}
+
+            
+
         </div>
       </div>
       </div>

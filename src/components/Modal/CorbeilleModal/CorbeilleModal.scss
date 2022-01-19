@@ -135,7 +135,7 @@
 .scrollDrawerContainerCorbeille{
     border: #86EBD9 solid 1px;
     width: 600px;
-    height: 40px;
+    // height: 40px;
     background-color: transparent;
     display: flex;
     gap: 450px;
@@ -145,9 +145,12 @@
     margin-top: 35px;
     
     .scrollDrawerText{
+        display: flex;
         color: white;
         font-family: 'MonumentExtendedLight';
         padding-left: 20px;
+        align-items: center;
+        min-height: 39px;
     }
 
 }
@@ -166,3 +169,26 @@
 }
 
 
+.trashShow{
+    width: 100%;
+    margin-top: 50px;
+
+    .trashBtn{
+        cursor: pointer;
+        width: 200px;
+        height: 40px;
+        margin: 10px;
+        background-image: url("../../../../public/assets/images/corbeille/bar-top-left.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.trashImg{
+    width: 400px;
+    margin-top: 20px;
+}

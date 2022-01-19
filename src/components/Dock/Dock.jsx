@@ -15,6 +15,7 @@ import { CorbeilleModal } from '../Modal/CorbeilleModal/CorbeilleModal';
 import { DossierJustice } from '../DossierJustice/DossierJustice';
 import { JeuJustice } from '../Enigmes/JeuJustice/JeuJustice';
 import { JeuClimat } from '../Enigmes/DereglementClimatiqueDossier/DereglementClimatiqueDossier';
+import { Canadair } from '../Canadair/Canadair';
 
 export const Dock = () => {
   return (
@@ -38,7 +39,8 @@ export const Dock = () => {
         </DockIcon>
 
         <DockIcon dockText="Climat" dockIcon="/assets/images/dock-icon/climat.png" >
-          <JeuFeuForet />
+          {/* <JeuFeuForet /> */}
+          <Canadair/>
         </DockIcon>
 
         <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >

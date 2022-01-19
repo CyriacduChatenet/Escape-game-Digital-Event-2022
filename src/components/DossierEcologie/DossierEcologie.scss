@@ -38,8 +38,8 @@
     background-color: #62BAB3;
     border-right: 2px solid #86EBD9;
     padding-top: 12%;
-    padding-left: 3%;
-    width: 30%;
+    padding-left: 2%;
+    width: 25%;
 }
 .closeDossierEcologie{
     width: 2.5vw;
@@ -99,7 +99,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-    width: 70%;
+    width: 75%;
 }
 .chevron{
     margin-left: 10%;
@@ -144,6 +144,8 @@
 }
 .chevronMiddle{
     transform: rotate(90deg);
+    margin-right: 10px;
+    color: #FFF;
 }
 .dossierFirst{
     display: flex;
@@ -198,7 +200,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 100%;
     color: #86EBD9;
 }
 .leftNavSecondSysteme{
