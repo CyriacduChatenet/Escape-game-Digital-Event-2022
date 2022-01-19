@@ -24,12 +24,6 @@ export const OracleModal = () => {
                 <img src="/assets/images/OracleBDD/navbar.png" alt="" className="navbar" />
             </div>
 
-            {/* <div className="input_displaying">
-                <input type="text" placeholder="Recherches..." className="search_input"/>
-                <img src="assets/images/folder-icon/search.png" alt="" className="search_img"/>
-                <img src="assets/images/folder-icon/vocal.png" alt="" className="vocal_img"/>
-            </div> */}
-
             <div className="treestructure_container">
 
                 <div className="first_folder_displaying">
@@ -45,32 +39,8 @@ export const OracleModal = () => {
                 </div>
 
                 <div className="first_txt_displaying">
-                    <img src="assets/images/folder-icon/file.png" alt="" className="file_displaying"/>
-
-                    <div className="dock-icon-container" onDoubleClick={handleOpen}>
-                        <p className="treestructure_text" >instruction.txt</p>
-
-                        <Modal
-                            open={open}
-                            onClose={handleClose}
-                            aria-labelledby="modal-modal-title"
-                            aria-describedby="modal-modal-description"
-                        >
-                            <Box sx={style}>
-                                <ul>
-                                    <li>"Mégot"</li>
-                                    <li>"Sac plastique" </li>
-                                    <li>"Canette"</li>
-                                    <li>"Boulette de papier"</li>
-                                    <li>"Bouteille vide"</li>
-                                    <li>"Emballage"</li>
-                                </ul>
-                            </Box>
-                        </Modal>
-                    </div>
-
-                    
-                    {/* <p className="treestructure_text" onClick={handleClick}>instruction.txt</p> */}
+                    <img src="assets/images/folder-icon/folder-icon.png" alt="" className="folder_displaying"/>
+                    <p className="treestructure_text">instruction</p>
                     <p className="treestructure_date">21/12/2017 2:38</p>
                     <p className="file_weight">490 Ko</p>
                 </div>

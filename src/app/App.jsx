@@ -19,6 +19,13 @@ import { Defeat } from "../components/Defeat/Defeat";
 import { Canadair } from "../components/Canadair/Canadair";
 import { JeuRepartition } from "../components/Enigmes/JeuRepartition/JeuRepartition";
 import {SurconsommationPasswordDecryptor} from "../components/SurconsommationPasswordDecryptor/SurconsommationPasswordDecryptor"
+import { OracleModal } from "../components/Modal/OracleModal/OracleModal";
+import { OracleModalArticleFolder } from "../components/Modal/OracleModal/OracleModalArticleFolder/OracleModalArticleFolder";
+import { OracleModalArticle1 } from "../components/Modal/OracleModal/OracleModalArticleFolder/OracleModalArticle1/OracleModalArticle1"
+import { OracleModalArticle2 } from "../components/Modal/OracleModal/OracleModalArticleFolder/OracleModalArticle2/OracleModalArticle2";
+import { OracleModalArticle3 } from "../components/Modal/OracleModal/OracleModalArticleFolder/OracleModalArticle3/OracleModalArticle3";
+import { OracleModalArticle4 } from "../components/Modal/OracleModal/OracleModalArticleFolder/OracleModalArticle4/OracleModalArticle4";
+import { OracleModalArticle5 } from "../components/Modal/OracleModal/OracleModalArticleFolder/OracleModalArticle5/OracleModalArticle5";
 
 function App() {
   return (
@@ -36,6 +43,12 @@ function App() {
           <Route exact path="/Partage" element={<Partage />} />
           <Route exact path="/Galerie" element={<Galerie />} />
           <Route exact path="/start-page" element={<StartPage />} />
+          <Route exact path="/OracleModalArticleFolder" element={<OracleModalArticleFolder/>} />
+          <Route exact path="/OracleModalArticle1" element={<OracleModalArticle1/>} />
+          <Route exact path="/OracleModalArticle2" element={<OracleModalArticle2/>} />
+          <Route exact path="/OracleModalArticle3" element={<OracleModalArticle3/>} />
+          <Route exact path="/OracleModalArticle4" element={<OracleModalArticle4/>} />
+          <Route exact path="/OracleModalArticle5" element={<OracleModalArticle5/>} />
 
           {/* Routes test */}
           <Route exact path="/victory" element={<Victory />} />
