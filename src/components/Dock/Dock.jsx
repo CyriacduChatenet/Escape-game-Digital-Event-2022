@@ -20,7 +20,6 @@ export const Dock = () => {
         <div className="dock-container">
             <div className="row-dock">
                 <DockIcon dockText="Justice" dockIcon="/assets/images/dock-icon/justice.png" >
-                    {/* <JeuJustice /> */}
                     <IndexJustice />
                 </DockIcon>
                 <DockIcon dockText="Extinction" dockIcon="/assets/images/dock-icon/extinction.png" >
