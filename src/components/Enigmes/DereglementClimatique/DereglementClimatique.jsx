@@ -37,8 +37,8 @@ export const DereglementClimatique = () => {
 
       {displayNews === false ? null : (
         <div className="breaking-news">
-          <video autoPlay className="breaking-news-video">
-            <source src="assets/video/earth.mp4" type="video/mp4" />
+          <video autoPlay loop className="breaking-news-video">
+            <source src="assets/video/video_canadair.mp4" type="video/mp4" />
           </video>
           <div className="tv-interface">
             <div className="logo-tv-container">
@@ -46,7 +46,7 @@ export const DereglementClimatique = () => {
                 <img src="assets/images/canad-air/logoTv.png" alt="" className="logoTV" />
               </div>
             </div>
-            <div className="breaking-news-overflow-x"></div>
+            {/* <div className="breaking-news-overflow-x"></div> */}
             <div className="tv-effect"></div>
             <div className="news-link">
               <p className="news">
@@ -76,7 +76,7 @@ export const DereglementClimatique = () => {
           >
             NOS AVIONS
           </li>
-          <li className="canad-air-nav-item">NOTE HISTOIRE</li>
+          <li className="canad-air-nav-item">NOTRE HISTOIRE</li>
           <li className="canad-air-nav-item">LOCALISATION</li>
         </ul>
       </nav>

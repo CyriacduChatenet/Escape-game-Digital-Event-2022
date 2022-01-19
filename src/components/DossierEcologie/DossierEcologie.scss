@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Raleway-Light";
+    src: url("../../../public/assets/fonts/Raleway-Light.ttf") format("otf"),
+}
 *{
     margin: 0;
     padding: 0;
@@ -33,6 +37,9 @@
     color: #FFF;
     height: 600px;
     border-radius: 10px;
+    p{
+        font-family: "Raleway-Light";
+    }
 }
 .leftNavDossierEcologie{
     background-color: #62BAB3;

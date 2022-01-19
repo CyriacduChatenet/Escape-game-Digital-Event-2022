@@ -1,5 +1,15 @@
 @import '../../../../public/assets/styles/import.scss';
 
+@font-face {
+    font-family: 'MonumentExtendedLight';
+    src: url('../../../../public/assets/fonts/MonumentExtended-Light.ttf');
+}
+
+@font-face {
+    font-family: 'MonumentExtendedBlack';
+    src: url('../../../../public/assets/fonts/MonumentExtended-Black.otf');
+}
+
 .DereglementClimatique{
     width: 1000px;
     height: 600px;
@@ -19,6 +29,17 @@
         justify-content: space-around;
         align-items: flex-end;
         color: white;
+    }
+
+    .canad-air-nav-item{
+        margin-right: 25px;
+        font-size: 14px;
+        cursor: pointer;
+        font-family: 'MonumentExtendedLight';
+        &:hover{
+            text-decoration: underline;
+            transition: .2s;
+        }
     }
 }
 
@@ -46,20 +67,24 @@
         justify-content: space-around;
         color: white;
         .canad-air-title {
-            font-size: 55px;
+            font-size: 35px;
+            font-family: 'MonumentExtendedBlack';
         }
         .canad-air-desc {
-            font-size: 30px;
+            font-size: 18px;
+            font-family: 'MonumentExtendedLight';
         }
         .canad-air-watch-video {
             border: none;
             padding: 3% 2%;
-            border-radius: 10px;
+            border-radius: 20px;
             background-color: #3F898D;
             color: white;
             width: 60%;
-            margin-left: 5%;
-            font-size: 20px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'MonumentExtendedLight';
+
         }
     }
 }
@@ -114,6 +139,9 @@
         height: 100%;
         position: absolute;
         z-index: 2;
+        // border-top: 1px solid black;
+        // border-bottom: 1px solid black;
+        border-width: 20px;
     }
     .tv-interface{
         width: 100%;
@@ -127,7 +155,7 @@
         .tv-effect {
             width: 100%;
             height: 100%;
-            background-image: url('../../../../public/assets/images/polar-game/tv-effect.png');
+            // background-image: url('../../../../public/assets/images/polar-game/tv-effect.png');
             position: absolute;
             z-index: -2;
         }
@@ -144,10 +172,19 @@
             padding: 0 2.5%;
             font-size: 20px;
         }
+
+        .link-news{
+            cursor: pointer;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 }
 .news {
     color: white;
+    margin-bottom: 40px;
 }
 .logo-tv-container{
     width: 100%;
