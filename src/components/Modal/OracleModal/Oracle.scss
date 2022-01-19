@@ -52,62 +52,6 @@
     }
 }
 
-// .input_displaying{
-//     position: absolute;
-//     top: 25px;
-//     right: 150px;
-//     width: 550px;
-//     height: 28px;
-//     background: linear-gradient(80deg, rgba(63, 137, 141, 0.1) 30%, rgba(255, 255, 255, 0.1) 90%);
-
-//     .search_input{
-//         background-color: transparent;
-//         font-size: 12px;
-//         font-family: "MonumentExtendedLight";
-//         display: flex;
-//         position: absolute;
-//         top: 7px;
-//         left: 56px;
-//     }
-//     .search_input::placeholder{
-//         color: rgba(255, 255, 255, 0.9);
-//     }
-
-//     .search_input:focus::placeholder{
-//         color: transparent;
-//         transition: .5s;
-//     }
-
-//     .search_input:enabled{
-//         color: white;
-//     }
-
-    // .search_img{
-    //     position: absolute;
-    //     top: 4px;
-    //     left: 17px;
-    //     width: 20px;
-    //     height: 20px;
-
-    //     &:hover{
-    //         cursor: pointer;
-    //     }
-    // }
-
-    // .vocal_img{
-    //     position: absolute;
-    //     top: 4px;
-    //     right: 17px;
-    //     width: 20px;
-    //     height: 20px;
-
-    //     &:hover{
-    //         cursor: pointer;
-    //     }
-    // }
-    
-
-
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -164,7 +108,6 @@
             }
         }
     }
-
     .second_folder_displaying{
         padding: 15px 20px;
         display: flex;
@@ -190,6 +133,7 @@
             }
         }
     }
+
 
     .first_txt_displaying{
         padding: 15px 20px;
