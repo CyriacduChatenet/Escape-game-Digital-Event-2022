@@ -12,7 +12,6 @@ import { JeuJustice } from "../components/Enigmes/JeuJustice/JeuJustice";
 import { JeuEcologie } from "../components/Enigmes/JeuEcologie/JeuEcologie";
 import { JeuTuyau } from "../components/Enigmes/JeuTuyau/JeuTuyau";
 import { StartPage } from "../pages/StartPage/StartPage";
-
 import Partage from "../components/Enigmes/partage/Partage";
 import { QCM } from "../components/QCM/QCM";
 import { Galerie } from "../components/Galerie/Galerie";
@@ -36,7 +35,6 @@ function App() {
           <Route exact path="/jeu-foret" element={<JeuFeuForet />} />
           <Route exact path="/jeu-justice" element={<JeuJustice />} />
           <Route exact path="/Partage" element={<Partage />} />
-          <Route exact path="/jeu-tuyau" element={<JeuTuyau />} />
           <Route exact path="/Galerie" element={<Galerie />} />
           <Route exact path="/start-page" element={<StartPage />} />
 
@@ -45,6 +43,7 @@ function App() {
           <Route exact path="/defeat" element={<Defeat />} />
           <Route exact path="/canadair" element={<Canadair />} />
           <Route exact path="/jeu-ecologie" element={<JeuEcologie />} />
+          <Route exact path="/jeu-tuyau" element={<JeuTuyau />} />
 
           <Route path='*' exact={true} element={<ErrorPage />} />
         </Routes>
