@@ -1,6 +1,7 @@
 import "./CorbeilleModal.scss";
 import { FaChevronRight } from 'react-icons/fa';
 import { useState } from "react/cjs/react.development";
+import {store} from "../../../redux/store"
 
 export const CorbeilleModal = () => {
   const [show,setShow] = useState(false)
@@ -8,7 +9,13 @@ export const CorbeilleModal = () => {
 
   const handleClick = () => setShow(true)
 
-  const handleRestauration = () => setRestauration(true)
+  const handleRestauration = () => {
+    store.dispatch({
+      type: "unlock/climat",
+      payload: true,
+    });
+    setRestauration(true)
+  }
 
   return (
     <div className="corbeille_page">

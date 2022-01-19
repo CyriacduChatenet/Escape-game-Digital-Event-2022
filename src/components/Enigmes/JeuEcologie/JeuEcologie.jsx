@@ -2,6 +2,8 @@ import "./JeuEcologie.scss";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { display } from "@mui/system";
+import {store} from "../../../redux/store"
+import { useEffect } from "react/cjs/react.development";
 
 // TODO :
 // BUG : décallage lors de l'entrée du mot dans le terminal et du ramassage du déchet
@@ -11,10 +13,13 @@ import { display } from "@mui/system";
 // Cocher la mission "Ecologie" dans le dashboard
 
 export const JeuEcologie = () => {
+  const missions = useSelector(state=> state.missionsReducer)
 
   const terminalText = "C:\hacker>"
 
   const unlock = useSelector(state => state.ecologieReducer)
+
+  const [isCompleted, setIsCompleted] = useState(false)
 
   const [dechetsList, setDechetsList] = useState([
     { name: "Mégot", trouve: false, img: "/assets/images/jeu-ecologie/megot.png", className: "dechet1", collect: false },
@@ -25,9 +30,21 @@ export const JeuEcologie = () => {
     { name: "Emballage", trouve: false, img: "/assets/images/jeu-ecologie/emballage.png", className: "dechet6", collect: false }
   ])
 
-  const [unlockDechetsList, setUnlockDechetsList] = useState([])
-
   const [userValue, setUservalue] = useState("")
+
+  useEffect(() => {
+    if(missions[0].completed){
+      setIsCompleted(true)
+    }
+  },[])
+
+  useEffect(() => {
+    dechetsList.map(dechet => {
+      dechet.collect = true
+      dechet.trouve = true
+    })
+    setDechetsList(dechetsList)
+  },[isCompleted])
 
   const handleChange = (e) => {
     const { value } = e.currentTarget
@@ -40,6 +57,7 @@ export const JeuEcologie = () => {
       }
     })
     setDechetsList(dechetsList)
+    checkGameIsValid()
   }
 
   const handleSubmit = (e) => {
@@ -51,12 +69,28 @@ export const JeuEcologie = () => {
         dechetsList[index].trouve = true
       }
     })
-    setDechetsList(dechetsList)
+    setDechetsList(dechetsList) 
   }
 
   const handleClick = (index) => {
     dechetsList[index].collect = true
     setDechetsList(dechetsList)
+    checkGameIsValid()
+  }
+
+  const checkGameIsValid = () => {
+    let numberOfCollect = 0
+    dechetsList.map(dechet => {
+      if(dechet.collect) numberOfCollect++
+    })
+
+    if(numberOfCollect >= 6) {
+      missions[0].completed = true
+      store.dispatch({
+        type: "missions/update",
+        payload: missions,
+      });
+    }
   }
 
   return (

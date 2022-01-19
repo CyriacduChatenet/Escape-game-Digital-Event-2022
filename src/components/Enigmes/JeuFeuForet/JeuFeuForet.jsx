@@ -4,6 +4,7 @@ import './JeuFeuForet.scss'
 export const JeuFeuForet = () => {
     const [three, setThree] = useState(100) 
     const [fire, setFire] = useState(0)
+    
 
     const [seconds, setSeconds] = useState(0)
     const [minutes, setMinutes] = useState(30)

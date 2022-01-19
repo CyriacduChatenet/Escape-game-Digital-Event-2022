@@ -4,7 +4,6 @@ import { store } from "../../redux/store"
 import "./QCM.scss";
 
 export const QCM = () => {
-
   const [selectedRadioQ1, setSelectedRadioQ1] = useState('');
   const radiosQ1 = ["3 douches", "5 douches", "1 douche"]
 
@@ -17,7 +16,8 @@ export const QCM = () => {
   const [questionState, setQuestionState] = useState(null)
 
   const CalculResponse = () => {
-    if (selectedRadioQ1 === "Answer 3" && selectedRadioQ2 === "Answer 1" && selectedRadioQ3 === "Answer 2") {
+    if (selectedRadioQ1 === "1 douche" && selectedRadioQ2 === "1 mois" && selectedRadioQ3 === "50 ans") {
+      console.log('good')
       setQuestionState(true)
       store.dispatch({
         type: "unlock/ecologie",

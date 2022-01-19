@@ -1,6 +1,16 @@
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal'
+import style from "../../PrimaryModal/style"
+import "../../PrimaryModal/primary-modal.scss"
 import "./Oracle.scss";
+import { useState } from 'react';
 
 export const OracleModal = () => {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
   return (
     <div className="oracle_modal_page">
         <div className="modal_container">
@@ -36,7 +46,31 @@ export const OracleModal = () => {
 
                 <div className="first_txt_displaying">
                     <img src="assets/images/folder-icon/file.png" alt="" className="file_displaying"/>
-                    <p className="treestructure_text">instruction.txt</p>
+
+                    <div className="dock-icon-container" onDoubleClick={handleOpen}>
+                        <p className="treestructure_text" >instruction.txt</p>
+
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box sx={style}>
+                                <ul>
+                                    <li>"Mégot"</li>
+                                    <li>"Sac plastique" </li>
+                                    <li>"Canette"</li>
+                                    <li>"Boulette de papier"</li>
+                                    <li>"Bouteille vide"</li>
+                                    <li>"Emballage"</li>
+                                </ul>
+                            </Box>
+                        </Modal>
+                    </div>
+
+                    
+                    {/* <p className="treestructure_text" onClick={handleClick}>instruction.txt</p> */}
                     <p className="treestructure_date">21/12/2017 2:38</p>
                     <p className="file_weight">490 Ko</p>
                 </div>
