@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import './JeuTuyau.scss'
+import './JeuRepartition.scss'
 
 // TODO :
 // Afficher les tuyaux manquant QUE quans ils ont executé le fichier qui se trouve dans Oracle
 // Compléter le chemin avec les tuyaux
 // Afficher l'écran de victoire
-// Cocher Répartission dans le dashboard
+// Cocher Répartition dans le dashboard
 
-export const JeuTuyau = () => {
+export const JeuRepartition = () => {
 
   const terminalText = "C:\hacker>"
 
@@ -85,7 +85,7 @@ export const JeuTuyau = () => {
   }
 
   return (
-    <div className='JeuTuyau'>
+    <div className='JeuRepartition'>
 
       <div className="terminal">
         <table className="table" border="1">
