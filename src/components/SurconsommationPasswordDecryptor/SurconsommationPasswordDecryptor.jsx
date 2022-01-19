@@ -1,28 +1,68 @@
+import { useSelector } from "react-redux";
 import { useState, useEffect } from "react/cjs/react.development";
 import { store } from "../../redux/store";
-import "./SurconsommationPasswordDecryptor.scss";
+import "./SurconsommationPasswordDecryptor.scss"
 
 export const SurconsommationPasswordDecryptor = () => {
   const [minutes, setMinutes] = useState(10);
   const [seconds, setSeconds] = useState(0);
+  const [barValue, setBarValue] = useState(0)  
 
-  const [barValue, setBarValue] = useState(0)
-  const [win, setWin] = useState(false)
+  const [numbersAnswer, setNumbersAnswer] = useState([
+    {name:"number1",response: "63", validated: false},
+    {name:"number2",response: "71", validated: false},
+    {name:"number3",response: "59", validated: false}
+  ])
+  const [errors, setErros] = useState(0)
+  const [gameIsValidated, setGameIsValidated] = useState(false)
+  const [userValues, setUserValues] = useState([])
+  const missions = useSelector(state=> state.missionsReducer)
 
-  const [codeFirstPart, setCodeFirstPart] = useState("")
-  const [codeSecondPart, setCodeSecondPart] = useState("")
-  const [codeThirdPart, setCodeThirdPart] = useState("")
+  // const resizeBarChart = () => {
+  //   if(codeFirstPart == 63 && codeSecondPart == 71 && codeThirdPart == 59){
+  //     setWin(true)
+  //   }
+  //   if(codeFirstPart != 63 && codeFirstPart != ""){
+  //     setBarValue(barValue +10)
+  //   }
+  // }
 
-  const resizeBarChart = () => {
-    if(codeFirstPart == 63 && codeSecondPart == 71 && codeThirdPart == 59){
-      setWin(true)
-    }
-    if(codeFirstPart != 63 && codeFirstPart != ""){
-      setBarValue(barValue +10)
+  const checkGameIsValidated = () => {
+    let numberOfValidated = 0
+    numbersAnswer.map(answer => {
+      if(answer.validated === true) {
+        numberOfValidated++
+      }
+    })
+
+    if(numberOfValidated >= 3){
+      setGameIsValidated(true)
+
+      missions[3].completed = true
+      store.dispatch({
+        type: "missions/update",
+        payload: missions,
+      });
     }
   }
 
-  resizeBarChart();
+  const handleChange = (e) => {
+    const {value, name} = e.currentTarget
+
+    numbersAnswer.map(answer => {
+      if(answer.name === name){
+        if(value === answer.response){
+          answer.validated = true
+        }
+        if(value != answer.response && value.length >= 2){
+          setErros(errors + 1)
+          setBarValue(barValue+errors)
+        }
+      }
+    })
+    setNumbersAnswer(numbersAnswer)
+    checkGameIsValidated()
+  }
 
   let intervalTime;
 
@@ -58,9 +98,9 @@ export const SurconsommationPasswordDecryptor = () => {
         <div className="bar" style={{height: barValue + "%"}}></div>
       </div>
       <div className="inputs-decryptor">
-        <input type="text" name="" id="" className="input-decryptor" onChange={(e) => {setCodeFirstPart(e.target.value)}} />
-        <input type="text" name="" id="" className="input-decryptor" />
-        <input type="text" name="" id="" className="input-decryptor" />
+        {numbersAnswer.map(answer => (
+          <input type="text" name={answer.name} className={answer.validated === true ? "validated input-decryptor" : "input-decryptor"} onChange={handleChange} maxLength={2} />
+          ))}
       </div>
       <div className="menus-decryptor">
         <div className="row-top">
@@ -116,6 +156,8 @@ export const SurconsommationPasswordDecryptor = () => {
           </div>
         </div>
       </div>
+
+          {gameIsValidated && <h1 className="victorySurconso">Victory</h1>}
     </div>
   );
 };

@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal'
 import style from "../PrimaryModal/style"
-import React, { useState, useRef } from "react";
 import "../PrimaryModal/primary-modal.scss"
+import React, { useState, useRef } from "react";
 import './DockIcon.scss';
 
 export const DockIcon = ({children,dockText, dockIcon}) => {
