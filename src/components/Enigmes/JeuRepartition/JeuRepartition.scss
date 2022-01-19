@@ -108,8 +108,8 @@
   height: 62px;
   background: rgba(255, 255, 255, 0.158);
 
--webkit-backdrop-filter: blur( 4.5px );
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  -webkit-backdrop-filter: blur( 4.5px );
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
   border-radius: 5px;
 }
 .filter1{
