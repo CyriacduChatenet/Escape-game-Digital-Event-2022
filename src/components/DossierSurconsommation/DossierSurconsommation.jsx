@@ -5,6 +5,7 @@ import style from "../../components/PrimaryModal/style"
 import Box from '@mui/material/Box';
 import { JeuSurconsommation } from '../Enigmes/JeuSurconsommation/JeuSurconsommation';
 import { SurconsommationPasswordDecryptor } from '../SurconsommationPasswordDecryptor/SurconsommationPasswordDecryptor';
+import { Surconsommation } from '../Surconsommation/Surconsommation';
 
 export const DossierSurconsommation = () => {
 
@@ -117,7 +118,7 @@ export const DossierSurconsommation = () => {
                 aria-describedby="modal-modal-description"
               >
                 <Box sx={style}>
-                  < JeuSurconsommation />
+                  < Surconsommation />
                 </Box>
               </Modal>
             </div>
