@@ -12,6 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    z-index: 50;
 
     .loader_video{
         position: absolute;

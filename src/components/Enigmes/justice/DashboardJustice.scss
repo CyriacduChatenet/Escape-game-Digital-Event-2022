@@ -1,5 +1,5 @@
 .tableauDeBordDiv{
-    background: url(../../../../public/assets/images/background-justice/Tdb.png);
+    background: url('../../../../public/assets/images/justice/Tdb.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -8,4 +8,43 @@
     position: absolute;
     left: 0px;
     z-index: -1;
+    .terminal {
+        .table {
+        position: absolute;
+        right: 1%;
+        bottom: 1%;
+        border: 1px solid #030303;
+        border-collapse: collapse; 
+        width:350px;      
+        .top {
+            border: 1px solid #030303;
+            font-family: "MonumentExtendedLight";
+            font-size:9px;
+            background-color:#FFF;
+            color: #030303;
+            padding: 8px 12px;
+            text-align:left;
+        }
+        .middle {
+            border-top: 1px solid #FFF; 
+            border-left: 1px solid #030303;
+            border-right: 1px solid #030303;
+            border-bottom: 1px solid #030303;
+            font-family: "MonumentExtendedLight";
+            font-size:9px;
+            background-color:#030303;
+            color: white;
+            vertical-align: top;
+            height: 130px;
+            padding: 8px 12px;
+            .middle-text {
+            font-family: "MonumentExtendedLight";
+            display: inline-block;
+            }
+            .margin-bottom {
+            margin-bottom: 12px;
+            }
+        }
+    } 
+  }
 }
