@@ -26,6 +26,8 @@ export const LoginJustice = ({ setIsLogin, setCurrentPage }) => {
     if (credentials.username === "ADMIN" && credentials.password === "mo2P@ss") {
       setCurrentPage("dashboard")
       setIsLogin(true)
+    }else{
+      alert(`Nom d'utilisateur ou mot de passe incorrect`)
     }
   }
 

@@ -39,10 +39,6 @@
     display: flex;
     flex-direction: column;
 
-    .test{
-      color: black;
-    }
-
     .login_input_username{
       width: 350px;
       height: 40px;
@@ -144,4 +140,13 @@
       }
     } 
   }
+}
+
+.incorrect{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+  left: 50px;
+  font-weight: bold;
 }
