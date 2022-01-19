@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Raleway-Light";
+    src: url("../../../public/assets/fonts/Raleway-Light.ttf") format("otf"),
+}
 *{
     margin: 0;
     padding: 0;
@@ -32,13 +36,16 @@
     color: #FFF;
     height: 600px;
     border-radius: 10px;
+    p{
+        font-family: "Raleway-Light";
+    }
 }
 .leftNavDossierRepartition{
     background-color: #62BAB3;
     border-right: 2px solid #86EBD9;
     padding-top: 12%;
     padding-left: 3%;
-    width: 30%;
+    width: 25%;
 }
 .closeDossierRepartition{
     width: 2.5vw;
@@ -98,7 +105,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-    width: 70%;
+    width: 75%;
 }
 .chevron{
     margin-left: 10%;
