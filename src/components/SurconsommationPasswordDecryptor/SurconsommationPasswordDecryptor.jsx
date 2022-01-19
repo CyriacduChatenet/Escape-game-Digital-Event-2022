@@ -1,11 +1,11 @@
+import { useSelector } from "react-redux";
 import { useState, useEffect } from "react/cjs/react.development";
 import { store } from "../../redux/store";
-import "./SurconsommationPasswordDecryptor.scss";
+import "./SurconsommationPasswordDecryptor.scss"
 
 export const SurconsommationPasswordDecryptor = () => {
   const [minutes, setMinutes] = useState(10);
   const [seconds, setSeconds] = useState(0);
-
   const [barValue, setBarValue] = useState(0)  
 
   const [numbersAnswer, setNumbersAnswer] = useState([
@@ -14,10 +14,9 @@ export const SurconsommationPasswordDecryptor = () => {
     {name:"number3",response: "59", validated: false}
   ])
   const [errors, setErros] = useState(0)
-
   const [gameIsValidated, setGameIsValidated] = useState(false)
-
   const [userValues, setUserValues] = useState([])
+  const missions = useSelector(state=> state.missionsReducer)
 
   // const resizeBarChart = () => {
   //   if(codeFirstPart == 63 && codeSecondPart == 71 && codeThirdPart == 59){
@@ -38,6 +37,12 @@ export const SurconsommationPasswordDecryptor = () => {
 
     if(numberOfValidated >= 3){
       setGameIsValidated(true)
+
+      missions[3].completed = true
+      store.dispatch({
+        type: "missions/update",
+        payload: missions,
+      });
     }
   }
 
