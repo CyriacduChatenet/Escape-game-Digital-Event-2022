@@ -1,0 +1,82 @@
+@import '../../../public/assets/styles/import.scss';
+
+@font-face {
+        font-family: "MonumentExtendedLight";
+        src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
+.credits {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .loader_video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    // .overlay {
+    //     position: fixed;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background-color: rgba(25, 46, 42, 0.4);
+    //     z-index: 2;
+    // }
+
+    .credits-texte {
+        background: rgba(134, 235, 217, 0.1);
+        padding: 2em;
+        width: 800px;
+        height: auto;
+        margin-left: 1em;
+        color: white;
+        h1 {
+            font-family: "MonumentExtendedLight", Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            margin-bottom: 2em;
+            color: #86EBD9;
+            text-shadow: #86EBD9 1px 0 3px;
+            text-align: center;
+        }
+        p {
+            font-family: "MonumentExtendedLight", Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .apprenants {
+            margin-bottom: 0;
+        }
+    }
+    .merci {
+        background: rgba(134, 235, 217, 0.1);
+        padding: 2em;
+        width: 400px;
+        height: auto;
+        margin-top: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-family: "MonumentExtendedLight", Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        img {
+            margin-top: 1em;
+            width: 300px;
+        }
+    }
+}

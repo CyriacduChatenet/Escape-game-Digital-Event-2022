@@ -40,6 +40,12 @@
             text-decoration: underline;
             transition: .2s;
         }
+        a {
+            color: white;
+            &:hover {
+                color: white;
+            }
+        }
     }
 }
 
@@ -84,6 +90,7 @@
             font-size: 15px;
             cursor: pointer;
             font-family: 'MonumentExtendedLight';
+            text-align: center;
 
         }
     }
@@ -175,16 +182,23 @@
 
         .link-news{
             cursor: pointer;
+            text-decoration: underline;
 
             &:hover{
-                text-decoration: underline;
+                color: #86EBD9;
+                transition: .2s;
+            }
+
+            &:not(:hover){
+                transition: .2s;
             }
         }
     }
 }
 .news {
     color: white;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 18px;
 }
 .logo-tv-container{
     width: 100%;
@@ -196,4 +210,10 @@
         display: flex;
         padding: 0 2%;
     }
+}
+
+.glitch_video{
+    position: absolute;
+    top: 0;
+    z-index: 10;
 }

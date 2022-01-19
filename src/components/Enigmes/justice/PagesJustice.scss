@@ -48,4 +48,16 @@
         }
     } 
   }
+  .btn-publier {
+      button {
+        position: absolute;
+        bottom: 2%;
+        left: 13%;
+        background-color: black;
+        padding: 8px;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+  }
 }

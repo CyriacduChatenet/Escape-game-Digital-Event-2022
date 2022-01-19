@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'MonumentExtendedLight';
+    src: url('../../../../../../public/assets/fonts/MonumentExtended-Light.ttf');
+}
+
+@font-face {
+    font-family: 'MonumentExtendedRegular';
+    src: url('../../../../../../public/assets/fonts/MonumentExtended-Regular.otf');
+}
+
+@font-face {
+    font-family: 'MonumentExtendedBlack';
+    src: url('../../../../../../public/assets/fonts/MonumentExtended-Black.otf');
+}
+
+.OracleModalArticle1{
+    width: 1000px;
+    height: 620px;
+    background: linear-gradient(90deg, rgba(63, 137, 141, 1) 100%, rgba(255, 255, 255, 1) 100%);
+    border-left: solid 2px #86EBD9;
+    position: absolute;
+    top: 220px;
+    left: 460px;
+
+    .article_header{
+        width: 100%;
+        height: 10%;
+        background-color: #5B7B7E;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        padding-left: 30px  ;
+        .article_title{
+            color: white;
+            font-size: 15px;
+            font-family: 'MonumentExtendedBlack';
+            margin-top: 5px;
+        }
+    
+        .article_img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .article_main{
+        width: 100%;
+        height: 520px;
+        text-align: start;
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow-y: scroll;
+
+        .article_subtitle{
+            color: white;
+            font-family: 'MonumentExtendedLight';
+            font-size: 14px;
+        }
+
+        .article_subtitle_2{
+            padding-top: 50px;
+            color: white;
+            font-family: 'MonumentExtendedLight';
+            font-size: 14px;
+        }
+
+        .article_text{
+            color: white;
+            font-family: 'MonumentExtendedLight';
+            font-size: 12px;
+            padding-top: 20px;
+            line-height: 30px;
+            text-align: justify;
+        }
+
+        .important_text{
+            font-family: 'MonumentExtendedBlack';
+        }
+    }
+
+
+
+}

@@ -18,6 +18,12 @@ retrouvez les et mettez les en ligne pour révéler au monde la vérité.</span>
           </td></tr>
         </table>
       </div>
+      {/* Button a afficher seulement si le select a bien été cliqué */}
+      <div className='btn-publier'>
+        <button>Publier les données</button>
+      </div>
+      
+      {/* OnClick : le mini jeu est validé, retour au dashboard, coche du mini jeu, écran final WIN */}
     </div>
   );
 }

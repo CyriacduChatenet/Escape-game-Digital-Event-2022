@@ -5,6 +5,7 @@ import style from "../../PrimaryModal/style"
 import "../../PrimaryModal/primary-modal.scss"
 import "./Oracle.scss";
 import { useState } from 'react';
+import { OracleModalArticleFolder } from './OracleModalArticleFolder/OracleModalArticleFolder';
 
 export const OracleModal = () => {
     const [open, setOpen] = useState(false);
@@ -24,12 +25,6 @@ export const OracleModal = () => {
                 <img src="/assets/images/OracleBDD/navbar.png" alt="" className="navbar" />
             </div>
 
-            {/* <div className="input_displaying">
-                <input type="text" placeholder="Recherches..." className="search_input"/>
-                <img src="assets/images/folder-icon/search.png" alt="" className="search_img"/>
-                <img src="assets/images/folder-icon/vocal.png" alt="" className="vocal_img"/>
-            </div> */}
-
             <div className="treestructure_container">
 
                 <div className="first_folder_displaying">
@@ -45,10 +40,9 @@ export const OracleModal = () => {
                 </div>
 
                 <div className="first_txt_displaying">
-                    <img src="assets/images/folder-icon/file.png" alt="" className="file_displaying"/>
-
                     <div className="dock-icon-container" onDoubleClick={handleOpen}>
-                        <p className="treestructure_text" >instruction.txt</p>
+                        <img src="assets/images/folder-icon/folder-icon.png" alt="" className="folder_displaying"/>
+                        <p className="treestructure_text">Instructions</p>
 
                         <Modal
                             open={open}
@@ -57,20 +51,11 @@ export const OracleModal = () => {
                             aria-describedby="modal-modal-description"
                         >
                             <Box sx={style}>
-                                <ul>
-                                    <li>"Mégot"</li>
-                                    <li>"Sac plastique" </li>
-                                    <li>"Canette"</li>
-                                    <li>"Boulette de papier"</li>
-                                    <li>"Bouteille vide"</li>
-                                    <li>"Emballage"</li>
-                                </ul>
+                                <OracleModalArticleFolder />
                             </Box>
                         </Modal>
                     </div>
 
-                    
-                    {/* <p className="treestructure_text" onClick={handleClick}>instruction.txt</p> */}
                     <p className="treestructure_date">21/12/2017 2:38</p>
                     <p className="file_weight">490 Ko</p>
                 </div>
@@ -99,10 +84,7 @@ export const OracleModal = () => {
                     <p className="treestructure_date">21/12/2017 2:38</p>
                     <p className="file_weight">74 Ko</p>
                 </div>
-
             </div>
-
-            
 
             <div className="bg-black"></div>
         </div> 

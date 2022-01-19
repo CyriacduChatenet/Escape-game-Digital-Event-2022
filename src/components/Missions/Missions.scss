@@ -1,13 +1,21 @@
 @import '../../../public/assets/styles/import.scss';
 
+@font-face {
+    font-family: "MonumentExtendedLight";
+    src: url("../../../public/assets/fonts/MonumentExtended-Light.ttf") format('truetype');
+}
+
 .subtitle {
     text-align: center;
     color: white;
     font-size: 2.5vh;
+    font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
 }
 
 .mission-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    font-family: 'MonumentExtendedLight', Arial, Helvetica, sans-serif;
 }

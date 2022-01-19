@@ -16,7 +16,7 @@ export const Dock = () => {
     <div className="dock-container">
       <div className="row-dock">
 
-        <DockIcon dockText="Justice" dockIcon="/assets/images/dock-icon/justice.png" >
+        <DockIcon dockText="Désinformation" dockIcon="/assets/images/dock-icon/justice.png" >
           <IndexJustice />
         </DockIcon>
 
@@ -38,10 +38,6 @@ export const Dock = () => {
 
         <DockIcon dockText="Surconsommation" dockIcon="/assets/images/dock-icon/surConsommation.png" >
           <Surconsommation/>
-        </DockIcon>
-
-        <DockIcon dockText="Dossiers" dockIcon="/assets/images/dock-icon/doc.png" >
-          {/* ? */}
         </DockIcon>
 
         <DockIcon dockText="Oracle" dockIcon="/assets/images/dock-icon/earth.png" >

@@ -42,16 +42,12 @@ export const DereglementClimatique = () => {
           </video>
           <div className="tv-interface">
             <div className="logo-tv-container">
-              <div className="logo-tv">
-                <img src="assets/images/canad-air/logoTv.png" alt="" className="logoTV" />
-              </div>
             </div>
-            {/* <div className="breaking-news-overflow-x"></div> */}
             <div className="tv-effect"></div>
             <div className="news-link">
               <p className="news">
                 <strong>Canada :</strong> Pour plus d'informations sur ce sujet
-                et bien d'autres ... rendez-vous sur ce site <br />{" "}
+                et bien d'autres ... rendez-vous sur ce site {" "}
                 <span
                   className="link-news"
                   onClick={() => {
@@ -76,8 +72,8 @@ export const DereglementClimatique = () => {
           >
             NOS AVIONS
           </li>
-          <li className="canad-air-nav-item">NOTRE HISTOIRE</li>
-          <li className="canad-air-nav-item">LOCALISATION</li>
+          <li className="canad-air-nav-item"><a href="/404" target="_blank">NOTRE HISTOIRE</a></li>
+          <li className="canad-air-nav-item"><a href="/404" target="_blank">LOCALISATION</a></li>
         </ul>
       </nav>
       {openHackMenu === false ? (
@@ -88,13 +84,14 @@ export const DereglementClimatique = () => {
               Canad-air lutte contre les incendies et le réchauffement cimatique
               depuis 1952.
             </p>
-            <button className="canad-air-watch-video">
+            <a className="canad-air-watch-video" href="/404" target="_blank">
               VISIONNEZ LA VIDEO
-            </button>
+            </a>
           </div>
           <div className="airplane-normal"></div>
         </div>
       ) : null}
+      
       {openHackMenu ? (
         <div className="canad-air-piratage">
           <div className="canad-air-hack-form">

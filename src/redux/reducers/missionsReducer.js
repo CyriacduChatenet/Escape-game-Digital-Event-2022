@@ -1,10 +1,12 @@
 import { MISSIONS_UPDATE_ACTION } from "../actions"
 
 const initialState = [
-  { name: "ecologie", completed: false },
-  { name: "partage", completed: false },
-  { name: "climat", completed: false },
-  { name: "surconsommation", completed: false },
+  { name: "Ecologie", completed: false },
+  { name: "Répartition des ressources", completed: false },
+  { name: "Dérèglement climatique", completed: false },
+  { name: "Surconsommation", completed: false },
+  { name: "Extinction des animaux", completed: false },
+  { name: "Désinformation", completed: false },
 ]
 
 export default function userReducer(state = initialState, action) {
