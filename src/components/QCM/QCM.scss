@@ -83,7 +83,7 @@
     position: absolute;
     left: 420px;
     bottom: 30px;
-    background-color: black;
+    background: rgba(63, 137, 141, 1);
     color: white;
     padding: 25px 50px;
     border-radius: 20px;
@@ -91,7 +91,7 @@
     font-family: "MonumentExtendedBlack";
 
     &:hover{
-        color: black;
+        color: rgba(63, 137, 141, 1);
         background-color: white;
         transition: .5s;
     }
