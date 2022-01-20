@@ -14,9 +14,7 @@ export const Missions = () => {
     const db = getFirestore(app);
     const chatColleftionRef = collection(db, 'missions');
   
-    useEffect(()=>{
-        getMissions()
-    },[])
+    
 
     const getMissions = async () => {
       onSnapshot(chatColleftionRef, (querySnapshot) => {
@@ -37,6 +35,10 @@ export const Missions = () => {
           
       })
     }
+
+    useEffect(()=>{
+        getMissions()
+    },[])
 
     return (
         <DropdownWindow position={{top:0,right:0}}>

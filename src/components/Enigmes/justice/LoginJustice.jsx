@@ -28,6 +28,7 @@ export const LoginJustice = ({ setIsLogin, setCurrentPage }) => {
       && missions[1].completed === true
       && missions[2].completed === true
       && missions[3].completed === true
+      && missions[4].completed === true
       ){
         setUnlock(true)
       }

@@ -4,6 +4,9 @@ import SpeechRecognition from 'react-speech-recognition/lib/SpeechRecognition';
 import { useSpeechRecognition } from 'react-speech-recognition';
 import { Box } from "@mui/system";
 import icebergs from "./icebergs.json"
+import {store} from "../../../redux/store"
+import { useSelector } from "react-redux";
+import { updateMission } from "../../../services/firebaseService";
 
 export const JeuPingouins = () => {
   const [translateXValue, setTranslateXValue] = useState(0)
@@ -16,6 +19,7 @@ export const JeuPingouins = () => {
   const [animalsTop, setAnimalsTop] = useState(0)
   const [animalsLeft, setAnimalsLeft] = useState(0)
   const [displayLoader, setDisplayLoader] = useState(true)
+  const missions = useSelector(state=> state.missionsReducer)
 
   const [isListening, setIsListening] = useState(false)
 
@@ -30,7 +34,16 @@ export const JeuPingouins = () => {
     },
     {
       command : ["A3"],
-      callback : () => {mooveAnimals(2)}
+      callback : () => {
+          mooveAnimals(2)
+
+          missions[4].completed = true
+          store.dispatch({
+              type: "missions/update",
+              payload: missions,
+            });
+          updateMission("4")
+        }
     },
     {
       command : ["A4"],
