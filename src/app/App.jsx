@@ -68,6 +68,11 @@ function App() {
           <Route path='*' exact={true} element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
+
+      <audio autoPlay src="/assets/audio/music/music-escape.mp3">
+      Your browser does not support the
+            <code>audio</code> element.
+      </audio>
     </div>
   );
 }
