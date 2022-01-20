@@ -38,7 +38,7 @@ export const DossierSurconsommation = () => {
       <div className='popUpDossierSurconsommation' style={dossierSurconsommation === false ? { display: 'none' } : { display: 'flex' }}>
         <div className='leftNavDossierSurconsommation'>
           <div className='leftNavSysteme'>
-            <span className='chevronMiddle'>{chevron}</span>
+            <span className='chevronMiddle'>{chevron}</span>ù
             <div className='logoSystemSurconsommation'></div>
             &nbsp;
             <p>Système</p>
