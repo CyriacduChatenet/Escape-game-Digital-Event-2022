@@ -41,7 +41,7 @@ export const OracleModalArticle1 = () => {
           marseillais. Des kayakistes et plongeurs participaient à l’opération
           et sont parvenus à récupérer 1,2 tonnes de déchets. Selon les données
           de National Geographic, 73% des déchets sur les plages à travers le
-          monde sont à base de plastique. <span className="important_text">Emballages</span>, filtres de cigarettes,
+          monde sont à base de plastique. <span className="important_text">Emballage</span>, filtres de cigarettes,
           sacs ou bacs en polystyrène, bouteilles, bouchons, rien n'y échappe.
           Un véritable double problème. D'une part, les estimations de la durée
           de vie du plastique vont de 450 ans à l'infini. D'autre part, lors de

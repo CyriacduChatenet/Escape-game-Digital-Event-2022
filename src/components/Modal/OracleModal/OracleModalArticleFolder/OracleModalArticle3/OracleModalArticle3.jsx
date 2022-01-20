@@ -36,7 +36,7 @@ export const OracleModalArticle3 = () => {
           t-shirt à l’effigie d’une marque française de matériel de détection
           sur le dos. Parfois, entre deux piécettes, Nicolas retrouve ainsi des
           Playmobil, des petites voiturettes en acier, de minuscules boucles
-          d’oreille… Cette fois, Nicolas et Benoît récoltent une <span className="important_text">bouteille vide </span>
+          d’oreille… Cette fois, Nicolas et Benoît récoltent une <span className="important_text">Bouteille vide </span>
           et surtout surtout quelques beaucoup de capsules de bières. "1664 ! Je
           ne l'avais pas encore, celle-là", ironise Benoît. Sur le chemin, ils
           croisent la route de deux ou trois autres prospecteurs. "Le soir, il

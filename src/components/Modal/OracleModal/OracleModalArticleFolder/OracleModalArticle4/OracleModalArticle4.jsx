@@ -37,7 +37,7 @@ export const OracleModalArticle4 = () => {
         </p>
 
         <p className="article_text">
-          Chaque année, ce sont environ 640 000 tonnes de <span className="important_text">sacs plastiques</span> qui
+          Chaque année, ce sont environ 640 000 tonnes de <span className="important_text">Sac plastiques</span> qui
           finissent abandonnés en mer, ce qui représente près de 10% de la
           pollution plastique constatée dans les milieux marins et 70% des gros
           déchets en plastique qui flottent dans les océans.5 000 milliards,
