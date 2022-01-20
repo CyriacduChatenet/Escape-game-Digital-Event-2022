@@ -25,22 +25,22 @@ export const DashboardPage = () => {
       <Terminal />
       <ProgressBar />
       <div className="dossierDivDashboard">
-        <DraggableFolder defaultPosition={{ top: 200, right: 100 }}>
+        <DraggableFolder defaultPosition={{ top: 300, right: 100 }}>
           <ExtinctionEspeceDossier />
         </DraggableFolder>
-        <DraggableFolder defaultPosition={{ top: 200, right: 250 }}>
+        <DraggableFolder defaultPosition={{ top: 300, right: 250 }}>
           <DereglementClimatiqueDossier />
         </DraggableFolder>
-        <DraggableFolder defaultPosition={{ top: 350, right: 250 }}>
+        <DraggableFolder defaultPosition={{ top: 450, right: 250 }}>
           <SurconsommationDossier />
         </DraggableFolder>
-        <DraggableFolder defaultPosition={{ top: 350, right: 100 }}>
+        <DraggableFolder defaultPosition={{ top: 450, right: 100 }}>
           <EcologieDossier />
         </DraggableFolder>
-        <DraggableFolder defaultPosition={{ top: 350, right: 400 }}>
+        <DraggableFolder defaultPosition={{ top: 450, right: 400 }}>
           <RepartitionDossier />
         </DraggableFolder>
-        <DraggableFolder defaultPosition={{ top: 200, right: 400 }}>
+        <DraggableFolder defaultPosition={{ top: 300, right: 400 }}>
           <JusticeDossier />
         </DraggableFolder>
       </div>
