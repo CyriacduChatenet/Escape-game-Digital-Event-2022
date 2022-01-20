@@ -38,7 +38,7 @@ export const OracleModalArticle2 = () => {
             l'écologie suite à plusieurs de menaces de morts et de l’envoi d’une{" "}
             <span className="important_text">Boulette de papier</span>, il
             fustigeait le manque de conscience écologique de nos concitoyens qui
-            continuent à jeter leurs <span className="important_text">mégots</span> de cigarettes par terre. Ce sont
+            continuent à jeter leurs <span className="important_text">Mégots</span> de cigarettes par terre. Ce sont
             précisément les filtres à cigarettes qui posent problème car aucune
             réglementation n’existe à l’échelle de la planète pour procéder à
             leur élimination et par conséquent, une très grande partie des
