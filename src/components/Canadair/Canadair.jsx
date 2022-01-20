@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux'
 import { useEffect } from 'react/cjs/react.development';
 import {store} from "../../redux/store"
 import './Canadair.scss'
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs, setDoc, doc,updateDoc } from 'firebase/firestore';
+import firebaseConfig from "../../firebaseConfig";
 
 export const Canadair = () => {
     const [credentials, setCredentials] = useState("");
@@ -10,6 +13,8 @@ export const Canadair = () => {
     const missions = useSelector(state=> state.missionsReducer)
     const [isValide, setIsValide] = useState(false)
     const [isCompled, setIsCompled] = useState(false)
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
     useEffect(() => {
         console.log(missions)
@@ -27,6 +32,7 @@ export const Canadair = () => {
             if(value == 'escape'){
                 setIsValide(true)
                 
+                updateDoc(doc(db, "missions","2"), {completed:true});
                 missions[2].completed = true
                 store.dispatch({
                     type: "missions/update",

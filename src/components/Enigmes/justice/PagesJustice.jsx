@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react/cjs/react.development';
 import { useSelector } from 'react-redux'
 import {store} from "../../../redux/store"
 import './PagesJustice.scss'
+import { updateMission } from '../../../services/firebaseService';
 
 const PagesJustice = ({selectValue}) => {
   const [background,setBackground] = useState('')
@@ -20,6 +21,7 @@ const PagesJustice = ({selectValue}) => {
 
   const handleClick = () => {
     console.log('click')
+    updateMission("5")
     missions[5].completed = true
     store.dispatch({
         type: "missions/update",

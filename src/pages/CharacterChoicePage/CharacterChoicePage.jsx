@@ -14,6 +14,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 import firebaseConfig from "../../firebaseConfig";
+import { resetMissions, updateMission } from "../../services/firebaseService";
 
 const initialsToggleState = {
   pecheur: false,
@@ -35,6 +36,9 @@ export const CharacterChoicePage = () => {
     window.addEventListener('keydown', (e) => {
       if (e.key === 'a' && e.ctrlKey) {
         updateDoc(doc(db, "characters", "selected"), initialsToggleState);
+      }
+      if (e.key === 'q' && e.ctrlKey) {
+        resetMissions()
       }
     })
     getCharacters()

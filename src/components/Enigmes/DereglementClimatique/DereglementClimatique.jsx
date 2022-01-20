@@ -2,6 +2,7 @@ import { useEffect, useState } from "react/cjs/react.development";
 import "./DereglementClimatique.scss";
 import {store} from "../../../redux/store"
 import { useSelector } from "react-redux";
+import { updateMission } from "../../../services/firebaseService";
 
 export const DereglementClimatique = () => {
   const [openHackMenu, setOpenHackMenu] = useState(false);
@@ -20,6 +21,7 @@ export const DereglementClimatique = () => {
           type: "missions/update",
           payload: missions,
         });
+        updateMission("2")
     } else {
       alert("loose");
     }

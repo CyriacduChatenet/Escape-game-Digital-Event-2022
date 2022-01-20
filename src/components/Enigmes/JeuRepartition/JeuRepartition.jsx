@@ -10,6 +10,7 @@ import tuyaux from "./tuyaux.json"
 import emplacements from "./emplacements.json"
 import {store} from "../../../redux/store"
 import { useSelector } from 'react-redux'
+import { updateMission } from '../../../services/firebaseService';
 
 export const JeuRepartition = () => {
   const terminalText = "C:\hacker>"
@@ -43,6 +44,8 @@ export const JeuRepartition = () => {
       && emplacementsClick[7].tuyau.type === "tuyau1"
     ){
       setIsValidated(true)
+
+      updateMission("1")
       
       missions[1].completed = true
       store.dispatch({

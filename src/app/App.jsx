@@ -30,6 +30,7 @@ import { OracleModalArticle4 } from "../components/Modal/OracleModal/OracleModal
 import { OracleModalArticle5 } from "../components/Modal/OracleModal/OracleModalArticleFolder/OracleModalArticle5/OracleModalArticle5";
 
 function App() {
+
   return (
     <div className="app">
       <BrowserRouter>
