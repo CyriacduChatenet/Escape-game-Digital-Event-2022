@@ -117,17 +117,6 @@ export const SurconsommationPasswordDecryptor = () => {
         ))}
       </div>
       <div className="menus-decryptor">
-        <div className="row-top">
-          <div className="decryptor-part">
-            <div className="code-unlock">
-              <div className="code-part-fix">12</div>
-              <div className="code-part-fix">44</div>
-              <div className="code-part-fix">59</div>
-            </div>
-            <div className="decryptor-desc">
-              Un bloc est correct et bien placé
-            </div>
-          </div>
           <div className="surconsommation-chart">
             <div className="bar" style={{ height: barValue + "%" }}></div>
           </div>
@@ -206,6 +195,5 @@ export const SurconsommationPasswordDecryptor = () => {
           {gameIsValidated && <Victory />}
         </div>
       </div>
-    </div>
   );
 };
