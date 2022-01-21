@@ -5,6 +5,7 @@ import { display } from "@mui/system";
 import {store} from "../../../redux/store"
 import { useEffect } from "react/cjs/react.development";
 import { updateMission } from "../../../services/firebaseService";
+import { Victory } from "../../Victory/Victory";
 
 // TODO :
 // BUG : décallage lors de l'entrée du mot dans le terminal et du ramassage du déchet
@@ -32,6 +33,8 @@ export const JeuEcologie = () => {
   ])
 
   const [userValue, setUservalue] = useState("")
+
+  const [gameIsValidated, setGameIsValidated] = useState(false);
 
   useEffect(() => {
     if(missions[0].completed === true){
@@ -147,6 +150,8 @@ export const JeuEcologie = () => {
           ))
         }
       </div>
+
+      {/* {gameIsValidated && <Victory />} */}
 
     </div>
   );
