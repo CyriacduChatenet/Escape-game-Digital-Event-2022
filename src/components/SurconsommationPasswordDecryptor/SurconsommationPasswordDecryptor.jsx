@@ -116,84 +116,65 @@ export const SurconsommationPasswordDecryptor = () => {
           />
         ))}
       </div>
-      <div className="menus-decryptor">
-          <div className="surconsommation-chart">
-            <div className="bar" style={{ height: barValue + "%" }}></div>
-          </div>
-          <div className="inputs-decryptor">
-            {numbersAnswer.map((answer) => (
-              <input
-                type="text"
-                name={answer.name}
-                className={
-                  answer.validated === true
-                    ? "validated input-decryptor"
-                    : "input-decryptor"
-                }
-                onChange={handleChange}
-                maxLength={2}
-              />
-            ))}
-          </div>
-          <div className="menus-decryptor">
-            <div className="row-top">
-              <div className="decryptor-part">
-                <div className="code-unlock">
-                  <div className="code-part-fix">12</div>
-                  <div className="code-part-fix">44</div>
-                  <div className="code-part-fix">59</div>
-                </div>
-                <div className="decryptor-desc">
-                  Un bloc est correct et bien placé
-                </div>
-              </div>
-              <div className="decryptor-part">
-                <div className="code-unlock">
-                  <div className="code-part-fix">12</div>
-                  <div className="code-part-fix">85</div>
-                  <div className="code-part-fix">71</div>
-                </div>
-                <div className="decryptor-desc">
-                  Un bloc est correct mais mal placé
-                </div>
-              </div>
-            </div>
-            <div className="row-mid">
-              <div className="decryptor-part">
-                <div className="code-unlock">
-                  <div className="code-part-fix">59</div>
-                  <div className="code-part-fix">63</div>
-                  <div className="code-part-fix">12</div>
-                </div>
-                <div className="decryptor-desc">
-                  Deux blocs sont correct mais mal placés
-                </div>
-              </div>
-              <div className="decryptor-part">
-                <div className="code-unlock">
-                  <div className="code-part-fix">03</div>
-                  <div className="code-part-fix">98</div>
-                  <div className="code-part-fix">44</div>
-                </div>
-                <div className="decryptor-desc">Aucun bloc n'est correct</div>
-              </div>
-            </div>
-            <div className="row-bottom">
-              <div className="decryptor-part">
-                <div className="code-unlock">
-                  <div className="code-part-fix">03</div>
-                  <div className="code-part-fix">44</div>
-                  <div className="code-part-fix">63</div>
-                </div>
-                <div className="decryptor-desc">
-                  Un des deux blocs sont correct mais mal placés
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {gameIsValidated && <Victory />}
+        <div className="menus-decryptor">
+          <div className="row-top">
+            <div className="decryptor-part">
+              <div className="code-unlock">
+                <div className="code-part-fix">12</div>
+                <div className="code-part-fix">44</div>
+                <div className="code-part-fix">59</div>
+              </div>
+              <div className="decryptor-desc">
+                Un bloc est correct et bien placé
+              </div>
+            </div>
+            <div className="decryptor-part">
+              <div className="code-unlock">
+                <div className="code-part-fix">12</div>
+                <div className="code-part-fix">85</div>
+                <div className="code-part-fix">71</div>
+              </div>
+              <div className="decryptor-desc">
+                Un bloc est correct mais mal placé
+              </div>
+            </div>
+          </div>
+          <div className="row-mid">
+            <div className="decryptor-part">
+              <div className="code-unlock">
+                <div className="code-part-fix">59</div>
+                <div className="code-part-fix">63</div>
+                <div className="code-part-fix">12</div>
+              </div>
+              <div className="decryptor-desc">
+                Deux blocs sont correct mais mal placés
+              </div>
+            </div>
+            <div className="decryptor-part">
+              <div className="code-unlock">
+                <div className="code-part-fix">03</div>
+                <div className="code-part-fix">98</div>
+                <div className="code-part-fix">44</div>
+              </div>
+              <div className="decryptor-desc">Aucun bloc n'est correct</div>
+            </div>
+          </div>
+          <div className="row-bottom">
+            <div className="decryptor-part">
+              <div className="code-unlock">
+                <div className="code-part-fix">03</div>
+                <div className="code-part-fix">44</div>
+                <div className="code-part-fix">63</div>
+              </div>
+              <div className="decryptor-desc">
+                Un des deux blocs sont correct mais mal placés
+              </div>
+            </div>
+          </div>
         </div>
+
+        {gameIsValidated && <Victory />}
       </div>
   );
 };
