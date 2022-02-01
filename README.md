@@ -46,17 +46,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
 ## Documentation 
 - [ React.js documentation](https://en.reactjs.org/)
 - [ JavaScript documentation](https://devdocs.io/javascript/)
-- - [ React router dom documentation](https://v5.reactrouter.com/)
+- [ React router dom documentation](https://v5.reactrouter.com/)
 - [ Redux documentation](https://redux.js.org/)
 - [ Firebase documentation](https://firebase.google.com/docs)
 - [ Sass documentation](https://sass-lang.com/)
 - [ Material UI documentation](https://v4.mui.com/)
+
+
+## Thanks to : Thomas Mouchelet, Stanislas Wiart, Quentin Palière Marie Tronel, Juliette BERNARD, William Fort, Théo GILLET Dimitri Zordan , Vincent DULOU, Eulalie Moreau, Bastien Lacouture, Nour Ouaamou, Megann DOUDY, Charles-Ambroise Delaunay, Jeremy Grollier, Axel Pinheiro, Selen ALTIN, Corentin Da Rocha, Clara TOMASZEK, Thelma Voisin, Emma Landelle, Elisa Aubouin, Romane Corbillon, Laura FAURE, Ludwig Cristia, Ambre Levesque.
