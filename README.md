@@ -1,8 +1,19 @@
-# Getting Started with Create React App
+# The last chance - Escape game 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an Escape game which has the theme of the break. 
 
-## Available Scripts
+## Stack
+<div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" width="20%" alt="React.js"> &nbsp;
+  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Flogosvector.net%2Fwp-content%2Fuploads%2F2015%2F07%2FJavaScript_logo.png&sp=1643743027T97c2349120ca49a320372389b58a2a981b5d66a13dfe5f971ef362faf4935ea1" width="10%" alt="JavaScript">&nbsp;
+  <img src="https://media.vlpt.us/images/smart5265988/post/be8f062c-71f1-4d86-874d-8e15a13346e5/image.png" width="25%" alt="React router dom">&nbsp;
+  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fseeklogo.com%2Fimages%2FR%2Fredux-logo-9CA6836C12-seeklogo.com.png&sp=1643743058T14b4541a0c3c40d318e3d779d5bd6b43c9092e7077bfd2d99073349c20165536" width="25%" alt="Redux">&nbsp;
+  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F1335026%3Fs%3D280%26v%3D4&sp=1643743094T161d2a79594b1f0ce6b6383fbb8a4938161f6ec0d303459e9ec1451af0a7875c" width="30%" alt="Firebase">&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1200px-Sass_Logo_Color.svg.png" width="15%" alt="Sass">&nbsp;
+  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fmui.com%2Fstatic%2Flogo.png&sp=1643743151T12faa588c3bb7a616efc3b83f48814e314743be4f2e2b4cd68afeab75ba7492e" width="10%" alt="Material UI">&nbsp;
+</div>
+
+## Build setup 
 
 In the project directory, you can run:
 
@@ -41,32 +52,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Documentation 
+- [ React.js documentation](https://en.reactjs.org/)
+- [ JavaScript documentation](https://devdocs.io/javascript/)
+- - [ React router dom documentation](https://v5.reactrouter.com/)
+- [ Redux documentation](https://redux.js.org/)
+- [ Firebase documentation](https://firebase.google.com/docs)
+- [ Sass documentation](https://sass-lang.com/)
+- [ Material UI documentation](https://v4.mui.com/)
