@@ -56,4 +56,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [ Material UI documentation](https://v4.mui.com/)
 
 
-## Thanks to : Thomas Mouchelet, Stanislas Wiart, Quentin Palière Marie Tronel, Juliette BERNARD, William Fort, Théo GILLET Dimitri Zordan , Vincent DULOU, Eulalie Moreau, Bastien Lacouture, Nour Ouaamou, Megann DOUDY, Charles-Ambroise Delaunay, Jeremy Grollier, Axel Pinheiro, Selen ALTIN, Corentin Da Rocha, Clara TOMASZEK, Thelma Voisin, Emma Landelle, Elisa Aubouin, Romane Corbillon, Laura FAURE, Ludwig Cristia, Ambre Levesque.
+## Thanks to : 
+
+Thomas Mouchelet, Stanislas Wiart, Quentin Palière Marie Tronel, Juliette BERNARD, William Fort, Théo GILLET Dimitri Zordan , Vincent DULOU, Eulalie Moreau, Bastien Lacouture, Nour Ouaamou, Megann DOUDY, Charles-Ambroise Delaunay, Jeremy Grollier, Axel Pinheiro, Selen ALTIN, Corentin Da Rocha, Clara TOMASZEK, Thelma Voisin, Emma Landelle, Elisa Aubouin, Romane Corbillon, Laura FAURE, Ludwig Cristia, Ambre Levesque.
