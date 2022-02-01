@@ -5,10 +5,10 @@ This project is an Escape game which has the theme of the break.
 ## Stack
 <div>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" width="20%" alt="React.js"> &nbsp;
-  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fblog.savoirfairelinux.com%2Fen-ca%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F12%2Fjavascript.png&sp=1643743242T802fe1a53de4ed2492be0e2549655746c6a2dddc444550223f36f55b2f3aed9b" width="10%" alt="JavaScript">&nbsp;
+  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fblog.savoirfairelinux.com%2Fen-ca%2Fwp-content%2Fuploads%2Fsites%2F2%2F2017%2F12%2Fjavascript.png&sp=1643743242T802fe1a53de4ed2492be0e2549655746c6a2dddc444550223f36f55b2f3aed9b" width="30%" alt="JavaScript">&nbsp;
   <img src="https://media.vlpt.us/images/smart5265988/post/be8f062c-71f1-4d86-874d-8e15a13346e5/image.png" width="25%" alt="React router dom">&nbsp;
-  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fseeklogo.com%2Fimages%2FR%2Fredux-logo-9CA6836C12-seeklogo.com.png&sp=1643743058T14b4541a0c3c40d318e3d779d5bd6b43c9092e7077bfd2d99073349c20165536" width="10%" alt="Redux">&nbsp;
-  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F1335026%3Fs%3D280%26v%3D4&sp=1643743094T161d2a79594b1f0ce6b6383fbb8a4938161f6ec0d303459e9ec1451af0a7875c" width="20%" alt="Firebase">&nbsp;
+  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fseeklogo.com%2Fimages%2FR%2Fredux-logo-9CA6836C12-seeklogo.com.png&sp=1643743058T14b4541a0c3c40d318e3d779d5bd6b43c9092e7077bfd2d99073349c20165536" width="15%" alt="Redux">&nbsp;
+  <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F1335026%3Fs%3D280%26v%3D4&sp=1643743094T161d2a79594b1f0ce6b6383fbb8a4938161f6ec0d303459e9ec1451af0a7875c" width="10%" alt="Firebase">&nbsp;
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1200px-Sass_Logo_Color.svg.png" width="15%" alt="Sass">&nbsp;
   <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fmui.com%2Fstatic%2Flogo.png&sp=1643743151T12faa588c3bb7a616efc3b83f48814e314743be4f2e2b4cd68afeab75ba7492e" width="15%" alt="Material UI">&nbsp;
 </div>
